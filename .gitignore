@@ -1,0 +1,24 @@
+# Flutter/Dart (app)
+app/.dart_tool/
+app/build/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/.packages
+app/pubspec.lock
+app/android/local.properties
+app/android/app/upload-keystore.jks
+app/android/key.properties
+app/android/app/google-services.json
+
+# Python
+tools_venv/
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Sistema
+.DS_Store

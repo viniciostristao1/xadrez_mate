@@ -1,0 +1,264 @@
+import 'package:flutter/material.dart';
+
+import '../data/puzzle_db.dart';
+import '../engine/chess.dart';
+import '../theme/app_colors.dart';
+import '../widgets/piece_icon.dart';
+
+/// Tela inicial: escolher quantos lances o mate terá (1, 2 ou 3)
+/// e o layout das peças.
+class HomeScreen extends StatefulWidget {
+  final Future<void> Function() onDbLoaded;
+  final PieceStyle pieceStyle;
+  final ValueChanged<PieceStyle> onPieceStyleChanged;
+  final void Function(int mate) onStartPuzzle;
+
+  const HomeScreen({
+    super.key,
+    required this.onDbLoaded,
+    required this.pieceStyle,
+    required this.onPieceStyleChanged,
+    required this.onStartPuzzle,
+  });
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool _loading = true;
+  int _puzzles = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    await widget.onDbLoaded();
+    if (!mounted) return;
+    setState(() {
+      _loading = false;
+      _puzzles = PuzzleDb.instance.countFor(1) +
+          PuzzleDb.instance.countFor(2) +
+          PuzzleDb.instance.countFor(3);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: _loading
+            ? const Center(child: CircularProgressIndicator())
+            : Padding(
+                padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    const SizedBox(height: 12),
+                    const Text(
+                      '♞ Xeque-Mate',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: AppColors.text,
+                        fontSize: 34,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      '$_puzzles problemas verificados de mate em 1, 2 ou 3 lances.\n'
+                      'Escolha a dificuldade e encontre o xeque-mate!',
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(color: AppColors.dim, height: 1.4),
+                    ),
+                    const SizedBox(height: 28),
+                    for (final mate in const [1, 2, 3]) ...[
+                      _PuzzleCard(
+                        mate: mate,
+                        count: PuzzleDb.instance.countFor(mate),
+                        onTap: () => widget.onStartPuzzle(mate),
+                      ),
+                      const SizedBox(height: 12),
+                    ],
+                    const Spacer(),
+                    // Layout das peças
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: AppColors.surface,
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(color: AppColors.border),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Layout das peças',
+                            style: TextStyle(
+                              color: AppColors.text,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              for (final style in PieceStyle.values)
+                                _StyleOption(
+                                  style: style,
+                                  selected: widget.pieceStyle == style,
+                                  onTap: () =>
+                                      widget.onPieceStyleChanged(style),
+                                ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+      ),
+    );
+  }
+}
+
+class _PuzzleCard extends StatelessWidget {
+  final int mate;
+  final int count;
+  final VoidCallback onTap;
+  const _PuzzleCard({
+    required this.mate,
+    required this.count,
+    required this.onTap,
+  });
+
+  static const _icons = ['♛', '♛', '♛'];
+
+  @override
+  Widget build(BuildContext context) {
+    final subtitle = switch (mate) {
+      1 => 'Encontre o xeque-mate em um único lance',
+      2 => 'Primeiro lance, resposta do rival, mate no segundo',
+      _ => 'Três lances até o xeque-mate final',
+    };
+    return Card(
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(18),
+          child: Row(
+            children: [
+              Container(
+                width: 52,
+                height: 52,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: AppColors.surfaceAlt,
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: Text(
+                  _icons[mate - 1],
+                  style: TextStyle(
+                    fontSize: 26,
+                    color: mate == 3 ? AppColors.danger : AppColors.accent,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Mate em $mate',
+                      style: const TextStyle(
+                        color: AppColors.text,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(subtitle, style: const TextStyle(color: AppColors.dim)),
+                  ],
+                ),
+              ),
+              Column(
+                children: [
+                  Text(
+                    '$count',
+                    style: const TextStyle(
+                      color: AppColors.accent,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                  const Text(
+                    'problemas',
+                    style: TextStyle(color: AppColors.faint, fontSize: 11),
+                  ),
+                ],
+              ),
+              const SizedBox(width: 4),
+              const Icon(Icons.chevron_right, color: AppColors.faint),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _StyleOption extends StatelessWidget {
+  final PieceStyle style;
+  final bool selected;
+  final VoidCallback onTap;
+  const _StyleOption({
+    required this.style,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        children: [
+          Container(
+            width: 76,
+            height: 66,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: AppColors.darkSquare,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: selected ? AppColors.accent : AppColors.border,
+                width: selected ? 2.5 : 1.2,
+              ),
+            ),
+            child: PieceIcon(
+              piece: const Piece(PieceType.knight, ChessColor.white),
+              style: style,
+              size: 46,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            style.label,
+            style: TextStyle(
+              color: selected ? AppColors.accent : AppColors.dim,
+              fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+              fontSize: 12.5,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
