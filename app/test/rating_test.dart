@@ -140,6 +140,31 @@ void main() {
     expect(fraco.delta, greaterThan(0), reason: 'ainda resolveu (resultado 0.15 > esperado)');
   });
 
+  test('histórico de evolução persiste', () async {
+    await RatingService.instance.load();
+    final svc = RatingService.instance;
+    await svc.registrarResolucao(
+      puzzle: makePuzzle(rating: 700),
+      segundos: 5,
+      erros: 0,
+      dicas: 0,
+    );
+    final r1 = svc.rating;
+    await svc.registrarResolucao(
+      puzzle: makePuzzle(rating: 1200),
+      segundos: 5,
+      erros: 0,
+      dicas: 0,
+    );
+    expect(svc.historico.length, 2);
+    expect(svc.historico[0], r1);
+    expect(svc.historico[1], svc.rating);
+    expect(svc.historicoTs[1], greaterThanOrEqualTo(svc.historicoTs[0]));
+    // recarrega de "disco": histórico mantido
+    await RatingService.instance.load();
+    expect(RatingService.instance.historico.length, 2);
+  });
+
   test('estatísticas persistem', () async {
     await RatingService.instance.load();
     await RatingService.instance.registrarResolucao(

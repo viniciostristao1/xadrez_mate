@@ -1,5 +1,20 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-08-17 — v0.6.0
+
+### Sessão de treino
+- `SessionScreen` reusa o `PuzzleScreen` (key por `sessao-{id}-{index}`);
+  o callback `onSolved` acumula estatísticas; o avanço ocorre SÓ no botão
+  "Próximo problema" (senão contaria duas vezes — o `onNext` apenas avança).
+- Meta de tempo da sessão = soma dos tempos-alvo (10/25/60 por problema).
+- `findAncestorStateOfType` no seletor para chamar `_startSession` do app.
+
+### Gráfico de evolução
+- `RatingChart` (CustomPainter): normaliza pelo min/max do histórico,
+  linha de referência em 1000, área com gradiente. Sem dependência externa.
+- Histórico persistido no `shared_preferences` como JSON
+  `[{r: rating, t: timestamp}]` — carregado com tolerância a corrupção.
+
 ## 2026-08-17 — v0.5.0
 
 ### Cronômetro / dica / rating

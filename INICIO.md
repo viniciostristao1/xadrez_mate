@@ -27,9 +27,12 @@ usuário (`ATUALIZACOES`) · futuro (`IDEIAS`).
 
 ## ⭐ ESTADO ATUAL (2026-08-17) — ler primeiro pós-/clear
 
+**v0.6.0 — SESSÃO + EVOLUÇÃO** (sessão de treino com meta de tempo e resumo;
+gráfico da evolução do rating na home). Base anterior:
+
 **v0.5.0 — CRONÔMETRO + DICA + RATING** (tempo por problema, lâmpada de
 dica jogada a jogada, rating estilo Elo inicial 1000, botão refazer como
-ícone de flecha circular). Base anterior:
+ícone de flecha circular).
 
 **v0.4.0 — MATEFLOW + ASSINATURA PRÓPRIA** (nome novo, logo ao lado do
 título na home, keystore de upload permanente — instala/atualiza sem
@@ -116,11 +119,16 @@ difícil) nos gerados. Validação independente em `tools/validate_db.py`
   afogado, roque, en passant, promoção, SAN) — sem import de Flutter.
 - `models/puzzle.dart` — `Puzzle` + `PuzzleNode` (árvore de solução).
 - `data/puzzle_db.dart` — carrega/indexa `assets/puzzles.json`.
-- `screens/home_screen.dart` — dificuldade + layout das peças.
+- `screens/home_screen.dart` — dificuldade + layout das peças + sessão +
+  gráfico de evolução.
+- `screens/session_screen.dart` — sessão de treino (sequência, meta de
+  tempo, resumo).
 - `screens/puzzle_screen.dart` — fluxo de resolução (correto/errado/mate).
 - `widgets/chess_board.dart` — tabuleiro interativo (destaques, marcadores).
 - `widgets/piece_icon.dart` — peças nos 3 estilos (Merida/Cburnett SVG,
   Emoji Unicode).
+- `widgets/rating_chart.dart` — gráfico da evolução do rating (CustomPaint).
+- `services/rating_service.dart` — rating Elo + histórico persistido.
 - `theme/` — `app_colors.dart` (tokens) e `app_theme.dart` (tema escuro).
 
 ## Testes

@@ -16,6 +16,7 @@ void main() {
         pieceStyle: style,
         onPieceStyleChanged: (_) {},
         onStartPuzzle: (_, __) {},
+        onStartSession: () {},
       ),
     ));
     await tester.pumpAndSettle();

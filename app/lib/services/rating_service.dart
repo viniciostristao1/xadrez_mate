@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/foundation.dart' show ValueNotifier;
@@ -33,6 +34,11 @@ class RatingService {
   int _erros = 0;
   int _dicas = 0;
 
+  /// Evolução do rating: um ponto por problema resolvido (rating após a
+  /// resolução). Timestamps em ms acompanham cada ponto.
+  final List<double> _historico = [];
+  final List<int> _historicoTs = [];
+
   /// Notifica a UI quando o rating/estatísticas mudam.
   final ValueNotifier<int> notifier = ValueNotifier(0);
 
@@ -41,12 +47,31 @@ class RatingService {
   int get erros => _erros;
   int get dicas => _dicas;
 
+  /// Histórico imutável (cópia) para a UI.
+  List<double> get historico => List.unmodifiable(_historico);
+  List<int> get historicoTs => List.unmodifiable(_historicoTs);
+
   Future<void> load() async {
     final prefs = await SharedPreferences.getInstance();
     _rating = prefs.getDouble('rating') ?? kInicial;
     _resolvidos = prefs.getInt('resolvidos') ?? 0;
     _erros = prefs.getInt('erros') ?? 0;
     _dicas = prefs.getInt('dicas') ?? 0;
+    _historico.clear();
+    _historicoTs.clear();
+    final h = prefs.getString('historico');
+    if (h != null) {
+      try {
+        final arr = jsonDecode(h) as List;
+        for (final e in arr) {
+          final m = e as Map<String, dynamic>;
+          _historico.add((m['r'] as num).toDouble());
+          _historicoTs.add(m['t'] as int);
+        }
+      } catch (_) {
+        // histórico corrompido: ignora
+      }
+    }
     notifier.value++;
   }
 
@@ -56,6 +81,13 @@ class RatingService {
     await prefs.setInt('resolvidos', _resolvidos);
     await prefs.setInt('erros', _erros);
     await prefs.setInt('dicas', _dicas);
+    await prefs.setString(
+      'historico',
+      jsonEncode([
+        for (var i = 0; i < _historico.length; i++)
+          {'r': _historico[i], 't': _historicoTs[i]},
+      ]),
+    );
     notifier.value++;
   }
 
@@ -104,6 +136,8 @@ class RatingService {
     _resolvidos++;
     _erros += erros;
     _dicas += dicas;
+    _historico.add(_rating);
+    _historicoTs.add(DateTime.now().millisecondsSinceEpoch);
     await _save();
     return (delta: delta, novo: _rating, resultado: r);
   }

@@ -1,5 +1,14 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.6.0 (2026-08-17)
+**Sessão de treino + evolução do rating!**
+- ⚡ **Sessão de treino**: escolha lances até o mate (1/2/3), nível e
+  quantidade (5, 10 ou 15 problemas) — o app mostra o progresso, o tempo
+  total contra a meta (10s/25s/60s por problema) e um resumo ao final
+  (acertos, erros, dicas, tempo e rating). Dá para refazer a sessão.
+- 📈 **Gráfico de evolução do rating** na página principal — veja sua curva
+  subir a cada problema resolvido.
+
 ## v0.5.0 (2026-08-17)
 **Cronômetro, dica e sistema de rating!**
 - ⏱ **Cronômetro** por problema: começa quando o problema aparece e para na

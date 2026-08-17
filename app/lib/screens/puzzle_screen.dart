@@ -28,6 +28,10 @@ class PuzzleScreen extends StatefulWidget {
   final VoidCallback onNext;
   final VoidCallback onExit;
 
+  /// Chamado ao concluir (para sessões de treino acumularem estatísticas).
+  final void Function(Puzzle puzzle, int elapsed, int errors, int hints)?
+      onSolved;
+
   const PuzzleScreen({
     super.key,
     required this.puzzle,
@@ -35,6 +39,7 @@ class PuzzleScreen extends StatefulWidget {
     required this.onPieceStyleChanged,
     required this.onNext,
     required this.onExit,
+    this.onSolved,
   });
 
   @override
@@ -279,6 +284,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
             .then((r) {
           if (mounted) setState(() => _ratingResult = r);
         });
+        widget.onSolved?.call(widget.puzzle, _elapsed, _errors, _hintsUsed);
         return;
       }
       // O oponente responde (todas as respostas legais têm continuação exata)

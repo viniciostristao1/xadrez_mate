@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/puzzle_db.dart';
 import '../services/rating_service.dart';
+import '../widgets/rating_chart.dart';
 import '../engine/chess.dart';
 import '../theme/app_colors.dart';
 import '../widgets/piece_icon.dart';
@@ -13,6 +14,7 @@ class HomeScreen extends StatefulWidget {
   final PieceStyle pieceStyle;
   final ValueChanged<PieceStyle> onPieceStyleChanged;
   final void Function(int mate, int level) onStartPuzzle;
+  final void Function() onStartSession;
 
   const HomeScreen({
     super.key,
@@ -20,6 +22,7 @@ class HomeScreen extends StatefulWidget {
     required this.pieceStyle,
     required this.onPieceStyleChanged,
     required this.onStartPuzzle,
+    required this.onStartSession,
   });
 
   @override
@@ -168,7 +171,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       const SizedBox(height: 12),
                     ],
-                    const Spacer(),
+                    // Sessão de treino
+                    _SessionCard(
+                      onTap: widget.onStartSession,
+                    ),
+                    const SizedBox(height: 12),
+                    // Evolução do rating
+                    _EvolutionCard(),
+                    const SizedBox(height: 6),
                     // Layout das peças
                     Container(
                       padding: const EdgeInsets.all(16),
@@ -207,6 +217,115 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
       ),
+    );
+  }
+}
+
+class _SessionCard extends StatelessWidget {
+  final VoidCallback onTap;
+  const _SessionCard({required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              Container(
+                width: 44,
+                height: 44,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: AppColors.surfaceAlt,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: const Icon(
+                  Icons.bolt,
+                  color: AppColors.accent,
+                  size: 24,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Sessão de treino',
+                      style: TextStyle(
+                        color: AppColors.text,
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    const Text(
+                      'Sequência de problemas com meta de tempo',
+                      style: TextStyle(color: AppColors.dim, fontSize: 12.5),
+                    ),
+                  ],
+                ),
+              ),
+              const Icon(Icons.chevron_right, color: AppColors.faint),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _EvolutionCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<int>(
+      valueListenable: RatingService.instance.notifier,
+      builder: (context, _, _) {
+        final historico = RatingService.instance.historico;
+        return Card(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.show_chart,
+                      size: 18,
+                      color: AppColors.accent,
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Evolução do rating',
+                      style: TextStyle(
+                        color: AppColors.text,
+                        fontWeight: FontWeight.w800,
+                        fontSize: 15.5,
+                      ),
+                    ),
+                    const Spacer(),
+                    if (historico.isNotEmpty)
+                      Text(
+                        '${RatingService.instance.resolvidos} resolvidos',
+                        style: const TextStyle(
+                          color: AppColors.faint,
+                          fontSize: 12,
+                        ),
+                      ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                RatingChart(pontos: historico),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }

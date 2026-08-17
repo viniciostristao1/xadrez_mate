@@ -2,8 +2,14 @@
 
 ## Próximos passos (ordem sugerida)
 
-1. **Dica** — botão que revela o lance correto (com custo: contador de dicas
-   por problema).
+1. **Histórico de rating** ✅ (v0.6.0) — gráfico de evolução na home.
+2. **Sessão de treino** ✅ (v0.6.0) — sequência com meta de tempo e resumo.
+3. **Modo racha** — sessão cronometrada onde o tempo é a nota (estreia já
+   com o tempo-alvo definido); ranking local de melhores sessões.
+4. **Mais estatísticas** — erros por categoria, taxa de acerto por nível,
+   melhor sequência.
+5. **Tema de tabuleiro** — cores do tabuleiro (clássico, verde, madeira…).
+6. **Modo "lado contrário"** — resolver do outro lado do tabuleiro.
 2. **Contador de erros** — registrar quantas tentativas erradas o usuário fez
    por problema; mostrar no fim ("resolvido em X tentativas").
 3. **Estatísticas locais** — problemas resolvidos/errados por categoria,
