@@ -221,6 +221,19 @@ void main() {
       expect(find.byIcon(Icons.arrow_forward), findsOneWidget);
     });
 
+    testWidgets('seta de próximo sempre visível à direita do refazer',
+        (tester) async {
+      final p = puzzles.firstWhere((x) => x.mate == 1);
+      await pumpPuzzle(tester, p);
+      // antes de resolver já existe (pular problema)
+      expect(find.byIcon(Icons.arrow_forward), findsOneWidget);
+      await solve(tester, p);
+      // após resolver, continua; e o card mostra o parabéns sem "Lance final"
+      expect(find.byIcon(Icons.arrow_forward), findsOneWidget);
+      expect(find.textContaining('Xeque-mate! Você conseguiu!'), findsOneWidget);
+      expect(find.textContaining('Lance final'), findsNothing);
+    });
+
     testWidgets('pausar cronômetro congela o tempo; retomar segue',
         (tester) async {
       final p = puzzles.firstWhere((x) => x.mate == 1);

@@ -497,7 +497,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
               ],
               const SizedBox(height: 8),
               // Ações: dica (lâmpada) + pausar + refazer (flecha circular)
-              // + próximo (seta, quando resolveu)
+              // + próximo (seta p/ direita, sempre visível à direita)
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -522,15 +522,15 @@ class PuzzleScreenState extends State<PuzzleScreen> {
                     color: AppColors.text,
                     onTap: _reset,
                   ),
-                  if (_solved) ...[
-                    const SizedBox(width: 16),
-                    _RoundIconButton(
-                      icon: Icons.arrow_forward,
-                      tooltip: 'Próximo problema',
-                      color: AppColors.ok,
-                      onTap: widget.onNext,
-                    ),
-                  ],
+                  const SizedBox(width: 16),
+                  _RoundIconButton(
+                    icon: Icons.arrow_forward,
+                    tooltip: _solved
+                        ? 'Próximo problema'
+                        : 'Pular para o próximo problema',
+                    color: _solved ? AppColors.ok : AppColors.dim,
+                    onTap: widget.onNext,
+                  ),
                 ],
               ),
               const SizedBox(height: 8),
@@ -539,7 +539,6 @@ class PuzzleScreenState extends State<PuzzleScreen> {
                   puzzle: widget.puzzle,
                   elapsed: _elapsed,
                   ratingResult: _ratingResult,
-                  ultimoLance: _sanMoves.isEmpty ? null : _sanMoves.last,
                 ),
             ],
           ),
@@ -679,12 +678,10 @@ class _SuccessCard extends StatelessWidget {
   final Puzzle puzzle;
   final int elapsed;
   final ({double delta, double novo, double resultado})? ratingResult;
-  final String? ultimoLance;
   const _SuccessCard({
     required this.puzzle,
     required this.elapsed,
     required this.ratingResult,
-    this.ultimoLance,
   });
 
   String get _elapsedLabel {
@@ -702,47 +699,48 @@ class _SuccessCard extends StatelessWidget {
     return Card(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-        child: Row(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('♛', style: TextStyle(fontSize: 26)),
-            const SizedBox(width: 10),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text(
+            // Mensagem inteira no topo do card (sem "Lance final" — o código
+            // da jogada já aparece nos chips abaixo do tabuleiro)
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('♛', style: TextStyle(fontSize: 20)),
+                SizedBox(width: 8),
+                Flexible(
+                  child: Text(
                     'Xeque-mate! Você conseguiu!',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       color: AppColors.text,
                       fontWeight: FontWeight.w800,
-                      fontSize: 14.5,
+                      fontSize: 15,
                     ),
                   ),
-                  if (ultimoLance != null)
-                    Text(
-                      'Lance final: $ultimoLance',
-                      style: const TextStyle(
-                        color: AppColors.ok,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 13,
-                      ),
-                    ),
-                ],
-              ),
+                ),
+              ],
             ),
-            _StatChip(icon: Icons.timer_outlined, label: _elapsedLabel),
-            const SizedBox(width: 6),
-            _StatChip(
-              icon: up ? Icons.trending_up : Icons.trending_down,
-              label: '${up ? '+' : ''}$delta',
-              color: up ? AppColors.ok : AppColors.danger,
-            ),
-            const SizedBox(width: 6),
-            _StatChip(
-              icon: Icons.emoji_events_outlined,
-              label: '$novo',
-              color: AppColors.accent,
+            const SizedBox(height: 8),
+            // Estatísticas (quebram em mais linhas se faltar espaço)
+            Wrap(
+              alignment: WrapAlignment.center,
+              spacing: 6,
+              runSpacing: 6,
+              children: [
+                _StatChip(icon: Icons.timer_outlined, label: _elapsedLabel),
+                _StatChip(
+                  icon: up ? Icons.trending_up : Icons.trending_down,
+                  label: '${up ? '+' : ''}$delta',
+                  color: up ? AppColors.ok : AppColors.danger,
+                ),
+                _StatChip(
+                  icon: Icons.emoji_events_outlined,
+                  label: '$novo',
+                  color: AppColors.accent,
+                ),
+              ],
             ),
           ],
         ),

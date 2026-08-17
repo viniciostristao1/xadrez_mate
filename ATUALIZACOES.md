@@ -1,5 +1,12 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.7.1 (2026-08-17)
+- ➡️ Botão de **próximo problema** (seta para a direita) sempre visível à
+  direita do botão de refazer — antes de resolver, ele pula para o próximo.
+- 🏁 Mensagem "Xeque-mate! Você conseguiu!" agora cabe inteira no topo do
+  card de sucesso (removido o "Lance final" — o código da jogada continua
+  abaixo do tabuleiro, como antes).
+
 ## v0.7.0 (2026-08-17)
 **Ajustes de usabilidade!**
 - 📜 **Página principal rola** até a Sessão de treino e a Evolução do rating.
