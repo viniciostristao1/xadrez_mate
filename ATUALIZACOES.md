@@ -1,5 +1,9 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.8.1 (2026-08-17)
+- ⬆️ Botões de **dica, pausar, refazer e próximo** subiram: ficam mais
+  perto do tabuleiro, sem colar no pé da tela.
+
 ## v0.8.0 (2026-08-17)
 **Mate aleatório (surpresa) + peças Leipzig + dica em amarelo!**
 - 🎲 **Mate aleatório**: no lugar da Sessão de treino. Problemas de mate em

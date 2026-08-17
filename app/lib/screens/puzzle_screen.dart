@@ -420,7 +420,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
       // Layout sem rolagem: o tabuleiro se ajusta ao espaço disponível.
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
+          padding: const EdgeInsets.fromLTRB(16, 4, 16, 36),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -506,7 +506,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
                   ),
                 ),
               ],
-              const SizedBox(height: 8),
+              const SizedBox(height: 10),
               // Ações: dica (lâmpada) + pausar + refazer (flecha circular)
               // + próximo (seta p/ direita, sempre visível à direita)
               Row(
@@ -544,7 +544,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 14),
               if (_solved)
                 _SuccessCard(
                   puzzle: widget.puzzle,
