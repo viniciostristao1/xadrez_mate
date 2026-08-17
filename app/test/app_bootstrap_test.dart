@@ -27,4 +27,35 @@ void main() {
     expect(find.text('Tática'), findsOneWidget);
     expect(find.byIcon(Icons.settings_outlined), findsOneWidget);
   });
+
+  testWidgets('clicar em Mates e Tática navega para as telas', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    tester.view.physicalSize = const Size(800, 1500);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+
+    await tester.pumpWidget(const MateflowApp());
+    await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 300)));
+    await tester.pumpAndSettle();
+    expect(find.text('Mates'), findsOneWidget);
+
+    // Mates
+    await tester.tap(find.text('Mates'));
+    await tester.pumpAndSettle();
+    expect(find.text('Mate em 1'), findsOneWidget);
+    expect(find.text('Mate em 2'), findsOneWidget);
+    expect(find.text('Mate em 3'), findsOneWidget);
+    // volta
+    await tester.tap(find.byIcon(Icons.arrow_back));
+    await tester.pumpAndSettle();
+    expect(find.text('Mates'), findsOneWidget);
+
+    // Tática
+    await tester.tap(find.text('Tática'));
+    await tester.pumpAndSettle();
+    expect(find.text('Espeto'), findsOneWidget);
+    expect(find.text('Descoberta'), findsOneWidget);
+    expect(find.text('Sacrifício'), findsOneWidget);
+  });
 }

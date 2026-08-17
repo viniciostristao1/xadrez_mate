@@ -30,6 +30,9 @@ class MateflowApp extends StatefulWidget {
 }
 
 class _MateflowAppState extends State<MateflowApp> {
+  // O context deste State fica ACIMA do Navigator (criado pelo MaterialApp);
+  // por isso a navegação usa o navigatorKey, nunca Navigator.of(context).
+  final GlobalKey<NavigatorState> _navKey = GlobalKey<NavigatorState>();
   PieceStyle _pieceStyle = PieceStyle.merida;
   bool _ready = false;
 
@@ -82,7 +85,7 @@ class _MateflowAppState extends State<MateflowApp> {
   // ------------------------------------------------------------------
 
   void _abrirMates() {
-    Navigator.of(context).push(MaterialPageRoute(
+    _navKey.currentState!.push(MaterialPageRoute(
       builder: (_) => MatesHomeScreen(
         onDbLoaded: () async {},
         onStartPuzzle: _startPuzzle,
@@ -92,7 +95,7 @@ class _MateflowAppState extends State<MateflowApp> {
   }
 
   void _abrirTatica() {
-    Navigator.of(context).push(MaterialPageRoute(
+    _navKey.currentState!.push(MaterialPageRoute(
       builder: (_) => TaticaHomeScreen(
         onDbLoaded: () async {},
         onStartTatica: _startTatica,
@@ -102,7 +105,7 @@ class _MateflowAppState extends State<MateflowApp> {
 
   void _abrirConfig() {
     showModalBottomSheet<void>(
-      context: context,
+      context: _navKey.currentContext!,
       backgroundColor: AppColors.surface,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
@@ -230,7 +233,7 @@ class _MateflowAppState extends State<MateflowApp> {
   }
 
   void _startFila(List<Puzzle> puzzles, {required bool surpresa}) {
-    Navigator.of(context).push(MaterialPageRoute(
+    _navKey.currentState!.push(MaterialPageRoute(
       builder: (_) => _FilaMates(
         puzzles: List.of(puzzles)..shuffle(),
         surpresa: surpresa,
@@ -242,7 +245,7 @@ class _MateflowAppState extends State<MateflowApp> {
   void _startTatica(String tema, int level) {
     final puzzles = TaticaDb.instance.forTemaLevel(tema, level);
     if (puzzles.isEmpty) return;
-    Navigator.of(context).push(MaterialPageRoute(
+    _navKey.currentState!.push(MaterialPageRoute(
       builder: (_) => _FilaTatica(
         puzzles: List.of(puzzles)..shuffle(),
         pieceStyle: _pieceStyle,
@@ -258,6 +261,7 @@ class _MateflowAppState extends State<MateflowApp> {
         return MaterialApp(
           title: 'Mateflow',
           debugShowCheckedModeBanner: false,
+          navigatorKey: _navKey,
           theme: AppTheme.dark,
           home: _ready
               ? HomeScreen(
