@@ -1,5 +1,9 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.3.0 (2026-08-17)
+**Novo logo oficial Vinyapps** (preto e âmbar) no ícone do aplicativo e na
+tela inicial.
+
 ## v0.2.0 (2026-08-17)
 **3 níveis de dificuldade + banco real de partidas!**
 - Cada categoria (mate em 1/2/3) agora tem **Fácil, Médio e Difícil** — escolha

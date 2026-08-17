@@ -25,7 +25,11 @@ Papéis dos docs: referência (`INICIO`) · como contribuir (`AGENTS.md` — ler
 antes de editar código) · técnico/gotchas (`APRENDIZADOS`) · changelog do
 usuário (`ATUALIZACOES`) · futuro (`IDEIAS`).
 
-## ⭐ ESTADO ATUAL (2026-08-16) — ler primeiro pós-/clear
+## ⭐ ESTADO ATUAL (2026-08-17) — ler primeiro pós-/clear
+
+**v0.3.0 — LOGO VINYAPPS** (ícone do launcher + home, preto/âmbar).
+
+Base anterior:
 
 **v0.2.0 — NÍVEIS + BANCO REAL** (`flutter analyze` limpo, **969 testes**
 passando, sendo 935 contra referência do python-chess). App completo:
