@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart' show ValueNotifier;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/puzzle.dart';
+import 'i18n.dart';
 
 /// Sistema de rating estilo Elo para avaliar o raciocínio do jogador.
 ///
@@ -31,6 +32,9 @@ class RatingService {
 
   /// Bônus do modo "Mate aleatório" (surpresa): +30% no delta.
   static const double bonusSurpresa = 1.3;
+
+  /// Tempo-alvo dos problemas de TÁTICA (segundos).
+  static const int tempoAlvoTatica = 30;
 
   double _rating = kInicial;
   int _resolvidos = 0;
@@ -98,13 +102,38 @@ class RatingService {
   double esperado(int ratingProblema) =>
       1 / (1 + pow(10, (ratingProblema - _rating) / 400));
 
+  /// Registra uma resolução de TÁTICA (sem objeto Puzzle) e devolve o resumo.
+  Future<({double delta, double novo, double resultado})> registrarResolucaoTatica({
+    required int ratingProblema,
+    required double segundos,
+    required int erros,
+    required int dicas,
+  }) async {
+    final fatorT = fatorTempoComAlvo(tempoAlvoTatica.toDouble(), segundos);
+    final r = max(
+        0.15,
+        min(1.0, 1.0 * fatorT * pow(fatorErro, erros) * pow(fatorDica, dicas)));
+    final delta = kConstante * (r - 1 / (1 + pow(10, (ratingProblema - _rating) / 400)));
+    _rating += delta;
+    _resolvidos++;
+    _erros += erros;
+    _dicas += dicas;
+    _historico.add(_rating);
+    _historicoTs.add(DateTime.now().millisecondsSinceEpoch);
+    await _save();
+    return (delta: delta, novo: _rating, resultado: r);
+  }
+
+  double fatorTempoComAlvo(double alvo, double segundos) {
+    if (segundos <= alvo) return 1.0;
+    return max(0.15, 1 - (segundos - alvo) / (2 * alvo));
+  }
+
   /// Fator de tempo: 1.0 dentro do alvo; cai linearmente até 0.15
   /// (em 3× o tempo-alvo ou mais).
   double fatorTempo(int mate, double segundos) {
     final alvo = tempoAlvo[mate]!.toDouble();
-    if (segundos <= alvo) return 1.0;
-    final f = 1 - (segundos - alvo) / (2 * alvo);
-    return max(0.15, f);
+    return fatorTempoComAlvo(alvo, segundos);
   }
 
   /// Resultado da resolução (0.15..1.0) combinando tempo, erros e dicas.
@@ -161,11 +190,11 @@ class RatingService {
 
   /// Faixa (título) do jogador pelo rating.
   static String faixa(double r) {
-    if (r < 1000) return 'Iniciante';
-    if (r < 1200) return 'Aprendiz';
-    if (r < 1400) return 'Intermediário';
-    if (r < 1600) return 'Forte';
-    if (r < 1800) return 'Avançado';
-    return 'Mestre do Mate';
+    if (r < 1000) return S.faixaIniciante;
+    if (r < 1200) return S.faixaAprendiz;
+    if (r < 1400) return S.faixaIntermediario;
+    if (r < 1600) return S.faixaForte;
+    if (r < 1800) return S.faixaAvancado;
+    return S.faixaMestre;
   }
 }

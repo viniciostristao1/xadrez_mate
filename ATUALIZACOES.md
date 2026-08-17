@@ -1,5 +1,17 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.9.0 (2026-08-17)
+**Tática + idiomas + mais mates difíceis!**
+- 🏠 **Nova página inicial**: escolha **Mates** ou **Tática** em botões
+  grandes.
+- ⚔️ **Seção Tática** com 3 temas: **Espeto**, **Descoberta** e
+  **Sacrifício** (126 problemas reais de partidas, verificados, com os
+  mesmos níveis Fácil/Médio/Difícil, cronômetro, dica e rating).
+- ⚙️ **Engrenagem de configurações**: **idioma** (Português, English,
+  Español) e **layout das peças** (movido para lá).
+- 📈 **Banco de mates maior**: agora **543 problemas** — os níveis difíceis
+  passaram de ~20 para **45–49 por categoria** (mate em 1, 2 e 3).
+
 ## v0.8.1 (2026-08-17)
 - ⬆️ Botões de **dica, pausar, refazer e próximo** subiram: ficam mais
   perto do tabuleiro, sem colar no pé da tela.

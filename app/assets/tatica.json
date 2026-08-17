@@ -1,0 +1,1661 @@
+{
+"version": 1,
+"puzzles": [
+{
+"tema": "skewer",
+"level": 1,
+"rating": 583,
+"fen": "2r2k2/p2r1pp1/1p6/4PpP1/3p3R/7R/PP5P/6K1 w - - 2 35",
+"linha": [
+"h4h8",
+"f8e7",
+"h8c8"
+],
+"id": 1
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 665,
+"fen": "8/8/k5r1/pp3b2/3Q1K2/8/PP6/8 b - - 1 54",
+"linha": [
+"g6g4",
+"f4e5",
+"g4d4"
+],
+"id": 2
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 734,
+"fen": "r5k1/6pp/p1R5/4Pp2/1P3P2/4P3/1P3P1r/R4K2 b - - 2 28",
+"linha": [
+"h2h1",
+"f1g2",
+"h1a1"
+],
+"id": 3
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 778,
+"fen": "r7/5ppp/8/1pk5/2b5/5P2/PK1R2PP/2R5 b - - 3 32",
+"linha": [
+"a8a2",
+"b2b1",
+"a2d2"
+],
+"id": 4
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 804,
+"fen": "5R2/8/K3p1k1/8/8/8/6r1/8 w - - 0 57",
+"linha": [
+"f8g8",
+"g6f6",
+"g8g2"
+],
+"id": 5
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 815,
+"fen": "8/pR6/8/P7/2P2rk1/1P1K4/8/6b1 w - - 1 40",
+"linha": [
+"b7g7",
+"g4f5",
+"g7g1"
+],
+"id": 6
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 830,
+"fen": "8/1p1r3p/p7/P5K1/8/2Pk4/8/1R6 w - - 16 39",
+"linha": [
+"b1d1",
+"d3c4",
+"d1d7"
+],
+"id": 7
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 844,
+"fen": "8/7p/3R4/4pPk1/4P3/3K1p2/P4P2/4r3 b - - 0 40",
+"linha": [
+"e1d1",
+"d3e3",
+"d1d6"
+],
+"id": 8
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 864,
+"fen": "3r4/8/6k1/3P3p/4K3/5P2/8/4R3 b - - 4 63",
+"linha": [
+"d8e8",
+"e4d3",
+"e8e1"
+],
+"id": 9
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 878,
+"fen": "r4k1r/pppq1p2/3pb2p/6p1/2nQ4/8/PPP2PPP/R4RK1 w - - 0 17",
+"linha": [
+"d4h8",
+"f8e7",
+"h8a8"
+],
+"id": 10
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 899,
+"fen": "8/8/3k1p2/2p3b1/4p3/4P3/5K2/4R3 b - - 1 46",
+"linha": [
+"g5h4",
+"f2f1",
+"h4e1"
+],
+"id": 11
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 919,
+"fen": "7R/8/8/1kr5/3K4/8/8/8 w - - 10 56",
+"linha": [
+"h8b8",
+"b5c6",
+"b8c8",
+"c6d7",
+"c8c5"
+],
+"id": 12
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 933,
+"fen": "8/r3k3/p2pP2R/2r2p1p/3R3P/6P1/6K1/8 w - - 1 44",
+"linha": [
+"h6h7",
+"e7e6",
+"h7a7"
+],
+"id": 13
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 946,
+"fen": "8/2r3k1/p5p1/4rb2/8/P7/1PP4R/1K5R w - - 12 45",
+"linha": [
+"h2h7",
+"g7f6",
+"h7c7"
+],
+"id": 14
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 957,
+"fen": "4R3/6p1/6pp/Bp1kn3/2p3PP/2P3K1/3r4/8 w - - 9 42",
+"linha": [
+"e8d8",
+"d5c6",
+"d8d2"
+],
+"id": 15
+},
+{
+"tema": "skewer",
+"level": 1,
+"rating": 968,
+"fen": "1r6/5pk1/6p1/6P1/4P3/3P2P1/PP1K2Q1/8 b - - 0 42",
+"linha": [
+"b8b2",
+"d2c3",
+"b2g2"
+],
+"id": 16
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1300,
+"fen": "r3r3/1p4pp/p7/R7/1k1n4/1P6/P4PPP/2R3K1 w - - 2 29",
+"linha": [
+"a5a4",
+"b4b5",
+"a4d4"
+],
+"id": 17
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1318,
+"fen": "6Q1/8/8/k2K4/P7/3P4/5q2/8 b - - 6 62",
+"linha": [
+"f2a2",
+"d5e5",
+"a2g8"
+],
+"id": 18
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1324,
+"fen": "r7/ppq3k1/3b3r/4p1p1/3pQpP1/PB1P1P2/1PP1R3/R5K1 b - - 9 33",
+"linha": [
+"a8h8",
+"e2g2",
+"h6h1",
+"g1f2",
+"h1a1"
+],
+"id": 19
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1331,
+"fen": "r2qkb2/p3ppp1/2p3p1/2pp2N1/6P1/1P1PP1R1/P1P4r/RNBQK3 b Qq - 0 14",
+"linha": [
+"h2h1",
+"e1e2",
+"h1d1"
+],
+"id": 20
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1342,
+"fen": "1r6/8/8/p7/k7/2K5/8/7R w - - 6 68",
+"linha": [
+"h1a1",
+"a4b5",
+"a1b1",
+"b5c5",
+"b1b8"
+],
+"id": 21
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1352,
+"fen": "r4rk1/pp1bbppp/4p3/3pn3/1P1q4/P5P1/3N1PBP/1RBQ1RK1 w - - 1 15",
+"linha": [
+"c1b2",
+"d4d3",
+"b2e5"
+],
+"id": 22
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1365,
+"fen": "8/2p5/p1k2q1p/4p3/1P6/3Q2P1/6K1/8 w - - 12 41",
+"linha": [
+"d3a6",
+"c6d5",
+"a6f6"
+],
+"id": 23
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1371,
+"fen": "8/5p1k/3q2p1/p1pP3p/PpK2P2/1B2Q3/8/8 b - - 1 44",
+"linha": [
+"d6a6",
+"c4c5",
+"a6a7",
+"c5b5",
+"a7e3"
+],
+"id": 24
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1383,
+"fen": "1r4k1/2p2ppp/3b2q1/3P1b2/7P/pPQ1BBP1/P4P2/2K1R3 b - - 0 33",
+"linha": [
+"d6b4",
+"c3d4",
+"b4e1"
+],
+"id": 25
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1395,
+"fen": "8/5bp1/5k1p/5P2/6PK/4B3/8/8 w - - 1 41",
+"linha": [
+"e3d4",
+"f6e7",
+"d4g7"
+],
+"id": 26
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1409,
+"fen": "2r2k2/1p3pR1/p2q2bp/P4P2/4P3/2BP4/1PQ2K1P/8 b - - 0 35",
+"linha": [
+"d6h2",
+"f2e3",
+"h2c2"
+],
+"id": 27
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1432,
+"fen": "r4k1r/pp3pp1/5n2/2pPR3/2P3p1/2NB2K1/PP6/4R3 b - - 1 24",
+"linha": [
+"h8h3",
+"g3f2",
+"h3d3"
+],
+"id": 28
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1448,
+"fen": "7Q/pp3k2/8/3pP1p1/8/6PK/PP2q2P/8 b - - 0 27",
+"linha": [
+"g5g4",
+"h3h4",
+"e2h2",
+"h4g4",
+"h2h8"
+],
+"id": 29
+},
+{
+"tema": "skewer",
+"level": 2,
+"rating": 1456,
+"fen": "6k1/p3b1p1/1p6/7R/K1P5/1P4B1/P3rPPP/8 b - - 2 29",
+"linha": [
+"e2a2",
+"a4b5",
+"a2a5",
+"b5c6",
+"a5h5"
+],
+"id": 30
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1704,
+"fen": "2k1rr2/p1p3p1/1b6/3QP1qp/3P2n1/2P5/PP2N1PP/R4R1K w - - 3 24",
+"linha": [
+"f1f8",
+"e8f8",
+"d5a8",
+"c8d7",
+"a8f8"
+],
+"id": 31
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1737,
+"fen": "8/1p2rk2/p4q2/7p/5Q2/P5BP/1P4PK/8 w - - 2 39",
+"linha": [
+"f4f6",
+"f7f6",
+"g3h4",
+"f6e5",
+"h4e7"
+],
+"id": 32
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1754,
+"fen": "8/5pp1/r2K3p/k7/7P/6P1/8/1R6 w - - 2 39",
+"linha": [
+"d6c5",
+"a5a4",
+"b1a1",
+"a4b3",
+"a1a6"
+],
+"id": 33
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1781,
+"fen": "5r1k/1pQqbpp1/1n2p3/pP1pP3/P2P4/3BPN2/6PP/2R3K1 b - - 4 28",
+"linha": [
+"f8c8",
+"c7b6",
+"c8c1"
+],
+"id": 34
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1811,
+"fen": "2b4r/2p1qp1N/pp1k1p2/3PpB2/2P5/4Q3/PP3P2/2K5 w - - 2 26",
+"linha": [
+"e3a3",
+"c7c5",
+"d5c6",
+"d6c6",
+"a3e7"
+],
+"id": 35
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1826,
+"fen": "r2q1r2/ppp1pk2/3p3Q/2n1n2R/2P1P2B/2P2P2/P3KP2/8 w - - 5 22",
+"linha": [
+"h5f5",
+"f7e8",
+"f5f8",
+"e8d7",
+"f8d8"
+],
+"id": 36
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1849,
+"fen": "5r1k/p3q1b1/1p4Qp/2p1P3/2P5/1P4P1/P5K1/2B4R b - - 2 34",
+"linha": [
+"e7b7",
+"g2g1",
+"f8f1",
+"g1f1",
+"b7h1",
+"f1e2",
+"h1c1",
+"e5e6",
+"c1b2"
+],
+"id": 37
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1869,
+"fen": "3r1rk1/pp2qp2/2p1p1pQ/8/8/1P4R1/6PP/5R1K w - - 0 30",
+"linha": [
+"g3h3",
+"f7f6",
+"h6h8",
+"g8f7",
+"h3h7",
+"f7e8",
+"h7e7"
+],
+"id": 38
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1893,
+"fen": "7r/1p4k1/p1b1R3/4P3/8/2P2N2/Pr4PP/R6K b - - 0 29",
+"linha": [
+"c6f3",
+"g2f3",
+"b2h2",
+"h1g1",
+"h2h1",
+"g1f2",
+"h1a1"
+],
+"id": 39
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1920,
+"fen": "r6q/pp2k3/4bb2/2PQ4/5P2/3P1K2/P1P5/4R1R1 b - - 13 33",
+"linha": [
+"h8h3",
+"g1g3",
+"h3h1",
+"e1h1",
+"e6d5",
+"f3e3",
+"d5h1"
+],
+"id": 40
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1946,
+"fen": "1r4k1/p4pp1/4qb1p/8/2Q5/P7/K1R3P1/1R6 b - - 20 49",
+"linha": [
+"b8c8",
+"c4e6",
+"c8c2",
+"a2b3",
+"c2c3"
+],
+"id": 41
+},
+{
+"tema": "skewer",
+"level": 3,
+"rating": 1976,
+"fen": "r3k2r/3b4/p1p1p3/1pp1p2q/4P3/2P2PQ1/PP2K1P1/3RR3 w kq - 1 27",
+"linha": [
+"e1h1",
+"h5h1",
+"d1h1",
+"h8h1",
+"g3g8",
+"e8e7",
+"g8a8"
+],
+"id": 42
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 598,
+"fen": "r4rk1/pb1q1pp1/1p5p/2p5/2R5/3B3P/PP3PP1/3QR1K1 w - - 2 19",
+"linha": [
+"d3h7",
+"g8h7",
+"d1d7"
+],
+"id": 43
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 779,
+"fen": "r3r3/p2qkppp/3b4/2pQ4/8/4P3/PP3PPP/RN3RK1 b - - 1 20",
+"linha": [
+"d6h2",
+"g1h2",
+"d7d5"
+],
+"id": 44
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 807,
+"fen": "rn1r2k1/pp3pp1/2pp3p/4q3/3QP3/2P2B1P/P1P2PP1/3R1RK1 w - - 5 17",
+"linha": [
+"d4e5",
+"d6e5",
+"d1d8"
+],
+"id": 45
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 836,
+"fen": "3r1rk1/p4pp1/1p5p/2pB4/2P5/1P1R3P/1b3PP1/3R2K1 w - - 0 26",
+"linha": [
+"d5f7",
+"g8f7",
+"d3d8"
+],
+"id": 46
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 895,
+"fen": "2r1k3/5ppp/8/p1npP3/Pp1N1P2/1P1b4/5KPP/2R1B3 b - - 3 31",
+"linha": [
+"c5e4",
+"f2e3",
+"c8c1"
+],
+"id": 47
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 906,
+"fen": "rn3k2/5ppp/2p1r3/1p2n3/p7/2P2P2/PP4PP/R1B1RBK1 b - - 1 20",
+"linha": [
+"e5f3",
+"g2f3",
+"e6e1"
+],
+"id": 48
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 918,
+"fen": "6k1/6p1/5P2/1p1p4/3Qbq2/pP6/P1P5/1K4R1 b - - 2 38",
+"linha": [
+"e4c2",
+"b1c2",
+"f4d4"
+],
+"id": 49
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 955,
+"fen": "r3k2r/pp3pp1/2n1p3/2bpPnP1/Q6p/2N5/PP1B2PP/R4R1K b kq - 0 16",
+"linha": [
+"f5g3",
+"h2g3",
+"h4g3",
+"a4h4",
+"h8h4"
+],
+"id": 50
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 967,
+"fen": "8/pp6/2pb1p1k/3p2pp/3N4/7K/Pr4P1/1B2R3 w - - 0 49",
+"linha": [
+"d4f5",
+"h6h7",
+"f5d6"
+],
+"id": 51
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 978,
+"fen": "4r1k1/p5pp/1p4q1/2p1pr2/4Q3/4B1P1/PP1R2KP/R7 b - - 1 28",
+"linha": [
+"f5f2",
+"g2f2",
+"g6e4"
+],
+"id": 52
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 992,
+"fen": "1r1q1rk1/pp3p1p/2nb1p2/3Q4/3P4/P4N2/1P3PPP/RN3RK1 b - - 0 14",
+"linha": [
+"d6h2",
+"f3h2",
+"d8d5"
+],
+"id": 53
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 1019,
+"fen": "r2q1rk1/pp1bbpp1/3p1n1p/2pN4/2B1P2B/3Q4/PPP2PPP/R4RK1 b - - 3 12",
+"linha": [
+"f6d5",
+"c4d5",
+"e7h4"
+],
+"id": 54
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 1036,
+"fen": "1r4k1/R7/6p1/3P3p/4N2P/2P1KP2/p5r1/8 w - - 1 40",
+"linha": [
+"e4f6",
+"g8f8",
+"f6d7",
+"f8e7",
+"d7b8"
+],
+"id": 55
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 1045,
+"fen": "r1b2rk1/1p3ppp/p3p3/3p4/3Q4/3B4/PP1q1PPP/1R3RK1 w - - 2 17",
+"linha": [
+"d3h7",
+"g8h7",
+"d4d2"
+],
+"id": 56
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 1055,
+"fen": "r5k1/1p1r1pp1/p3pnp1/2qN4/8/1Q5P/PP3PP1/3RR1K1 w - - 0 25",
+"linha": [
+"d5f6",
+"g7f6",
+"d1d7"
+],
+"id": 57
+},
+{
+"tema": "discoveredAttack",
+"level": 1,
+"rating": 1068,
+"fen": "r4rk1/3p1ppp/1pbNp3/p3P3/Pn3P2/Q2Bq2P/1PP3P1/2RR3K w - - 7 23",
+"linha": [
+"d3h7",
+"g8h7",
+"a3e3"
+],
+"id": 58
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1300,
+"fen": "r1q1r1k1/1p3pp1/n1p4p/p2pp2P/P3P3/2P2P2/1P1QBb2/R1BK3R w - - 0 24",
+"linha": [
+"e2a6",
+"b7a6",
+"d2f2"
+],
+"id": 59
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1307,
+"fen": "r3r3/1p1n2pk/2p1p2p/2P5/1p2R3/P2Q1N1P/5PP1/q5K1 w - - 0 25",
+"linha": [
+"e4e1",
+"h7h8",
+"e1a1"
+],
+"id": 60
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1317,
+"fen": "r3kb1r/p2n2pp/2B5/q3Pp2/P4B2/2p3P1/4PP1P/R2QK2R b KQkq - 0 17",
+"linha": [
+"c3c2",
+"d1d2",
+"f8b4"
+],
+"id": 61
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1327,
+"fen": "r2qk1nr/1pp2ppp/p1pb4/6N1/3QP1b1/8/PPP2PPP/RNB2RK1 b kq - 2 8",
+"linha": [
+"d6h2",
+"g1h2",
+"d8d4"
+],
+"id": 62
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1338,
+"fen": "r2q1r2/pp3p2/2pp2pk/6bp/B1PpPn2/3P1QNP/PP3PRK/6R1 w - - 2 23",
+"linha": [
+"g3f5",
+"g6f5",
+"g2g5",
+"d8g5",
+"g1g5"
+],
+"id": 63
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1352,
+"fen": "r4rk1/ppp2pp1/4p1bp/8/q3NQPP/8/PPP2PB1/2KR4 w - - 4 18",
+"linha": [
+"e4f6",
+"g7f6",
+"f4a4"
+],
+"id": 64
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1364,
+"fen": "2br3k/p3R1pp/1bp5/4B3/2BnP3/2N5/P2K2PP/8 b - - 6 27",
+"linha": [
+"d4f5",
+"d2c2",
+"f5e7"
+],
+"id": 65
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1376,
+"fen": "rn1qkb1r/4pp1p/2b2p2/pp1N4/2p1PP2/7P/PP1Q2P1/2KR1BNR w kq - 0 13",
+"linha": [
+"d5f6",
+"e7f6",
+"d2d8"
+],
+"id": 66
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1392,
+"fen": "6qk/1p4p1/B1n2rQp/3p4/8/2P2P2/P6P/6RK w - - 1 30",
+"linha": [
+"g6f6",
+"g7f6",
+"g1g8",
+"h8g8",
+"a6b7"
+],
+"id": 67
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1400,
+"fen": "r2qkb1r/pbp1n2p/1p2Q1p1/3n2P1/2P2P2/3P4/PP4BP/RNB1K1NR b KQkq - 0 11",
+"linha": [
+"d5f4",
+"c1f4",
+"b7g2"
+],
+"id": 68
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1406,
+"fen": "r5k1/3rnpb1/BB1pq1pp/4p3/8/7P/4QPP1/R2R2K1 w - - 7 33",
+"linha": [
+"a6c4",
+"d6d5",
+"a1a8"
+],
+"id": 69
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1417,
+"fen": "6k1/6pp/p7/1pb5/3p4/P1p4P/1PP2PPK/RB2r3 w - - 0 25",
+"linha": [
+"b1a2",
+"g8f8",
+"a1e1"
+],
+"id": 70
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1438,
+"fen": "5r2/p5pk/3r3p/2QBqp2/4P2N/P5PP/5P2/5bK1 w - - 0 32",
+"linha": [
+"d5g8",
+"h7g8",
+"c5e5"
+],
+"id": 71
+},
+{
+"tema": "discoveredAttack",
+"level": 2,
+"rating": 1451,
+"fen": "r3kb1r/pp2pppp/5nn1/3P4/2p1P1b1/2P2NB1/PqB1Q1PP/RN2K2R w KQkq - 0 13",
+"linha": [
+"c2a4",
+"b7b5",
+"e2b2"
+],
+"id": 72
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1703,
+"fen": "r1b1k2r/p1ppqpp1/2p4p/7n/1b2P3/P1N2P2/1PPB2PP/R2QKB1R b KQkq - 0 10",
+"linha": [
+"e7h4",
+"g2g3",
+"h5g3",
+"a3b4",
+"g3h1"
+],
+"id": 73
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1730,
+"fen": "4r2k/p3q1p1/7p/2R5/2PpN3/6P1/4Q2P/6K1 b - - 0 39",
+"linha": [
+"e7c5",
+"e4c5",
+"e8e2"
+],
+"id": 74
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1758,
+"fen": "3rr1k1/5p2/p2q2pB/1pp1p3/3n2Pb/3R2N1/PP1QB1PP/5RK1 b - - 1 23",
+"linha": [
+"d4e2",
+"d2e2",
+"d6d3",
+"e2d3",
+"d8d3"
+],
+"id": 75
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1779,
+"fen": "r5k1/1p2b1pp/1qpp4/p3p3/2P1P1b1/P1N2N2/QP4PP/5RK1 w - - 5 24",
+"linha": [
+"c4c5",
+"g8h8",
+"c5b6"
+],
+"id": 76
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1801,
+"fen": "r4rk1/1p3ppp/p1n1b3/2NpP3/3q4/P2B3P/5PP1/2RQ1RK1 w - - 0 19",
+"linha": [
+"c5e6",
+"f7e6",
+"c1c6",
+"d4d3",
+"d1d3"
+],
+"id": 77
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1828,
+"fen": "3qr1k1/pb3p2/1p4pp/n1rp4/P1pRnN2/2P2N1P/BPQ2PP1/3R2K1 w - - 3 21",
+"linha": [
+"d4e4",
+"d5e4",
+"d1d8"
+],
+"id": 78
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1856,
+"fen": "r1b1r3/pp1n3p/1k3n2/1B6/4p3/2R2N2/2PP1PPP/5RK1 w - - 2 20",
+"linha": [
+"f1b1",
+"a7a6",
+"b5d7",
+"b6a7",
+"d7e8"
+],
+"id": 79
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1885,
+"fen": "r1b2r2/pp2n1p1/1qn1ppk1/3pP1N1/3P3P/P7/1P1Q1PP1/RN2K2R w KQ - 0 14",
+"linha": [
+"h4h5",
+"g6h6",
+"g5e6",
+"h6h7",
+"e6f8"
+],
+"id": 80
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1929,
+"fen": "r3kb1r/pp2pppp/2n5/2qB4/5B2/1P2PQ2/P1P2PPP/R4nK1 w kq - 0 13",
+"linha": [
+"d5f7",
+"e8f7",
+"f4d6",
+"f7e8",
+"d6c5"
+],
+"id": 81
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1961,
+"fen": "8/p3nk2/1p4qp/2b5/2p1N1n1/1P3B2/PBPP4/2K2R2 w - - 5 27",
+"linha": [
+"f3g4",
+"f7e8",
+"g4h5",
+"g6h5",
+"e4f6",
+"e8d8",
+"f6h5"
+],
+"id": 82
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 1990,
+"fen": "6r1/4p3/3p1kp1/2pP1P2/1p2pR2/1P6/4RP1P/6K1 b - - 0 40",
+"linha": [
+"g6f5",
+"g1f1",
+"f6g5",
+"e2e4",
+"f5e4"
+],
+"id": 83
+},
+{
+"tema": "discoveredAttack",
+"level": 3,
+"rating": 2012,
+"fen": "rn3rk1/pp3ppp/4p3/3p1b2/2PP3P/q1PB1N2/P1QB1nP1/1K1R3R w - - 0 15",
+"linha": [
+"d3f5",
+"e6f5",
+"d2c1",
+"a3a5",
+"c2f2"
+],
+"id": 84
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 482,
+"fen": "3r3k/p5pp/1p6/2p2pq1/5b2/1NP3P1/PP2Q1KP/4R3 w - - 0 27",
+"linha": [
+"e2e8",
+"d8e8",
+"e1e8"
+],
+"id": 85
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 553,
+"fen": "4r2k/pp2r1p1/2p1qp1p/2P5/3P1P2/2Q5/2R2NPP/3R2K1 b - - 3 28",
+"linha": [
+"e6e1",
+"d1e1",
+"e7e1",
+"c3e1",
+"e8e1"
+],
+"id": 86
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 577,
+"fen": "3r4/6kp/6p1/3q4/5QB1/5p2/1P3P1P/R6K b - - 6 41",
+"linha": [
+"d5d1",
+"a1d1",
+"d8d1"
+],
+"id": 87
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 623,
+"fen": "1k1r4/1p3Qp1/p2q3p/8/1N6/8/PP3PPP/2R3K1 b - - 0 22",
+"linha": [
+"d6d1",
+"c1d1",
+"d8d1"
+],
+"id": 88
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 692,
+"fen": "6k1/p3rppp/1n2p3/3q4/8/P1Q1PP2/6PP/2R3K1 w - - 0 27",
+"linha": [
+"c3c8",
+"b6c8",
+"c1c8",
+"d5d8",
+"c8d8",
+"e7e8",
+"d8e8"
+],
+"id": 89
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 749,
+"fen": "2rr3k/p1q3pp/4Q3/3p4/1PnP1P2/2P5/P3RP1P/4R1K1 w - - 1 25",
+"linha": [
+"e6e8",
+"d8e8",
+"e2e8",
+"c8e8",
+"e1e8"
+],
+"id": 90
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 802,
+"fen": "r4rk1/1pp3p1/1q2p3/4P2Q/p3R3/P7/1PP2PPP/1R4K1 b - - 1 20",
+"linha": [
+"b6f2",
+"g1h1",
+"f2f1",
+"b1f1",
+"f8f1"
+],
+"id": 91
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 843,
+"fen": "6k1/8/3B1pp1/2PP4/3p2pP/p2K4/r2N1P2/8 b - - 0 41",
+"linha": [
+"a2d2",
+"d3d2",
+"a3a2",
+"c5c6",
+"a2a1q"
+],
+"id": 92
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 885,
+"fen": "5r2/p2pb2Q/1k3qp1/1p2N1p1/4R3/2PP4/PP3PPP/R5K1 b - - 3 22",
+"linha": [
+"f6f2",
+"g1h1",
+"f2f1",
+"a1f1",
+"f8f1"
+],
+"id": 93
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 916,
+"fen": "5r1k/p5pp/1n2Q3/4P3/2p1Rq2/2N5/PP3PPP/3R2K1 b - - 2 25",
+"linha": [
+"f4f2",
+"g1h1",
+"f2f1",
+"d1f1",
+"f8f1"
+],
+"id": 94
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 938,
+"fen": "1r1r1k2/R4ppQ/1p2p3/8/3qB3/5P2/6PP/1R5K b - - 0 31",
+"linha": [
+"d4d1",
+"b1d1",
+"d8d1"
+],
+"id": 95
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 959,
+"fen": "2r3k1/3Q1ppp/pp6/8/5P2/1Pq5/2PR2PP/7K w - - 2 25",
+"linha": [
+"d7d8",
+"c8d8",
+"d2d8"
+],
+"id": 96
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 970,
+"fen": "5r1k/6pp/1p6/p7/3p4/bP1Q4/4RqPP/4R2K b - - 1 31",
+"linha": [
+"f2f1",
+"e1f1",
+"f8f1"
+],
+"id": 97
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 986,
+"fen": "8/k1pr4/1p6/4R3/p2r2p1/q5P1/5P2/1R4KQ w - - 2 39",
+"linha": [
+"e5a5",
+"b6a5",
+"h1b7"
+],
+"id": 98
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 991,
+"fen": "2b1rk2/p2r1p1p/2qp2pN/2p1b3/2P1PQ2/1P1B4/P5PP/3R1RK1 w - - 6 24",
+"linha": [
+"f4f7",
+"d7f7",
+"f1f7"
+],
+"id": 99
+},
+{
+"tema": "sacrifice",
+"level": 1,
+"rating": 1002,
+"fen": "1k4r1/pp3p2/1p1p3p/4P3/1P2P3/P4q2/3Q1PrP/2RR1K2 w - - 3 26",
+"linha": [
+"d2d6",
+"b8a8",
+"d6d8",
+"g8d8",
+"d1d8"
+],
+"id": 100
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1303,
+"fen": "3r2r1/2p1nk1p/1p3p1B/p4P2/3N4/2P5/b1P3PP/3RR1K1 w - - 2 23",
+"linha": [
+"e1e7",
+"f7e7",
+"d4c6"
+],
+"id": 101
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1318,
+"fen": "1r4k1/5p1p/RB4p1/p7/4P3/2b2P2/P5PP/6K1 b - - 3 30",
+"linha": [
+"b8b6",
+"a6b6",
+"c3d4",
+"g1f1",
+"d4b6"
+],
+"id": 102
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1327,
+"fen": "r1b2rk1/1p2bppp/pqnp4/3Np3/2B1PP2/PN6/1PP2nPP/R1BQ1RK1 b - - 6 13",
+"linha": [
+"f2h3",
+"g1h1",
+"b6g1",
+"f1g1",
+"h3f2"
+],
+"id": 103
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1340,
+"fen": "3r2k1/6pp/8/5Q2/2pP4/2q3P1/5RKP/8 w - - 0 36",
+"linha": [
+"f5f7",
+"g8h8",
+"f7f8",
+"d8f8",
+"f2f8"
+],
+"id": 104
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1351,
+"fen": "5rk1/5r1p/6bQ/p2pBp2/2pP3R/2q1P2P/P5PK/8 w - - 2 43",
+"linha": [
+"h6g6",
+"h7g6",
+"h4h8"
+],
+"id": 105
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1361,
+"fen": "5rk1/R5p1/5q1p/8/3p2Q1/1P6/P3rPPP/5RK1 b - - 3 38",
+"linha": [
+"f6f2",
+"f1f2",
+"e2e1",
+"f2f1",
+"e1f1"
+],
+"id": 106
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1373,
+"fen": "2r4k/pb4pp/1p6/3pP3/3Pn3/2Pq2NQ/PP5P/5R1K w - - 0 24",
+"linha": [
+"h3c8",
+"b7c8",
+"f1f8"
+],
+"id": 107
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1383,
+"fen": "2b1r1k1/ppq1rppp/3p4/2pP4/2P5/1P1P2PP/P3RQBK/5R2 w - - 3 24",
+"linha": [
+"f2f7",
+"e7f7",
+"e2e8",
+"f7f8",
+"f1f8"
+],
+"id": 108
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1406,
+"fen": "r5k1/p2qppbp/1p1p1np1/2p5/2Pn4/P1NPP1PP/1P3P2/1RBQ1RK1 b - - 0 14",
+"linha": [
+"d7h3",
+"e3d4",
+"f6g4",
+"d1g4",
+"h3g4"
+],
+"id": 109
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1426,
+"fen": "2r5/4ppkp/6p1/1p6/1P6/P3B3/1br2PPP/1R1R2K1 w - - 3 23",
+"linha": [
+"b1b2",
+"c2b2",
+"e3d4",
+"f7f6",
+"d4b2"
+],
+"id": 110
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1438,
+"fen": "1r6/pp4kp/3q1Rp1/2pNp3/2Pn2P1/3P3P/PP1Q4/6K1 b - - 2 23",
+"linha": [
+"d6f6",
+"d5f6",
+"d4f3",
+"g1f2",
+"f3d2"
+],
+"id": 111
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1449,
+"fen": "3Q4/5pk1/pr6/1r1B1KP1/8/8/8/8 b - - 6 61",
+"linha": [
+"b5d5",
+"d8d5",
+"b6b5",
+"d5b5",
+"a6b5"
+],
+"id": 112
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1470,
+"fen": "4r1k1/3R1pp1/1p3p1p/p1b5/2P5/P4NP1/1PnRrPBP/5K2 b - - 3 21",
+"linha": [
+"e2e1",
+"f3e1",
+"e8e1"
+],
+"id": 113
+},
+{
+"tema": "sacrifice",
+"level": 2,
+"rating": 1476,
+"fen": "1n4k1/5ppp/1p1qp3/rQ6/Pp1P1P2/4PP2/2rNK2P/R5R1 w - - 7 22",
+"linha": [
+"b5e8",
+"d6f8",
+"g1g7",
+"g8g7",
+"a1g1",
+"g7f6",
+"e8f8"
+],
+"id": 114
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1708,
+"fen": "r3n2k/2q1b2p/3p2p1/2n2N2/2B1P3/8/1Pp2B2/1NKR3R w - - 2 30",
+"linha": [
+"h1h7",
+"h8h7",
+"d1h1",
+"e7h4",
+"h1h4"
+],
+"id": 115
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1729,
+"fen": "2R5/3Nb1pk/1r5p/2pP4/1p2P3/3P4/4K1PP/8 b - - 2 39",
+"linha": [
+"b4b3",
+"d5d6",
+"e7d6",
+"d7b6",
+"b3b2",
+"b6c4",
+"b2b1q"
+],
+"id": 116
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1748,
+"fen": "r4rk1/1q1p2pp/p3p3/2p1Q3/8/1B6/PPP2PbP/3RR1K1 w - - 0 22",
+"linha": [
+"d1d7",
+"b7d7",
+"b3e6",
+"g8h8",
+"e6d7"
+],
+"id": 117
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1774,
+"fen": "7r/1p1q2k1/p4p1p/4n1p1/3N2P1/8/PP5Q/K1R5 w - - 1 36",
+"linha": [
+"c1c7",
+"d7c7",
+"d4e6",
+"g7g6",
+"e6c7"
+],
+"id": 118
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1786,
+"fen": "2kr2nr/pp1b1ppp/2nB4/1B1N4/Q2P4/7P/Pq1NKP2/8 w - - 2 16",
+"linha": [
+"d5b6",
+"a7b6",
+"a4a8",
+"c6b8",
+"a8b8"
+],
+"id": 119
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1799,
+"fen": "2rb1R2/pk3B2/bp2p3/3pP3/8/2P1B3/PP4PP/6K1 b - - 9 28",
+"linha": [
+"d8g5",
+"f8c8",
+"g5e3",
+"g1h1",
+"b7c8"
+],
+"id": 120
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1842,
+"fen": "1r1q1rk1/1b2bppp/p7/1p2pP2/3pp1Q1/P2P2P1/BPP4P/R1B2RK1 w - - 0 17",
+"linha": [
+"c1h6",
+"e7f6",
+"h6g7",
+"f6g7",
+"f5f6",
+"d8f6",
+"f1f6"
+],
+"id": 121
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1885,
+"fen": "r1b1rnk1/ppp1q1pp/8/3p3Q/8/2PBP1b1/PP1N2PP/R4RK1 w - - 0 17",
+"linha": [
+"f1f8",
+"g8f8",
+"a1f1"
+],
+"id": 122
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1908,
+"fen": "2r5/p4k1p/1p4p1/2P1pp2/8/1P2K3/P4PPP/2R5 w - - 1 28",
+"linha": [
+"c5b6",
+"c8c1",
+"b6b7"
+],
+"id": 123
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1938,
+"fen": "3b4/pp3p1p/2p3pk/4Q3/5P1K/1P2P1P1/PB5P/5q2 w - - 15 35",
+"linha": [
+"e5g5",
+"d8g5",
+"f4g5"
+],
+"id": 124
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1957,
+"fen": "1r6/pp2kppQ/2n1p1n1/3p2P1/5P2/2PqP3/PP1N4/2KR3R b - - 4 27",
+"linha": [
+"c6b4",
+"c3b4",
+"b8c8",
+"d2c4",
+"c8c4"
+],
+"id": 125
+},
+{
+"tema": "sacrifice",
+"level": 3,
+"rating": 1991,
+"fen": "5r1k/2R1R3/1p5p/3N2p1/8/3b4/Pr6/4K3 w - - 2 37",
+"linha": [
+"d5f6",
+"b2b1",
+"e1d2",
+"f8d8",
+"e7e8",
+"d8e8",
+"d2d3",
+"b1d1",
+"d3c2",
+"d1c1",
+"c2c1",
+"e8c8",
+"c7c8"
+],
+"id": 126
+}
+]
+}

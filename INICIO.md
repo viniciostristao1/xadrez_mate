@@ -27,9 +27,13 @@ usuário (`ATUALIZACOES`) · futuro (`IDEIAS`).
 
 ## ⭐ ESTADO ATUAL (2026-08-17) — ler primeiro pós-/clear
 
+**v0.9.0 — TÁTICA + IDIOMAS + BANCO MAIOR** (página inicial com Mates/Tática;
+tema tático: Espeto, Descoberta, Sacrifício; idiomas pt/en/es na
+engrenagem; 543 mates com difíceis 45+). Base anterior:
+
 **v0.8.0 — MATE ALEATÓRIO + LEIPZIG** (categoria surpresa mate 2/3 com +30%
 de pontos no lugar da sessão; peças Leipzig no lugar do Emoji; dica em
-amarelo intenso). Base anterior:
+amarelo intenso).
 
 **v0.6.0 — SESSÃO + EVOLUÇÃO** (sessão de treino com meta de tempo e resumo;
 gráfico da evolução do rating na home).
