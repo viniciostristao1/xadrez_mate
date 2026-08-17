@@ -1,4 +1,27 @@
-# APRENDIZADOS — notas técnicas e gotchas do Xeque-Mate
+# APRENDIZADOS — notas técnicas e gotchas do Mateflow
+
+## 2026-08-17 — v0.4.0
+
+### Assinatura de release (o bug do "pacote em conflito")
+- O `flutter create` padrão assina RELEASE com a chave **debug**; no GitHub
+  Actions o debug keystore é gerado novo a cada execução → **assinatura
+  diferente a cada build** → o Android recusa instalar por cima
+  ("pacote em conflito").
+- **Correção**: keystore de upload própria (`app/android/app/upload-keystore.jks`,
+  alias `upload`, gitignored) com a senha em `key.properties` (gitignored) e o
+  backup nos secrets do GitHub (`KEYSTORE_BASE64` + `KEYSTORE_PASSWORD` — o
+  workflow já decodifica e injeta). `build.gradle.kts` usa `signingConfig
+  release` se `key.properties` existir; sem ele, cai em debug (tolerante).
+- ⚠️ A troca de assinatura exige **desinstalar o app antigo UMA vez** (limitação
+  do Android); depois, atualizações com o mesmo versionCode crescente instalam
+  por cima.
+- **Guardar backup da keystore** — sem ela, não dá para atualizar por cima.
+  Fonte da verdade: o secret `KEYSTORE_BASE64` no repo.
+
+### Renome para Mateflow
+- Nome de exibição: `android:label="Mateflow"` no manifest + `title` do
+  MaterialApp. `applicationId` (`com.vinyapps.xadrez_mate`) NÃO muda — mudar
+  criaria outro pacote (novo conflito).
 
 ## 2026-08-17 — v0.2.0
 

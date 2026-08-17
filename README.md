@@ -1,8 +1,8 @@
-# ♞ Xeque-Mate
+# ♞ Mateflow
 
-Treinador de **problemas de xeque-mate** para Android: mate em **1, 2 ou 3
-lances**, com tabuleiro interativo que marca as casas legais de cada peça,
-aviso imediato de lance errado e xeque-mate ao final.
+Treinador de **problemas de xeque-mate** para Android (marca **Vinyapps**):
+mate em **1, 2 ou 3 lances**, com tabuleiro interativo que marca as casas
+legais de cada peça, aviso imediato de lance errado e xeque-mate ao final.
 
 - **318 problemas verificados** em **3 níveis** (Fácil / Médio / Difícil):
   198 são reais, de partidas (banco oficial do Lichess, CC0, com rating de

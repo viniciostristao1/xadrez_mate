@@ -1,4 +1,4 @@
-# Xeque-Mate — INÍCIO (ler primeiro em toda tarefa)
+# Mateflow — INÍCIO (ler primeiro em toda tarefa)
 
 App **Flutter** de treino de xadrez com **problemas de xeque-mate** (mate em
 **1, 2 ou 3 lances**). O usuário escolhe a dificuldade, seleciona uma peça,
@@ -27,9 +27,13 @@ usuário (`ATUALIZACOES`) · futuro (`IDEIAS`).
 
 ## ⭐ ESTADO ATUAL (2026-08-17) — ler primeiro pós-/clear
 
-**v0.3.0 — LOGO VINYAPPS** (ícone do launcher + home, preto/âmbar).
+**v0.4.0 — MATEFLOW + ASSINATURA PRÓPRIA** (nome novo, logo ao lado do
+título na home, keystore de upload permanente — instala/atualiza sem
+conflito; ver APRENDIZADOS §assinatura).
 
 Base anterior:
+
+**v0.3.0 — LOGO VINYAPPS** (ícone do launcher + home, preto/âmbar).
 
 **v0.2.0 — NÍVEIS + BANCO REAL** (`flutter analyze` limpo, **969 testes**
 passando, sendo 935 contra referência do python-chess). App completo:

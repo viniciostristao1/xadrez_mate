@@ -70,7 +70,7 @@ class _XequeMateAppState extends State<XequeMateApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Xeque-Mate',
+      title: 'Mateflow',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.dark,
       home: _queue.isEmpty

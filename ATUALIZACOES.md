@@ -1,5 +1,13 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.4.0 (2026-08-17)
+**Agora é Mateflow!** Nome novo, logo ao lado do título na página principal e
+**instalação/atualização sem conflito**: o app agora é assinado com uma chave
+própria permanente (antes cada versão usava uma assinatura temporária, e o
+Android recusava instalar por cima). ⚠️ Para instalar esta versão, **desinstale
+o Mateflow/Xeque-Mate antigo primeiro** (uma única vez; as próximas atualizações
+instalam por cima normalmente).
+
 ## v0.3.0 (2026-08-17)
 **Novo logo oficial Vinyapps** (preto e âmbar) no ícone do aplicativo e na
 tela inicial.

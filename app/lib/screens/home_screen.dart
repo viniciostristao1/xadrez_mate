@@ -58,42 +58,44 @@ class _HomeScreenState extends State<HomeScreen> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const SizedBox(height: 12),
-                    // Logo Vinyapps
-                    Center(
-                      child: Container(
-                        width: 96,
-                        height: 96,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(22),
-                          border: Border.all(color: AppColors.accent, width: 2),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black54,
-                              blurRadius: 14,
-                              offset: Offset(0, 4),
+                    // Logo Vinyapps ao lado do nome
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 52,
+                          height: 52,
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(13),
+                            border: Border.all(color: AppColors.accent, width: 1.6),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black54,
+                                blurRadius: 10,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(11),
+                            child: Image.asset(
+                              'assets/icon/app_icon.png',
+                              fit: BoxFit.cover,
                             ),
-                          ],
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image.asset(
-                            'assets/icon/app_icon.png',
-                            fit: BoxFit.cover,
                           ),
                         ),
-                      ),
-                    ),
-                    const SizedBox(height: 14),
-                    const Text(
-                      'Xeque-Mate',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: AppColors.text,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0.5,
-                      ),
+                        const SizedBox(width: 12),
+                        const Text(
+                          'Mateflow',
+                          style: TextStyle(
+                            color: AppColors.text,
+                            fontSize: 32,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 0.5,
+                          ),
+                        ),
+                      ],
                     ),
                     const SizedBox(height: 6),
                     Text(
