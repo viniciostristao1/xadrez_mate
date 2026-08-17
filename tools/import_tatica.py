@@ -42,8 +42,8 @@ TEMAS = {
 }
 # Chave canônica gravada no JSON (a UI usa estes nomes):
 TEMA_PT = {"skewer": "espeto", "discoveredAttack": "descoberta", "sacrifice": "sacrificio"}
-SAMPLE_PER_TEMA_NIVEL = 220
-GOAL_PER_NIVEL = {"1": 16, "2": 14, "3": 12}  # por tema (total ~42/tema)
+SAMPLE_PER_TEMA_NIVEL = 450
+GOAL_PER_NIVEL = {"1": 32, "2": 28, "3": 24}  # por tema (total ~84/tema)
 MIN_LINHA = 3  # mínimo de lances totais na linha (prefere linhas mais ricas)
 
 

@@ -21,12 +21,16 @@ class TaticaScreen extends StatefulWidget {
   final VoidCallback onNext;
   final VoidCallback onExit;
 
+  /// Mensagem de sucesso (tática ou defesa).
+  final String successMessage;
+
   const TaticaScreen({
     super.key,
     required this.puzzle,
     required this.pieceStyle,
     required this.onNext,
     required this.onExit,
+    this.successMessage = '',
   });
 
   @override
@@ -468,6 +472,9 @@ class TaticaScreenState extends State<TaticaScreen> {
                   puzzle: widget.puzzle,
                   elapsed: _elapsed,
                   ratingResult: _ratingResult,
+                  message: widget.successMessage.isEmpty
+                      ? S.boaTatica
+                      : widget.successMessage,
                 ),
             ],
           ),
@@ -480,6 +487,11 @@ class TaticaScreenState extends State<TaticaScreen> {
         'espeto' => S.espeto,
         'descoberta' => S.descoberta,
         'sacrificio' => S.sacrificio,
+        'defenderMate' => S.defenderMate,
+        'salvarPeca' => S.salvarPeca,
+        'contraAtaque' => S.contraAtaque,
+        'neutralizar' => S.neutralizar,
+        'defesaPrecisa' => S.defesaPrecisa,
         _ => widget.puzzle.tema,
       };
 }
@@ -613,10 +625,12 @@ class _SuccessCard extends StatelessWidget {
   final TaticaPuzzle puzzle;
   final int elapsed;
   final ({double delta, double novo, double resultado})? ratingResult;
+  final String message;
   const _SuccessCard({
     required this.puzzle,
     required this.elapsed,
     required this.ratingResult,
+    required this.message,
   });
 
   String get _elapsedLabel {
@@ -644,7 +658,7 @@ class _SuccessCard extends StatelessWidget {
                 const SizedBox(width: 8),
                 Flexible(
                   child: Text(
-                    S.boaTatica,
+                    message,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       color: AppColors.text,

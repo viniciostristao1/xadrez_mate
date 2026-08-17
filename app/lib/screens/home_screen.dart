@@ -8,12 +8,14 @@ import '../theme/app_colors.dart';
 class HomeScreen extends StatelessWidget {
   final VoidCallback onMates;
   final VoidCallback onTatica;
+  final VoidCallback onDefesa;
   final VoidCallback onConfig;
 
   const HomeScreen({
     super.key,
     required this.onMates,
     required this.onTatica,
+    required this.onDefesa,
     required this.onConfig,
   });
 
@@ -38,8 +40,8 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(24, 16, 24, 24),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(24, 16, 24, 28),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -51,8 +53,7 @@ class HomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(20),
-                    border:
-                        Border.all(color: AppColors.accent, width: 2),
+                    border: Border.all(color: AppColors.accent, width: 2),
                     boxShadow: const [
                       BoxShadow(
                         color: Colors.black54,
@@ -70,26 +71,26 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _BigButton(
-                      icon: Icons.flag_outlined,
-                      title: S.mates,
-                      subtitle: S.matesSub,
-                      onTap: onMates,
-                    ),
-                    const SizedBox(height: 20),
-                    _BigButton(
-                      icon: Icons.bolt_outlined,
-                      title: S.tatica,
-                      subtitle: S.taticaSub,
-                      onTap: onTatica,
-                    ),
-                  ],
-                ),
+              const SizedBox(height: 24),
+              _BigButton(
+                icon: Icons.flag_outlined,
+                title: S.mates,
+                subtitle: S.matesSub,
+                onTap: onMates,
+              ),
+              const SizedBox(height: 18),
+              _BigButton(
+                icon: Icons.bolt_outlined,
+                title: S.tatica,
+                subtitle: S.taticaSub,
+                onTap: onTatica,
+              ),
+              const SizedBox(height: 18),
+              _BigButton(
+                icon: Icons.shield_outlined,
+                title: S.defesa,
+                subtitle: S.defesaSub,
+                onTap: onDefesa,
               ),
             ],
           ),

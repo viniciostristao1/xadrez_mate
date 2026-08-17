@@ -1,0 +1,5609 @@
+{
+"version": 1,
+"puzzles": [
+{
+"tema": "contraAtaque",
+"rating": 779,
+"fen": "2r5/8/5k2/6p1/p1R3Pp/PpK4P/1P6/8 b - - 10 45",
+"linha": [
+"c8c4",
+"c3c4",
+"f6e5"
+],
+"level": 1,
+"id": 1
+},
+{
+"tema": "contraAtaque",
+"rating": 904,
+"fen": "8/3K4/r7/6k1/6p1/6Pp/3R3P/8 w - - 3 55",
+"linha": [
+"d2d5",
+"g5g6",
+"d5d6",
+"a6d6",
+"d7d6",
+"g6f6",
+"d6d5",
+"f6f5",
+"d5d4"
+],
+"level": 1,
+"id": 2
+},
+{
+"tema": "contraAtaque",
+"rating": 1042,
+"fen": "8/8/5r2/1p1pBk2/p1pP4/P1P2K2/1P6/8 w - - 0 47",
+"linha": [
+"e5f6",
+"f5f6",
+"f3f4"
+],
+"level": 1,
+"id": 3
+},
+{
+"tema": "contraAtaque",
+"rating": 1125,
+"fen": "3N1r2/R7/kp6/p2pPp1Q/2pP2P1/2q5/2P5/2K5 b - - 1 38",
+"linha": [
+"a6a7",
+"h5h7",
+"a7a6"
+],
+"level": 1,
+"id": 4
+},
+{
+"tema": "contraAtaque",
+"rating": 1132,
+"fen": "r6r/1p1k2p1/p2p1q1p/3QRb2/8/1PP5/P4PPP/R1B3K1 b - - 0 18",
+"linha": [
+"f6e5",
+"d5b7",
+"d7e6"
+],
+"level": 1,
+"id": 5
+},
+{
+"tema": "contraAtaque",
+"rating": 1148,
+"fen": "2k5/6K1/2q2Q2/p7/8/6P1/7P/8 b - - 0 66",
+"linha": [
+"c6f6",
+"g7f6",
+"a5a4"
+],
+"level": 1,
+"id": 6
+},
+{
+"tema": "contraAtaque",
+"rating": 1167,
+"fen": "4r1k1/5p2/6pp/1p6/p1q3P1/5P2/1P4P1/2Q1RK2 w - - 0 45",
+"linha": [
+"c1c4",
+"e8e1",
+"f1e1",
+"b5c4",
+"e1d2"
+],
+"level": 1,
+"id": 7
+},
+{
+"tema": "contraAtaque",
+"rating": 1186,
+"fen": "7k/p6p/1p1b4/8/1P1pBPq1/3Q4/P6P/7K w - - 3 31",
+"linha": [
+"d3d4",
+"g4g7",
+"d4d6",
+"g7a1",
+"h1g2"
+],
+"level": 1,
+"id": 8
+},
+{
+"tema": "contraAtaque",
+"rating": 1227,
+"fen": "1r6/6p1/7p/8/4k3/7P/1RK2PP1/8 b - - 0 45",
+"linha": [
+"b8b2",
+"c2b2",
+"e4d3"
+],
+"level": 1,
+"id": 9
+},
+{
+"tema": "contraAtaque",
+"rating": 1257,
+"fen": "8/8/4Nb2/1p5p/2k2PPP/5K2/8/8 b - - 0 52",
+"linha": [
+"h5g4",
+"f3g4",
+"b5b4"
+],
+"level": 1,
+"id": 10
+},
+{
+"tema": "contraAtaque",
+"rating": 1272,
+"fen": "2r3k1/5pb1/p5pp/1p2p3/1B1rR3/P2nR2P/B4PP1/6K1 w - - 10 32",
+"linha": [
+"e4d4",
+"e5d4",
+"e3d3",
+"c8c1",
+"g1h2"
+],
+"level": 1,
+"id": 11
+},
+{
+"tema": "contraAtaque",
+"rating": 1281,
+"fen": "7k/pp2p3/2p1Pr2/3p3p/3Q4/2P4q/PP6/1K2R3 w - - 0 37",
+"linha": [
+"d4f6",
+"e7f6",
+"e6e7",
+"h3f5",
+"b1a1"
+],
+"level": 1,
+"id": 12
+},
+{
+"tema": "contraAtaque",
+"rating": 1310,
+"fen": "8/4k3/5R2/3pPK2/p1pP4/2P5/r7/8 b - - 0 40",
+"linha": [
+"a2f2",
+"f5g6",
+"f2f6",
+"e5f6",
+"e7f8"
+],
+"level": 1,
+"id": 13
+},
+{
+"tema": "contraAtaque",
+"rating": 1338,
+"fen": "6k1/1p2npp1/p5qp/8/P7/4BN1P/1b3PP1/3Q2K1 w - - 0 27",
+"linha": [
+"d1d8",
+"g8h7",
+"d8e7",
+"g6b1",
+"g1h2"
+],
+"level": 1,
+"id": 14
+},
+{
+"tema": "contraAtaque",
+"rating": 1355,
+"fen": "8/p1p3rk/1p2Q2p/8/5P2/2P2b1K/P1P5/8 b - - 0 35",
+"linha": [
+"f3g4",
+"e6g4",
+"g7g4",
+"h3g4",
+"h7g6"
+],
+"level": 1,
+"id": 15
+},
+{
+"tema": "contraAtaque",
+"rating": 1376,
+"fen": "5Q2/1pr3qp/p5pk/8/8/1B4P1/P4P1P/6K1 w - - 5 30",
+"linha": [
+"f8f4",
+"g6g5",
+"f4d6",
+"g7g6",
+"d6c7",
+"g6b1",
+"g1g2"
+],
+"level": 1,
+"id": 16
+},
+{
+"tema": "contraAtaque",
+"rating": 1391,
+"fen": "6k1/p4pp1/1q2p2p/1P1pP3/r2PbQ2/7P/5BP1/2R3K1 w - - 0 31",
+"linha": [
+"c1c8",
+"g8h7",
+"f4f7",
+"a4a1",
+"g1h2"
+],
+"level": 1,
+"id": 17
+},
+{
+"tema": "contraAtaque",
+"rating": 1404,
+"fen": "1k2r2r/1pp4p/8/2b5/p1q4Q/P1P1p1P1/1P5P/RKB5 w - - 0 28",
+"linha": [
+"h4c4",
+"e3e2",
+"c1d2"
+],
+"level": 1,
+"id": 18
+},
+{
+"tema": "contraAtaque",
+"rating": 1441,
+"fen": "r3qr1k/1p2b1p1/4p1Qp/2ppP3/p4P2/2P1P1P1/PP4P1/1K1R3R w - - 1 21",
+"linha": [
+"h1h6",
+"g7h6",
+"g6h6",
+"h8g8",
+"d1h1"
+],
+"level": 1,
+"id": 19
+},
+{
+"tema": "contraAtaque",
+"rating": 1468,
+"fen": "8/8/8/8/2kPK3/3n4/2p5/7R b - - 3 62",
+"linha": [
+"d3f2",
+"e4e3",
+"f2h1",
+"e3d2",
+"c4b3"
+],
+"level": 1,
+"id": 20
+},
+{
+"tema": "contraAtaque",
+"rating": 1497,
+"fen": "8/3N2p1/4r1kp/2P1pp2/8/3K4/5PPP/8 w - - 1 38",
+"linha": [
+"d7f8",
+"g6f7",
+"f8e6",
+"f7e6",
+"d3c4"
+],
+"level": 1,
+"id": 21
+},
+{
+"tema": "contraAtaque",
+"rating": 1510,
+"fen": "8/8/K4k1p/6pP/6P1/P1r2P2/5R2/8 b - - 0 43",
+"linha": [
+"c3a3",
+"a6b5",
+"f6e5"
+],
+"level": 1,
+"id": 22
+},
+{
+"tema": "contraAtaque",
+"rating": 1515,
+"fen": "8/5Rp1/pr6/7k/5K1P/5P2/8/8 b - - 0 44",
+"linha": [
+"b6f6",
+"f7f6",
+"g7f6",
+"f4f5",
+"a6a5"
+],
+"level": 1,
+"id": 23
+},
+{
+"tema": "contraAtaque",
+"rating": 1535,
+"fen": "8/8/6kp/pp1p4/2pP2KP/P1P5/1P6/8 b - - 0 48",
+"linha": [
+"h6h5",
+"g4f4",
+"g6f6"
+],
+"level": 1,
+"id": 24
+},
+{
+"tema": "contraAtaque",
+"rating": 1551,
+"fen": "8/6p1/4k2p/4p3/p1P5/PR2K2P/6P1/8 b - - 0 44",
+"linha": [
+"a4b3",
+"e3d2",
+"e5e4"
+],
+"level": 1,
+"id": 25
+},
+{
+"tema": "contraAtaque",
+"rating": 1564,
+"fen": "r4b1r/p1k1p1p1/2p5/2p1P2p/1q2QB2/3P4/P1n3PP/R4RK1 w - - 2 22",
+"linha": [
+"e5e6",
+"c7d8",
+"e4c6",
+"b4d4",
+"g1h1"
+],
+"level": 1,
+"id": 26
+},
+{
+"tema": "contraAtaque",
+"rating": 1576,
+"fen": "8/6R1/3rk1p1/8/2K5/6P1/8/8 w - - 0 55",
+"linha": [
+"g7g6",
+"e6e5",
+"g6d6",
+"e5d6",
+"c4d4",
+"d6e6",
+"d4e4",
+"e6f6",
+"e4f4",
+"f6g6",
+"f4g4"
+],
+"level": 1,
+"id": 27
+},
+{
+"tema": "contraAtaque",
+"rating": 1595,
+"fen": "8/6k1/8/1K4pP/1R5r/P7/1P6/8 b - - 0 45",
+"linha": [
+"h4b4",
+"b5b4",
+"g5g4"
+],
+"level": 1,
+"id": 28
+},
+{
+"tema": "contraAtaque",
+"rating": 1612,
+"fen": "r7/4R3/1pkp4/p1pn4/8/2Nb2B1/P5PP/2R3K1 b - - 3 28",
+"linha": [
+"d5e7",
+"c1d1",
+"c5c4"
+],
+"level": 1,
+"id": 29
+},
+{
+"tema": "contraAtaque",
+"rating": 1615,
+"fen": "8/2p3k1/1p1p2pp/p2P4/P1PQb3/1Pq2N1P/6P1/7K b - - 8 33",
+"linha": [
+"c3d4",
+"f3d4",
+"g7f6",
+"h1g1",
+"f6e5",
+"d4c6",
+"e5f4"
+],
+"level": 1,
+"id": 30
+},
+{
+"tema": "contraAtaque",
+"rating": 1638,
+"fen": "7k/6p1/2p3qp/1pQpP3/3Pp3/7P/r3BPPK/8 w - - 6 43",
+"linha": [
+"c5f8",
+"h8h7",
+"e2g4"
+],
+"level": 2,
+"id": 31
+},
+{
+"tema": "contraAtaque",
+"rating": 1657,
+"fen": "8/p7/6p1/P1KRrk1p/1P6/8/8/8 w - - 3 53",
+"linha": [
+"d5e5",
+"f5e5",
+"b4b5"
+],
+"level": 2,
+"id": 32
+},
+{
+"tema": "contraAtaque",
+"rating": 1690,
+"fen": "5rk1/p4pp1/1p2p2p/2nb3P/1qP5/3B1P2/P1PQ2P1/2KR3R b - - 4 23",
+"linha": [
+"b4a3",
+"c1b1",
+"c5a4"
+],
+"level": 2,
+"id": 33
+},
+{
+"tema": "contraAtaque",
+"rating": 1709,
+"fen": "r1b1kr2/2pqnRb1/pp1p3p/3Pp2Q/2P1P2B/2NB3P/PP4P1/R5K1 b q - 0 18",
+"linha": [
+"f8f7",
+"a1f1",
+"e7g8"
+],
+"level": 2,
+"id": 34
+},
+{
+"tema": "contraAtaque",
+"rating": 1723,
+"fen": "6R1/6r1/5pk1/5p1p/7P/6P1/5PK1/8 w - - 4 46",
+"linha": [
+"g8g7",
+"g6g7",
+"g2f3"
+],
+"level": 2,
+"id": 35
+},
+{
+"tema": "contraAtaque",
+"rating": 1724,
+"fen": "7k/1p2p1bp/r1p1P3/p5Q1/4B1N1/2B1K3/PPP5/3qr1N1 w - - 15 30",
+"linha": [
+"c3e1",
+"g7d4",
+"e3f4",
+"d1c1",
+"f4f5"
+],
+"level": 2,
+"id": 36
+},
+{
+"tema": "contraAtaque",
+"rating": 1746,
+"fen": "8/8/r4k2/P2Kp3/8/R4b2/5P2/8 w - - 2 53",
+"linha": [
+"a3f3",
+"f6e7",
+"f3a3"
+],
+"level": 2,
+"id": 37
+},
+{
+"tema": "contraAtaque",
+"rating": 1774,
+"fen": "6k1/p1q3b1/2p3QR/3p4/5r2/4PK2/Pr6/6R1 w - - 0 29",
+"linha": [
+"e3f4",
+"b2f2",
+"f3f2",
+"c7f4",
+"f2e2"
+],
+"level": 2,
+"id": 38
+},
+{
+"tema": "contraAtaque",
+"rating": 1784,
+"fen": "4R3/8/K7/1P2r3/5k2/8/8/8 b - - 2 65",
+"linha": [
+"e5e8",
+"a6b6",
+"f4e5"
+],
+"level": 2,
+"id": 39
+},
+{
+"tema": "contraAtaque",
+"rating": 1809,
+"fen": "8/8/2R4r/6k1/4p3/8/4KP2/8 w - - 0 52",
+"linha": [
+"c6h6",
+"g5h6",
+"e2e3",
+"h6g5",
+"e3e4",
+"g5f6",
+"e4f4"
+],
+"level": 2,
+"id": 40
+},
+{
+"tema": "contraAtaque",
+"rating": 1821,
+"fen": "8/p1Q3pk/7p/8/1qNn4/3P3P/PP3PP1/6K1 b - - 0 29",
+"linha": [
+"b4e1",
+"g1h2",
+"d4e2"
+],
+"level": 2,
+"id": 41
+},
+{
+"tema": "contraAtaque",
+"rating": 1825,
+"fen": "rnbqk1r1/pp4bp/2p1p3/2PnPP2/1PB5/8/PB5P/RN1Q1RK1 w q - 1 17",
+"linha": [
+"d1h5",
+"e8e7",
+"f5f6",
+"g7f6",
+"g1h1"
+],
+"level": 2,
+"id": 42
+},
+{
+"tema": "contraAtaque",
+"rating": 1841,
+"fen": "3k4/pQ6/2p2p2/2Pqp3/8/6PK/5P1P/8 b - - 2 35",
+"linha": [
+"d5d7",
+"b7d7",
+"d8d7",
+"h3g4",
+"a7a5"
+],
+"level": 2,
+"id": 43
+},
+{
+"tema": "contraAtaque",
+"rating": 1862,
+"fen": "r2q1rk1/3n1ppp/p3pb2/3p4/8/1P1BRQ2/PB3PPP/2R3K1 w - - 4 18",
+"linha": [
+"d3h7",
+"g8h7",
+"f3h5",
+"h7g8",
+"e3h3"
+],
+"level": 2,
+"id": 44
+},
+{
+"tema": "contraAtaque",
+"rating": 1884,
+"fen": "8/8/4R3/3p1n1k/3P1P2/5K2/8/8 b - - 0 53",
+"linha": [
+"f5d4",
+"f3e3",
+"d4e6",
+"f4f5",
+"e6c7"
+],
+"level": 2,
+"id": 45
+},
+{
+"tema": "contraAtaque",
+"rating": 1892,
+"fen": "8/p5p1/2pk4/6p1/2PK2P1/P6P/8/8 b - - 0 35",
+"linha": [
+"c6c5",
+"d4e4",
+"d6e6"
+],
+"level": 2,
+"id": 46
+},
+{
+"tema": "contraAtaque",
+"rating": 1911,
+"fen": "8/p2k4/2p5/8/Q7/2BK1p2/PP3q2/8 b - - 1 40",
+"linha": [
+"f2e2",
+"d3d4",
+"f3f2",
+"a4a7",
+"d7e6"
+],
+"level": 2,
+"id": 47
+},
+{
+"tema": "contraAtaque",
+"rating": 1924,
+"fen": "6k1/2b5/6K1/6P1/4R2P/5q2/8/8 w - - 0 51",
+"linha": [
+"e4e8",
+"f3f8",
+"e8f8",
+"g8f8",
+"g6h7"
+],
+"level": 2,
+"id": 48
+},
+{
+"tema": "contraAtaque",
+"rating": 1935,
+"fen": "8/6k1/5R2/4n1Kr/6P1/8/8/8 w - - 0 59",
+"linha": [
+"g4h5",
+"e5f7",
+"g5f5"
+],
+"level": 2,
+"id": 49
+},
+{
+"tema": "contraAtaque",
+"rating": 1947,
+"fen": "r3kb1r/pp1R1ppp/4qn2/1B2p1B1/4P3/5Q2/PPP2PPP/2K4R b kq - 0 12",
+"linha": [
+"f6d7",
+"h1d1",
+"f8d6"
+],
+"level": 2,
+"id": 50
+},
+{
+"tema": "contraAtaque",
+"rating": 1954,
+"fen": "r2q1rk1/p1p3pp/1pnp4/bN2pn2/P1P5/5NB1/5PPP/1R1Q1RK1 w - - 0 17",
+"linha": [
+"d1d5",
+"g8h8",
+"d5c6",
+"a7a6",
+"b5a3"
+],
+"level": 2,
+"id": 51
+},
+{
+"tema": "contraAtaque",
+"rating": 1966,
+"fen": "Q7/5pk1/6Rn/2P4p/3P2pP/4P1P1/1rpq4/5RK1 b - - 3 50",
+"linha": [
+"g7g6",
+"a8e4",
+"g6g7"
+],
+"level": 2,
+"id": 52
+},
+{
+"tema": "contraAtaque",
+"rating": 2000,
+"fen": "8/4k3/6p1/5bPp/4BP2/5K2/8/8 b - - 4 55",
+"linha": [
+"f5e4",
+"f3e4",
+"e7e6",
+"f4f5",
+"g6f5",
+"e4f4",
+"h5h4"
+],
+"level": 2,
+"id": 53
+},
+{
+"tema": "contraAtaque",
+"rating": 2024,
+"fen": "5rk1/1N4pp/p1nQ4/8/8/8/qP3bPP/3RR2K b - - 1 26",
+"linha": [
+"f2e1",
+"d1e1",
+"a2f7",
+"h2h4",
+"f7b7",
+"d6d5",
+"g8h8"
+],
+"level": 2,
+"id": 54
+},
+{
+"tema": "contraAtaque",
+"rating": 2041,
+"fen": "4k3/7r/p1PPK3/4P2p/8/1p6/7P/8 w - - 0 52",
+"linha": [
+"d6d7",
+"e8d8",
+"e6d6",
+"h7h6",
+"e5e6",
+"h6e6",
+"d6e6",
+"d8c7",
+"e6e7"
+],
+"level": 2,
+"id": 55
+},
+{
+"tema": "contraAtaque",
+"rating": 2046,
+"fen": "7r/6p1/Pk6/8/1P6/8/R1K5/8 b - - 2 49",
+"linha": [
+"h8h2",
+"c2b3",
+"h2a2",
+"b3a2",
+"g7g5"
+],
+"level": 2,
+"id": 56
+},
+{
+"tema": "contraAtaque",
+"rating": 2067,
+"fen": "5rk1/6p1/2pR3p/1p2pNn1/2q1P3/2P1Q1P1/r6P/5RK1 w - - 11 31",
+"linha": [
+"f5e7",
+"g8h7",
+"f1f8",
+"a2a1",
+"g1g2"
+],
+"level": 2,
+"id": 57
+},
+{
+"tema": "contraAtaque",
+"rating": 2082,
+"fen": "8/2Q2pk1/8/3pp2P/2q5/2P5/KP6/8 w - - 2 37",
+"linha": [
+"c7c4",
+"d5c4",
+"b2b4"
+],
+"level": 2,
+"id": 58
+},
+{
+"tema": "contraAtaque",
+"rating": 2096,
+"fen": "4Rbk1/p4p1p/6p1/8/1PQ1N3/2P4P/2rq1PP1/6K1 b - - 2 31",
+"linha": [
+"c2c1",
+"g1h2",
+"d2f4",
+"g2g3",
+"f4f3",
+"e8f8",
+"g8f8",
+"c4c5",
+"f8g8"
+],
+"level": 2,
+"id": 59
+},
+{
+"tema": "contraAtaque",
+"rating": 2103,
+"fen": "8/5pp1/6bp/8/2kp2PP/3N4/P3KP2/8 w - - 3 41",
+"linha": [
+"d3e5",
+"c4c3",
+"e5g6",
+"f7g6",
+"e2d1"
+],
+"level": 2,
+"id": 60
+},
+{
+"tema": "contraAtaque",
+"rating": 2112,
+"fen": "rn4k1/pp3p2/1bp4p/6p1/4r1P1/PNqB1K2/2P1N2P/R2Q3R b - - 1 18",
+"linha": [
+"c3f6",
+"f3e4",
+"b8d7"
+],
+"level": 3,
+"id": 61
+},
+{
+"tema": "contraAtaque",
+"rating": 2123,
+"fen": "1k3r2/7b/p1Pr3p/3N2p1/2p1pp2/8/P5PP/3R1RK1 w - - 0 30",
+"linha": [
+"d1b1",
+"b8c8",
+"d5e7",
+"c8d8",
+"b1b7"
+],
+"level": 3,
+"id": 62
+},
+{
+"tema": "contraAtaque",
+"rating": 2139,
+"fen": "5Q2/8/1p1q4/p1k5/3p4/P4P2/1P6/K7 w - - 4 50",
+"linha": [
+"f8d6",
+"c5d6",
+"a1b1"
+],
+"level": 3,
+"id": 63
+},
+{
+"tema": "contraAtaque",
+"rating": 2148,
+"fen": "r2r4/p5kp/1p2Kpp1/2p5/2P5/1P2P1P1/P4P1P/3R1R2 b - - 0 24",
+"linha": [
+"d8e8",
+"e6d5",
+"a8c8"
+],
+"level": 3,
+"id": 64
+},
+{
+"tema": "contraAtaque",
+"rating": 2158,
+"fen": "3q2k1/1N3pp1/4p2p/2b1P3/p1p1P3/2B4P/1Q3PP1/6K1 b - - 1 38",
+"linha": [
+"d8d1",
+"g1h2",
+"a4a3",
+"b2a1",
+"d1a1",
+"c3a1",
+"c5b4"
+],
+"level": 3,
+"id": 65
+},
+{
+"tema": "contraAtaque",
+"rating": 2164,
+"fen": "8/8/5k1p/2p1pbp1/2P1B3/1P3KP1/7P/8 b - - 1 34",
+"linha": [
+"g5g4",
+"f3e3",
+"f5e4",
+"e3e4",
+"f6e6",
+"e4d3",
+"e6f5"
+],
+"level": 3,
+"id": 66
+},
+{
+"tema": "contraAtaque",
+"rating": 2175,
+"fen": "r4rk1/ppp2pR1/3q1b2/3p3Q/3B4/2P5/PP3P1P/2K1R3 b - - 0 21",
+"linha": [
+"f6g7",
+"e1g1",
+"f7f6"
+],
+"level": 3,
+"id": 67
+},
+{
+"tema": "contraAtaque",
+"rating": 2185,
+"fen": "5k2/4r1p1/PP3p2/2P4p/2Q5/4Pq2/5P2/1K1R4 b - - 0 37",
+"linha": [
+"f3d1",
+"b1b2",
+"e7d7"
+],
+"level": 3,
+"id": 68
+},
+{
+"tema": "contraAtaque",
+"rating": 2189,
+"fen": "8/8/4k2p/1p1pp1p1/pPpP1P2/P1P1K1PP/8/8 b - - 0 48",
+"linha": [
+"g5f4",
+"g3f4",
+"e5e4"
+],
+"level": 3,
+"id": 69
+},
+{
+"tema": "contraAtaque",
+"rating": 2208,
+"fen": "3r4/P1R5/7P/4p3/8/4K3/2p5/1k6 b - - 0 55",
+"linha": [
+"c2c1q",
+"c7c1",
+"b1c1",
+"e3e4",
+"d8e8"
+],
+"level": 3,
+"id": 70
+},
+{
+"tema": "contraAtaque",
+"rating": 2220,
+"fen": "3kr3/1p1r2p1/pq1b1p1p/3p3P/6Q1/P1PB2B1/1P3PP1/2K1R3 w - - 2 26",
+"linha": [
+"e1e8",
+"d8e8",
+"g4e6",
+"e8d8",
+"d3f5"
+],
+"level": 3,
+"id": 71
+},
+{
+"tema": "contraAtaque",
+"rating": 2248,
+"fen": "rk5r/1b3R2/pp2p2q/4P2p/B6B/4p2P/PP4P1/5Q1K w - - 0 28",
+"linha": [
+"f7b7",
+"b8b7",
+"f1f7",
+"b7b8",
+"h4e7"
+],
+"level": 3,
+"id": 72
+},
+{
+"tema": "contraAtaque",
+"rating": 2252,
+"fen": "R7/6r1/5ppk/7p/5P1P/5KP1/8/8 w - - 6 58",
+"linha": [
+"a8h8",
+"g7h7",
+"h8h7",
+"h6h7",
+"f3e4",
+"h7g8",
+"e4d5"
+],
+"level": 3,
+"id": 73
+},
+{
+"tema": "contraAtaque",
+"rating": 2258,
+"fen": "8/6k1/2p1r1p1/p2p4/3P1K2/P1P5/1P3R2/8 b - - 9 51",
+"linha": [
+"e6f6",
+"f4e3",
+"f6f2",
+"e3f2",
+"a5a4"
+],
+"level": 3,
+"id": 74
+},
+{
+"tema": "contraAtaque",
+"rating": 2292,
+"fen": "4Qrk1/pp4p1/4b2p/4N3/1P3q2/P7/6PP/2R4K w - - 2 30",
+"linha": [
+"e8e6",
+"g8h7",
+"c1g1"
+],
+"level": 3,
+"id": 75
+},
+{
+"tema": "contraAtaque",
+"rating": 2322,
+"fen": "8/8/5P2/1kr4R/8/6K1/8/8 b - - 0 52",
+"linha": [
+"c5h5",
+"g3g4",
+"h5h8",
+"g4f5",
+"b5c6"
+],
+"level": 3,
+"id": 76
+},
+{
+"tema": "contraAtaque",
+"rating": 2332,
+"fen": "r4r1k/ppp4p/2n5/2b5/8/6N1/PPPP2PP/R1B2R1K b - - 8 18",
+"linha": [
+"f8f1",
+"g3f1",
+"a8f8",
+"f1g3",
+"f8e8"
+],
+"level": 3,
+"id": 77
+},
+{
+"tema": "contraAtaque",
+"rating": 2346,
+"fen": "8/5Rkp/p5p1/1p6/3P2KP/1P6/1P6/8 b - - 0 62",
+"linha": [
+"g7f7",
+"g4f4",
+"f7f6",
+"f4e4",
+"f6e6"
+],
+"level": 3,
+"id": 78
+},
+{
+"tema": "contraAtaque",
+"rating": 2353,
+"fen": "r7/1p4kp/1N3pp1/2p5/p7/2P5/5PPP/5NK1 w - - 0 30",
+"linha": [
+"b6a8",
+"a4a3",
+"f1e3",
+"a3a2",
+"e3c2"
+],
+"level": 3,
+"id": 79
+},
+{
+"tema": "contraAtaque",
+"rating": 2362,
+"fen": "2krRK2/1p6/1P3nP1/8/8/8/8/8 w - - 0 64",
+"linha": [
+"e8d8",
+"c8d8",
+"g6g7",
+"d8d7",
+"f8f7",
+"f6g4",
+"f7g6"
+],
+"level": 3,
+"id": 80
+},
+{
+"tema": "contraAtaque",
+"rating": 2379,
+"fen": "r1bq1rk1/pp1n4/4pbp1/7Q/3p4/2N1B3/PPP3PP/R4RK1 w - - 0 17",
+"linha": [
+"h5g6",
+"f6g7",
+"e3h6",
+"d8e7",
+"c3e4"
+],
+"level": 3,
+"id": 81
+},
+{
+"tema": "contraAtaque",
+"rating": 2394,
+"fen": "8/5k2/6p1/6P1/3r1p2/2PK4/8/8 w - - 0 72",
+"linha": [
+"d3d4",
+"f7e6",
+"c3c4",
+"f4f3",
+"d4e3",
+"f3f2",
+"e3f2",
+"e6f5",
+"c4c5"
+],
+"level": 3,
+"id": 82
+},
+{
+"tema": "contraAtaque",
+"rating": 2410,
+"fen": "4Q3/5p1k/p2p2pp/1prq1P2/8/1P6/P5PP/5RK1 w - - 2 37",
+"linha": [
+"f5g6",
+"h7g6",
+"e8g8",
+"g6h5",
+"h2h3",
+"d5d4",
+"g1h1"
+],
+"level": 3,
+"id": 83
+},
+{
+"tema": "contraAtaque",
+"rating": 2419,
+"fen": "r4k2/1b3ppQ/p2N3p/1p6/3b1P1q/3B1R1P/PPP3P1/7K b - - 0 26",
+"linha": [
+"b7f3",
+"h7h8",
+"f8e7",
+"d6f5",
+"e7d7"
+],
+"level": 3,
+"id": 84
+},
+{
+"tema": "contraAtaque",
+"rating": 2469,
+"fen": "3b4/7p/8/P2p4/3kpKP1/7P/3B4/8 w - - 1 47",
+"linha": [
+"d2e3",
+"d4d3",
+"a5a6",
+"d8c7",
+"f4f5",
+"c7b8",
+"a6a7",
+"b8a7",
+"e3a7",
+"e4e3",
+"f5e5",
+"e3e2",
+"a7f2"
+],
+"level": 3,
+"id": 85
+},
+{
+"tema": "contraAtaque",
+"rating": 2505,
+"fen": "8/5P1P/1p4Kr/8/6P1/8/2p5/k7 w - - 1 63",
+"linha": [
+"g6h6",
+"c2c1q",
+"g4g5",
+"c1c6",
+"h6g7"
+],
+"level": 3,
+"id": 86
+},
+{
+"tema": "contraAtaque",
+"rating": 2521,
+"fen": "8/2p5/3k4/3pNqbp/QP1P2p1/5P2/PKP5/4r1NR b - - 1 28",
+"linha": [
+"g5c1",
+"b2c3",
+"e1e5",
+"a4a6",
+"c7c6"
+],
+"level": 3,
+"id": 87
+},
+{
+"tema": "contraAtaque",
+"rating": 2550,
+"fen": "8/6p1/2k4p/p1r5/3K4/1PR2P1P/8/8 b - - 13 46",
+"linha": [
+"c5c3",
+"d4c3",
+"g7g5"
+],
+"level": 3,
+"id": 88
+},
+{
+"tema": "contraAtaque",
+"rating": 2592,
+"fen": "r1b2rk1/3n1ppp/p2pp3/q5b1/2PQ3P/2NB4/PP4PR/3K2N1 w - - 0 17",
+"linha": [
+"d3h7",
+"g8h7",
+"h4g5",
+"h7g6",
+"d4h4"
+],
+"level": 3,
+"id": 89
+},
+{
+"tema": "contraAtaque",
+"rating": 2613,
+"fen": "5k2/5pp1/p7/1p1p2p1/2bP2P1/4RPK1/P5RP/6r1 b - - 5 34",
+"linha": [
+"g1g2",
+"g3g2",
+"b5b4",
+"a2a4",
+"b4b3",
+"e3e1",
+"c4d3"
+],
+"level": 3,
+"id": 90
+},
+{
+"tema": "defesaPrecisa",
+"rating": 861,
+"fen": "3r1r2/8/2Q1k1p1/3ppq2/8/2P3P1/PP3PK1/3R3R b - - 1 38",
+"linha": [
+"d8d6",
+"c6d6",
+"e6d6"
+],
+"level": 1,
+"id": 91
+},
+{
+"tema": "defesaPrecisa",
+"rating": 975,
+"fen": "8/8/8/1p5k/1P6/1P2Kp2/8/8 b - - 0 63",
+"linha": [
+"h5g4",
+"e3f2",
+"g4f4"
+],
+"level": 1,
+"id": 92
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1039,
+"fen": "2Q4k/6p1/8/2p1q2P/1p1bPr2/1P1R3K/P5R1/8 b - - 3 37",
+"linha": [
+"h8h7",
+"c8g4",
+"f4g4"
+],
+"level": 1,
+"id": 93
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1133,
+"fen": "8/p2Q2k1/1p2p1pn/1P1p1p1R/3P1P2/qN2r3/P1r3PP/R5K1 b - - 3 40",
+"linha": [
+"h6f7",
+"h5h7",
+"g7h7"
+],
+"level": 1,
+"id": 94
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1147,
+"fen": "8/1k6/ppP5/1P1p4/3P4/4K3/8/8 b - - 0 44",
+"linha": [
+"b7c7",
+"e3d2",
+"a6b5"
+],
+"level": 1,
+"id": 95
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1195,
+"fen": "r1bkr3/ppp2ppp/8/8/8/4P1P1/PP1P1bBP/R1Bn1K1R w - - 1 12",
+"linha": [
+"f1e2",
+"c8g4",
+"g2f3"
+],
+"level": 1,
+"id": 96
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1259,
+"fen": "4r1k1/pp3p1p/3p2p1/8/3n4/P2RN1q1/1P6/1B1Q2K1 w - - 1 34",
+"linha": [
+"e3g2",
+"d4e2",
+"d1e2",
+"e8e2",
+"d3g3"
+],
+"level": 1,
+"id": 97
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1312,
+"fen": "4k3/pp3pr1/5p2/8/6q1/2P1BB2/PP3PP1/3R1RK1 b - - 1 21",
+"linha": [
+"g4f3",
+"e3g5",
+"g7g5",
+"f1e1",
+"e8f8"
+],
+"level": 1,
+"id": 98
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1329,
+"fen": "8/8/1p5p/p7/P5Pp/1P5P/k1K5/8 w - - 0 45",
+"linha": [
+"c2c3",
+"a2a3",
+"c3c4"
+],
+"level": 1,
+"id": 99
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1350,
+"fen": "rnb1kbnr/pp1pq1pp/2p2p2/4N2Q/3PP3/8/PPP2PPP/RNB1KB1R b KQkq - 2 5",
+"linha": [
+"g7g6",
+"h5h4",
+"f6e5"
+],
+"level": 1,
+"id": 100
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1399,
+"fen": "8/8/k6p/p4p1P/K1p1pP2/2P1P3/1P6/8 b - - 0 49",
+"linha": [
+"a6b6",
+"a4a3",
+"b6b5",
+"a3a2",
+"b5a4"
+],
+"level": 1,
+"id": 101
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1434,
+"fen": "r5k1/1pR4N/3p2n1/p2Ppr2/8/7P/1P1Q1P2/q3K1R1 w - - 1 25",
+"linha": [
+"c7c1",
+"a1c1",
+"d2c1"
+],
+"level": 1,
+"id": 102
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1446,
+"fen": "8/7n/p5Rp/3R4/4p2k/4q2P/PP4P1/6K1 w - - 1 41",
+"linha": [
+"g1h2",
+"e3f4",
+"g2g3",
+"f4g3",
+"g6g3"
+],
+"level": 1,
+"id": 103
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1459,
+"fen": "2R5/7k/6pp/4NB1q/3p1P2/3P1KP1/7r/8 w - - 3 50",
+"linha": [
+"f5g4",
+"h2f2",
+"f3f2"
+],
+"level": 1,
+"id": 104
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1549,
+"fen": "2r2rk1/pb1nqpp1/1p5p/3N1B2/3Pn3/5N2/PPQ2PPP/2R2RK1 b - - 0 16",
+"linha": [
+"b7d5",
+"c2c8",
+"f8c8",
+"c1c8",
+"d7f8"
+],
+"level": 1,
+"id": 105
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1551,
+"fen": "r1b4r/ppp1kBpp/2p5/2b4Q/4n2q/2P4P/PP1P2P1/RNB2RK1 w - - 0 11",
+"linha": [
+"d2d4",
+"h4h5",
+"f7h5"
+],
+"level": 1,
+"id": 106
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1557,
+"fen": "1r3rk1/p4p2/2p2Q2/4p3/4P3/1P4B1/P1PqB1PP/7K w - - 1 27",
+"linha": [
+"g3e5",
+"d2c1",
+"e2f1"
+],
+"level": 1,
+"id": 107
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1561,
+"fen": "3r1rk1/pppb1pb1/6pp/2qNp3/4P3/PnPP2P1/1P4BP/R1BQ1RK1 w - - 1 19",
+"linha": [
+"c1e3",
+"c5d6",
+"d1b3"
+],
+"level": 1,
+"id": 108
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1583,
+"fen": "2k3r1/pp1b1p2/2pp1q2/8/2BpP2P/2Q2nb1/PPP5/2K2R1R w - - 0 24",
+"linha": [
+"c3f3",
+"f6h6",
+"c1b1"
+],
+"level": 1,
+"id": 109
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1628,
+"fen": "1Q4k1/6p1/3rb2p/8/8/2P2qN1/PP3P1P/5RK1 b - - 1 25",
+"linha": [
+"g8h7",
+"b8d6",
+"e6h3",
+"d6d5",
+"f3d5"
+],
+"level": 2,
+"id": 110
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1638,
+"fen": "8/7K/6p1/5p2/4p3/1k4P1/5P1P/8 b - - 0 44",
+"linha": [
+"g6g5",
+"g3g4",
+"f5f4"
+],
+"level": 2,
+"id": 111
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1641,
+"fen": "8/2p5/p1n5/1pP1p2k/1P1p4/P2P3q/5P2/R4KR1 w - - 0 35",
+"linha": [
+"f1e2",
+"e5e4",
+"g1h1",
+"e4d3",
+"e2d2"
+],
+"level": 2,
+"id": 112
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1685,
+"fen": "8/8/8/5Qp1/8/6b1/P1P2k2/1KN3q1 b - - 1 57",
+"linha": [
+"g3f4",
+"f5c5",
+"f4e3"
+],
+"level": 2,
+"id": 113
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1696,
+"fen": "r2r2k1/4Rp1p/6pB/b7/P1q1P3/5Q1P/6P1/7K w - - 0 35",
+"linha": [
+"f3f6",
+"a5c3",
+"e4e5"
+],
+"level": 2,
+"id": 114
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1717,
+"fen": "8/8/pk6/2N3R1/P1P5/1P1pn3/8/6K1 b - - 0 45",
+"linha": [
+"d3d2",
+"a4a5",
+"b6c6",
+"c5e4",
+"d2d1q"
+],
+"level": 2,
+"id": 115
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1732,
+"fen": "8/8/8/pp1p1k2/6pP/PPP3K1/8/8 b - - 0 41",
+"linha": [
+"b5b4",
+"c3b4",
+"a5b4",
+"a3a4",
+"d5d4"
+],
+"level": 2,
+"id": 116
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1751,
+"fen": "r5nr/p1Nk1Qpp/1pn5/1Bb1p3/4P3/8/PPP3qP/R1BK3R b - - 0 13",
+"linha": [
+"g8e7",
+"f7f1",
+"g2f1"
+],
+"level": 2,
+"id": 117
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1772,
+"fen": "8/P7/8/4k3/3p3P/rR2pK2/8/8 b - - 0 44",
+"linha": [
+"a3a7",
+"b3b5",
+"e5d6"
+],
+"level": 2,
+"id": 118
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1786,
+"fen": "rn1qk2r/pp3pp1/3Nbb1p/4p3/4P3/3B4/PPP2PPP/RN1QK2R b KQkq - 0 10",
+"linha": [
+"d8d6",
+"d3b5",
+"e8e7"
+],
+"level": 2,
+"id": 119
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1851,
+"fen": "8/7p/6p1/1p2k1PP/1p2P3/1P3K2/8/8 w - - 0 35",
+"linha": [
+"h5g6",
+"h7g6",
+"f3e3"
+],
+"level": 2,
+"id": 120
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1862,
+"fen": "3r1rk1/p2q1p1p/1p3Pp1/2p3P1/2PP1p2/2P4Q/PB5P/1R4K1 w - - 0 26",
+"linha": [
+"h3h6",
+"d7g4",
+"g1f2",
+"g4h4",
+"h6h4"
+],
+"level": 2,
+"id": 121
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1920,
+"fen": "8/5p2/4p1p1/1pp1PpP1/P2k1P2/1P4P1/3K4/8 b - - 0 36",
+"linha": [
+"b5a4",
+"b3a4",
+"d4c4",
+"a4a5",
+"c4b5",
+"d2c3",
+"b5a5",
+"c3c4",
+"a5b6"
+],
+"level": 2,
+"id": 122
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1938,
+"fen": "8/8/8/3k4/1K5p/2P2Np1/8/8 b - - 1 53",
+"linha": [
+"h4h3",
+"c3c4",
+"d5c6"
+],
+"level": 2,
+"id": 123
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1941,
+"fen": "r3k2r/pb1p1ppp/3Bp3/1BP5/1n6/q3PK2/3Q1PPP/3R4 w kq - 0 22",
+"linha": [
+"c5c6",
+"d7c6",
+"d6b4",
+"a3b4",
+"d2b4"
+],
+"level": 2,
+"id": 124
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1947,
+"fen": "8/4k2B/6p1/4Kp2/5P1p/4P3/8/8 b - - 1 41",
+"linha": [
+"e7f7",
+"e3e4",
+"h4h3",
+"e4f5",
+"h3h2",
+"f5g6",
+"f7g7"
+],
+"level": 2,
+"id": 125
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1950,
+"fen": "2r2rk1/pb6/1p1pp1pp/2nPp3/2P3P1/qPR1Q3/5PBP/5RK1 w - - 0 23",
+"linha": [
+"e3h6",
+"c8c7",
+"c3h3"
+],
+"level": 2,
+"id": 126
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1975,
+"fen": "8/5k2/3p1Ppp/3P2P1/5K2/8/8/8 w - - 0 60",
+"linha": [
+"g5h6",
+"f7f6",
+"f4g4"
+],
+"level": 2,
+"id": 127
+},
+{
+"tema": "defesaPrecisa",
+"rating": 1987,
+"fen": "3r1rk1/p1p4p/2Q3p1/3p4/2PP4/4P1qP/PP4P1/1R2R1K1 b - - 0 20",
+"linha": [
+"f8f2",
+"c6e6",
+"g8f8",
+"e6f6",
+"f2f6"
+],
+"level": 2,
+"id": 128
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2009,
+"fen": "8/8/2p2k2/p5p1/Pp1P1pPP/1P3K2/8/8 b - - 0 37",
+"linha": [
+"g5h4",
+"f3f4",
+"f6g6"
+],
+"level": 3,
+"id": 129
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2046,
+"fen": "8/8/p1R5/1p1pp3/6k1/1PKP4/1PP3r1/8 b - - 0 38",
+"linha": [
+"a6a5",
+"b3b4",
+"a5a4"
+],
+"level": 3,
+"id": 130
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2049,
+"fen": "r4r2/p1p2p1k/b1p1pQ2/6p1/6N1/2B5/P1P1KPP1/7q w - - 4 25",
+"linha": [
+"e2f3",
+"h1d1",
+"f3g3",
+"d1d6",
+"c3e5"
+],
+"level": 3,
+"id": 131
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2057,
+"fen": "6k1/rb2rpb1/p3pR1p/1p2B3/3P2QN/1P6/P2N2PP/2q3K1 w - - 9 28",
+"linha": [
+"f6f1",
+"f7f5",
+"g4g7",
+"e7g7",
+"f1c1"
+],
+"level": 3,
+"id": 132
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2074,
+"fen": "1b5R/pp1k4/2p5/2N2p2/QBPp4/3P4/PP2q1r1/2K5 b - - 6 36",
+"linha": [
+"d7e7",
+"c5d7",
+"e7f7",
+"h8h7",
+"f7g6"
+],
+"level": 3,
+"id": 133
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2102,
+"fen": "8/2k3p1/1p2p3/pPP1P1pP/K5P1/8/8/8 b - - 0 49",
+"linha": [
+"b6c5",
+"a4a5",
+"c7b7",
+"h5h6",
+"g7h6",
+"b5b6",
+"c5c4"
+],
+"level": 3,
+"id": 134
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2122,
+"fen": "8/8/8/4k3/6p1/6P1/5NK1/3n4 b - - 3 47",
+"linha": [
+"d1f2",
+"g2f2",
+"e5d4",
+"f2e2",
+"d4e4"
+],
+"level": 3,
+"id": 135
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2159,
+"fen": "8/8/8/8/P1k2pR1/r7/8/3K4 b - - 2 56",
+"linha": [
+"c4d3",
+"d1e1",
+"d3e3"
+],
+"level": 3,
+"id": 136
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2220,
+"fen": "8/6p1/R5Rp/pp2kp2/2p1p2P/6P1/Pq3PK1/8 w - - 0 47",
+"linha": [
+"a6d6",
+"f5f4",
+"g3g4",
+"f4f3",
+"g2g3",
+"b2f2",
+"g3f2"
+],
+"level": 3,
+"id": 137
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2223,
+"fen": "r1b1k2r/pppp1ppp/8/3Pn3/1b2n2q/2N3P1/PPPKQ2P/R1B2BNR w kq - 0 10",
+"linha": [
+"d2d1",
+"e4c3",
+"b2c3",
+"h4g4",
+"e2g4",
+"e5g4",
+"c3b4"
+],
+"level": 3,
+"id": 138
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2243,
+"fen": "8/5p2/5k2/6pp/4KP1P/6P1/8/8 b - - 0 50",
+"linha": [
+"g5h4",
+"g3h4",
+"f6e6",
+"f4f5",
+"e6d6",
+"e4d4",
+"f7f6"
+],
+"level": 3,
+"id": 139
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2257,
+"fen": "8/pp1b4/2p5/3p4/3P1ppk/2P3P1/PPB2K1P/8 b - - 0 34",
+"linha": [
+"h4h3",
+"f2g1",
+"f4g3",
+"h2g3",
+"h3g3"
+],
+"level": 3,
+"id": 140
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2259,
+"fen": "8/5Nkp/p5p1/1pB4b/2p5/2n4P/n1Br2P1/5RK1 w - - 1 31",
+"linha": [
+"f7g5",
+"c3e2",
+"g1h2",
+"e2d4",
+"c5d4",
+"d2d4",
+"g5e6",
+"g7h6",
+"e6d4"
+],
+"level": 3,
+"id": 141
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2292,
+"fen": "7R/qp2kr2/6Q1/p2p2P1/1P3P2/P2p4/4p2P/4R2K b - - 1 33",
+"linha": [
+"a7f2",
+"h8e8",
+"e7e8",
+"g6e6",
+"e8f8"
+],
+"level": 3,
+"id": 142
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2315,
+"fen": "8/1kp5/p3p1p1/2Rp1qP1/1Q1P1P1r/1P3K2/P5P1/8 b - - 6 46",
+"linha": [
+"b7a8",
+"b4d2",
+"f5g4",
+"f3f2",
+"h4h2"
+],
+"level": 3,
+"id": 143
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2383,
+"fen": "5b1k/1p5p/p1n1QPp1/8/5R2/P2q2PK/2r4P/5R2 w - - 4 30",
+"linha": [
+"e6f7",
+"d3d8",
+"f1d1",
+"d8c8",
+"d1d7"
+],
+"level": 3,
+"id": 144
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2476,
+"fen": "r2q1k1r/p1p2ppp/1p6/8/1Q1n2b1/5NP1/PP1N1PP1/3RKB1R b K - 3 15",
+"linha": [
+"c7c5",
+"b4c4",
+"d8e7",
+"f1e2",
+"b6b5",
+"c4d3",
+"g4f5",
+"d3d4",
+"c5d4"
+],
+"level": 3,
+"id": 145
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2626,
+"fen": "8/8/R1k1K3/3p4/P2P4/1rp5/8/8 b - - 1 57",
+"linha": [
+"b3b6",
+"a6a5",
+"c6c7"
+],
+"level": 3,
+"id": 146
+},
+{
+"tema": "defesaPrecisa",
+"rating": 2793,
+"fen": "4r3/p2RP3/2kP4/7p/8/5pr1/5R2/1K6 w - - 1 53",
+"linha": [
+"d7d8",
+"g3g1",
+"b1a2",
+"g1g2",
+"f2g2",
+"f3g2",
+"d8e8",
+"g2g1q",
+"e8c8",
+"c6d6",
+"e7e8q"
+],
+"level": 3,
+"id": 147
+},
+{
+"tema": "defenderMate",
+"rating": 906,
+"fen": "8/8/8/6p1/5KPk/8/8/8 w - - 0 81",
+"linha": [
+"f4f5",
+"h4h3",
+"f5g5"
+],
+"level": 1,
+"id": 148
+},
+{
+"tema": "defenderMate",
+"rating": 949,
+"fen": "rn2b1k1/pp4pp/3b1p2/3Q4/3P4/N1P2N2/Pq1B1PPP/R5K1 b - - 0 16",
+"linha": [
+"e8f7",
+"d5d6",
+"b2a1"
+],
+"level": 1,
+"id": 149
+},
+{
+"tema": "defenderMate",
+"rating": 1006,
+"fen": "8/pq6/1p5P/5Q2/2P5/3k4/P3p1P1/7K b - - 1 41",
+"linha": [
+"b7e4",
+"f5e4",
+"d3e4"
+],
+"level": 1,
+"id": 150
+},
+{
+"tema": "defenderMate",
+"rating": 1010,
+"fen": "8/1p5p/1Q5k/6p1/8/6Pq/PP1r3P/2R3K1 b - - 1 42",
+"linha": [
+"h6h5",
+"b6f2",
+"d2f2"
+],
+"level": 1,
+"id": 151
+},
+{
+"tema": "defenderMate",
+"rating": 1042,
+"fen": "r1b1r2k/pp6/3p1Q1b/2p1N3/1q2P3/8/PPP2PPP/1R3K1R b - - 0 20",
+"linha": [
+"h6g7",
+"f6h4",
+"h8g8"
+],
+"level": 1,
+"id": 152
+},
+{
+"tema": "defenderMate",
+"rating": 1045,
+"fen": "k6r/1b5p/6p1/1P6/3Q1P2/PP2R3/3K3q/8 w - - 0 32",
+"linha": [
+"e3e2",
+"h2e2",
+"d2e2"
+],
+"level": 1,
+"id": 153
+},
+{
+"tema": "defenderMate",
+"rating": 1057,
+"fen": "3r4/6pp/pNnNpk2/1p6/3p1R2/8/PPP2PPK/8 b - - 5 32",
+"linha": [
+"f6e5",
+"d6f7",
+"e5f4",
+"f7d8",
+"c6d8"
+],
+"level": 1,
+"id": 154
+},
+{
+"tema": "defenderMate",
+"rating": 1058,
+"fen": "6k1/6p1/2p1Rp1p/2Pp1Q2/3P4/2r3PP/5P2/q5K1 w - - 2 34",
+"linha": [
+"g1g2",
+"c3c1",
+"e6e8"
+],
+"level": 1,
+"id": 155
+},
+{
+"tema": "defenderMate",
+"rating": 1061,
+"fen": "7k/p4pp1/8/1q1p3n/6B1/P7/2QB1PPb/5K2 w - - 1 30",
+"linha": [
+"g4e2",
+"h5g3",
+"f2g3"
+],
+"level": 1,
+"id": 156
+},
+{
+"tema": "defenderMate",
+"rating": 1067,
+"fen": "4rbk1/3n3p/3p2p1/3Pp3/2p1P1P1/P1q1BP2/7Q/4K2R w K - 0 27",
+"linha": [
+"e3d2",
+"c3a1",
+"e1e2",
+"a1h1",
+"h2h1"
+],
+"level": 1,
+"id": 157
+},
+{
+"tema": "defenderMate",
+"rating": 1070,
+"fen": "3R4/8/5K2/3k2p1/8/6pP/5pP1/8 b - - 1 101",
+"linha": [
+"d5e4",
+"d8d1",
+"e4e3",
+"d1a1",
+"e3e2"
+],
+"level": 1,
+"id": 158
+},
+{
+"tema": "defenderMate",
+"rating": 1074,
+"fen": "8/4R2p/8/8/4k1P1/7P/1r3p2/5K2 b - - 6 60",
+"linha": [
+"e4f3",
+"e7f7",
+"f3g3"
+],
+"level": 1,
+"id": 159
+},
+{
+"tema": "defenderMate",
+"rating": 1097,
+"fen": "8/4R3/1BQ3k1/2P2n2/2K5/5r1p/5q1P/8 b - - 7 55",
+"linha": [
+"g6g5",
+"c6f3",
+"f2f3"
+],
+"level": 1,
+"id": 160
+},
+{
+"tema": "defenderMate",
+"rating": 1109,
+"fen": "8/8/8/4p3/5pK1/6N1/4k2P/8 b - - 2 51",
+"linha": [
+"f4g3",
+"g4g3",
+"e5e4"
+],
+"level": 1,
+"id": 161
+},
+{
+"tema": "defenderMate",
+"rating": 1111,
+"fen": "8/1p3Rp1/p1p3r1/P1P5/1P3k1K/7P/8/8 b - - 1 45",
+"linha": [
+"g6f6",
+"f7f6",
+"g7f6"
+],
+"level": 1,
+"id": 162
+},
+{
+"tema": "defenderMate",
+"rating": 1117,
+"fen": "8/8/8/p7/1pPk2p1/1P2p1P1/P2K4/8 w - - 0 52",
+"linha": [
+"d2e2",
+"d4e4",
+"c4c5",
+"e4d5",
+"e2e3"
+],
+"level": 1,
+"id": 163
+},
+{
+"tema": "defenderMate",
+"rating": 1123,
+"fen": "k7/pp1r2pp/4R3/3p2P1/2q2r2/P1N3Q1/KP5P/8 w - - 1 35",
+"linha": [
+"b2b3",
+"c4c8",
+"g3f4"
+],
+"level": 1,
+"id": 164
+},
+{
+"tema": "defenderMate",
+"rating": 1145,
+"fen": "8/1Q6/4pp2/1k1p1p1p/3P3P/pqP1P1P1/5P2/6K1 b - - 7 52",
+"linha": [
+"b5c4",
+"b7c8",
+"c4d3"
+],
+"level": 1,
+"id": 165
+},
+{
+"tema": "defenderMate",
+"rating": 1149,
+"fen": "8/1b4p1/1k3pPp/4K2P/4PP2/8/8/8 w - - 0 47",
+"linha": [
+"e5e6",
+"b7e4",
+"e6f7"
+],
+"level": 1,
+"id": 166
+},
+{
+"tema": "defenderMate",
+"rating": 1150,
+"fen": "5k2/R3Rp2/6p1/1p5p/1P1r3K/2n5/7P/8 w - - 8 44",
+"linha": [
+"h4g5",
+"c3e4",
+"g5h6"
+],
+"level": 1,
+"id": 167
+},
+{
+"tema": "defenderMate",
+"rating": 1183,
+"fen": "8/5k2/3KP3/8/2p2p2/5P2/8/8 b - - 0 52",
+"linha": [
+"f7e8",
+"d6e5",
+"c4c3",
+"e5f4",
+"c3c2"
+],
+"level": 1,
+"id": 168
+},
+{
+"tema": "defenderMate",
+"rating": 1188,
+"fen": "8/7p/p1k2p2/1p2pP2/1P2P2P/3NK3/8/3n4 w - - 4 46",
+"linha": [
+"e3d2",
+"d1e3",
+"d2e3"
+],
+"level": 1,
+"id": 169
+},
+{
+"tema": "defenderMate",
+"rating": 1226,
+"fen": "8/5b2/6p1/p1p2p1p/P6P/2k3P1/4NK2/3B4 b - - 1 44",
+"linha": [
+"c3d2",
+"e2f4",
+"d2d1"
+],
+"level": 1,
+"id": 170
+},
+{
+"tema": "defenderMate",
+"rating": 1262,
+"fen": "8/7k/p3q3/7R/P3pprP/1P4PK/3Q1P2/8 b - - 0 42",
+"linha": [
+"h7g6",
+"h5g5",
+"g4g5"
+],
+"level": 1,
+"id": 171
+},
+{
+"tema": "defenderMate",
+"rating": 1279,
+"fen": "5rk1/p2r2pp/2p1Q1b1/8/4Pp2/1PPq4/P2N2PP/R2R2K1 b - - 3 31",
+"linha": [
+"g6f7",
+"e6d7",
+"d3d7"
+],
+"level": 1,
+"id": 172
+},
+{
+"tema": "defenderMate",
+"rating": 1284,
+"fen": "r1b2rk1/p2pbpp1/2p4B/2q1P3/8/3B2Q1/nPP3PP/2KR3R w - - 0 16",
+"linha": [
+"c1b1",
+"a2c3",
+"b2c3",
+"a8b8",
+"b1c1"
+],
+"level": 1,
+"id": 173
+},
+{
+"tema": "defenderMate",
+"rating": 1299,
+"fen": "5r2/4Q2k/p6p/4B1pq/8/1Pr2PKN/6PP/7R b - - 3 28",
+"linha": [
+"f8f7",
+"e7f7",
+"h5f7",
+"h3g5",
+"h6g5"
+],
+"level": 1,
+"id": 174
+},
+{
+"tema": "defenderMate",
+"rating": 1319,
+"fen": "r1b2rk1/ppp3pp/2np1b2/3Np3/2P1q3/4PN1P/PPK1B1P1/3R1Q1R w - - 0 16",
+"linha": [
+"e2d3",
+"c6b4",
+"d5b4"
+],
+"level": 1,
+"id": 175
+},
+{
+"tema": "defenderMate",
+"rating": 1333,
+"fen": "8/p1p3p1/1k3p2/2p3p1/2PK2P1/1P1P4/5P2/8 w - - 0 37",
+"linha": [
+"d4d5",
+"g7g6",
+"d5e6",
+"b6a5",
+"e6f6"
+],
+"level": 1,
+"id": 176
+},
+{
+"tema": "defenderMate",
+"rating": 1348,
+"fen": "6k1/p3B3/2b2bPQ/q1P5/8/P2rp3/8/5R1K w - - 0 40",
+"linha": [
+"h1g1",
+"e3e2",
+"h6h7"
+],
+"level": 1,
+"id": 177
+},
+{
+"tema": "defenderMate",
+"rating": 1348,
+"fen": "r4k2/1b1n1p2/p2P3Q/1p2qP2/2p1N3/2PB4/P1P1K3/R7 b - - 2 29",
+"linha": [
+"e5g7",
+"h6g7",
+"f8g7"
+],
+"level": 1,
+"id": 178
+},
+{
+"tema": "defenderMate",
+"rating": 1356,
+"fen": "6R1/P7/8/5k2/5pp1/8/1r3K2/8 w - - 1 53",
+"linha": [
+"f2e1",
+"b2b1",
+"e1d2"
+],
+"level": 2,
+"id": 179
+},
+{
+"tema": "defenderMate",
+"rating": 1357,
+"fen": "4Qb1k/1p1N2p1/p1p4p/4P3/8/6KP/P5P1/4q3 w - - 16 39",
+"linha": [
+"g3h2",
+"e1f2",
+"e8f8",
+"f2f8",
+"d7f8"
+],
+"level": 2,
+"id": 180
+},
+{
+"tema": "defenderMate",
+"rating": 1371,
+"fen": "2kr4/p1p1N2p/8/5b2/2Pb4/8/PP3PPP/R2K4 b - - 2 21",
+"linha": [
+"c8b7",
+"e7f5",
+"d4b2"
+],
+"level": 2,
+"id": 181
+},
+{
+"tema": "defenderMate",
+"rating": 1384,
+"fen": "8/p3Q1kp/1p3pp1/2pP4/8/4P1P1/P2nq2P/2R3K1 b - - 1 36",
+"linha": [
+"g7h6",
+"e7f6",
+"d2f3",
+"f6f3",
+"e2f3"
+],
+"level": 2,
+"id": 182
+},
+{
+"tema": "defenderMate",
+"rating": 1395,
+"fen": "r1bq1rk1/pppn1ppB/2n5/2b1P3/8/5N1P/PP3PP1/RNBQK2R b KQ - 0 10",
+"linha": [
+"g8h7",
+"f3g5",
+"h7g8"
+],
+"level": 2,
+"id": 183
+},
+{
+"tema": "defenderMate",
+"rating": 1439,
+"fen": "8/p4pp1/7p/4k3/1p1pP1P1/1Pp2PP1/P1PK4/8 w - - 0 32",
+"linha": [
+"d2d3",
+"g7g5",
+"d3c4"
+],
+"level": 2,
+"id": 184
+},
+{
+"tema": "defenderMate",
+"rating": 1441,
+"fen": "k7/P7/1K6/1N6/2n5/4p1p1/8/8 w - - 2 60",
+"linha": [
+"b6a6",
+"e3e2",
+"b5c7"
+],
+"level": 2,
+"id": 185
+},
+{
+"tema": "defenderMate",
+"rating": 1443,
+"fen": "8/6p1/2p5/R7/8/8/kp1K4/8 b - - 1 43",
+"linha": [
+"a2b3",
+"a5a7",
+"b2b1q",
+"a7b7",
+"b3a2"
+],
+"level": 2,
+"id": 186
+},
+{
+"tema": "defenderMate",
+"rating": 1449,
+"fen": "1k6/1P4R1/8/K3p3/2n1rb2/8/8/8 w - - 1 72",
+"linha": [
+"a5a6",
+"c4d6",
+"g7g8",
+"b8c7",
+"b7b8q"
+],
+"level": 2,
+"id": 187
+},
+{
+"tema": "defenderMate",
+"rating": 1470,
+"fen": "8/3Q4/1q6/p3P2P/kp1P4/r3N3/4r1P1/R5K1 b - - 4 41",
+"linha": [
+"b6b5",
+"d7b5",
+"a4b5"
+],
+"level": 2,
+"id": 188
+},
+{
+"tema": "defenderMate",
+"rating": 1479,
+"fen": "8/8/2R5/8/1pk5/7P/P2r4/6K1 b - - 1 63",
+"linha": [
+"c4b5",
+"c6c8",
+"d2a2"
+],
+"level": 2,
+"id": 189
+},
+{
+"tema": "defenderMate",
+"rating": 1491,
+"fen": "5r2/7P/5K2/8/2P2k2/P7/8/8 w - - 1 69",
+"linha": [
+"f6g7",
+"f8d8",
+"h7h8q",
+"d8h8",
+"g7h8",
+"f4e4",
+"a3a4",
+"e4d4",
+"a4a5"
+],
+"level": 2,
+"id": 190
+},
+{
+"tema": "defenderMate",
+"rating": 1509,
+"fen": "8/8/p4p2/5k2/1P4PP/5P1K/2P1b3/8 b - - 0 44",
+"linha": [
+"f5f4",
+"h4h5",
+"e2f3",
+"h3h4",
+"f3g4",
+"h5h6",
+"g4f5"
+],
+"level": 2,
+"id": 191
+},
+{
+"tema": "defenderMate",
+"rating": 1509,
+"fen": "8/8/8/8/4k3/6Pp/6K1/8 w - - 0 46",
+"linha": [
+"g2h3",
+"e4f5",
+"h3h4",
+"f5g6",
+"h4g4"
+],
+"level": 2,
+"id": 192
+},
+{
+"tema": "defenderMate",
+"rating": 1513,
+"fen": "6bk/p1R5/1p5p/8/P4Q2/1r6/5PP1/q5K1 w - - 4 43",
+"linha": [
+"g1h2",
+"a1g7",
+"c7g7"
+],
+"level": 2,
+"id": 193
+},
+{
+"tema": "defenderMate",
+"rating": 1525,
+"fen": "4q3/6pk/8/1p2p2p/p4pbP/2PQB1P1/PP4P1/6K1 b - - 1 40",
+"linha": [
+"e5e4",
+"d3d2",
+"f4e3"
+],
+"level": 2,
+"id": 194
+},
+{
+"tema": "defenderMate",
+"rating": 1527,
+"fen": "r1b1k2r/pp1p1ppp/4p3/8/1qNnP1n1/8/PP2QPPP/R1B1KB1R w KQkq - 2 11",
+"linha": [
+"c1d2",
+"d4e2",
+"d2b4"
+],
+"level": 2,
+"id": 195
+},
+{
+"tema": "defenderMate",
+"rating": 1533,
+"fen": "q7/3Q2k1/3p1p1p/P2Rp1p1/8/6P1/1P3PKP/2r5 b - - 8 43",
+"linha": [
+"g7g6",
+"d7d6",
+"c1d1"
+],
+"level": 2,
+"id": 196
+},
+{
+"tema": "defenderMate",
+"rating": 1534,
+"fen": "6k1/1R3Rpp/p3p3/3pP3/P2P4/8/2r2KPP/2r5 w - - 3 27",
+"linha": [
+"f2g3",
+"c1g1",
+"f7g7"
+],
+"level": 2,
+"id": 197
+},
+{
+"tema": "defenderMate",
+"rating": 1546,
+"fen": "8/Q6k/6p1/P4p1p/1r2p3/2b5/1rq1NPPP/3RR1K1 b - - 2 34",
+"linha": [
+"b4b7",
+"a7b7",
+"b2b7"
+],
+"level": 2,
+"id": 198
+},
+{
+"tema": "defenderMate",
+"rating": 1561,
+"fen": "rn2k2r/pbpp1pRp/1p1b4/8/3B4/P4N2/1PP1BP2/R2QK2q w Qkq - 1 17",
+"linha": [
+"g7g1",
+"h1g1",
+"f3g1"
+],
+"level": 2,
+"id": 199
+},
+{
+"tema": "defenderMate",
+"rating": 1567,
+"fen": "2b4r/1p2k3/4pb2/8/p2B4/2PQ1B2/q2KPP2/6R1 w - - 0 37",
+"linha": [
+"d2e3",
+"f6d4",
+"d3d4"
+],
+"level": 2,
+"id": 200
+},
+{
+"tema": "defenderMate",
+"rating": 1574,
+"fen": "5rk1/p1Q3pp/3P1p2/8/8/1P1q1KP1/4RP2/8 w - - 5 39",
+"linha": [
+"e2e3",
+"d3d1",
+"f3g2"
+],
+"level": 2,
+"id": 201
+},
+{
+"tema": "defenderMate",
+"rating": 1617,
+"fen": "2Q5/5R2/1p1p2p1/p6p/2P2k2/1P3P1P/P2p2P1/6K1 b - - 1 45",
+"linha": [
+"f4g3",
+"c8g4",
+"h5g4",
+"f3g4",
+"d2d1q"
+],
+"level": 2,
+"id": 202
+},
+{
+"tema": "defenderMate",
+"rating": 1629,
+"fen": "8/8/5k1p/p3P2P/3K4/8/8/8 b - - 0 41",
+"linha": [
+"f6e6",
+"d4e4",
+"a5a4",
+"e4d4",
+"a4a3",
+"d4c3",
+"e6e5"
+],
+"level": 2,
+"id": 203
+},
+{
+"tema": "defenderMate",
+"rating": 1644,
+"fen": "1Q4k1/p4pp1/1p5p/4p3/4P3/2N2P1q/Pr1r2PP/R5RK b - - 2 28",
+"linha": [
+"g8h7",
+"b8c8",
+"h3c8"
+],
+"level": 2,
+"id": 204
+},
+{
+"tema": "defenderMate",
+"rating": 1654,
+"fen": "6k1/5ppp/p6B/3p1P2/3br3/1qr5/1R4QP/5RK1 w - - 0 33",
+"linha": [
+"g1h1",
+"b3b2",
+"g2b2"
+],
+"level": 2,
+"id": 205
+},
+{
+"tema": "defenderMate",
+"rating": 1655,
+"fen": "1R6/p1p5/3b2kp/3K2r1/r3ppPR/2B5/1P3P2/8 w - - 0 38",
+"linha": [
+"d5e6",
+"g5e5",
+"c3e5"
+],
+"level": 2,
+"id": 206
+},
+{
+"tema": "defenderMate",
+"rating": 1659,
+"fen": "8/1r3pkp/1b4p1/2RpQ3/7P/1qP3P1/1P3P2/2B3K1 b - - 6 33",
+"linha": [
+"f7f6",
+"c1h6",
+"g7h6",
+"e5f4",
+"h6g7"
+],
+"level": 2,
+"id": 207
+},
+{
+"tema": "defenderMate",
+"rating": 1663,
+"fen": "8/3n1pk1/6p1/p1P1p1Pp/PpQpP2P/1B2q3/1P6/2K5 w - - 2 36",
+"linha": [
+"c1b1",
+"e3e4",
+"b1a2"
+],
+"level": 3,
+"id": 208
+},
+{
+"tema": "defenderMate",
+"rating": 1671,
+"fen": "5r2/1k3p1p/4q3/R7/3p4/P4Q2/1P3PPP/6K1 b - - 2 31",
+"linha": [
+"b7b6",
+"g2g3",
+"b6a5"
+],
+"level": 3,
+"id": 209
+},
+{
+"tema": "defenderMate",
+"rating": 1679,
+"fen": "8/5pkp/6p1/3q4/5n2/7P/5PP1/Q3R1K1 b - - 2 37",
+"linha": [
+"g7h6",
+"e1e4",
+"d5e4"
+],
+"level": 3,
+"id": 210
+},
+{
+"tema": "defenderMate",
+"rating": 1681,
+"fen": "2r1k3/ppB4p/7q/8/Q2PP1b1/P4nP1/P6P/2R2R1K b - - 4 24",
+"linha": [
+"g4d7",
+"a4c2",
+"c8c7",
+"c2b2",
+"c7c1"
+],
+"level": 3,
+"id": 211
+},
+{
+"tema": "defenderMate",
+"rating": 1691,
+"fen": "4k2R/2p1p3/4p2Q/3p4/3P2P1/1p2P3/1Pn5/3KNq2 b - - 5 34",
+"linha": [
+"e8d7",
+"h6h4",
+"c2e3",
+"d1d2",
+"e3c4"
+],
+"level": 3,
+"id": 212
+},
+{
+"tema": "defenderMate",
+"rating": 1703,
+"fen": "1q5k/p6p/1p2Qp2/5Pp1/3N2P1/P3P1KP/1Pr5/8 w - - 7 35",
+"linha": [
+"g3f3",
+"b8b7",
+"e3e4",
+"c2c8",
+"e6f6"
+],
+"level": 3,
+"id": 213
+},
+{
+"tema": "defenderMate",
+"rating": 1711,
+"fen": "2rb2k1/p5pp/K4p2/2N5/1Pb5/P1r5/3R1PPP/R7 w - - 3 30",
+"linha": [
+"a6b7",
+"c8c7",
+"b7b8",
+"c7e7",
+"d2d8"
+],
+"level": 3,
+"id": 214
+},
+{
+"tema": "defenderMate",
+"rating": 1716,
+"fen": "3k4/2b5/1KP5/p4p2/7p/1P5P/P5P1/8 w - - 5 55",
+"linha": [
+"b6b7",
+"c7e5",
+"a2a3"
+],
+"level": 3,
+"id": 215
+},
+{
+"tema": "defenderMate",
+"rating": 1721,
+"fen": "8/8/8/5p2/4pKp1/7k/8/6N1 b - - 11 60",
+"linha": [
+"h3g2",
+"g1e2",
+"g2f2",
+"e2c3",
+"g4g3"
+],
+"level": 3,
+"id": 216
+},
+{
+"tema": "defenderMate",
+"rating": 1734,
+"fen": "1r3rk1/p4p2/2p4p/2q1p1p1/4Pnb1/2PB1PB1/P1Q3PP/3R1RK1 w - - 1 19",
+"linha": [
+"g3f2",
+"c5a3",
+"f3g4",
+"b8b2",
+"c2c1"
+],
+"level": 3,
+"id": 217
+},
+{
+"tema": "defenderMate",
+"rating": 1739,
+"fen": "8/2p3k1/1p1p2Pn/p2P1K1P/P1P5/1P6/8/8 w - - 3 54",
+"linha": [
+"f5e6",
+"h6g8",
+"e6d7"
+],
+"level": 3,
+"id": 218
+},
+{
+"tema": "defenderMate",
+"rating": 1749,
+"fen": "2kr4/R7/3K4/2P5/4B3/p2P4/r7/8 w - - 3 58",
+"linha": [
+"d6c6",
+"a2b2",
+"a7a8",
+"b2b8",
+"e4f5"
+],
+"level": 3,
+"id": 219
+},
+{
+"tema": "defenderMate",
+"rating": 1758,
+"fen": "8/1p2qkpQ/p2p2rp/3Pp3/7P/3R4/PPr2P2/5RK1 w - - 2 27",
+"linha": [
+"d3g3",
+"e7f6",
+"h4h5",
+"g6g5",
+"h7c2"
+],
+"level": 3,
+"id": 220
+},
+{
+"tema": "defenderMate",
+"rating": 1760,
+"fen": "3r4/1P6/8/6p1/1R1K4/5k2/8/8 w - - 1 54",
+"linha": [
+"d4e5",
+"d8b8",
+"e5f5",
+"f3e3",
+"f5g5"
+],
+"level": 3,
+"id": 221
+},
+{
+"tema": "defenderMate",
+"rating": 1773,
+"fen": "6k1/5pp1/7p/3pP3/3P4/8/1prbN1PP/1R2K3 w - - 6 39",
+"linha": [
+"e1d1",
+"c2c1",
+"e2c1",
+"b2c1q",
+"b1c1"
+],
+"level": 3,
+"id": 222
+},
+{
+"tema": "defenderMate",
+"rating": 1777,
+"fen": "r3b1k1/1p5p/p1pp2q1/2P2p2/1P1BpP1b/PQ2P1PP/3P2K1/R4R2 b - - 0 25",
+"linha": [
+"e8f7",
+"g2h1",
+"f7b3"
+],
+"level": 3,
+"id": 223
+},
+{
+"tema": "defenderMate",
+"rating": 1777,
+"fen": "8/8/8/Rp2k2P/1P2p1p1/6P1/5K1r/8 w - - 7 48",
+"linha": [
+"f2e3",
+"h2h3",
+"a5b5"
+],
+"level": 3,
+"id": 224
+},
+{
+"tema": "defenderMate",
+"rating": 1779,
+"fen": "8/8/5Qp1/6Pp/4p2P/p4k2/5p2/1K6 b - - 3 51",
+"linha": [
+"f3g2",
+"f6c6",
+"f2f1q"
+],
+"level": 3,
+"id": 225
+},
+{
+"tema": "defenderMate",
+"rating": 1785,
+"fen": "2r3k1/p1r1q3/1p2p1Q1/3bPpN1/8/3n3P/PPB2PP1/2R1R1K1 b - - 0 25",
+"linha": [
+"e7g7",
+"g6g7",
+"g8g7",
+"c2d3",
+"c7c1"
+],
+"level": 3,
+"id": 226
+},
+{
+"tema": "defenderMate",
+"rating": 1785,
+"fen": "8/3Np2Q/3p2p1/3P4/1p2qn1k/1P6/5PP1/5K2 b - - 0 38",
+"linha": [
+"h4g5",
+"h7e7",
+"e4e7"
+],
+"level": 3,
+"id": 227
+},
+{
+"tema": "defenderMate",
+"rating": 1829,
+"fen": "3r2k1/p4B1p/1p3qp1/5b2/8/1Qr1PP1P/P2R1KP1/7R b - - 0 23",
+"linha": [
+"g8g7",
+"b3c3",
+"f6c3"
+],
+"level": 3,
+"id": 228
+},
+{
+"tema": "defenderMate",
+"rating": 1833,
+"fen": "8/pp6/2p3BP/6p1/3k4/1r3K2/8/8 w - - 1 41",
+"linha": [
+"f3g4",
+"d4c5",
+"h6h7",
+"b3b4",
+"g4g5"
+],
+"level": 3,
+"id": 229
+},
+{
+"tema": "defenderMate",
+"rating": 1853,
+"fen": "4R3/p2r3B/2bq1ppQ/5k2/8/1P4P1/P4P1K/8 b - - 0 38",
+"linha": [
+"d7h7",
+"h6h7",
+"c6e8",
+"h7h3",
+"f5e5"
+],
+"level": 3,
+"id": 230
+},
+{
+"tema": "defenderMate",
+"rating": 1862,
+"fen": "8/8/6p1/p2p4/2k4P/1P6/P2K4/8 b - - 0 46",
+"linha": [
+"c4b4",
+"d2c2",
+"b4a3",
+"c2b1",
+"d5d4",
+"b1a1",
+"d4d3",
+"a1b1",
+"d3d2",
+"b1c2",
+"a3a2"
+],
+"level": 3,
+"id": 231
+},
+{
+"tema": "defenderMate",
+"rating": 1864,
+"fen": "2b2r2/5p1k/1q5p/1p5R/2p1Q1pP/3p2P1/PP4PK/3R4 b - - 5 27",
+"linha": [
+"f7f5",
+"e4e7",
+"h7g8"
+],
+"level": 3,
+"id": 232
+},
+{
+"tema": "defenderMate",
+"rating": 1881,
+"fen": "8/p1B4p/1p3pk1/6p1/3PQ1P1/2P1nP1K/P3q2P/8 b - - 10 36",
+"linha": [
+"g6h6",
+"e4e3",
+"e2e3"
+],
+"level": 3,
+"id": 233
+},
+{
+"tema": "defenderMate",
+"rating": 1882,
+"fen": "8/6p1/2p3p1/2P1k1P1/1P1p1p1P/2K2P2/8/8 w - - 0 47",
+"linha": [
+"c3c4",
+"e5e6",
+"c4d4"
+],
+"level": 3,
+"id": 234
+},
+{
+"tema": "defenderMate",
+"rating": 1905,
+"fen": "8/7p/3R1kpP/p4p2/8/2b5/P2p1PP1/6K1 b - - 5 44",
+"linha": [
+"f6e5",
+"d6d3",
+"e5e4"
+],
+"level": 3,
+"id": 235
+},
+{
+"tema": "defenderMate",
+"rating": 1908,
+"fen": "1r5r/6kp/6p1/pp1Q1Pq1/3Rp3/2P1R3/P6P/6K1 w - - 1 29",
+"linha": [
+"e3g3",
+"h8d8",
+"g3g5"
+],
+"level": 3,
+"id": 236
+},
+{
+"tema": "defenderMate",
+"rating": 1912,
+"fen": "2r2rk1/pp3p2/4p3/3p2q1/3P4/P1N4Q/1PP5/1R4K1 w - - 0 31",
+"linha": [
+"g1h1",
+"g5g6",
+"b1g1",
+"g8g7",
+"g1g6"
+],
+"level": 3,
+"id": 237
+},
+{
+"tema": "salvarPeca",
+"rating": 1118,
+"fen": "3q2k1/3r1pb1/B3p2p/3bP3/R2P2Qp/1r5P/5PP1/2R3K1 w - - 3 34",
+"linha": [
+"c1c8",
+"b3b1",
+"g1h2",
+"d8c8",
+"a6c8"
+],
+"level": 1,
+"id": 238
+},
+{
+"tema": "salvarPeca",
+"rating": 1141,
+"fen": "8/1p6/2p5/p1Pp2Pk/P4K2/8/1P6/8 w - - 1 38",
+"linha": [
+"f4f5",
+"d5d4",
+"g5g6",
+"h5h6",
+"f5f6"
+],
+"level": 1,
+"id": 239
+},
+{
+"tema": "salvarPeca",
+"rating": 1147,
+"fen": "8/b7/P7/8/2K1Pk2/8/8/8 w - - 2 56",
+"linha": [
+"c4d5",
+"a7e3",
+"e4e5"
+],
+"level": 1,
+"id": 240
+},
+{
+"tema": "salvarPeca",
+"rating": 1159,
+"fen": "8/1K3p1p/3P1kp1/4b3/8/2pB4/6PP/8 w - - 0 44",
+"linha": [
+"d6d7",
+"f6e7",
+"b7c8"
+],
+"level": 1,
+"id": 241
+},
+{
+"tema": "salvarPeca",
+"rating": 1161,
+"fen": "8/p7/1p6/5p2/P1B2k2/6pK/8/8 b - - 1 65",
+"linha": [
+"f4f3",
+"c4d5",
+"f3f2"
+],
+"level": 1,
+"id": 242
+},
+{
+"tema": "salvarPeca",
+"rating": 1191,
+"fen": "1r1qkb1r/1p3ppp/4b3/p2pP3/P7/1QN5/1P3PPP/R1B2RK1 b k - 4 15",
+"linha": [
+"d5d4",
+"b3b5",
+"e6d7",
+"b5d3",
+"d4c3"
+],
+"level": 1,
+"id": 243
+},
+{
+"tema": "salvarPeca",
+"rating": 1255,
+"fen": "r6r/pp6/2pp3p/4pk2/3P1p2/2P2R1P/PP3PP1/3R2K1 b - - 0 21",
+"linha": [
+"e5e4",
+"g2g4",
+"f5g5"
+],
+"level": 1,
+"id": 244
+},
+{
+"tema": "salvarPeca",
+"rating": 1266,
+"fen": "8/8/8/kPp1p1p1/p1P1P1Pp/7P/1K6/8 w - - 1 48",
+"linha": [
+"b2a3",
+"a5b6",
+"a3a4",
+"b6c7",
+"a4a5"
+],
+"level": 1,
+"id": 245
+},
+{
+"tema": "salvarPeca",
+"rating": 1273,
+"fen": "7K/6P1/1kp4R/p1p5/8/p1PP4/2P5/6r1 w - - 4 38",
+"linha": [
+"g7g8q",
+"g1g8",
+"h8g8",
+"a3a2",
+"h6h1"
+],
+"level": 1,
+"id": 246
+},
+{
+"tema": "salvarPeca",
+"rating": 1322,
+"fen": "8/1p3p1p/2k2Np1/5p2/3P4/5P2/7P/7K b - - 2 39",
+"linha": [
+"b7b5",
+"h1g2",
+"b5b4"
+],
+"level": 1,
+"id": 247
+},
+{
+"tema": "salvarPeca",
+"rating": 1353,
+"fen": "5rk1/3q1p2/6pK/4P1Qp/6P1/7P/8/8 w - - 1 51",
+"linha": [
+"g5f6",
+"d7d2",
+"g4g5"
+],
+"level": 1,
+"id": 248
+},
+{
+"tema": "salvarPeca",
+"rating": 1406,
+"fen": "8/8/pp4K1/8/2P2Pk1/1P4P1/P7/b7 w - - 5 45",
+"linha": [
+"f4f5",
+"a1e5",
+"f5f6",
+"e5g3",
+"f6f7",
+"g3d6",
+"g6g7"
+],
+"level": 1,
+"id": 249
+},
+{
+"tema": "salvarPeca",
+"rating": 1418,
+"fen": "r5k1/pp3p2/2p1bbpp/2P1p3/8/P1N1PBP1/1P1r1P1P/2R2RK1 w - - 2 17",
+"linha": [
+"c3e4",
+"d2b2",
+"e4f6",
+"g8g7",
+"f6e4"
+],
+"level": 1,
+"id": 250
+},
+{
+"tema": "salvarPeca",
+"rating": 1513,
+"fen": "8/5P1k/p3p3/1p1n3K/4r1P1/1P6/PBr2P1P/8 w - - 7 36",
+"linha": [
+"f7f8q",
+"d5f4",
+"h5g5"
+],
+"level": 1,
+"id": 251
+},
+{
+"tema": "salvarPeca",
+"rating": 1583,
+"fen": "8/1p2k2p/p3P1p1/2PP4/2K1b2P/8/1P3P2/8 w - - 1 36",
+"linha": [
+"c4d4",
+"e4b1",
+"d4e5"
+],
+"level": 1,
+"id": 252
+},
+{
+"tema": "salvarPeca",
+"rating": 1589,
+"fen": "r4rk1/p2q1p1p/1p2pPp1/3b4/5QPP/2P5/P1K2P2/R7 w - - 1 23",
+"linha": [
+"f4h6",
+"d7a4",
+"c2d2",
+"a4f4",
+"h6f4"
+],
+"level": 1,
+"id": 253
+},
+{
+"tema": "salvarPeca",
+"rating": 1628,
+"fen": "rq2k2r/2p2pp1/p1p5/2B1P3/4R3/2P4p/PP3Q2/6K1 w kq - 0 24",
+"linha": [
+"e5e6",
+"h3h2",
+"g1h1"
+],
+"level": 1,
+"id": 254
+},
+{
+"tema": "salvarPeca",
+"rating": 1638,
+"fen": "8/8/8/3pkPK1/4p2P/8/8/8 w - - 1 48",
+"linha": [
+"f5f6",
+"e5e6",
+"g5g6"
+],
+"level": 1,
+"id": 255
+},
+{
+"tema": "salvarPeca",
+"rating": 1654,
+"fen": "5B2/p1p5/1k6/2p3Kp/P1P3p1/8/8/8 b - - 3 36",
+"linha": [
+"g4g3",
+"g5h5",
+"g3g2",
+"a4a5",
+"b6c6"
+],
+"level": 1,
+"id": 256
+},
+{
+"tema": "salvarPeca",
+"rating": 1654,
+"fen": "8/p3kp1p/1N4r1/3R4/5p2/4p3/PPP2PPP/6K1 b - - 0 26",
+"linha": [
+"e3e2",
+"d5e5",
+"g6e6",
+"e5e2",
+"e6e2"
+],
+"level": 1,
+"id": 257
+},
+{
+"tema": "salvarPeca",
+"rating": 1675,
+"fen": "2k5/1p6/3B2P1/2P5/8/p4K2/8/3r4 w - - 1 58",
+"linha": [
+"g6g7",
+"d1g1",
+"d6g3"
+],
+"level": 1,
+"id": 258
+},
+{
+"tema": "salvarPeca",
+"rating": 1677,
+"fen": "r1b2rk1/ppqn1pp1/2pb4/3p2N1/3P4/2N1P3/PPP3PP/R2Q1RK1 w - - 2 15",
+"linha": [
+"d1h5",
+"d6h2",
+"g1h1",
+"d7f6",
+"f1f6"
+],
+"level": 1,
+"id": 259
+},
+{
+"tema": "salvarPeca",
+"rating": 1681,
+"fen": "8/8/4kp2/6p1/4P1Kp/7P/6P1/8 b - - 4 58",
+"linha": [
+"e6e5",
+"g4h5",
+"e5e4",
+"h5g6",
+"e4e5"
+],
+"level": 1,
+"id": 260
+},
+{
+"tema": "salvarPeca",
+"rating": 1685,
+"fen": "r2qr3/p1p3k1/6pn/2Q1N3/4P3/2N4b/PPP2PP1/R4RK1 b - - 1 18",
+"linha": [
+"d8g5",
+"c5c7",
+"e8e7",
+"c7e7",
+"g5e7"
+],
+"level": 1,
+"id": 261
+},
+{
+"tema": "salvarPeca",
+"rating": 1687,
+"fen": "4R3/pp3p1k/4b1pp/8/2r1Q1P1/8/P4PKP/3r4 w - - 0 29",
+"linha": [
+"e4e5",
+"c4g4",
+"g2f3"
+],
+"level": 1,
+"id": 262
+},
+{
+"tema": "salvarPeca",
+"rating": 1707,
+"fen": "8/8/6p1/kPp2p1p/2P2P1P/1K6/8/8 w - - 9 50",
+"linha": [
+"b3a3",
+"a5b6",
+"a3a4",
+"b6b7",
+"a4a5"
+],
+"level": 1,
+"id": 263
+},
+{
+"tema": "salvarPeca",
+"rating": 1739,
+"fen": "8/1p6/p3p3/3p3P/4pkPK/2P2r2/PP6/4R3 w - - 3 35",
+"linha": [
+"h5h6",
+"f3f2",
+"e1h1"
+],
+"level": 1,
+"id": 264
+},
+{
+"tema": "salvarPeca",
+"rating": 1739,
+"fen": "8/4kp2/2p4p/p1P2Kp1/6P1/P6P/1P6/8 b - - 0 34",
+"linha": [
+"a5a4",
+"f5e5",
+"f7f6",
+"e5f5",
+"e7f7"
+],
+"level": 1,
+"id": 265
+},
+{
+"tema": "salvarPeca",
+"rating": 1747,
+"fen": "3r1r2/p3p1kb/1p3p2/3B1Pp1/3R2Pp/1QP1p3/PP4RK/4q3 w - - 0 32",
+"linha": [
+"d4d1",
+"e1d1",
+"b3d1",
+"h7g8",
+"c3c4"
+],
+"level": 1,
+"id": 266
+},
+{
+"tema": "salvarPeca",
+"rating": 1754,
+"fen": "8/2q3k1/5pP1/4pP2/8/P4P2/KPBp2r1/3Q4 w - - 4 41",
+"linha": [
+"d1h1",
+"c7c4",
+"c2b3",
+"c4b3",
+"a2b3"
+],
+"level": 1,
+"id": 267
+},
+{
+"tema": "salvarPeca",
+"rating": 1771,
+"fen": "4q1k1/pb3pp1/1b5p/4Q3/5B2/P6P/5PP1/5RK1 b - - 2 26",
+"linha": [
+"e8c6",
+"e5b8",
+"g8h7"
+],
+"level": 2,
+"id": 268
+},
+{
+"tema": "salvarPeca",
+"rating": 1781,
+"fen": "1n6/RP2K1k1/1r2p1p1/8/5P2/6P1/8/8 w - - 5 57",
+"linha": [
+"e7d8",
+"b8c6",
+"d8c7",
+"b6b7",
+"a7b7"
+],
+"level": 2,
+"id": 269
+},
+{
+"tema": "salvarPeca",
+"rating": 1798,
+"fen": "1k1r4/pb3p2/1pq2B2/4p3/PQ2p1p1/6P1/2P2P1P/1R3RK1 b - - 0 28",
+"linha": [
+"e4e3",
+"f2f3",
+"g4f3",
+"f6e5",
+"b8a8"
+],
+"level": 2,
+"id": 270
+},
+{
+"tema": "salvarPeca",
+"rating": 1800,
+"fen": "8/P1q4p/5pk1/6p1/5P2/6KP/5QP1/7r w - - 0 52",
+"linha": [
+"a7a8q",
+"c7c3",
+"a8f3"
+],
+"level": 2,
+"id": 271
+},
+{
+"tema": "salvarPeca",
+"rating": 1813,
+"fen": "2k3rr/pp1q1p2/3p1p2/1p1N4/1P1QP2p/P4bP1/2P2P1P/R4RK1 b - - 0 20",
+"linha": [
+"d7h3",
+"d4c3",
+"c8b8",
+"c3c7",
+"b8a8",
+"c7d8",
+"g8d8"
+],
+"level": 2,
+"id": 272
+},
+{
+"tema": "salvarPeca",
+"rating": 1838,
+"fen": "r4rk1/pbpp2pp/1p1b4/2q2p2/5P2/4P3/PPPBB1PP/R2Q1RK1 w - - 2 15",
+"linha": [
+"b2b4",
+"c5c6",
+"e2f3",
+"c6c4",
+"f3b7",
+"a8b8",
+"b7f3"
+],
+"level": 2,
+"id": 273
+},
+{
+"tema": "salvarPeca",
+"rating": 1846,
+"fen": "4r1k1/1p3p2/1Q4pP/p2p4/P1q2P1P/2P5/1K6/7R w - - 1 29",
+"linha": [
+"b6f6",
+"e8e2",
+"b2c1",
+"e2c2",
+"c1c2"
+],
+"level": 2,
+"id": 274
+},
+{
+"tema": "salvarPeca",
+"rating": 1850,
+"fen": "1r4k1/5p1p/R2P2p1/2p3q1/Q2bP3/8/6PP/4R2K b - - 0 35",
+"linha": [
+"b8b2",
+"a6a8",
+"g8g7",
+"a4d4",
+"c5d4"
+],
+"level": 2,
+"id": 275
+},
+{
+"tema": "salvarPeca",
+"rating": 1863,
+"fen": "8/8/kp2R3/3p4/P2P1p2/K1P5/8/5r2 b - - 0 46",
+"linha": [
+"f4f3",
+"e6f6",
+"f3f2",
+"a3b2",
+"a6a5",
+"f6f4",
+"a5a4",
+"f4f8",
+"a4b5"
+],
+"level": 2,
+"id": 276
+},
+{
+"tema": "salvarPeca",
+"rating": 1868,
+"fen": "8/8/p3k1p1/Pp2p2p/1P2K1PP/5P2/8/8 b - - 0 37",
+"linha": [
+"g6g5",
+"h4g5",
+"h5h4"
+],
+"level": 2,
+"id": 277
+},
+{
+"tema": "salvarPeca",
+"rating": 1875,
+"fen": "2q5/p4pk1/1p4pp/3Q1n2/4P3/1P4P1/r4P1P/3R1BK1 b - - 0 30",
+"linha": [
+"c8c2",
+"d5e5",
+"g7h7",
+"e5f4",
+"c2d1"
+],
+"level": 2,
+"id": 278
+},
+{
+"tema": "salvarPeca",
+"rating": 1881,
+"fen": "r5k1/p1pN1p2/1p1b2p1/3p1n2/3P4/2P3Pq/P2QRP1P/1R4K1 b - - 4 23",
+"linha": [
+"f5h4",
+"d7f6",
+"g8g7"
+],
+"level": 2,
+"id": 279
+},
+{
+"tema": "salvarPeca",
+"rating": 1890,
+"fen": "8/8/5k1p/6pP/1R4P1/1p2KP2/8/1r6 b - - 0 43",
+"linha": [
+"b3b2",
+"b4b6",
+"f6e5",
+"f3f4",
+"g5f4"
+],
+"level": 2,
+"id": 280
+},
+{
+"tema": "salvarPeca",
+"rating": 1913,
+"fen": "8/2k5/p4p2/PpKP4/5P2/8/8/8 b - - 0 39",
+"linha": [
+"f6f5",
+"d5d6",
+"c7d7",
+"c5d5",
+"b5b4",
+"d5c4",
+"d7d6"
+],
+"level": 2,
+"id": 281
+},
+{
+"tema": "salvarPeca",
+"rating": 1918,
+"fen": "2r2rk1/pb3ppp/1p2P1q1/8/3P4/P7/BP2Q1PP/4RR1K b - - 0 21",
+"linha": [
+"c8c2",
+"e6f7",
+"g8h8"
+],
+"level": 2,
+"id": 282
+},
+{
+"tema": "salvarPeca",
+"rating": 1920,
+"fen": "6k1/1N3ppp/p1PK4/8/8/4p2P/8/1r6 w - - 0 44",
+"linha": [
+"c6c7",
+"b1d1",
+"d6c6",
+"h7h6",
+"c7c8q"
+],
+"level": 2,
+"id": 283
+},
+{
+"tema": "salvarPeca",
+"rating": 1923,
+"fen": "5R2/1P5P/2K5/6k1/5p2/1r6/4p3/8 b - - 0 65",
+"linha": [
+"e2e1q",
+"f8g8",
+"g5f5"
+],
+"level": 2,
+"id": 284
+},
+{
+"tema": "salvarPeca",
+"rating": 1930,
+"fen": "6k1/6pp/5r2/p3qp2/Pnp5/2R1P2P/6P1/2QR2K1 b - - 1 34",
+"linha": [
+"b4a2",
+"d1d8",
+"g8f7",
+"c1d1",
+"a2c3"
+],
+"level": 2,
+"id": 285
+},
+{
+"tema": "salvarPeca",
+"rating": 1934,
+"fen": "8/p7/3P3k/8/P1P5/1r1BK1Pp/8/8 w - - 0 47",
+"linha": [
+"d6d7",
+"b3b8",
+"c4c5",
+"h3h2",
+"d3e4"
+],
+"level": 2,
+"id": 286
+},
+{
+"tema": "salvarPeca",
+"rating": 1952,
+"fen": "r7/1p2k2p/4p1pP/4p3/1PPpP3/p2KnR2/1P3RP1/8 b - - 1 32",
+"linha": [
+"a3a2",
+"f3f7",
+"e7d6",
+"c4c5",
+"d6c6",
+"b4b5",
+"c6c5"
+],
+"level": 2,
+"id": 287
+},
+{
+"tema": "salvarPeca",
+"rating": 1963,
+"fen": "3r2k1/5ppp/b1p4P/1p2pP2/1P2P3/p1n1QKP1/P1qN2B1/7R w - - 3 27",
+"linha": [
+"e3g5",
+"c2d3",
+"f3g4",
+"g7g6",
+"g5f6"
+],
+"level": 2,
+"id": 288
+},
+{
+"tema": "salvarPeca",
+"rating": 1965,
+"fen": "r5k1/N2p2pp/1pb1pq2/8/2P5/6Q1/1Pn2PPP/2R2RK1 b - - 2 21",
+"linha": [
+"c2d4",
+"f1e1",
+"a8a7",
+"g3b8",
+"g8f7"
+],
+"level": 2,
+"id": 289
+},
+{
+"tema": "salvarPeca",
+"rating": 1966,
+"fen": "r4r2/pppqp3/2npb1kP/6N1/4Pp2/P1PP1Q2/2P2PB1/R3K2R b KQ - 3 18",
+"linha": [
+"e6g4",
+"f3h3",
+"g4h3",
+"g2h3",
+"d7e8"
+],
+"level": 2,
+"id": 290
+},
+{
+"tema": "salvarPeca",
+"rating": 1978,
+"fen": "8/1p6/1p1k1p1p/1P5P/1PR2KP1/8/8/1r6 w - - 1 50",
+"linha": [
+"f4f5",
+"b1f1",
+"f5g6",
+"d6d5",
+"c4c7"
+],
+"level": 2,
+"id": 291
+},
+{
+"tema": "salvarPeca",
+"rating": 1985,
+"fen": "3r1k2/p1p3pp/1p3p2/8/2B3PP/P7/1PPn4/2K2R2 w - - 1 26",
+"linha": [
+"f1d1",
+"d8d4",
+"c4e2"
+],
+"level": 2,
+"id": 292
+},
+{
+"tema": "salvarPeca",
+"rating": 1985,
+"fen": "R7/5ppk/8/1P2p2P/3p4/7r/P2K4/8 w - - 0 34",
+"linha": [
+"b5b6",
+"h3h2",
+"d2c1"
+],
+"level": 2,
+"id": 293
+},
+{
+"tema": "salvarPeca",
+"rating": 1987,
+"fen": "8/7k/1p2K2P/1P2P3/8/6b1/8/8 w - - 1 53",
+"linha": [
+"e6f6",
+"h7h6",
+"e5e6",
+"g3h4",
+"f6f7"
+],
+"level": 2,
+"id": 294
+},
+{
+"tema": "salvarPeca",
+"rating": 2003,
+"fen": "3K2k1/1p4p1/3P4/5R1p/1P6/P6P/2r2p2/8 b - - 3 49",
+"linha": [
+"g7g6",
+"f5f3",
+"g6g5"
+],
+"level": 2,
+"id": 295
+},
+{
+"tema": "salvarPeca",
+"rating": 2004,
+"fen": "r1bq1r2/2p2B1k/pb1p1pnp/1p2p2Q/1P2P2N/P1PP1N2/5PPP/R4RK1 b - - 0 17",
+"linha": [
+"g6f4",
+"f7g6",
+"h7g7",
+"h4f5",
+"c8f5"
+],
+"level": 2,
+"id": 296
+},
+{
+"tema": "salvarPeca",
+"rating": 2019,
+"fen": "rn2k2r/1b2b1pp/p4q2/8/2p5/BBP5/P1PP1PPP/R2QR1K1 b kq - 3 14",
+"linha": [
+"e8g8",
+"b3c4",
+"g8h8"
+],
+"level": 2,
+"id": 297
+},
+{
+"tema": "salvarPeca",
+"rating": 2046,
+"fen": "8/5k2/8/1RB4p/1P4pK/5r2/8/8 b - - 3 46",
+"linha": [
+"f7g6",
+"b5b6",
+"g6f5",
+"b6f6",
+"f5f6"
+],
+"level": 3,
+"id": 298
+},
+{
+"tema": "salvarPeca",
+"rating": 2054,
+"fen": "8/8/R1p1r3/P2p2k1/6p1/2P5/1P4PK/8 b - - 0 44",
+"linha": [
+"g5f4",
+"g2g3",
+"f4f3",
+"a6a8",
+"e6e2"
+],
+"level": 3,
+"id": 299
+},
+{
+"tema": "salvarPeca",
+"rating": 2055,
+"fen": "4rrk1/ppp2ppp/3p2n1/4n1q1/3pP3/1B4BP/PPPNb1P1/R3QRK1 w - - 1 15",
+"linha": [
+"f1f5",
+"g5e3",
+"g3f2",
+"e3h6",
+"e1e2"
+],
+"level": 3,
+"id": 300
+},
+{
+"tema": "salvarPeca",
+"rating": 2064,
+"fen": "5r1k/2q1r3/p6p/4bB2/2pB4/2P4P/P5Q1/6RK w - - 3 38",
+"linha": [
+"g2g6",
+"c7b7",
+"f5e4",
+"b7e4",
+"g6e4"
+],
+"level": 3,
+"id": 301
+},
+{
+"tema": "salvarPeca",
+"rating": 2071,
+"fen": "3r4/p2r1p2/5nkp/2R1B1p1/8/P2p3P/1P1R1PP1/6K1 b - - 0 29",
+"linha": [
+"f6e4",
+"c5c6",
+"g6f5"
+],
+"level": 3,
+"id": 302
+},
+{
+"tema": "salvarPeca",
+"rating": 2072,
+"fen": "1R6/8/2P2pk1/1K6/8/1P5p/8/2r5 w - - 0 45",
+"linha": [
+"b8h8",
+"c1c3",
+"b3b4",
+"f6f5",
+"b5b6"
+],
+"level": 3,
+"id": 303
+},
+{
+"tema": "salvarPeca",
+"rating": 2078,
+"fen": "3r2k1/pp3r1p/n1pBRppQ/8/8/1P5P/2q2PP1/3R1K2 w - - 0 26",
+"linha": [
+"d1e1",
+"c2d3",
+"f1g1",
+"d3d6",
+"e6d6"
+],
+"level": 3,
+"id": 304
+},
+{
+"tema": "salvarPeca",
+"rating": 2083,
+"fen": "6k1/1b3p1p/1q2p1p1/4b3/1p1Pp3/4B3/PPQN2PP/7K w - - 0 27",
+"linha": [
+"d2c4",
+"b6b5",
+"d4e5",
+"b7d5",
+"b2b3"
+],
+"level": 3,
+"id": 305
+},
+{
+"tema": "salvarPeca",
+"rating": 2084,
+"fen": "2r2rk1/1p4p1/p3p2p/3p1p1q/8/2P1RN2/PP3P2/RQ3K2 b - - 1 25",
+"linha": [
+"f5f4",
+"e3d3",
+"e6e5"
+],
+"level": 3,
+"id": 306
+},
+{
+"tema": "salvarPeca",
+"rating": 2087,
+"fen": "r3kbnr/ppp3pp/2n2p2/4p3/4QB2/1N6/PqP2PPP/RN2K2R w KQkq - 0 10",
+"linha": [
+"f4c1",
+"f8b4",
+"e1f1",
+"b2a1",
+"b3a1"
+],
+"level": 3,
+"id": 307
+},
+{
+"tema": "salvarPeca",
+"rating": 2088,
+"fen": "4r3/1pp2R2/3p2kp/p2P4/b1Pn2P1/P6P/1K6/5R2 w - - 2 32",
+"linha": [
+"h3h4",
+"e8e2",
+"b2c3"
+],
+"level": 3,
+"id": 308
+},
+{
+"tema": "salvarPeca",
+"rating": 2096,
+"fen": "4r1k1/p4qBp/2Q2Pp1/4p3/P1P5/1P4P1/1r5P/4R1K1 w - - 1 38",
+"linha": [
+"e1d1",
+"b2b3",
+"d1d7",
+"b3b1",
+"g1g2"
+],
+"level": 3,
+"id": 309
+},
+{
+"tema": "salvarPeca",
+"rating": 2106,
+"fen": "1r6/3R4/2r2kp1/4pp1p/3Pp2P/4P1P1/R4PK1/8 w - - 0 42",
+"linha": [
+"d4d5",
+"c6b6",
+"a2a7"
+],
+"level": 3,
+"id": 310
+},
+{
+"tema": "salvarPeca",
+"rating": 2107,
+"fen": "5k2/2r3b1/p2pPr2/1p1P2Q1/2q5/P7/1PPR4/1K5R w - - 1 33",
+"linha": [
+"d2f2",
+"c4d4",
+"h1f1"
+],
+"level": 3,
+"id": 311
+},
+{
+"tema": "salvarPeca",
+"rating": 2110,
+"fen": "2k4r/2p2p2/2p5/p5q1/6b1/PP1PQ1b1/R1PN4/1K2R3 b - - 7 28",
+"linha": [
+"g3f4",
+"e3a7",
+"f4d2",
+"a7a8",
+"c8d7",
+"a8h8",
+"d2e1",
+"h8d4",
+"d7c8"
+],
+"level": 3,
+"id": 312
+},
+{
+"tema": "salvarPeca",
+"rating": 2120,
+"fen": "6k1/7p/3p4/p2Pr3/2PQp1q1/P4pP1/5P1P/1R3R1K b - - 2 27",
+"linha": [
+"g4h3",
+"b1b8",
+"g8f7",
+"d4a7",
+"e5e7",
+"a7e7",
+"f7e7",
+"f1g1",
+"e4e3",
+"f2e3",
+"f3f2"
+],
+"level": 3,
+"id": 313
+},
+{
+"tema": "salvarPeca",
+"rating": 2123,
+"fen": "2k5/1p6/1B1p2p1/PK1Pppb1/4P2p/5P1P/6P1/8 w - - 1 39",
+"linha": [
+"a5a6",
+"b7a6",
+"b5c6"
+],
+"level": 3,
+"id": 314
+},
+{
+"tema": "salvarPeca",
+"rating": 2130,
+"fen": "8/R5pk/5r2/5P1p/5KP1/8/8/8 w - - 0 82",
+"linha": [
+"g4g5",
+"f6f8",
+"f5f6",
+"f8g8",
+"f4f5"
+],
+"level": 3,
+"id": 315
+},
+{
+"tema": "salvarPeca",
+"rating": 2147,
+"fen": "r1bqk2r/pn2bpQ1/1p1p2np/8/4P3/5N2/PPP1BPPP/RNB2RK1 b kq - 0 12",
+"linha": [
+"e7f6",
+"e2b5",
+"e8e7",
+"g7f6",
+"e7f6"
+],
+"level": 3,
+"id": 316
+},
+{
+"tema": "salvarPeca",
+"rating": 2149,
+"fen": "8/p5k1/4R1pp/8/1pp1N3/1b1p2PP/1P5K/8 b - - 0 38",
+"linha": [
+"c4c3",
+"e6e7",
+"g7f8",
+"e7a7",
+"d3d2"
+],
+"level": 3,
+"id": 317
+},
+{
+"tema": "salvarPeca",
+"rating": 2160,
+"fen": "7r/p1k1bppp/1p3nP1/1K6/1P3P2/P3BN2/2q5/3R1B1R w - - 3 24",
+"linha": [
+"d1c1",
+"a7a6",
+"b5a6",
+"h8a8",
+"a6b5",
+"c2c1",
+"e3c1",
+"f6e4",
+"b5c4"
+],
+"level": 3,
+"id": 318
+},
+{
+"tema": "salvarPeca",
+"rating": 2161,
+"fen": "r1b1kb1r/pp3ppp/2nppn2/2p5/4P3/2NPBN2/PqPQBPPP/R3K2R w KQkq - 0 8",
+"linha": [
+"a1b1",
+"b2a3",
+"c3b5",
+"a3a2",
+"e1g1"
+],
+"level": 3,
+"id": 319
+},
+{
+"tema": "salvarPeca",
+"rating": 2166,
+"fen": "8/3P1p2/4pk2/1BP1N1pp/5P2/6PK/7P/3q4 w - - 0 43",
+"linha": [
+"b5d3",
+"f6e7",
+"c5c6",
+"g5g4",
+"h3h4"
+],
+"level": 3,
+"id": 320
+},
+{
+"tema": "salvarPeca",
+"rating": 2171,
+"fen": "8/8/8/pp1p1k2/2pP2p1/P1P3K1/1P4P1/8 b - - 1 36",
+"linha": [
+"f5g5",
+"g3f2",
+"g5f4"
+],
+"level": 3,
+"id": 321
+},
+{
+"tema": "salvarPeca",
+"rating": 2171,
+"fen": "r5k1/p1p3b1/1pn1pB2/8/2P2Q2/2N2b1r/PqBK1P1P/4R3 w - - 1 20",
+"linha": [
+"e1g1",
+"a8d8",
+"c3d5",
+"b2b4",
+"d2c1"
+],
+"level": 3,
+"id": 322
+},
+{
+"tema": "salvarPeca",
+"rating": 2187,
+"fen": "r3qrk1/ppp3pp/8/6B1/1N2R3/3B1b2/PP3P2/R2Q2K1 b - - 0 18",
+"linha": [
+"e8h5",
+"d1b3",
+"g8h8"
+],
+"level": 3,
+"id": 323
+},
+{
+"tema": "salvarPeca",
+"rating": 2189,
+"fen": "5rk1/1R2n1b1/p1p5/7p/2PP2pN/3QP3/6PP/q4NK1 b - - 4 28",
+"linha": [
+"a1e1",
+"g2g3",
+"e1f2",
+"g1h1",
+"f2f1",
+"d3f1",
+"f8f1",
+"h1g2",
+"f1f7"
+],
+"level": 3,
+"id": 324
+},
+{
+"tema": "salvarPeca",
+"rating": 2211,
+"fen": "8/4B3/2k5/2P1Kp2/3P1Pp1/4n3/8/8 b - - 0 45",
+"linha": [
+"g4g3",
+"d4d5",
+"c6d7"
+],
+"level": 3,
+"id": 325
+},
+{
+"tema": "salvarPeca",
+"rating": 2217,
+"fen": "8/P1n5/1p5p/8/3kpp2/3p3P/5PP1/2R2K2 b - - 4 39",
+"linha": [
+"d3d2",
+"c1a1",
+"d4d3",
+"a1a3",
+"d3c2"
+],
+"level": 3,
+"id": 326
+},
+{
+"tema": "salvarPeca",
+"rating": 2219,
+"fen": "8/8/4pk2/p1p4p/Pp1pKP2/1P1P3P/2P5/8 b - - 0 38",
+"linha": [
+"h5h4",
+"f4f5",
+"e6e5",
+"e4d5",
+"f6f5",
+"d5c5",
+"f5f4"
+],
+"level": 3,
+"id": 327
+},
+{
+"tema": "neutralizar",
+"rating": 876,
+"fen": "8/8/8/1n6/1P5p/3NK1k1/8/8 b - - 0 61",
+"linha": [
+"h4h3",
+"d3f2",
+"h3h2",
+"f2h1",
+"g3g2"
+],
+"level": 1,
+"id": 328
+},
+{
+"tema": "neutralizar",
+"rating": 908,
+"fen": "8/8/8/1p5p/1P3P1k/4K3/8/8 b - - 0 61",
+"linha": [
+"h4g4",
+"e3e4",
+"h5h4"
+],
+"level": 1,
+"id": 329
+},
+{
+"tema": "neutralizar",
+"rating": 1021,
+"fen": "8/5rk1/4K1p1/3R2P1/8/8/8/8 w - - 10 70",
+"linha": [
+"d5d7",
+"f7d7",
+"e6d7",
+"g7f7",
+"d7d6"
+],
+"level": 1,
+"id": 330
+},
+{
+"tema": "neutralizar",
+"rating": 1035,
+"fen": "8/7p/8/8/5p1k/5P2/6P1/7K b - - 4 51",
+"linha": [
+"h4g3",
+"h1g1",
+"h7h5"
+],
+"level": 1,
+"id": 331
+},
+{
+"tema": "neutralizar",
+"rating": 1138,
+"fen": "8/8/8/6p1/3k2P1/2p4P/5P2/3K4 b - - 2 52",
+"linha": [
+"d4d3",
+"d1c1",
+"c3c2",
+"c1b2",
+"d3d2"
+],
+"level": 1,
+"id": 332
+},
+{
+"tema": "neutralizar",
+"rating": 1159,
+"fen": "8/p6p/6p1/1P2p3/Pk2K3/5P2/6PP/8 b - - 5 34",
+"linha": [
+"b4a4",
+"e4e5",
+"a4b5",
+"f3f4",
+"a7a5"
+],
+"level": 1,
+"id": 333
+},
+{
+"tema": "neutralizar",
+"rating": 1184,
+"fen": "8/8/2bk2pp/8/1N1K4/7P/6P1/8 w - - 0 43",
+"linha": [
+"b4c6",
+"d6c6",
+"d4e5"
+],
+"level": 1,
+"id": 334
+},
+{
+"tema": "neutralizar",
+"rating": 1232,
+"fen": "r2q1rk1/pp3ppp/2nbpn2/3p2B1/Q5b1/3P1NP1/PP2PPBP/RN3RK1 w - - 6 10",
+"linha": [
+"g5f6",
+"d8f6",
+"a4g4",
+"f6b2",
+"b1d2"
+],
+"level": 1,
+"id": 335
+},
+{
+"tema": "neutralizar",
+"rating": 1276,
+"fen": "8/6p1/3p1k1p/3P4/4P1P1/2b4P/2K5/8 w - - 1 50",
+"linha": [
+"c2c3",
+"f6e5",
+"c3d3"
+],
+"level": 1,
+"id": 336
+},
+{
+"tema": "neutralizar",
+"rating": 1334,
+"fen": "4b3/p7/1p5p/1N2k1p1/1PP1p1P1/P3K2P/8/8 b - - 2 51",
+"linha": [
+"e8b5",
+"c4b5",
+"e5d5"
+],
+"level": 1,
+"id": 337
+},
+{
+"tema": "neutralizar",
+"rating": 1347,
+"fen": "8/6k1/4p3/6Kp/3P4/5P2/8/8 w - - 1 45",
+"linha": [
+"g5h5",
+"g7f6",
+"h5g4"
+],
+"level": 1,
+"id": 338
+},
+{
+"tema": "neutralizar",
+"rating": 1352,
+"fen": "8/2p2p2/3p2kp/p2P4/P1P1KpP1/7P/8/8 w - - 0 38",
+"linha": [
+"e4f4",
+"f7f6",
+"h3h4"
+],
+"level": 1,
+"id": 339
+},
+{
+"tema": "neutralizar",
+"rating": 1402,
+"fen": "3r4/6k1/1p1pr1p1/p1p2p2/P1P1p1P1/1P1n4/3R1PBP/4R1K1 w - - 1 30",
+"linha": [
+"d2d3",
+"e4d3",
+"e1e6",
+"d3d2",
+"g2f3"
+],
+"level": 1,
+"id": 340
+},
+{
+"tema": "neutralizar",
+"rating": 1436,
+"fen": "8/6pp/5k2/8/4p1PP/6K1/5P2/8 b - - 2 46",
+"linha": [
+"f6e5",
+"f2f4",
+"e5d4"
+],
+"level": 1,
+"id": 341
+},
+{
+"tema": "neutralizar",
+"rating": 1459,
+"fen": "2r1k2r/1p2bppp/1q1p4/p2Pp1P1/P4n1P/1N3P2/1PPQ4/2KR1B1R b k - 0 17",
+"linha": [
+"b6b3",
+"f1b5",
+"e8f8"
+],
+"level": 1,
+"id": 342
+},
+{
+"tema": "neutralizar",
+"rating": 1503,
+"fen": "r1bq2k1/pp2pr1p/2n2bpB/3p4/3P4/3B1N2/PPQ2PPP/R4RK1 w - - 4 14",
+"linha": [
+"d3g6",
+"h7g6",
+"c2g6",
+"f7g7",
+"h6g7",
+"f6g7",
+"f3g5"
+],
+"level": 1,
+"id": 343
+},
+{
+"tema": "neutralizar",
+"rating": 1513,
+"fen": "rn3rk1/ppq2ppb/2p1pn1p/8/7N/1BNP2bP/PPPB1P2/R2QR1K1 w - - 0 14",
+"linha": [
+"f2g3",
+"c7g3",
+"h4g2"
+],
+"level": 1,
+"id": 344
+},
+{
+"tema": "neutralizar",
+"rating": 1541,
+"fen": "8/5p1p/p3p1p1/2K5/1p3P2/1P4Pk/P1P4P/8 w - - 1 30",
+"linha": [
+"c5b4",
+"h3h2",
+"c2c4",
+"h2g3",
+"c4c5"
+],
+"level": 1,
+"id": 345
+},
+{
+"tema": "neutralizar",
+"rating": 1559,
+"fen": "8/6K1/5P2/8/7R/8/p1r5/1k6 b - - 0 58",
+"linha": [
+"a2a1q",
+"h4h1",
+"c2c1",
+"h1c1",
+"b1c1"
+],
+"level": 1,
+"id": 346
+},
+{
+"tema": "neutralizar",
+"rating": 1564,
+"fen": "8/8/1p1k4/2p1p3/P3K3/3B1P2/P7/4n3 b - - 5 53",
+"linha": [
+"e1d3",
+"e4d3",
+"d6d5",
+"d3c3",
+"c5c4"
+],
+"level": 1,
+"id": 347
+},
+{
+"tema": "neutralizar",
+"rating": 1596,
+"fen": "r2qk2r/1p3pbp/p1npb1p1/3np3/4P3/2NB4/PPP2PPP/R1BQK2R w KQkq - 0 12",
+"linha": [
+"e4d5",
+"e6d5",
+"c3d5",
+"d8a5",
+"d5c3"
+],
+"level": 1,
+"id": 348
+},
+{
+"tema": "neutralizar",
+"rating": 1613,
+"fen": "3k4/p2b4/2p5/1p1p1Bp1/3P2P1/P1P3K1/2P5/8 b - - 2 34",
+"linha": [
+"d7f5",
+"g4f5",
+"d8e7"
+],
+"level": 1,
+"id": 349
+},
+{
+"tema": "neutralizar",
+"rating": 1630,
+"fen": "3r4/1bk5/p1pNpPpp/8/8/6P1/PPP4P/5RK1 b - - 0 26",
+"linha": [
+"c7d6",
+"f1d1",
+"d6c7"
+],
+"level": 1,
+"id": 350
+},
+{
+"tema": "neutralizar",
+"rating": 1632,
+"fen": "7k/p5bp/5Bp1/3b4/8/P2p4/1P3RPP/7K b - - 3 30",
+"linha": [
+"g7f6",
+"f2f6",
+"d3d2",
+"f6f1",
+"d5b3"
+],
+"level": 1,
+"id": 351
+},
+{
+"tema": "neutralizar",
+"rating": 1650,
+"fen": "rnbqk2r/ppp2pp1/3b3p/8/6n1/2B2N2/PPP1PPPP/RN1QKB1R b KQkq - 1 7",
+"linha": [
+"g4f2",
+"d1d4",
+"f2h1",
+"d4g7",
+"h8f8"
+],
+"level": 1,
+"id": 352
+},
+{
+"tema": "neutralizar",
+"rating": 1677,
+"fen": "r5k1/p4p1p/RP4pQ/1q1pP3/2p5/2P4P/5PP1/6K1 w - - 2 28",
+"linha": [
+"a6a7",
+"a8a7",
+"b6a7",
+"b5a5",
+"h6e3"
+],
+"level": 1,
+"id": 353
+},
+{
+"tema": "neutralizar",
+"rating": 1684,
+"fen": "3q1k1r/5p2/4p2p/p2pP2Q/5pR1/P1r5/6PP/5RK1 w - - 0 32",
+"linha": [
+"g4f4",
+"d8b6",
+"g1h1"
+],
+"level": 1,
+"id": 354
+},
+{
+"tema": "neutralizar",
+"rating": 1716,
+"fen": "5k2/p1p2r2/1p1pK3/1P1Pp3/4N1p1/8/2P2n2/5R2 w - - 0 44",
+"linha": [
+"f1f2",
+"f7f2",
+"e4f2",
+"g4g3",
+"f2h3"
+],
+"level": 1,
+"id": 355
+},
+{
+"tema": "neutralizar",
+"rating": 1734,
+"fen": "2r2rk1/2R1ppbp/b5p1/p1NP4/4PP2/8/PP3RPP/7K w - - 4 27",
+"linha": [
+"c5a6",
+"c8c7",
+"a6c7",
+"f8c8",
+"f2c2"
+],
+"level": 1,
+"id": 356
+},
+{
+"tema": "neutralizar",
+"rating": 1740,
+"fen": "8/8/8/p3pP1p/3k3P/KP6/8/8 b - - 0 46",
+"linha": [
+"d4d5",
+"a3a4",
+"e5e4"
+],
+"level": 1,
+"id": 357
+},
+{
+"tema": "neutralizar",
+"rating": 1759,
+"fen": "8/1p6/6K1/2k4p/7P/5P2/8/8 w - - 1 51",
+"linha": [
+"f3f4",
+"c5d6",
+"f4f5"
+],
+"level": 2,
+"id": 358
+},
+{
+"tema": "neutralizar",
+"rating": 1779,
+"fen": "r2k1b1r/pppq1B1p/4p1p1/4n3/3Pb3/4PN1P/PP3PP1/R2QK2R w KQ - 0 13",
+"linha": [
+"f3e5",
+"f8b4",
+"e1f1",
+"d7b5",
+"f1g1"
+],
+"level": 2,
+"id": 359
+},
+{
+"tema": "neutralizar",
+"rating": 1797,
+"fen": "4k3/2p5/4K3/8/7R/p1b5/8/8 b - - 0 50",
+"linha": [
+"a3a2",
+"h4g4",
+"e8f8"
+],
+"level": 2,
+"id": 360
+},
+{
+"tema": "neutralizar",
+"rating": 1810,
+"fen": "r2qkbnr/1pp3pp/p1n5/3pB3/8/2PBPQ2/PP3PPP/RN2K2R b KQkq - 0 9",
+"linha": [
+"c6e5",
+"f3h5",
+"e5f7"
+],
+"level": 2,
+"id": 361
+},
+{
+"tema": "neutralizar",
+"rating": 1823,
+"fen": "r1bq1rk1/pp3pBp/2pp2p1/8/B7/P1n4P/1PP2PP1/R2QK2R w KQ - 0 13",
+"linha": [
+"g7c3",
+"f8e8",
+"e1f1"
+],
+"level": 2,
+"id": 362
+},
+{
+"tema": "neutralizar",
+"rating": 1827,
+"fen": "8/8/3k3p/pppP2p1/4Pp2/1P1K1PP1/P6P/8 b - - 0 33",
+"linha": [
+"f4g3",
+"h2g3",
+"h6h5"
+],
+"level": 2,
+"id": 363
+},
+{
+"tema": "neutralizar",
+"rating": 1841,
+"fen": "8/8/2R5/8/3k1PK1/rp6/8/8 b - - 1 58",
+"linha": [
+"b3b2",
+"c6b6",
+"d4c3"
+],
+"level": 2,
+"id": 364
+},
+{
+"tema": "neutralizar",
+"rating": 1847,
+"fen": "rnbqk2r/ppp2ppp/3bp3/8/4n3/1BN5/PPPP2PP/R1BQK1NR w KQkq - 0 7",
+"linha": [
+"c3e4",
+"d8h4",
+"e4f2"
+],
+"level": 2,
+"id": 365
+},
+{
+"tema": "neutralizar",
+"rating": 1853,
+"fen": "8/1p6/1p1p1k2/2p1p2K/P1P1P3/1P1P4/8/8 w - - 1 39",
+"linha": [
+"h5h6",
+"f6e6",
+"h6g6",
+"e6e7",
+"g6g7"
+],
+"level": 2,
+"id": 366
+},
+{
+"tema": "neutralizar",
+"rating": 1869,
+"fen": "r2q1r1k/1b2bppp/p3pnn1/1p5Q/3NN3/2P2R2/PPB3PP/R1B3K1 w - - 4 18",
+"linha": [
+"e4f6",
+"e7f6",
+"f3h3"
+],
+"level": 2,
+"id": 367
+},
+{
+"tema": "neutralizar",
+"rating": 1883,
+"fen": "r3r1k1/pp1qbpp1/3p1n1p/2pP4/2Q1NP2/5b2/PP1BP3/R3KBR1 w Q - 0 17",
+"linha": [
+"e2f3",
+"f6e4",
+"f3e4",
+"e7h4",
+"e1d1"
+],
+"level": 2,
+"id": 368
+},
+{
+"tema": "neutralizar",
+"rating": 1885,
+"fen": "4R3/1pp2p1k/1b4p1/1P1Q4/2P3K1/6P1/4p3/5q2 w - - 0 41",
+"linha": [
+"d5e5",
+"f7f5",
+"g4g5",
+"f1c1",
+"g5f6"
+],
+"level": 2,
+"id": 369
+},
+{
+"tema": "neutralizar",
+"rating": 1892,
+"fen": "8/8/5p1p/p1k3p1/P1P4P/3K4/6P1/8 w - - 0 38",
+"linha": [
+"h4g5",
+"f6g5",
+"g2g4",
+"c5b4",
+"d3d4"
+],
+"level": 2,
+"id": 370
+},
+{
+"tema": "neutralizar",
+"rating": 1916,
+"fen": "8/b6p/P1K5/2p1k1p1/6P1/8/1P3P2/8 w - - 2 50",
+"linha": [
+"c6b7",
+"e5d6",
+"b7a7",
+"d6c7",
+"b2b3",
+"h7h6",
+"f2f3"
+],
+"level": 2,
+"id": 371
+},
+{
+"tema": "neutralizar",
+"rating": 1931,
+"fen": "1R6/5k2/2pP4/p7/P3n1K1/2r2P2/8/8 w - - 0 41",
+"linha": [
+"f3e4",
+"c3d3",
+"e4e5"
+],
+"level": 2,
+"id": 372
+},
+{
+"tema": "neutralizar",
+"rating": 1944,
+"fen": "8/1p1k4/4p3/3pPn2/1PpN1P2/2P5/2K5/8 w - - 1 37",
+"linha": [
+"d4f5",
+"e6f5",
+"c2d2",
+"d5d4",
+"c3d4",
+"b7b5",
+"d4d5"
+],
+"level": 2,
+"id": 373
+},
+{
+"tema": "neutralizar",
+"rating": 1949,
+"fen": "r3r1k1/pp2qp1p/3b2p1/3p4/3P2n1/1PN4P/PBP1BPP1/R2QK2R b KQ - 0 15",
+"linha": [
+"g4f2",
+"e1f2",
+"e7e3",
+"f2f1",
+"d6g3"
+],
+"level": 2,
+"id": 374
+},
+{
+"tema": "neutralizar",
+"rating": 1952,
+"fen": "8/8/4k1pp/1p6/1P3KP1/6P1/8/8 b - - 6 44",
+"linha": [
+"e6d5",
+"g4g5",
+"h6h5"
+],
+"level": 2,
+"id": 375
+},
+{
+"tema": "neutralizar",
+"rating": 1971,
+"fen": "7n/8/4K1pp/1k6/6PP/8/8/8 w - - 2 54",
+"linha": [
+"e6f6",
+"b5c6",
+"f6g7",
+"g6g5",
+"h4h5"
+],
+"level": 2,
+"id": 376
+},
+{
+"tema": "neutralizar",
+"rating": 1976,
+"fen": "8/8/1k1p3p/p2P2p1/1pK2P1P/1P3P2/1P6/8 b - - 0 39",
+"linha": [
+"g5h4",
+"f4f5",
+"b6c7"
+],
+"level": 2,
+"id": 377
+},
+{
+"tema": "neutralizar",
+"rating": 1983,
+"fen": "8/7k/6p1/6b1/P6p/3N4/2P1K3/8 w - - 0 39",
+"linha": [
+"a4a5",
+"g5d8",
+"a5a6",
+"d8b6",
+"c2c4",
+"b6a7",
+"c4c5"
+],
+"level": 2,
+"id": 378
+},
+{
+"tema": "neutralizar",
+"rating": 1993,
+"fen": "3rr1k1/pp3pp1/1b5p/3pB1nQ/q2N4/P1P2N1P/1P2RPP1/6K1 w - - 7 28",
+"linha": [
+"f3g5",
+"a4d7",
+"g5f3"
+],
+"level": 2,
+"id": 379
+},
+{
+"tema": "neutralizar",
+"rating": 2010,
+"fen": "8/pp6/8/2p2k1P/3p4/2P3K1/PP6/8 w - - 0 40",
+"linha": [
+"c3d4",
+"c5d4",
+"g3f3"
+],
+"level": 2,
+"id": 380
+},
+{
+"tema": "neutralizar",
+"rating": 2026,
+"fen": "8/p7/2pp4/8/2KPk3/1PP5/8/8 b - - 0 55",
+"linha": [
+"a7a5",
+"b3b4",
+"a5a4"
+],
+"level": 2,
+"id": 381
+},
+{
+"tema": "neutralizar",
+"rating": 2043,
+"fen": "8/3k4/P5p1/1NbP3p/8/5K2/8/8 w - - 1 54",
+"linha": [
+"a6a7",
+"c5a7",
+"b5a7",
+"h5h4",
+"a7b5"
+],
+"level": 2,
+"id": 382
+},
+{
+"tema": "neutralizar",
+"rating": 2058,
+"fen": "2rq1rk1/1p2ppbp/p2p1np1/8/P2BPPb1/2N5/1PPQB1PP/R4RK1 w - - 1 14",
+"linha": [
+"d4f6",
+"d8b6",
+"g1h1"
+],
+"level": 2,
+"id": 383
+},
+{
+"tema": "neutralizar",
+"rating": 2090,
+"fen": "6k1/p5pp/5p2/1P2p3/2P1P3/2KB2P1/8/7r w - - 1 37",
+"linha": [
+"c4c5",
+"g8f7",
+"b5b6",
+"h1c1",
+"d3c2",
+"a7b6",
+"c5b6"
+],
+"level": 2,
+"id": 384
+},
+{
+"tema": "neutralizar",
+"rating": 2092,
+"fen": "8/1p6/4qk2/p2p2p1/2pPPp1p/2P2P1P/PPQ2K2/8 b - - 0 38",
+"linha": [
+"e6h3",
+"e4e5",
+"f6g7"
+],
+"level": 2,
+"id": 385
+},
+{
+"tema": "neutralizar",
+"rating": 2098,
+"fen": "8/8/5p2/kpP2p2/3K1P2/8/8/8 w - - 0 55",
+"linha": [
+"d4d5",
+"b5b4",
+"c5c6",
+"a5b6",
+"d5d6"
+],
+"level": 2,
+"id": 386
+},
+{
+"tema": "neutralizar",
+"rating": 2117,
+"fen": "8/1k6/1P1Kp3/5p1p/6p1/5P1P/5P2/8 w - - 0 49",
+"linha": [
+"f3g4",
+"f5g4",
+"h3h4"
+],
+"level": 2,
+"id": 387
+},
+{
+"tema": "neutralizar",
+"rating": 2122,
+"fen": "2r3k1/p1qn1pb1/1p1p2p1/4P1P1/3B3Q/1NP5/P1P2K2/R6b w - - 0 22",
+"linha": [
+"e5d6",
+"c7d6",
+"d4g7",
+"g8g7",
+"a1h1",
+"d6e5",
+"b3d4"
+],
+"level": 3,
+"id": 388
+},
+{
+"tema": "neutralizar",
+"rating": 2144,
+"fen": "2k3rr/1pp5/3pqn2/pP6/P2QP2p/B2P3P/5PP1/2R2RK1 b - - 2 22",
+"linha": [
+"e6h3",
+"c1c7",
+"c8b8",
+"c7c8",
+"b8c8",
+"f1c1",
+"c8b8"
+],
+"level": 3,
+"id": 389
+},
+{
+"tema": "neutralizar",
+"rating": 2152,
+"fen": "5rrk/p6q/1p1p4/6b1/3PN1Q1/2P4P/PP4PK/4R3 w - - 0 31",
+"linha": [
+"e4g5",
+"h7h6",
+"h3h4"
+],
+"level": 3,
+"id": 390
+},
+{
+"tema": "neutralizar",
+"rating": 2154,
+"fen": "8/8/5kp1/5p1p/3K1P2/7P/6P1/8 w - - 2 49",
+"linha": [
+"h3h4",
+"f6e6",
+"d4c5",
+"e6d7",
+"c5d5"
+],
+"level": 3,
+"id": 391
+},
+{
+"tema": "neutralizar",
+"rating": 2171,
+"fen": "8/1p6/p4p2/4pk1P/1P6/P3P1K1/8/8 w - - 3 42",
+"linha": [
+"g3h4",
+"e5e4",
+"a3a4"
+],
+"level": 3,
+"id": 392
+},
+{
+"tema": "neutralizar",
+"rating": 2174,
+"fen": "8/8/7p/1p2k3/2p4P/P1P1K3/8/8 w - - 2 54",
+"linha": [
+"h4h5",
+"e5d5",
+"e3f4",
+"d5c5",
+"f4f5"
+],
+"level": 3,
+"id": 393
+},
+{
+"tema": "neutralizar",
+"rating": 2196,
+"fen": "r4k2/p7/6pN/8/8/2p5/P4PPP/4R1K1 b - - 2 30",
+"linha": [
+"c3c2",
+"h6g4",
+"a8c8"
+],
+"level": 3,
+"id": 394
+},
+{
+"tema": "neutralizar",
+"rating": 2211,
+"fen": "r3k1r1/ppp1pb1p/2n4B/5p2/4Q1P1/qP5P/2P5/3RR2K w q - 0 25",
+"linha": [
+"e4f5",
+"a8d8",
+"e1f1"
+],
+"level": 3,
+"id": 395
+},
+{
+"tema": "neutralizar",
+"rating": 2248,
+"fen": "8/8/1p6/4k3/PpP5/8/2K5/8 b - - 1 50",
+"linha": [
+"e5d4",
+"c4c5",
+"b6c5",
+"a4a5",
+"d4d5"
+],
+"level": 3,
+"id": 396
+},
+{
+"tema": "neutralizar",
+"rating": 2249,
+"fen": "8/8/8/2pkpP1p/p1p4P/P1P1K3/1P6/8 w - - 0 35",
+"linha": [
+"e3f3",
+"e5e4",
+"f3f4",
+"e4e3",
+"f4e3",
+"d5e5",
+"f5f6",
+"e5f6",
+"e3f4"
+],
+"level": 3,
+"id": 397
+},
+{
+"tema": "neutralizar",
+"rating": 2255,
+"fen": "5Q2/5ppk/5q1p/4rN1R/2P3P1/pP2P3/K7/8 b - - 11 45",
+"linha": [
+"e5f5",
+"h5h2",
+"f5f1"
+],
+"level": 3,
+"id": 398
+},
+{
+"tema": "neutralizar",
+"rating": 2256,
+"fen": "5r2/8/3r4/p1pNk1p1/1pPn2P1/1P3pK1/P2R3P/3R4 w - - 2 38",
+"linha": [
+"d2d4",
+"f3f2",
+"d4d3"
+],
+"level": 3,
+"id": 399
+},
+{
+"tema": "neutralizar",
+"rating": 2279,
+"fen": "r3r1k1/pp3ppp/1q4b1/2p5/2Q1N1P1/bP3P1P/P1P3B1/1K1R3R b - - 1 19",
+"linha": [
+"e8e4",
+"f3e4",
+"b6f6"
+],
+"level": 3,
+"id": 400
+},
+{
+"tema": "neutralizar",
+"rating": 2290,
+"fen": "8/6k1/1p1p2p1/2pPp3/2P3KP/2P5/5P2/8 w - - 1 35",
+"linha": [
+"g4g5",
+"g7f7",
+"g5h6",
+"f7f6",
+"f2f3",
+"f6f5",
+"h6g7",
+"f5f4",
+"g7g6",
+"f4f3",
+"h4h5"
+],
+"level": 3,
+"id": 401
+},
+{
+"tema": "neutralizar",
+"rating": 2296,
+"fen": "1q3k2/8/3pRP2/p1pP1Ppp/1rP5/4Q3/7P/6K1 w - - 0 40",
+"linha": [
+"e3g5",
+"b4b1",
+"g1g2",
+"b8b2",
+"g2h3"
+],
+"level": 3,
+"id": 402
+},
+{
+"tema": "neutralizar",
+"rating": 2305,
+"fen": "8/8/3KP1k1/7p/5p1P/p3n3/5B2/8 w - - 0 51",
+"linha": [
+"f2e3",
+"f4e3",
+"e6e7",
+"g6f7",
+"d6d7"
+],
+"level": 3,
+"id": 403
+},
+{
+"tema": "neutralizar",
+"rating": 2325,
+"fen": "2rr2k1/p4pp1/1n2p2B/4Q2n/3PP2q/1B3P2/PP3P1P/R4R1K b - - 0 19",
+"linha": [
+"g7h6",
+"b3e6",
+"f7e6",
+"e5e6",
+"g8h7",
+"e6f5",
+"h7h8"
+],
+"level": 3,
+"id": 404
+},
+{
+"tema": "neutralizar",
+"rating": 2327,
+"fen": "8/8/6p1/1p1K4/5k2/1P6/2P5/8 b - - 0 42",
+"linha": [
+"b5b4",
+"d5d4",
+"g6g5"
+],
+"level": 3,
+"id": 405
+},
+{
+"tema": "neutralizar",
+"rating": 2329,
+"fen": "3R4/8/p1k5/4p3/1Pn1P3/P7/3Br1r1/2KR4 b - - 3 46",
+"linha": [
+"c6b5",
+"d8d5",
+"b5a4"
+],
+"level": 3,
+"id": 406
+},
+{
+"tema": "neutralizar",
+"rating": 2340,
+"fen": "8/8/5n1p/1P2k3/4B1p1/4K2P/8/8 b - - 0 47",
+"linha": [
+"f6e4",
+"b5b6",
+"e4d6",
+"h3g4",
+"d6c4",
+"e3f3",
+"c4b6",
+"f3g3",
+"e5f6",
+"g3h4",
+"f6g6"
+],
+"level": 3,
+"id": 407
+},
+{
+"tema": "neutralizar",
+"rating": 2351,
+"fen": "r1bqk2r/ppp2pp1/2nb3p/4N3/2B5/2P5/PPP2PPP/R1BQR1K1 b kq - 0 9",
+"linha": [
+"d6e5",
+"c1f4",
+"d8d1",
+"a1d1",
+"f7f6"
+],
+"level": 3,
+"id": 408
+},
+{
+"tema": "neutralizar",
+"rating": 2373,
+"fen": "8/8/8/8/P7/2K3p1/2R2rPk/8 b - - 5 56",
+"linha": [
+"h2g2",
+"a4a5",
+"g2h3"
+],
+"level": 3,
+"id": 409
+},
+{
+"tema": "neutralizar",
+"rating": 2382,
+"fen": "7r/p6p/5p2/2N5/3k4/1P6/P3p1PK/2R5 b - - 5 28",
+"linha": [
+"h8e8",
+"c1c4",
+"d4e3"
+],
+"level": 3,
+"id": 410
+},
+{
+"tema": "neutralizar",
+"rating": 2407,
+"fen": "8/p7/8/4k2p/Pp4pP/4K1P1/1P6/8 b - a3 0 37",
+"linha": [
+"b4a3",
+"b2a3",
+"a7a6"
+],
+"level": 3,
+"id": 411
+},
+{
+"tema": "neutralizar",
+"rating": 2432,
+"fen": "7k/7p/pp6/4p3/1p1n4/P2P3P/1BP3K1/8 w - - 0 35",
+"linha": [
+"b2d4",
+"e5d4",
+"a3a4",
+"h8g7",
+"g2f3"
+],
+"level": 3,
+"id": 412
+},
+{
+"tema": "neutralizar",
+"rating": 2446,
+"fen": "8/5k1p/5p2/3pbP2/7P/2B2K2/1P6/8 b - - 6 32",
+"linha": [
+"e5c3",
+"b2c3",
+"h7h5"
+],
+"level": 3,
+"id": 413
+},
+{
+"tema": "neutralizar",
+"rating": 2470,
+"fen": "8/2B5/p1p3p1/P4pPp/4pP1P/4P3/3k1K2/8 b - - 7 67",
+"linha": [
+"c6c5",
+"c7b6",
+"c5c4",
+"b6c5",
+"c4c3",
+"c5b4",
+"d2c2"
+],
+"level": 3,
+"id": 414
+},
+{
+"tema": "neutralizar",
+"rating": 2475,
+"fen": "8/1Q4nk/p1p2p2/Pp1p1q2/1P1P2pP/2P3B1/6P1/6K1 w - - 0 36",
+"linha": [
+"b7a6",
+"f5d3",
+"g1h2"
+],
+"level": 3,
+"id": 415
+},
+{
+"tema": "neutralizar",
+"rating": 2479,
+"fen": "4K3/4P3/2k5/p7/Pp6/2pR4/2P2r2/8 b - - 8 49",
+"linha": [
+"f2c2",
+"d3e3",
+"c2h2"
+],
+"level": 3,
+"id": 416
+},
+{
+"tema": "neutralizar",
+"rating": 2488,
+"fen": "rnb2rk1/pppp1ppp/8/4P3/2B4q/1Q4n1/PB3P1P/R3K1NR w KQ - 0 12",
+"linha": [
+"f2g3",
+"h4e4",
+"e1f2"
+],
+"level": 3,
+"id": 417
+}
+]
+}

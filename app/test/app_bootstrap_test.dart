@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:xadrez_mate/data/defesa_db.dart';
+import 'package:xadrez_mate/data/puzzle_db.dart';
+import 'package:xadrez_mate/data/tatica_db.dart';
 import 'package:xadrez_mate/main.dart';
 
 /// Garante que o app SAI da tela de carregamento (bootstrap completo com os
@@ -25,6 +29,7 @@ void main() {
     expect(find.text('Mateflow'), findsOneWidget);
     expect(find.text('Mates'), findsOneWidget);
     expect(find.text('Tática'), findsOneWidget);
+    expect(find.text('Defesa'), findsOneWidget);
     expect(find.byIcon(Icons.settings_outlined), findsOneWidget);
   });
 
@@ -57,6 +62,54 @@ void main() {
     expect(find.text('Espeto'), findsOneWidget);
     expect(find.text('Descoberta'), findsOneWidget);
     expect(find.text('Sacrifício'), findsOneWidget);
+    // volta
+    await tester.tap(find.byIcon(Icons.arrow_back));
+    await tester.pumpAndSettle();
+
+    // Defesa
+    await tester.tap(find.text('Defesa'));
+    await tester.pumpAndSettle();
+    expect(find.text('Defender contra mate'), findsOneWidget);
+    expect(find.text('Salvar uma peça'), findsOneWidget);
+    expect(find.text('Encontrar contra-ataque'), findsOneWidget);
+    expect(find.text('Neutralizar uma ameaça'), findsOneWidget);
+    expect(find.text('Defesa precisa'), findsOneWidget);
+  });
+
+  testWidgets('Defesa tem exercícios em todos os níveis', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(const MateflowApp());
+    await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 1500)));
+    await tester.pumpAndSettle();
+    debugPrint('puzzles: ${PuzzleDb.instance.countFor(1)} '
+        'tatica: ${TaticaDb.instance.countTema("espeto")} '
+        'defesa: ${DefesaDb.instance.countTema("defenderMate")}');
+
+    await tester.tap(find.text('Defesa'));
+    await tester.pumpAndSettle();
+
+    final counts = tester
+        .widgetList<Text>(find.descendant(
+          of: find.byType(Card),
+          matching: find.byType(Text),
+        ))
+        .map((t) => t.data)
+        .whereType<String>()
+        .where((s) => int.tryParse(s) != null)
+        .map(int.parse)
+        .toList();
+    debugPrint('defesa contagens: $counts');
+    expect(counts.length, greaterThanOrEqualTo(15));
+    for (final c in counts) {
+      expect(c, greaterThan(0), reason: 'tema/nível sem exercícios');
+    }
+
+    // clicar num nível entra no primeiro exercício
+    await tester.tap(find.text('Fácil').first);
+    await tester.pumpAndSettle();
+    expect(find.byIcon(Icons.lightbulb_outline), findsOneWidget,
+        reason: 'deveria abrir um exercício de defesa');
   });
 
   testWidgets('Tática tem exercícios em todos os níveis', (tester) async {

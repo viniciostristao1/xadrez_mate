@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'data/defesa_db.dart';
 import 'data/puzzle_db.dart';
 import 'data/tatica_db.dart';
 import 'engine/chess.dart';
 import 'models/puzzle.dart';
 import 'models/tatica_puzzle.dart';
+import 'screens/defesa_home_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/mates_home_screen.dart';
 import 'screens/puzzle_screen.dart';
@@ -59,6 +61,7 @@ class _MateflowAppState extends State<MateflowApp> {
         () => I18n.instance.load(),
         () => PuzzleDb.instance.load(),
         () => TaticaDb.instance.load(),
+        () => DefesaDb.instance.load(),
       ];
       await Future.wait(loads.map((f) async {
         try {
@@ -99,6 +102,15 @@ class _MateflowAppState extends State<MateflowApp> {
       builder: (_) => TaticaHomeScreen(
         onDbLoaded: () async {},
         onStartTatica: _startTatica,
+      ),
+    ));
+  }
+
+  void _abrirDefesa() {
+    _navKey.currentState!.push(MaterialPageRoute(
+      builder: (_) => DefesaHomeScreen(
+        onDbLoaded: () async {},
+        onStartDefesa: _startDefesa,
       ),
     ));
   }
@@ -251,6 +263,18 @@ class _MateflowAppState extends State<MateflowApp> {
     ));
   }
 
+  void _startDefesa(String tema, int level) {
+    final puzzles = DefesaDb.instance.forTemaLevel(tema, level);
+    if (puzzles.isEmpty) return;
+    _navKey.currentState!.push(MaterialPageRoute(
+      builder: (_) => _FilaTatica(
+        puzzles: List.of(puzzles)..shuffle(),
+        pieceStyle: _pieceStyle,
+        successMessage: S.boaDefesa,
+      ),
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<int>(
@@ -265,6 +289,7 @@ class _MateflowAppState extends State<MateflowApp> {
               ? HomeScreen(
                   onMates: _abrirMates,
                   onTatica: _abrirTatica,
+                  onDefesa: _abrirDefesa,
                   onConfig: _abrirConfig,
                 )
               : const Scaffold(
@@ -317,10 +342,12 @@ class _FilaMatesState extends State<_FilaMates> {
 class _FilaTatica extends StatefulWidget {
   final List<TaticaPuzzle> puzzles;
   final PieceStyle pieceStyle;
+  final String successMessage;
 
   const _FilaTatica({
     required this.puzzles,
     required this.pieceStyle,
+    this.successMessage = '',
   });
 
   @override
@@ -337,6 +364,7 @@ class _FilaTaticaState extends State<_FilaTatica> {
       key: ValueKey('tatica-${puzzle.id}-$_index'),
       puzzle: puzzle,
       pieceStyle: widget.pieceStyle,
+      successMessage: widget.successMessage,
       onNext: () =>
           setState(() => _index = (_index + 1) % widget.puzzles.length),
       onExit: () => Navigator.of(context).pop(),

@@ -22,6 +22,7 @@ void main() {
       home: HomeScreen(
         onMates: () {},
         onTatica: () {},
+        onDefesa: () {},
         onConfig: onConfig ?? () {},
       ),
     ));
@@ -33,6 +34,7 @@ void main() {
     expect(find.text('Mateflow'), findsOneWidget);
     expect(find.text('Mates'), findsOneWidget);
     expect(find.text('Tática'), findsOneWidget);
+    expect(find.text('Defesa'), findsOneWidget);
   });
 
   testWidgets('engrenagem abre configurações com idioma e peças',

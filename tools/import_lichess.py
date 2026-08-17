@@ -44,8 +44,8 @@ SRC = Path("/tmp/lichess_puzzles.csv.zst")
 OUT = Path(__file__).resolve().parent.parent / "app" / "assets" / "puzzles_lichess.json"
 
 CAT_KEY = {"mateIn1": 1, "mateIn2": 2, "mateIn3": 3}
-SAMPLE_PER_CAT = {"1": 520, "2": 520, "3": 470}
-GOAL_PER_LEVEL_PER_CAT = {"1": 50, "2": 46, "3": 45}
+SAMPLE_PER_CAT = {"1": 700, "2": 700, "3": 700}
+GOAL_PER_LEVEL_PER_CAT = {"1": 70, "2": 70, "3": 70}
 
 
 def verify(fen_original: str, all_moves: list[str], expected_mate: int) -> dict | None:

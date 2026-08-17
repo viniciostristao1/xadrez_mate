@@ -212,6 +212,69 @@ abstract final class S {
         Idioma.es: 'Jugada esperada',
       });
 
+  // Defesa
+  static String get defesa => I18n.t({Idioma.pt: 'Defesa', Idioma.en: 'Defense', Idioma.es: 'Defensa'});
+  static String get defesaSub => I18n.t({
+        Idioma.pt: 'Encontre a única defesa contra as ameaças',
+        Idioma.en: 'Find the only defense against the threats',
+        Idioma.es: 'Encuentra la única defensa contra las amenazas',
+      });
+  static String get defenderMate => I18n.t({
+        Idioma.pt: 'Defender contra mate',
+        Idioma.en: 'Defend against mate',
+        Idioma.es: 'Defender contra el mate',
+      });
+  static String get defenderMateSub => I18n.t({
+        Idioma.pt: 'O rival ameaça mate — defenda-se',
+        Idioma.en: 'The rival threatens mate — defend',
+        Idioma.es: 'El rival amenaza mate — defiéndete',
+      });
+  static String get salvarPeca => I18n.t({
+        Idioma.pt: 'Salvar uma peça',
+        Idioma.en: 'Save a piece',
+        Idioma.es: 'Salvar una pieza',
+      });
+  static String get salvarPecaSub => I18n.t({
+        Idioma.pt: 'Sua peça está atacada — resgate-a',
+        Idioma.en: 'Your piece is attacked — rescue it',
+        Idioma.es: 'Tu pieza está atacada — rescátala',
+      });
+  static String get contraAtaque => I18n.t({
+        Idioma.pt: 'Encontrar contra-ataque',
+        Idioma.en: 'Find the counterattack',
+        Idioma.es: 'Encontrar el contraataque',
+      });
+  static String get contraAtaqueSub => I18n.t({
+        Idioma.pt: 'Defenda atacando: xeque ou ganho de material',
+        Idioma.en: 'Defend by attacking: check or material gain',
+        Idioma.es: 'Defiende atacando: jaque o ganancia de material',
+      });
+  static String get neutralizar => I18n.t({
+        Idioma.pt: 'Neutralizar uma ameaça',
+        Idioma.en: 'Neutralize a threat',
+        Idioma.es: 'Neutralizar una amenaza',
+      });
+  static String get neutralizarSub => I18n.t({
+        Idioma.pt: 'Desarme a ameaça adversária',
+        Idioma.en: 'Defuse the rival threat',
+        Idioma.es: 'Desactiva la amenaza rival',
+      });
+  static String get defesaPrecisa => I18n.t({
+        Idioma.pt: 'Defesa precisa',
+        Idioma.en: 'Precise defense',
+        Idioma.es: 'Defensa precisa',
+      });
+  static String get defesaPrecisaSub => I18n.t({
+        Idioma.pt: 'Só um lance salva a posição',
+        Idioma.en: 'Only one move saves the position',
+        Idioma.es: 'Solo una jugada salva la posición',
+      });
+  static String get boaDefesa => I18n.t({
+        Idioma.pt: 'Boa defesa! Você conseguiu!',
+        Idioma.en: 'Nice defense! You got it!',
+        Idioma.es: '¡Buena defensa! ¡Lo lograste!',
+      });
+
   // Config
   static String get portugues => I18n.t({Idioma.pt: 'Português', Idioma.en: 'Portuguese', Idioma.es: 'Portugués'});
   static String get ingles => I18n.t({Idioma.pt: 'Inglês', Idioma.en: 'English', Idioma.es: 'Inglés'});

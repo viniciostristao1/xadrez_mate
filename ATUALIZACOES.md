@@ -1,5 +1,16 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.10.0 (2026-08-17)
+**Nova categoria DEFESA + bancos ampliados!**
+- 🛡 **Defesa** na página inicial (agora são 3: Mates, Tática e Defesa), com
+  **5 subtemas**: **Defender contra mate**, **Salvar uma peça**, **Encontrar
+  contra-ataque**, **Neutralizar uma ameaça** e **Defesa precisa** — 417
+  problemas reais de partidas, com níveis, cronômetro, dica e rating.
+- 📈 **Mates ampliados**: agora **750 problemas** — os níveis difíceis
+  passaram para **69 (mate 1), 69 (mate 2) e 73 (mate 3)** (+20 em cada).
+- ⚔️ **Tática dobrada**: **252 exercícios** (84 por tema).
+- 🐛 Página principal agora rola em telas baixas (sem overflow).
+
 ## v0.9.3 (2026-08-17)
 - 🐛 **Correções**: botões de **próximo** (seta direita) e **voltar**
   (seta esquerda) agora funcionam em Mate e Tática; a seção **Tática**

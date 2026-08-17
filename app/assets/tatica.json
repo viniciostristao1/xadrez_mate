@@ -4,74 +4,134 @@
 {
 "tema": "espeto",
 "level": 1,
-"rating": 583,
-"fen": "2r2k2/p2r1pp1/1p6/4PpP1/3p3R/7R/PP5P/6K1 w - - 2 35",
+"rating": 565,
+"fen": "4r3/p7/1pp5/3pk3/PP6/2P1p3/2K5/4R3 w - - 3 40",
 "linha": [
-"h4h8",
-"f8e7",
-"h8c8"
+"e1e3",
+"e5d6",
+"e3e8"
 ],
 "id": 1
 },
 {
 "tema": "espeto",
 "level": 1,
-"rating": 665,
-"fen": "8/8/k5r1/pp3b2/3Q1K2/8/PP6/8 b - - 1 54",
+"rating": 627,
+"fen": "8/5p1r/2k1pP2/8/P5P1/8/1R3K2/8 b - - 0 41",
 "linha": [
-"g6g4",
-"f4e5",
-"g4d4"
+"h7h2",
+"f2e1",
+"h2b2"
 ],
 "id": 2
 },
 {
 "tema": "espeto",
 "level": 1,
-"rating": 734,
-"fen": "r5k1/6pp/p1R5/4Pp2/1P3P2/4P3/1P3P1r/R4K2 b - - 2 28",
+"rating": 665,
+"fen": "8/p1r4p/6p1/8/2k3p1/P3K3/2p4P/2R5 w - - 2 45",
 "linha": [
-"h2h1",
-"f1g2",
-"h1a1"
+"c1c2",
+"c4d5",
+"c2c7"
 ],
 "id": 3
 },
 {
 "tema": "espeto",
 "level": 1,
-"rating": 778,
-"fen": "r7/5ppp/8/1pk5/2b5/5P2/PK1R2PP/2R5 b - - 3 32",
+"rating": 699,
+"fen": "r5r1/n4k2/2pBNp2/p3pP1p/Pp2P3/1P1P4/1P1QK3/8 b - - 0 32",
 "linha": [
-"a8a2",
-"b2b1",
-"a2d2"
+"g8g2",
+"e2d1",
+"g2d2"
 ],
 "id": 4
 },
 {
 "tema": "espeto",
 "level": 1,
-"rating": 804,
-"fen": "5R2/8/K3p1k1/8/8/8/6r1/8 w - - 0 57",
+"rating": 723,
+"fen": "8/1pp4R/1b3p2/pn3k2/8/4P3/5PPP/6K1 w - - 0 29",
 "linha": [
-"f8g8",
-"g6f6",
-"g8g2"
+"h7h5",
+"f5g6",
+"h5b5"
 ],
 "id": 5
 },
 {
 "tema": "espeto",
 "level": 1,
-"rating": 815,
-"fen": "8/pR6/8/P7/2P2rk1/1P1K4/8/6b1 w - - 1 40",
+"rating": 744,
+"fen": "6R1/8/8/7k/p7/2K5/8/7r w - - 2 61",
 "linha": [
-"b7g7",
-"g4f5",
-"g7g1"
+"g8h8",
+"h5g6",
+"h8h1"
 ],
 "id": 6
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 765,
+"fen": "8/3n1k2/p3p1p1/3p2P1/2pP2N1/PrP2P2/1P1K2R1/8 b - - 5 41",
+"linha": [
+"b3b2",
+"d2e1",
+"b2g2"
+],
+"id": 7
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 793,
+"fen": "3rk1nr/p1p2ppp/2p5/4N3/4P1b1/2P5/PPP3PP/R1B1K2R b KQk - 0 10",
+"linha": [
+"d8d1",
+"e1f2",
+"d1h1"
+],
+"id": 8
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 805,
+"fen": "8/8/8/4p3/R3Pp1p/3k3r/5K2/8 w - - 0 52",
+"linha": [
+"a4a3",
+"d3d4",
+"a3h3"
+],
+"id": 9
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 814,
+"fen": "5k2/p3pp1p/b5p1/3R4/4P3/8/r4PPP/2K4R b - - 0 20",
+"linha": [
+"a2a1",
+"c1d2",
+"a1h1"
+],
+"id": 10
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 820,
+"fen": "6R1/6p1/p1k4p/1p1p4/PP2p1P1/2b1P3/6K1/8 w - - 0 38",
+"linha": [
+"g8c8",
+"c6b7",
+"c8c3"
+],
+"id": 11
 },
 {
 "tema": "espeto",
@@ -83,55 +143,117 @@
 "d3c4",
 "d1d7"
 ],
-"id": 7
+"id": 12
 },
 {
 "tema": "espeto",
 "level": 1,
-"rating": 844,
-"fen": "8/7p/3R4/4pPk1/4P3/3K1p2/P4P2/4r3 b - - 0 40",
+"rating": 838,
+"fen": "4k2r/p4ppp/4p3/3p4/8/2r1P2P/PR3PP1/5RK1 w k - 0 21",
+"linha": [
+"b2b8",
+"e8e7",
+"b8h8"
+],
+"id": 13
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 853,
+"fen": "8/1pR2p2/4pk2/p2b4/8/2K3R1/r7/3B4 b - - 1 51",
+"linha": [
+"a2a3",
+"c3b2",
+"a3g3"
+],
+"id": 14
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 862,
+"fen": "3r4/6pp/2p5/ppPk4/6P1/7P/1P6/4R1K1 w - - 2 33",
 "linha": [
 "e1d1",
-"d3e3",
-"d1d6"
+"d5c5",
+"d1d8"
 ],
-"id": 8
+"id": 15
 },
 {
 "tema": "espeto",
 "level": 1,
-"rating": 864,
-"fen": "3r4/8/6k1/3P3p/4K3/5P2/8/4R3 b - - 4 63",
+"rating": 867,
+"fen": "2R5/r5k1/8/2P1b3/8/1N4p1/2K3B1/8 b - - 0 44",
 "linha": [
-"d8e8",
-"e4d3",
-"e8e1"
+"a7a2",
+"c2d3",
+"a2g2"
 ],
-"id": 9
+"id": 16
 },
 {
 "tema": "espeto",
 "level": 1,
-"rating": 878,
-"fen": "r4k1r/pppq1p2/3pb2p/6p1/2nQ4/8/PPP2PPP/R4RK1 w - - 0 17",
+"rating": 875,
+"fen": "8/p6p/k1b1p1p1/2B1P3/2KP4/5P2/3b2PP/5N2 b - - 3 51",
 "linha": [
-"d4h8",
+"c6b5",
+"c4b3",
+"b5f1"
+],
+"id": 17
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 887,
+"fen": "2r3k1/5pp1/4pq1p/3pb3/1P6/2P4P/2Q2PP1/1BR3K1 w - - 8 29",
+"linha": [
+"c2h7",
+"g8f8",
+"h7h8",
 "f8e7",
-"h8a8"
+"h8c8"
 ],
-"id": 10
+"id": 18
 },
 {
 "tema": "espeto",
 "level": 1,
-"rating": 899,
-"fen": "8/8/3k1p2/2p3b1/4p3/4P3/5K2/4R3 b - - 1 46",
+"rating": 898,
+"fen": "7R/8/3k4/5K2/8/8/8/3r4 w - - 22 72",
 "linha": [
-"g5h4",
-"f2f1",
-"h4e1"
+"h8d8",
+"d6c6",
+"d8d1"
 ],
-"id": 11
+"id": 19
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 907,
+"fen": "8/8/1R6/P1pPk3/8/6PP/4q3/7K w - - 7 57",
+"linha": [
+"b6e6",
+"e5d5",
+"e6e2"
+],
+"id": 20
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 915,
+"fen": "5b2/8/R5p1/3KpBk1/4P3/p4P2/6r1/8 w - - 4 46",
+"linha": [
+"a6g6",
+"g5f4",
+"g6g2"
+],
+"id": 21
 },
 {
 "tema": "espeto",
@@ -145,19 +267,43 @@
 "c6d7",
 "c8c5"
 ],
-"id": 12
+"id": 22
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 926,
+"fen": "8/8/p7/7p/2R2K1k/2P3r1/P1P3P1/8 b - - 0 52",
+"linha": [
+"g3g4",
+"f4f3",
+"g4c4"
+],
+"id": 23
 },
 {
 "tema": "espeto",
 "level": 1,
 "rating": 933,
-"fen": "8/r3k3/p2pP2R/2r2p1p/3R3P/6P1/6K1/8 w - - 1 44",
+"fen": "8/4Rp1p/p4p2/5P1P/2P3P1/1P2K3/P1k5/6r1 b - - 0 42",
 "linha": [
-"h6h7",
-"e7e6",
-"h7a7"
+"g1e1",
+"e3d4",
+"e1e7"
 ],
-"id": 13
+"id": 24
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 941,
+"fen": "8/7r/3k4/8/6P1/8/1R3K2/8 b - - 0 46",
+"linha": [
+"h7h2",
+"f2f3",
+"h2b2"
+],
+"id": 25
 },
 {
 "tema": "espeto",
@@ -169,31 +315,79 @@
 "g7f6",
 "h7c7"
 ],
-"id": 14
+"id": 26
 },
 {
 "tema": "espeto",
 "level": 1,
-"rating": 957,
-"fen": "4R3/6p1/6pp/Bp1kn3/2p3PP/2P3K1/3r4/8 w - - 9 42",
+"rating": 953,
+"fen": "6r1/1p1B1k2/1R6/2p5/p2b4/P7/7P/7K w - - 3 35",
 "linha": [
-"e8d8",
-"d5c6",
-"d8d2"
+"d7e6",
+"f7f8",
+"e6g8"
 ],
-"id": 15
+"id": 27
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 960,
+"fen": "8/2p3r1/pp6/4p2P/P1Pb2k1/1P3R2/4KP2/8 w - - 0 39",
+"linha": [
+"f3g3",
+"g4h5",
+"g3g7"
+],
+"id": 28
 },
 {
 "tema": "espeto",
 "level": 1,
 "rating": 968,
-"fen": "1r6/5pk1/6p1/6P1/4P3/3P2P1/PP1K2Q1/8 b - - 0 42",
+"fen": "8/7R/r3k3/4p2p/3b2p1/3K4/8/5R2 w - - 0 56",
 "linha": [
-"b8b2",
-"d2c3",
-"b2g2"
+"h7h6",
+"e6d5",
+"h6a6"
 ],
-"id": 16
+"id": 29
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 973,
+"fen": "8/7p/2r2k2/1p5R/2p2p2/5P2/P5P1/6K1 w - - 0 50",
+"linha": [
+"h5h6",
+"f6e5",
+"h6c6"
+],
+"id": 30
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 985,
+"fen": "8/8/p1p5/1p1pP1pp/1P1P4/2k2r1P/R4P2/6K1 w - - 0 50",
+"linha": [
+"a2a3",
+"c3d4",
+"a3f3"
+],
+"id": 31
+},
+{
+"tema": "espeto",
+"level": 1,
+"rating": 992,
+"fen": "R7/1p6/2k5/3p1pp1/7p/2r4P/5PP1/4K3 w - - 0 37",
+"linha": [
+"a8c8",
+"c6d6",
+"c8c3"
+],
+"id": 32
 },
 {
 "tema": "espeto",
@@ -205,45 +399,81 @@
 "b4b5",
 "a4d4"
 ],
-"id": 17
+"id": 33
 },
 {
 "tema": "espeto",
 "level": 2,
-"rating": 1318,
-"fen": "6Q1/8/8/k2K4/P7/3P4/5q2/8 b - - 6 62",
+"rating": 1306,
+"fen": "8/2R5/5kp1/4N2p/p3K3/P7/1P3r2/4n3 w - - 8 45",
 "linha": [
-"f2a2",
-"d5e5",
-"a2g8"
+"c7f7",
+"f6e6",
+"f7f2"
 ],
-"id": 18
+"id": 34
 },
 {
 "tema": "espeto",
 "level": 2,
-"rating": 1324,
-"fen": "r7/ppq3k1/3b3r/4p1p1/3pQpP1/PB1P1P2/1PP1R3/R5K1 b - - 9 33",
+"rating": 1311,
+"fen": "6QR/p4pp1/4p1k1/3pq1p1/6P1/7P/P1r2P2/6K1 w - - 4 36",
 "linha": [
-"a8h8",
-"e2g2",
-"h6h1",
-"g1f2",
-"h1a1"
+"g8h7",
+"g6f6",
+"h7c2"
 ],
-"id": 19
+"id": 35
 },
 {
 "tema": "espeto",
 "level": 2,
-"rating": 1331,
-"fen": "r2qkb2/p3ppp1/2p3p1/2pp2N1/6P1/1P1PP1R1/P1P4r/RNBQK3 b Qq - 0 14",
+"rating": 1319,
+"fen": "8/4B2N/p1p3p1/5p2/5k2/P2K1P2/7r/8 w - - 0 37",
 "linha": [
-"h2h1",
-"e1e2",
-"h1d1"
+"e7d6",
+"f4f3",
+"d6h2"
 ],
-"id": 20
+"id": 36
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1325,
+"fen": "3r2k1/5p1p/p2qb1p1/1p6/3P4/1P1R4/P2Q1PPP/1B4K1 b - - 2 29",
+"linha": [
+"e6f5",
+"d3e3",
+"f5b1"
+],
+"id": 37
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1328,
+"fen": "8/4k1pp/5p2/3Q1P2/3P2PP/2P2K2/8/4q3 b - - 4 42",
+"linha": [
+"e1h1",
+"f3e2",
+"h1d5"
+],
+"id": 38
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1336,
+"fen": "rn2kbnr/ppp2ppp/3p4/8/4PPbq/3PBN2/PPP1K2P/RN1Q1B1R b kq - 3 8",
+"linha": [
+"g4f3",
+"e2f3",
+"h4h5",
+"f3f2",
+"h5d1"
+],
+"id": 39
 },
 {
 "tema": "espeto",
@@ -257,19 +487,35 @@
 "b5c5",
 "b1b8"
 ],
-"id": 21
+"id": 40
 },
 {
 "tema": "espeto",
 "level": 2,
-"rating": 1352,
-"fen": "r4rk1/pp1bbppp/4p3/3pn3/1P1q4/P5P1/3N1PBP/1RBQ1RK1 w - - 1 15",
+"rating": 1351,
+"fen": "r1b2nk1/2q4p/2p1rQp1/p1b5/1pP1p3/1P2PBP1/PB3P1P/3R1RK1 w - - 2 21",
 "linha": [
-"c1b2",
-"d4d3",
-"b2e5"
+"f6h8",
+"g8f7",
+"h8g7",
+"f7e8",
+"g7c7"
 ],
-"id": 22
+"id": 41
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1357,
+"fen": "7r/3q1pk1/6n1/R7/1p2P3/3P2Q1/1PP3P1/1R4K1 b - - 0 33",
+"linha": [
+"d7d4",
+"g1f1",
+"h8h1",
+"f1e2",
+"h1b1"
+],
+"id": 42
 },
 {
 "tema": "espeto",
@@ -281,33 +527,63 @@
 "c6d5",
 "a6f6"
 ],
-"id": 23
+"id": 43
 },
 {
 "tema": "espeto",
 "level": 2,
-"rating": 1371,
-"fen": "8/5p1k/3q2p1/p1pP3p/PpK2P2/1B2Q3/8/8 b - - 1 44",
+"rating": 1369,
+"fen": "3k3r/p1pr4/1p3R1p/3Q2p1/3P3N/P7/1PP2P1q/2K5 w - - 1 29",
 "linha": [
-"d6a6",
-"c4c5",
-"a6a7",
-"c5b5",
-"a7e3"
+"d5a8",
+"d8e7",
+"a8h8",
+"h2h1",
+"c1d2",
+"d7d4",
+"d2c3"
 ],
-"id": 24
+"id": 44
 },
 {
 "tema": "espeto",
 "level": 2,
-"rating": 1383,
-"fen": "1r4k1/2p2ppp/3b2q1/3P1b2/7P/pPQ1BBP1/P4P2/2K1R3 b - - 0 33",
+"rating": 1374,
+"fen": "4r1k1/pp3p2/5p1p/8/1P6/P6Q/5K2/3Rr3 b - - 2 44",
 "linha": [
-"d6b4",
-"c3d4",
-"b4e1"
+"e8e2",
+"f2f3",
+"e2e3",
+"f3f4",
+"e3h3"
 ],
-"id": 25
+"id": 45
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1381,
+"fen": "8/R4pp1/4b2p/p7/1k3PP1/7P/1P6/2rB2K1 w - - 1 40",
+"linha": [
+"a7b7",
+"b4c4",
+"b7c7",
+"c4d4",
+"c7c1"
+],
+"id": 46
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1387,
+"fen": "r7/pb2k3/4p3/1pp1P1R1/6P1/4K3/Pr6/5R2 w - - 3 32",
+"linha": [
+"g5g7",
+"e7e8",
+"g7b7"
+],
+"id": 47
 },
 {
 "tema": "espeto",
@@ -319,31 +595,83 @@
 "f6e7",
 "d4g7"
 ],
-"id": 26
+"id": 48
 },
 {
 "tema": "espeto",
 "level": 2,
-"rating": 1409,
-"fen": "2r2k2/1p3pR1/p2q2bp/P4P2/4P3/2BP4/1PQ2K1P/8 b - - 0 35",
+"rating": 1402,
+"fen": "r3k2r/1B1p1pp1/p3p3/2b1P1n1/1pP4P/6p1/PP2Q3/R4R1K b kq - 0 21",
 "linha": [
-"d6h2",
-"f2e3",
-"h2c2"
+"h8h4",
+"h1g2",
+"h4h2",
+"g2g3",
+"h2e2"
 ],
-"id": 27
+"id": 49
 },
 {
 "tema": "espeto",
 "level": 2,
-"rating": 1432,
-"fen": "r4k1r/pp3pp1/5n2/2pPR3/2P3p1/2NB2K1/PP6/4R3 b - - 1 24",
+"rating": 1408,
+"fen": "5R2/6k1/7p/3Bp2P/3bP1r1/2p5/8/3K4 w - - 3 41",
 "linha": [
-"h8h3",
-"g3f2",
-"h3d3"
+"f8g8",
+"g7f6",
+"g8g4"
 ],
-"id": 28
+"id": 50
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1417,
+"fen": "2k4r/R7/1B2p3/4P3/p1p5/P6p/1Pb4K/8 w - - 2 33",
+"linha": [
+"a7a8",
+"c8b7",
+"a8h8"
+],
+"id": 51
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1425,
+"fen": "7r/6q1/p1Pk1p2/1p4p1/1P1P4/3Q2P1/P4PP1/2R3K1 b - - 0 34",
+"linha": [
+"g7h6",
+"f2f4",
+"h6h1",
+"g1f2",
+"h1c1"
+],
+"id": 52
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1431,
+"fen": "2K5/1P3R2/3k4/4p1pp/1r6/3p2P1/7P/8 w - - 0 50",
+"linha": [
+"f7d7",
+"d6e6",
+"d7d3"
+],
+"id": 53
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1437,
+"fen": "8/6bk/3p2p1/3Qp3/2PpP3/5q2/8/Q3K3 b - - 5 48",
+"linha": [
+"f3h1",
+"e1f2",
+"h1a1"
+],
+"id": 54
 },
 {
 "tema": "espeto",
@@ -357,63 +685,157 @@
 "h4g4",
 "h2h8"
 ],
-"id": 29
+"id": 55
 },
 {
 "tema": "espeto",
 "level": 2,
-"rating": 1456,
-"fen": "6k1/p3b1p1/1p6/7R/K1P5/1P4B1/P3rPPP/8 b - - 2 29",
+"rating": 1454,
+"fen": "r7/pp1Qp1B1/3b4/3k4/4q3/8/PP3PP1/5K2 w - - 5 35",
 "linha": [
-"e2a2",
-"a4b5",
-"a2a5",
-"b5c6",
-"a5h5"
+"d7b7",
+"d5e6",
+"b7e4"
 ],
-"id": 30
+"id": 56
 },
 {
 "tema": "espeto",
-"level": 3,
-"rating": 1704,
-"fen": "2k1rr2/p1p3p1/1b6/3QP1qp/3P2n1/2P5/PP2N1PP/R4R1K w - - 3 24",
+"level": 2,
+"rating": 1461,
+"fen": "8/kp6/p4p2/4pQ1P/8/P1P1KP2/1P6/3q4 b - - 10 38",
 "linha": [
-"f1f8",
-"e8f8",
-"d5a8",
-"c8d7",
-"a8f8"
+"d1e1",
+"e3d3",
+"e1b1",
+"d3e2",
+"b1f5"
 ],
-"id": 31
+"id": 57
 },
 {
 "tema": "espeto",
-"level": 3,
-"rating": 1737,
-"fen": "8/1p2rk2/p4q2/7p/5Q2/P5BP/1P4PK/8 w - - 2 39",
+"level": 2,
+"rating": 1464,
+"fen": "8/8/8/2bk1P1p/1p3P1P/p2K4/8/1R6 b - - 0 53",
 "linha": [
-"f4f6",
-"f7f6",
-"g3h4",
-"f6e5",
-"h4e7"
-],
-"id": 32
-},
-{
-"tema": "espeto",
-"level": 3,
-"rating": 1754,
-"fen": "8/5pp1/r2K3p/k7/7P/6P1/8/1R6 w - - 2 39",
-"linha": [
-"d6c5",
-"a5a4",
+"a3a2",
 "b1a1",
-"a4b3",
-"a1a6"
+"b4b3",
+"d3c3",
+"c5d4",
+"c3b3",
+"d4a1"
 ],
-"id": 33
+"id": 58
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1472,
+"fen": "8/6r1/4p2p/3bPp1k/p3pP2/P5RP/1PR2K2/8 b - - 2 42",
+"linha": [
+"e4e3",
+"g3e3",
+"g7g2",
+"f2f1",
+"g2c2"
+],
+"id": 59
+},
+{
+"tema": "espeto",
+"level": 2,
+"rating": 1476,
+"fen": "rnb1k2r/pp3ppp/3p2q1/2p1P3/4P1P1/5KB1/P4P1P/R2Q1BNR b kq - 0 14",
+"linha": [
+"c8g4",
+"f3g2",
+"g4d1"
+],
+"id": 60
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1703,
+"fen": "8/7r/pkp5/2p1Pp2/P1P2P2/2P1K3/R7/8 b - - 4 40",
+"linha": [
+"h7h3",
+"e3f2",
+"h3h2",
+"f2g3",
+"h2a2"
+],
+"id": 61
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1714,
+"fen": "r4rk1/2p2p1p/5qp1/1Q6/p1B5/1P1R4/P1P2PPP/1K5R b - - 3 22",
+"linha": [
+"a4a3",
+"b1c1",
+"f6a1",
+"c1d2",
+"a1h1"
+],
+"id": 62
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1723,
+"fen": "r4rk1/pp3ppp/2p5/3p4/8/1QPn2NP/P2q1PP1/R4RK1 w - - 2 24",
+"linha": [
+"a1d1",
+"d2b2",
+"d1d3",
+"b2b3",
+"a2b3"
+],
+"id": 63
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1742,
+"fen": "3k4/3r4/6R1/7R/1p2P2P/pP1bPK2/r4NP1/8 b - - 0 42",
+"linha": [
+"d3e2",
+"f3g3",
+"e2h5"
+],
+"id": 64
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1751,
+"fen": "3r2r1/ppq3k1/6b1/2p1p1R1/2PbP2Q/1P6/P4P1P/3R3K w - - 1 40",
+"linha": [
+"g5g6",
+"g7g6",
+"d1g1",
+"g6f7",
+"h4h7",
+"f7e6",
+"h7c7"
+],
+"id": 65
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1767,
+"fen": "r3r3/ppp2kp1/3p4/3P4/3b3Q/5Pq1/PPPPB1P1/R1B2K1R b - - 2 23",
+"linha": [
+"e8h8",
+"h4d4",
+"h8h1"
+],
+"id": 66
 },
 {
 "tema": "espeto",
@@ -425,7 +847,23 @@
 "c7b6",
 "c8c1"
 ],
-"id": 34
+"id": 67
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1797,
+"fen": "r6r/pp2kppp/4p3/3pN3/Q7/2q1b3/P3KPPP/R6R w - - 2 19",
+"linha": [
+"a4d7",
+"e7f6",
+"d7f7",
+"f6e5",
+"f7g7",
+"e5d6",
+"g7c3"
+],
+"id": 68
 },
 {
 "tema": "espeto",
@@ -439,7 +877,21 @@
 "d6c6",
 "a3e7"
 ],
-"id": 35
+"id": 69
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1821,
+"fen": "5r2/3pq1p1/4n2p/ppp1P2k/4Q3/3P4/PPP3P1/2K2R2 w - - 2 32",
+"linha": [
+"f1h1",
+"h5g5",
+"e4h4",
+"g5g6",
+"h4e7"
+],
+"id": 70
 },
 {
 "tema": "espeto",
@@ -453,139 +905,255 @@
 "e8d7",
 "f8d8"
 ],
-"id": 36
+"id": 71
 },
 {
 "tema": "espeto",
 "level": 3,
-"rating": 1849,
-"fen": "5r1k/p3q1b1/1p4Qp/2p1P3/2P5/1P4P1/P5K1/2B4R b - - 2 34",
+"rating": 1835,
+"fen": "6Q1/8/3bp2p/5kp1/8/1p3P1P/1q4P1/6K1 w - - 0 45",
 "linha": [
-"e7b7",
-"g2g1",
-"f8f1",
-"g1f1",
-"b7h1",
-"f1e2",
-"h1c1",
-"e5e6",
-"c1b2"
+"g8h7",
+"f5f6",
+"h7h8",
+"f6g6",
+"h8b2"
 ],
-"id": 37
+"id": 72
 },
 {
 "tema": "espeto",
 "level": 3,
-"rating": 1869,
-"fen": "3r1rk1/pp2qp2/2p1p1pQ/8/8/1P4R1/6PP/5R1K w - - 0 30",
+"rating": 1847,
+"fen": "2K2Q2/8/1P3p2/1N3k1p/8/p7/P5q1/8 b - - 7 72",
 "linha": [
-"g3h3",
-"f7f6",
+"g2a8",
+"c8d7",
+"a8f8"
+],
+"id": 73
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1862,
+"fen": "7r/2b1qk2/2p4R/p1p1p3/N1PpPr1p/1P1P1PR1/P2B1PK1/8 w - - 0 32",
+"linha": [
 "h6h8",
-"g8f7",
-"h3h7",
-"f7e8",
+"h4g3",
+"h8h7",
+"f7f8",
 "h7e7"
 ],
-"id": 38
+"id": 74
 },
 {
 "tema": "espeto",
 "level": 3,
-"rating": 1893,
-"fen": "7r/1p4k1/p1b1R3/4P3/8/2P2N2/Pr4PP/R6K b - - 0 29",
+"rating": 1878,
+"fen": "1k1r4/Npp5/3p4/R7/P6p/2n1r2P/2P3P1/1R4K1 w - - 2 36",
 "linha": [
-"c6f3",
-"g2f3",
-"b2h2",
-"h1g1",
-"h2h1",
-"g1f2",
-"h1a1"
-],
-"id": 39
-},
-{
-"tema": "espeto",
-"level": 3,
-"rating": 1920,
-"fen": "r6q/pp2k3/4bb2/2PQ4/5P2/3P1K2/P1P5/4R1R1 b - - 13 33",
-"linha": [
-"h8h3",
-"g1g3",
-"h3h1",
-"e1h1",
-"e6d5",
-"f3e3",
-"d5h1"
-],
-"id": 40
-},
-{
-"tema": "espeto",
-"level": 3,
-"rating": 1946,
-"fen": "1r4k1/p4pp1/4qb1p/8/2Q5/P7/K1R3P1/1R6 b - - 20 49",
-"linha": [
+"a7c6",
 "b8c8",
-"c4e6",
-"c8c2",
-"a2b3",
-"c2c3"
+"a5a8",
+"c8d7",
+"a8d8"
 ],
-"id": 41
+"id": 75
 },
 {
 "tema": "espeto",
 "level": 3,
-"rating": 1976,
-"fen": "r3k2r/3b4/p1p1p3/1pp1p2q/4P3/2P2PQ1/PP2K1P1/3RR3 w kq - 1 27",
+"rating": 1891,
+"fen": "6R1/8/8/5k2/8/P7/2K3p1/6r1 b - - 1 62",
 "linha": [
-"e1h1",
-"h5h1",
-"d1h1",
-"h8h1",
-"g3g8",
-"e8e7",
-"g8a8"
+"g1a1",
+"g8g2",
+"a1a2",
+"c2d3",
+"a2g2"
 ],
-"id": 42
+"id": 76
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1904,
+"fen": "2r4k/7n/1p6/p2p3R/3Pn1P1/4p3/PP2B3/3K3R b - - 4 42",
+"linha": [
+"e4f2",
+"d1e1",
+"c8c1",
+"e2d1",
+"c1d1",
+"e1e2",
+"d1h1",
+"h5h1",
+"f2h1"
+],
+"id": 77
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1912,
+"fen": "6k1/4pp2/p5pB/2p4n/3pP1Q1/P2P2qP/1r4P1/5RK1 w - - 2 31",
+"linha": [
+"g4c8",
+"g8h7",
+"f1f7",
+"h5g7",
+"f7g7",
+"h7h6",
+"c8h8",
+"h6g5",
+"g7g6",
+"g5g6",
+"h8g8",
+"g6f6",
+"g8g3"
+],
+"id": 78
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1929,
+"fen": "7r/4kpbp/8/3QP1P1/6b1/8/r4P2/4KBNR b K - 0 25",
+"linha": [
+"a2a1",
+"e1d2",
+"a1d1",
+"d2e3",
+"d1d5"
+],
+"id": 79
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1939,
+"fen": "6k1/3r1p2/4q2p/p1p2Q2/1r6/8/PPB2PP1/KR6 w - - 3 30",
+"linha": [
+"f5h7",
+"g8f8",
+"c2f5",
+"e6f6",
+"f5d7"
+],
+"id": 80
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1948,
+"fen": "r3r3/p1q1kp1p/4b1p1/5R1Q/2p5/2P5/P1P3PP/4R1K1 w - - 0 20",
+"linha": [
+"f5f7",
+"e7f7",
+"h5h7",
+"f7f8",
+"h7c7"
+],
+"id": 81
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1968,
+"fen": "3k3r/pq1n4/3bpp2/8/4b3/5NPp/1PP1QP1K/R2R4 w - - 0 26",
+"linha": [
+"d1d6",
+"e4f3",
+"e2e6"
+],
+"id": 82
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1978,
+"fen": "r1b4k/ppp4p/3p2pB/2qnn3/4Q3/2P1PP2/PPB2P1P/R4RK1 b - - 2 17",
+"linha": [
+"c8f5",
+"e4d4",
+"f5c2"
+],
+"id": 83
+},
+{
+"tema": "espeto",
+"level": 3,
+"rating": 1993,
+"fen": "6Q1/8/5k2/1p2q3/6b1/8/p4BK1/8 w - - 10 86",
+"linha": [
+"f2d4",
+"e5d4",
+"g8h8",
+"f6f7",
+"h8d4"
+],
+"id": 84
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 598,
-"fen": "r4rk1/pb1q1pp1/1p5p/2p5/2R5/3B3P/PP3PP1/3QR1K1 w - - 2 19",
+"rating": 575,
+"fen": "5rk1/p4ppp/1p1r1n2/2p5/2P2P1P/3BPK2/P5P1/1R1R4 w - - 6 24",
+"linha": [
+"d3h7",
+"f6h7",
+"d1d6"
+],
+"id": 85
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 681,
+"fen": "2r3k1/p4p2/3rpb1p/2p3p1/8/PP1B1PP1/2P4P/1R1R2K1 w - - 3 26",
 "linha": [
 "d3h7",
 "g8h7",
-"d1d7"
+"d1d6"
 ],
-"id": 43
+"id": 86
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 779,
-"fen": "r3r3/p2qkppp/3b4/2pQ4/8/4P3/PP3PPP/RN3RK1 b - - 1 20",
+"rating": 776,
+"fen": "r4rk1/p2b1p2/2p2n1p/3p2p1/3q4/3B2PP/PPP3P1/R2Q1R1K w - - 0 18",
 "linha": [
-"d6h2",
-"g1h2",
-"d7d5"
+"d3h7",
+"g8h7",
+"d1d4"
 ],
-"id": 44
+"id": 87
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 807,
-"fen": "rn1r2k1/pp3pp1/2pp3p/4q3/3QP3/2P2B1P/P1P2PP1/3R1RK1 w - - 5 17",
+"rating": 799,
+"fen": "r1b2rk1/ppp2ppp/3p4/3q4/P7/3BP2P/1PPQ1PP1/1R2K2R w K - 2 15",
 "linha": [
-"d4e5",
-"d6e5",
-"d1d8"
+"d3h7",
+"g8h7",
+"d2d5"
 ],
-"id": 45
+"id": 88
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 812,
+"fen": "8/5pk1/2q1p1p1/p1BpPnPp/Pp3P2/1P2P3/2Q2K2/8 w - - 4 43",
+"linha": [
+"c5f8",
+"g7f8",
+"c2c6"
+],
+"id": 89
 },
 {
 "tema": "descoberta",
@@ -597,93 +1165,183 @@
 "g8f7",
 "d3d8"
 ],
-"id": 46
+"id": 90
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 895,
-"fen": "2r1k3/5ppp/8/p1npP3/Pp1N1P2/1P1b4/5KPP/2R1B3 b - - 3 31",
+"rating": 870,
+"fen": "r3r1k1/pp3pp1/4p2p/1P1pPq2/P1pP1P2/2PnR3/2Q1N1PP/5R1K b - - 0 28",
 "linha": [
-"c5e4",
-"f2e3",
+"d3f2",
+"f1f2",
+"f5c2"
+],
+"id": 91
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 887,
+"fen": "1r2k1nr/N3pp1p/6p1/8/8/8/PbP2PPP/1RB1K2R b Kk - 1 14",
+"linha": [
+"b2c3",
+"e1e2",
+"b8b1"
+],
+"id": 92
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 896,
+"fen": "2r1r1k1/1b3p1p/p5p1/8/Q1Bq4/P6P/1P3PP1/1R4K1 w - - 0 26",
+"linha": [
+"c4f7",
+"g8f7",
+"a4d4"
+],
+"id": 93
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 903,
+"fen": "2r1r1k1/1p4p1/p3Ppp1/2bN4/8/1P6/P3RPPP/2R3K1 b - - 4 23",
+"linha": [
+"c5f2",
+"g1f2",
 "c8c1"
 ],
-"id": 47
+"id": 94
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 906,
-"fen": "rn3k2/5ppp/2p1r3/1p2n3/p7/2P2P2/PP4PP/R1B1RBK1 b - - 1 20",
+"rating": 912,
+"fen": "2kr1b1R/p5p1/8/3P1p2/2P5/4B3/PP1K1P2/8 b - - 0 25",
 "linha": [
-"e5f3",
-"g2f3",
-"e6e1"
+"f8b4",
+"d2d3",
+"d8h8"
 ],
-"id": 48
+"id": 95
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 918,
-"fen": "6k1/6p1/5P2/1p1p4/3Qbq2/pP6/P1P5/1K4R1 b - - 2 38",
+"rating": 929,
+"fen": "8/2B2p2/p1n3p1/2ppP1P1/5k2/P2K4/1PP5/8 w - - 0 35",
 "linha": [
-"e4c2",
-"b1c2",
-"f4d4"
+"e5e6",
+"f4g4",
+"e6f7"
 ],
-"id": 49
+"id": 96
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 943,
+"fen": "6k1/5ppp/Q4n2/2b5/5P2/2P1p1P1/PP5P/6K1 b - - 0 33",
+"linha": [
+"e3e2",
+"g1g2",
+"e2e1q"
+],
+"id": 97
 },
 {
 "tema": "descoberta",
 "level": 1,
 "rating": 955,
-"fen": "r3k2r/pp3pp1/2n1p3/2bpPnP1/Q6p/2N5/PP1B2PP/R4R1K b kq - 0 16",
+"fen": "3rr1k1/p4p2/1p4pQ/2p5/8/PPP1R2B/2bq1PPP/6K1 w - - 0 29",
 "linha": [
-"f5g3",
-"h2g3",
-"h4g3",
-"a4h4",
-"h8h4"
+"e3e8",
+"d8e8",
+"h6d2"
 ],
-"id": 50
+"id": 98
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 967,
-"fen": "8/pp6/2pb1p1k/3p2pp/3N4/7K/Pr4P1/1B2R3 w - - 0 49",
+"rating": 963,
+"fen": "8/8/8/1p6/pr1k1PR1/6P1/5K2/8 w - - 0 49",
 "linha": [
-"d4f5",
-"h6h7",
-"f5d6"
+"f4f5",
+"d4c3",
+"g4b4",
+"c3b4",
+"f5f6",
+"a4a3",
+"f6f7",
+"a3a2",
+"f7f8q"
 ],
-"id": 51
+"id": 99
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 978,
-"fen": "4r1k1/p5pp/1p4q1/2p1pr2/4Q3/4B1P1/PP1R2KP/R7 b - - 1 28",
+"rating": 968,
+"fen": "6k1/1p1bq1p1/3b1p1p/1r1P4/R2BP3/6P1/2Q2P1P/1R4K1 b - - 2 29",
 "linha": [
-"f5f2",
-"g2f2",
-"g6e4"
+"b5b1",
+"c2b1",
+"d7a4"
 ],
-"id": 52
+"id": 100
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 992,
-"fen": "1r1q1rk1/pp3p1p/2nb1p2/3Q4/3P4/P4N2/1P3PPP/RN3RK1 b - - 0 14",
+"rating": 977,
+"fen": "r3k2r/p1p1bpp1/4p3/4P1p1/q3N3/1Rp1P2P/2Q2PP1/4K2R w Kkq - 0 23",
 "linha": [
-"d6h2",
-"f3h2",
-"d8d5"
+"b3b8",
+"a8b8",
+"c2a4"
 ],
-"id": 53
+"id": 101
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 988,
+"fen": "7r/1p1k4/p3p2p/3pPn2/5R2/1P5P/PB5K/8 w - - 1 30",
+"linha": [
+"f4f5",
+"e6f5",
+"e5e6",
+"d7e6",
+"b2h8"
+],
+"id": 102
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 996,
+"fen": "r4rk1/pppb2pp/3bp3/3p4/3q4/P1NB3P/1PP2PP1/R2Q1RK1 w - - 0 14",
+"linha": [
+"d3h7",
+"g8h7",
+"d1d4"
+],
+"id": 103
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 1009,
+"fen": "r1b1k2r/1pqp1ppp/p3pn2/4n3/2PNPB2/2PB4/P1Q2PPP/R3K2R b KQkq - 4 13",
+"linha": [
+"e5d3",
+"c2d3",
+"c7f4"
+],
+"id": 104
 },
 {
 "tema": "descoberta",
@@ -695,57 +1353,139 @@
 "c4d5",
 "e7h4"
 ],
-"id": 54
+"id": 105
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 1036,
-"fen": "1r4k1/R7/6p1/3P3p/4N2P/2P1KP2/p5r1/8 w - - 1 40",
+"rating": 1021,
+"fen": "r1br2k1/1pp2ppp/1q2p3/p3n3/8/3B1P2/PP1QN1PP/1KR4R w - - 0 16",
 "linha": [
-"e4f6",
-"g8f8",
-"f6d7",
-"f8e7",
-"d7b8"
+"d3h7",
+"g8h7",
+"d2d8"
 ],
-"id": 55
+"id": 106
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 1045,
-"fen": "r1b2rk1/1p3ppp/p3p3/3p4/3Q4/3B4/PP1q1PPP/1R3RK1 w - - 2 17",
+"rating": 1031,
+"fen": "r3k1nr/ppp4p/2n3p1/3q4/1b4b1/3BPpBP/PP3PP1/RN1Q1K1R w kq - 0 12",
+"linha": [
+"d3g6",
+"h7g6",
+"d1d5"
+],
+"id": 107
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 1039,
+"fen": "2r3k1/p5pp/8/2bq1p2/1r2pB2/1PQp2P1/P4PBP/2RR2K1 b - - 1 31",
+"linha": [
+"c5f2",
+"g1h1",
+"c8c3"
+],
+"id": 108
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 1048,
+"fen": "1br1k2r/1pq2pp1/p3p3/3Pn2n/2P5/2N4P/PP3PBB/R2Q1RK1 b k - 2 18",
+"linha": [
+"e5f3",
+"g2f3",
+"c7h2"
+],
+"id": 109
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 1054,
+"fen": "3r2k1/2p2pp1/1p5p/3P4/3Q4/3B2P1/3q1PKP/8 w - - 8 35",
 "linha": [
 "d3h7",
 "g8h7",
 "d4d2"
 ],
-"id": 56
+"id": 110
 },
 {
 "tema": "descoberta",
 "level": 1,
-"rating": 1055,
-"fen": "r5k1/1p1r1pp1/p3pnp1/2qN4/8/1Q5P/PP3PP1/3RR1K1 w - - 0 25",
+"rating": 1062,
+"fen": "r6r/1b2kp2/1p2p3/1N1pn2p/6pP/2P1N1P1/1R2BPK1/3R4 b - - 6 32",
 "linha": [
-"d5f6",
-"g7f6",
-"d1d7"
+"d5d4",
+"g2f1",
+"d4e3"
 ],
-"id": 57
+"id": 111
 },
 {
 "tema": "descoberta",
 "level": 1,
 "rating": 1068,
-"fen": "r4rk1/3p1ppp/1pbNp3/p3P3/Pn3P2/Q2Bq2P/1PP3P1/2RR3K w - - 7 23",
+"fen": "8/1p3QPk/p1p1p3/2P5/PP1P1K2/1q6/8/8 b - - 2 59",
 "linha": [
-"d3h7",
-"g8h7",
-"a3e3"
+"e6e5",
+"f4e4",
+"b3f7"
 ],
-"id": 58
+"id": 112
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 1071,
+"fen": "5r2/2p3bk/p3Q1pp/1p1N1p2/4p3/1q5P/5PP1/3R3K w - - 4 37",
+"linha": [
+"d5f6",
+"f8f6",
+"e6b3"
+],
+"id": 113
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 1079,
+"fen": "2r2r1k/pb1p2pB/1p2p3/4P1p1/3P4/P1q1P2Q/6PP/R5K1 w - - 0 24",
+"linha": [
+"h7g6",
+"h8g8",
+"h3h7"
+],
+"id": 114
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 1087,
+"fen": "6rk/1p2bprp/p3p3/3qQ3/1P6/P2PR1P1/2P2P1P/R5K1 w - - 0 23",
+"linha": [
+"e5d5",
+"e6d5",
+"e3e7"
+],
+"id": 115
+},
+{
+"tema": "descoberta",
+"level": 1,
+"rating": 1091,
+"fen": "1r6/p1p1k3/1b2p1rp/4P1q1/3P2B1/1Q5P/PP3PP1/R3K2R b KQ - 0 22",
+"linha": [
+"b6a5",
+"e1f1",
+"b8b3"
+],
+"id": 116
 },
 {
 "tema": "descoberta",
@@ -757,119 +1497,207 @@
 "b7a6",
 "d2f2"
 ],
-"id": 59
+"id": 117
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1307,
-"fen": "r3r3/1p1n2pk/2p1p2p/2P5/1p2R3/P2Q1N1P/5PP1/q5K1 w - - 0 25",
+"rating": 1304,
+"fen": "5rk1/4n2p/3p2pq/p1pP1nN1/1pP1BQP1/1P5P/P5K1/5R2 b - - 0 33",
 "linha": [
-"e4e1",
-"h7h8",
-"e1a1"
+"f5h4",
+"g2g3",
+"f8f4"
 ],
-"id": 60
+"id": 118
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1317,
-"fen": "r3kb1r/p2n2pp/2B5/q3Pp2/P4B2/2p3P1/4PP1P/R2QK2R b KQkq - 0 17",
+"rating": 1312,
+"fen": "r1bq2k1/pp1nbr1p/2p1pn1p/2Pp1pN1/3P4/2N4P/PPQ1PP2/R3KBR1 w Q - 0 13",
 "linha": [
-"c3c2",
-"d1d2",
-"f8b4"
+"g5e6",
+"g8h8",
+"e6d8"
 ],
-"id": 61
+"id": 119
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1327,
-"fen": "r2qk1nr/1pp2ppp/p1pb4/6N1/3QP1b1/8/PPP2PPP/RNB2RK1 b kq - 2 8",
+"rating": 1319,
+"fen": "r1bq1rk1/ppp2ppp/3p4/2b1p2n/2PnP3/P2P1N1P/1P2BPP1/RNBQ1RK1 w - - 1 9",
 "linha": [
-"d6h2",
-"g1h2",
-"d8d4"
+"f3d4",
+"c5d4",
+"e2h5"
 ],
-"id": 62
+"id": 120
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1338,
-"fen": "r2q1r2/pp3p2/2pp2pk/6bp/B1PpPn2/3P1QNP/PP3PRK/6R1 w - - 2 23",
+"rating": 1325,
+"fen": "r6k/p4BN1/bp4Q1/8/3q4/4p3/PPP3PP/R5K1 b - - 0 24",
 "linha": [
-"g3f5",
-"g6f5",
-"g2g5",
-"d8g5",
-"g1g5"
+"e3e2",
+"g1h1",
+"d4d1",
+"a1d1",
+"e2d1q"
 ],
-"id": 63
+"id": 121
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1352,
-"fen": "r4rk1/ppp2pp1/4p1bp/8/q3NQPP/8/PPP2PB1/2KR4 w - - 4 18",
+"rating": 1328,
+"fen": "rnb1k2r/1pp2p1p/p3pp2/3n4/3q4/P2B2Q1/1PP3PP/2KR2NR w kq - 0 17",
 "linha": [
-"e4f6",
-"g7f6",
-"f4a4"
+"d3b5",
+"a6b5",
+"d1d4"
 ],
-"id": 64
+"id": 122
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1364,
-"fen": "2br3k/p3R1pp/1bp5/4B3/2BnP3/2N5/P2K2PP/8 b - - 6 27",
+"rating": 1332,
+"fen": "1r4k1/5ppp/2q1pn2/ppBp4/r2P4/1QP1P2P/5PP1/1RR3K1 w - - 3 25",
 "linha": [
-"d4f5",
-"d2c2",
-"f5e7"
+"b3a4",
+"b5a4",
+"b1b8"
 ],
-"id": 65
+"id": 123
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1376,
-"fen": "rn1qkb1r/4pp1p/2b2p2/pp1N4/2p1PP2/7P/PP1Q2P1/2KR1BNR w kq - 0 13",
+"rating": 1341,
+"fen": "7r/p6p/1b3Q1p/8/2qn1Nk1/5P2/PP6/R4RK1 b - - 0 27",
 "linha": [
-"d5f6",
-"e7f6",
-"d2d8"
+"d4f3",
+"g1h1",
+"c4f4",
+"f6f4",
+"g4f4"
 ],
-"id": 66
+"id": 124
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1392,
-"fen": "6qk/1p4p1/B1n2rQp/3p4/8/2P2P2/P6P/6RK w - - 1 30",
+"rating": 1348,
+"fen": "4r1k1/p4pp1/2p1bn1p/3p4/8/P1qB1QB1/2P2PPP/1R4K1 w - - 0 21",
 "linha": [
-"g6f6",
-"g7f6",
-"g1g8",
-"h8g8",
-"a6b7"
+"d3h7",
+"g8h7",
+"f3c3"
 ],
-"id": 67
+"id": 125
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1400,
-"fen": "r2qkb1r/pbp1n2p/1p2Q1p1/3n2P1/2P2P2/3P4/PP4BP/RNB1K1NR b KQkq - 0 11",
+"rating": 1355,
+"fen": "8/p3r1k1/1p2q2p/2p2pP1/4p3/1NP1Q1PK/PP3P2/3R4 b - - 0 34",
 "linha": [
-"d5f4",
-"c1f4",
-"b7g2"
+"f5f4",
+"h3g2",
+"f4e3"
 ],
-"id": 68
+"id": 126
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1362,
+"fen": "r4r1k/ppp1b1pp/3q1n2/6B1/8/1QN5/PPP2PPP/R4RK1 b - - 4 14",
+"linha": [
+"f6g4",
+"g2g3",
+"e7g5"
+],
+"id": 127
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1366,
+"fen": "4r3/1p2rp1p/2p4k/p2p1p2/4nN1P/1P4P1/P1P5/1KB1R1R1 b - - 1 24",
+"linha": [
+"e4c3",
+"b1b2",
+"e7e1",
+"f4g2",
+"e1c1"
+],
+"id": 128
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1375,
+"fen": "3q3r/4rp1k/p2p1Q1p/1pp5/5P2/1P1P2P1/P5KP/1R2R3 b - - 3 27",
+"linha": [
+"e7e2",
+"e1e2",
+"d8f6"
+],
+"id": 129
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1382,
+"fen": "r1b2r1k/1pq2p1B/p1p3p1/3p2pR/P1P5/1P2P1P1/4KPP1/7Q w - - 0 21",
+"linha": [
+"h7g6",
+"h8g7",
+"h5h7",
+"g7g6",
+"h1h6"
+],
+"id": 130
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1391,
+"fen": "8/8/2q2kpp/1pB1pp2/8/7P/r1Q2PP1/6K1 w - - 0 36",
+"linha": [
+"c5e7",
+"f6e7",
+"c2c6"
+],
+"id": 131
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1399,
+"fen": "rnb1r1k1/pp2Pp1p/6p1/q3b1B1/2P5/2N5/PPQ2PPP/R3KB1R b KQ - 2 12",
+"linha": [
+"e5c3",
+"c2c3",
+"a5g5"
+],
+"id": 132
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1402,
+"fen": "1r4k1/2p1r1p1/4b3/p7/7Q/2P3R1/PP3q2/2K1R3 w - - 0 32",
+"linha": [
+"g3g7",
+"e7g7",
+"h4f2"
+],
+"id": 133
 },
 {
 "tema": "descoberta",
@@ -881,43 +1709,133 @@
 "d6d5",
 "a1a8"
 ],
-"id": 69
+"id": 134
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1417,
-"fen": "6k1/6pp/p7/1pb5/3p4/P1p4P/1PP2PPK/RB2r3 w - - 0 25",
+"rating": 1414,
+"fen": "1r4k1/5pp1/2p4p/q2pP3/3R1PP1/PnQ4P/1P2R3/1K6 b - - 7 33",
 "linha": [
-"b1a2",
+"a5c3",
+"b2c3",
+"b3d4"
+],
+"id": 135
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1421,
+"fen": "2r3k1/pbr2ppp/1pnqpn2/3p4/1P1P4/PQ2PN1P/3NBPP1/2R2RK1 b - - 6 15",
+"linha": [
+"c6d4",
+"f3d4",
+"c7c1",
+"f1c1",
+"c8c1"
+],
+"id": 136
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1426,
+"fen": "r4rk1/6pp/p1bNN2q/3n3P/1p6/8/PPP3Q1/1K4RR b - - 0 29",
+"linha": [
+"d5c3",
+"b2c3",
+"c6g2"
+],
+"id": 137
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1436,
+"fen": "1nbr2k1/5p1p/n5p1/1N1N4/P3PP2/1P4P1/1q4BP/3R1RK1 w - - 1 27",
+"linha": [
+"d5e7",
 "g8f8",
-"a1e1"
+"d1d8",
+"f8e7",
+"d8c8"
 ],
-"id": 70
+"id": 138
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1438,
-"fen": "5r2/p5pk/3r3p/2QBqp2/4P2N/P5PP/5P2/5bK1 w - - 0 32",
+"rating": 1441,
+"fen": "r2q1rk1/ppp1bppp/4p3/n2pP3/2nP1B2/P1N4P/BPbNQPP1/R3K2R w KQ - 0 14",
 "linha": [
-"d5g8",
-"h7g8",
-"c5e5"
+"d2c4",
+"d5c4",
+"e2c2"
 ],
-"id": 71
+"id": 139
 },
 {
 "tema": "descoberta",
 "level": 2,
-"rating": 1451,
-"fen": "r3kb1r/pp2pppp/5nn1/3P4/2p1P1b1/2P2NB1/PqB1Q1PP/RN2K2R w KQkq - 0 13",
+"rating": 1449,
+"fen": "8/6kp/1Q6/2p5/8/1K1P4/PP3q2/8 b - - 4 54",
 "linha": [
-"c2a4",
-"b7b5",
-"e2b2"
+"c5c4",
+"b3c3",
+"f2b6"
 ],
-"id": 72
+"id": 140
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1454,
+"fen": "r1b1R3/5p1k/6p1/2NP3p/2P5/P2Q2PP/5PK1/2q5 b - - 2 35",
+"linha": [
+"c8h3",
+"g2h2",
+"a8e8"
+],
+"id": 141
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1460,
+"fen": "r1bq2kr/pppp2pp/2n5/6b1/4PP2/8/PPP3PP/R2Q1RK1 w - - 0 13",
+"linha": [
+"d1d5",
+"g8f8",
+"f4g5"
+],
+"id": 142
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1473,
+"fen": "4r1k1/p1q3bp/1pn3p1/5p2/2p1NP2/2P1Q2P/PP3BB1/3rR1K1 w - - 0 23",
+"linha": [
+"e4f6",
+"g7f6",
+"e3e8"
+],
+"id": 143
+},
+{
+"tema": "descoberta",
+"level": 2,
+"rating": 1476,
+"fen": "r1b2rk1/pp2bppp/8/3qn3/4N3/2PB4/P4PPP/R1BQ1RK1 w - - 0 16",
+"linha": [
+"e4f6",
+"e7f6",
+"d3h7",
+"g8h7",
+"d1d5"
+],
+"id": 144
 },
 {
 "tema": "descoberta",
@@ -931,207 +1849,393 @@
 "a3b4",
 "g3h1"
 ],
-"id": 73
+"id": 145
 },
 {
 "tema": "descoberta",
 "level": 3,
-"rating": 1730,
-"fen": "4r2k/p3q1p1/7p/2R5/2PpN3/6P1/4Q2P/6K1 b - - 0 39",
+"rating": 1713,
+"fen": "5rk1/p3ppbp/1q6/1NrP1P2/2P3Q1/PP5P/6P1/3R1RK1 b - - 0 22",
 "linha": [
-"e7c5",
-"e4c5",
-"e8e2"
+"c5c4",
+"b5d4",
+"c4d4"
 ],
-"id": 74
+"id": 146
 },
 {
 "tema": "descoberta",
 "level": 3,
-"rating": 1758,
-"fen": "3rr1k1/5p2/p2q2pB/1pp1p3/3n2Pb/3R2N1/PP1QB1PP/5RK1 b - - 1 23",
+"rating": 1728,
+"fen": "5r1k/4bp1p/pr5B/4P3/1P6/P3n1RP/5PP1/6K1 w - - 0 31",
 "linha": [
-"d4e2",
-"d2e2",
-"d6d3",
-"e2d3",
-"d8d3"
+"h6g7",
+"h8g8",
+"g7f6",
+"e3g4",
+"g3g4"
 ],
-"id": 75
+"id": 147
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1735,
+"fen": "5r2/pp3ppk/4p1np/4P2Q/1q1P4/1P2B2R/P1r3PP/R5K1 w - - 5 23",
+"linha": [
+"e3h6",
+"f8h8",
+"h6d2"
+],
+"id": 148
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1748,
+"fen": "r2q3r/pbpp1kbQ/1pn1p1n1/4P1p1/3P1P2/2P5/PP1N2PP/R4RK1 w - - 1 17",
+"linha": [
+"f4g5",
+"d8f6",
+"f1f6"
+],
+"id": 149
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1762,
+"fen": "1r4k1/Q5pp/4p3/1BR2p2/3q4/B3nP1P/P5P1/6K1 b - - 1 35",
+"linha": [
+"e3g4",
+"g1h1",
+"d4d1",
+"b5f1",
+"d1f1"
+],
+"id": 150
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1769,
+"fen": "1k1r3r/6pp/3p4/1B1qp3/1P1n4/R6P/3Q1PP1/R5K1 b - - 0 28",
+"linha": [
+"d4f3",
+"g2f3",
+"d5d2"
+],
+"id": 151
 },
 {
 "tema": "descoberta",
 "level": 3,
 "rating": 1779,
-"fen": "r5k1/1p2b1pp/1qpp4/p3p3/2P1P1b1/P1N2N2/QP4PP/5RK1 w - - 5 24",
+"fen": "r3r3/pp3p1k/2p3pb/3b4/8/2qB2QP/P1P3P1/3R1R1K w - - 0 23",
 "linha": [
-"c4c5",
-"g8h8",
-"c5b6"
+"d3g6",
+"f7g6",
+"g3c3"
 ],
-"id": 76
+"id": 152
 },
 {
 "tema": "descoberta",
 "level": 3,
-"rating": 1801,
-"fen": "r4rk1/1p3ppp/p1n1b3/2NpP3/3q4/P2B3P/5PP1/2RQ1RK1 w - - 0 19",
+"rating": 1796,
+"fen": "3r1rk1/1p4pp/p1pp4/8/8/P2Q1Bq1/1PP3P1/1K5R w - - 1 25",
 "linha": [
-"c5e6",
-"f7e6",
-"c1c6",
-"d4d3",
-"d1d3"
+"f3d5",
+"c6d5",
+"d3g3"
 ],
-"id": 77
+"id": 153
 },
 {
 "tema": "descoberta",
 "level": 3,
-"rating": 1828,
-"fen": "3qr1k1/pb3p2/1p4pp/n1rp4/P1pRnN2/2P2N1P/BPQ2PP1/3R2K1 w - - 3 21",
+"rating": 1807,
+"fen": "4r2k/1p2Np1p/p1pQ1P2/2P4r/6pq/4R3/P5P1/6K1 w - - 5 39",
 "linha": [
-"d4e4",
-"d5e4",
-"d1d8"
+"e7g6",
+"h7g6",
+"e3e8",
+"h8h7",
+"e8h8",
+"h7h8",
+"d6f8",
+"h8h7",
+"f8g7"
 ],
-"id": 78
+"id": 154
 },
 {
 "tema": "descoberta",
 "level": 3,
-"rating": 1856,
-"fen": "r1b1r3/pp1n3p/1k3n2/1B6/4p3/2R2N2/2PP1PPP/5RK1 w - - 2 20",
+"rating": 1819,
+"fen": "r4r1k/1p2Npbp/p2pbnp1/8/2B1P3/qP3P2/1BPQ2PP/2KR3R b - - 2 16",
 "linha": [
-"f1b1",
+"a3b2",
+"c1b2",
+"f6e4",
+"c2c3",
+"e4d2"
+],
+"id": 155
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1829,
+"fen": "6k1/R2RBp1p/2p1p1p1/p7/5b1P/8/P4PK1/1rr5 w - - 0 34",
+"linha": [
+"e7f6",
+"b1b8",
+"d7f7"
+],
+"id": 156
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1851,
+"fen": "r1b4r/pp1k2p1/2nb2qp/1B1p2B1/3p3Q/8/PPP2PPP/3RR1K1 w - - 0 18",
+"linha": [
+"h4g4",
+"d7c7",
+"g5d8",
+"h8d8",
+"g4g6"
+],
+"id": 157
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1865,
+"fen": "1r3rk1/2p1qppp/p3bn2/8/2p1P1P1/P1NP1P2/1PPQ3P/K2R1B1R b - - 1 18",
+"linha": [
+"b8b2",
+"a1b2",
+"f8b8",
+"b2a2",
+"c4d3",
+"c3d5",
+"f6d5"
+],
+"id": 158
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1878,
+"fen": "3r4/k5p1/1p5p/1Bq5/1b3Q2/5P1P/P2pN3/1K1R4 b - - 5 32",
+"linha": [
+"c5b5",
+"f4c7",
 "a7a6",
-"b5d7",
-"b6a7",
-"d7e8"
+"c7d8",
+"b4e7"
 ],
-"id": 79
+"id": 159
 },
 {
 "tema": "descoberta",
 "level": 3,
-"rating": 1885,
-"fen": "r1b2r2/pp2n1p1/1qn1ppk1/3pP1N1/3P3P/P7/1P1Q1PP1/RN2K2R w KQ - 0 14",
+"rating": 1888,
+"fen": "4r1k1/p2r1pbp/1qNp2p1/2nP4/4P3/P4P2/2RQ2PP/1N1R2K1 b - - 7 32",
 "linha": [
-"h4h5",
-"g6h6",
-"g5e6",
-"h6h7",
-"e6f8"
-],
-"id": 80
-},
-{
-"tema": "descoberta",
-"level": 3,
-"rating": 1929,
-"fen": "r3kb1r/pp2pppp/2n5/2qB4/5B2/1P2PQ2/P1P2PPP/R4nK1 w kq - 0 13",
-"linha": [
-"d5f7",
-"e8f7",
-"f4d6",
-"f7e8",
-"d6c5"
-],
-"id": 81
-},
-{
-"tema": "descoberta",
-"level": 3,
-"rating": 1961,
-"fen": "8/p3nk2/1p4qp/2b5/2p1N1n1/1P3B2/PBPP4/2K2R2 w - - 5 27",
-"linha": [
-"f3g4",
-"f7e8",
-"g4h5",
-"g6h5",
-"e4f6",
-"e8d8",
-"f6h5"
-],
-"id": 82
-},
-{
-"tema": "descoberta",
-"level": 3,
-"rating": 1990,
-"fen": "6r1/4p3/3p1kp1/2pP1P2/1p2pR2/1P6/4RP1P/6K1 b - - 0 40",
-"linha": [
-"g6f5",
+"c5e4",
 "g1f1",
-"f6g5",
-"e2e4",
-"f5e4"
+"e4d2"
 ],
-"id": 83
+"id": 160
 },
 {
 "tema": "descoberta",
 "level": 3,
-"rating": 2012,
-"fen": "rn3rk1/pp3ppp/4p3/3p1b2/2PP3P/q1PB1N2/P1QB1nP1/1K1R3R w - - 0 15",
+"rating": 1902,
+"fen": "2r5/5p1p/p4kr1/3p4/Q3Pq2/5N2/P4PPP/3R2K1 w - - 1 31",
 "linha": [
-"d3f5",
-"e6f5",
-"d2c1",
-"a3a5",
-"c2f2"
+"e4e5",
+"f6g7",
+"a4f4"
 ],
-"id": 84
+"id": 161
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1918,
+"fen": "r1b4r/pp1pkp2/3Np1p1/1B2Q2p/4n2P/5q2/PPP5/2KR4 w - - 0 23",
+"linha": [
+"d6c8",
+"a8c8",
+"d1d7",
+"e7f8",
+"e5h8"
+],
+"id": 162
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1938,
+"fen": "r1bkr3/1p3ppp/p7/2b5/P7/4Bp2/1P3PPP/R3KB1R w KQ - 2 15",
+"linha": [
+"e1c1",
+"c8d7",
+"e3c5"
+],
+"id": 163
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1949,
+"fen": "3qk1nr/p2rbpp1/1p2p2p/1Np1P2Q/2Pn4/1P2B1PN/P4P1P/3R1RK1 b k - 7 18",
+"linha": [
+"g7g6",
+"h5g4",
+"h6h5",
+"g4e4",
+"d4e2",
+"g1g2",
+"d7d1",
+"f1d1",
+"d8d1"
+],
+"id": 164
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1963,
+"fen": "r1bQ1B2/3p2pk/5p1p/pNP2P2/P3q3/3n4/1P4PP/R4RK1 b - - 1 27",
+"linha": [
+"c8b7",
+"f1f3",
+"a8d8"
+],
+"id": 165
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1971,
+"fen": "5B2/1q3P1k/p1r3p1/1p2R1Qp/3p1N2/3P2PP/PPP4K/5b2 b - - 0 28",
+"linha": [
+"c6c2",
+"h2g1",
+"c2g2",
+"g1h1",
+"g2g3",
+"h1h2",
+"g3g5"
+],
+"id": 166
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 1991,
+"fen": "2r1r1k1/p2n1p2/1p2Pq1Q/2p2p1P/3p4/3P2P1/PPP2PK1/R3R3 w - - 1 25",
+"linha": [
+"e6d7",
+"f6h6",
+"e1e8",
+"c8e8",
+"d7e8q"
+],
+"id": 167
+},
+{
+"tema": "descoberta",
+"level": 3,
+"rating": 2005,
+"fen": "4k3/4R3/3Bp3/1P2P1Pp/3b1P2/4p3/7r/3K4 b - - 1 35",
+"linha": [
+"e8d8",
+"e7c7",
+"e3e2",
+"d1e1",
+"d4f2",
+"e1e2",
+"f2b6"
+],
+"id": 168
 },
 {
 "tema": "sacrificio",
 "level": 1,
-"rating": 482,
-"fen": "3r3k/p5pp/1p6/2p2pq1/5b2/1NP3P1/PP2Q1KP/4R3 w - - 0 27",
+"rating": 422,
+"fen": "3r3k/ppq3p1/7p/8/8/5Q2/Pb4PP/1B3R1K w - - 0 27",
 "linha": [
-"e2e8",
+"f3f8",
+"d8f8",
+"f1f8"
+],
+"id": 169
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 523,
+"fen": "3r2k1/pp3ppp/1b6/8/8/4QN2/PPq2PPP/4R1K1 w - - 0 20",
+"linha": [
+"e3e8",
 "d8e8",
 "e1e8"
 ],
-"id": 85
+"id": 170
 },
 {
 "tema": "sacrificio",
 "level": 1,
-"rating": 553,
-"fen": "4r2k/pp2r1p1/2p1qp1p/2P5/3P1P2/2Q5/2R2NPP/3R2K1 b - - 3 28",
+"rating": 569,
+"fen": "2r4k/p4Qpp/1pr5/3p4/3P4/4q1P1/PP3RKP/8 w - - 2 33",
+"linha": [
+"f7f8",
+"c8f8",
+"f2f8"
+],
+"id": 171
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 585,
+"fen": "4r1k1/pp3ppp/2p1q3/8/1PPQ4/P4BPb/5P1P/3R2K1 b - - 2 22",
 "linha": [
 "e6e1",
 "d1e1",
-"e7e1",
-"c3e1",
 "e8e1"
 ],
-"id": 86
+"id": 172
 },
 {
 "tema": "sacrificio",
 "level": 1,
-"rating": 577,
-"fen": "3r4/6kp/6p1/3q4/5QB1/5p2/1P3P1P/R6K b - - 6 41",
+"rating": 616,
+"fen": "4r1k1/5ppp/B1R2b2/5P2/2Q2p1P/pP2qP2/P1P5/1K5R b - - 0 28",
 "linha": [
-"d5d1",
-"a1d1",
-"d8d1"
+"e3e1",
+"h1e1",
+"e8e1"
 ],
-"id": 87
+"id": 173
 },
 {
 "tema": "sacrificio",
 "level": 1,
-"rating": 623,
-"fen": "1k1r4/1p3Qp1/p2q3p/8/1N6/8/PP3PPP/2R3K1 b - - 0 22",
+"rating": 653,
+"fen": "4r1k1/5pbp/p2p2p1/2pBqbN1/8/1P3Q2/P1P2PPP/2R3K1 b - - 3 20",
 "linha": [
-"d6d1",
-"c1d1",
-"d8d1"
+"e5e1",
+"c1e1",
+"e8e1"
 ],
-"id": 88
+"id": 174
 },
 {
 "tema": "sacrificio",
@@ -1147,21 +2251,45 @@
 "e7e8",
 "d8e8"
 ],
-"id": 89
+"id": 175
 },
 {
 "tema": "sacrificio",
 "level": 1,
-"rating": 749,
-"fen": "2rr3k/p1q3pp/4Q3/3p4/1PnP1P2/2P5/P3RP1P/4R1K1 w - - 1 25",
+"rating": 729,
+"fen": "r4rk1/p2p1qp1/1p6/4R3/6Q1/8/PP3PPP/R5K1 b - - 0 21",
 "linha": [
-"e6e8",
+"f7f2",
+"g1h1",
+"f2f1",
+"a1f1",
+"f8f1"
+],
+"id": 176
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 738,
+"fen": "3r2k1/p4ppp/qp4b1/4Q3/NP6/P6P/5PP1/4R1K1 w - - 4 29",
+"linha": [
+"e5e8",
 "d8e8",
-"e2e8",
-"c8e8",
 "e1e8"
 ],
-"id": 90
+"id": 177
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 775,
+"fen": "2r3k1/p4ppp/3Qb3/8/2qPN3/P3P1P1/1R4PP/R6K b - - 0 28",
+"linha": [
+"c4c1",
+"a1c1",
+"c8c1"
+],
+"id": 178
 },
 {
 "tema": "sacrificio",
@@ -1175,85 +2303,147 @@
 "b1f1",
 "f8f1"
 ],
-"id": 91
+"id": 179
 },
 {
 "tema": "sacrificio",
 "level": 1,
-"rating": 843,
-"fen": "6k1/8/3B1pp1/2PP4/3p2pP/p2K4/r2N1P2/8 b - - 0 41",
+"rating": 820,
+"fen": "4r1k1/5pp1/p6B/2pb4/3p4/1PPP2Q1/P3qPPP/R5K1 b - - 0 25",
 "linha": [
-"a2d2",
-"d3d2",
-"a3a2",
-"c5c6",
-"a2a1q"
+"e2e1",
+"a1e1",
+"e8e1"
 ],
-"id": 92
+"id": 180
 },
 {
 "tema": "sacrificio",
 "level": 1,
-"rating": 885,
-"fen": "5r2/p2pb2Q/1k3qp1/1p2N1p1/4R3/2PP4/PP3PPP/R5K1 b - - 3 22",
-"linha": [
-"f6f2",
-"g1h1",
-"f2f1",
-"a1f1",
-"f8f1"
-],
-"id": 93
-},
-{
-"tema": "sacrificio",
-"level": 1,
-"rating": 916,
-"fen": "5r1k/p5pp/1n2Q3/4P3/2p1Rq2/2N5/PP3PPP/3R2K1 b - - 2 25",
+"rating": 842,
+"fen": "5rk1/4R1p1/1p4Qp/p7/5q2/6PP/P3RP1K/2r5 b - - 0 33",
 "linha": [
 "f4f2",
+"e2f2",
+"f8f2"
+],
+"id": 181
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 854,
+"fen": "4rr1k/2p2p1p/2p4q/p1n2bN1/P4P2/1P2P1R1/2pP2QP/2KN2R1 w - - 0 24",
+"linha": [
+"g5f7",
+"f8f7",
+"g3g8",
+"e8g8",
+"g2g8"
+],
+"id": 182
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 884,
+"fen": "4r1k1/pp2qppp/3p4/8/2nN4/1PP5/P1Q2PPP/R5K1 b - - 0 21",
+"linha": [
+"e7e1",
+"a1e1",
+"e8e1"
+],
+"id": 183
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 900,
+"fen": "r1b2rk1/pp3pb1/1np3N1/3p2qp/8/3Q4/PP3PPP/RB3RK1 w - - 0 24",
+"linha": [
+"g6e7",
+"g5e7",
+"d3h7"
+],
+"id": 184
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 923,
+"fen": "5rk1/2p4p/p3p1pQ/2q5/2p5/8/5PPP/BR4K1 b - - 1 32",
+"linha": [
+"c5f2",
 "g1h1",
 "f2f1",
-"d1f1",
+"b1f1",
 "f8f1"
 ],
-"id": 94
+"id": 185
 },
 {
 "tema": "sacrificio",
 "level": 1,
 "rating": 938,
-"fen": "1r1r1k2/R4ppQ/1p2p3/8/3qB3/5P2/6PP/1R5K b - - 0 31",
+"fen": "3r2k1/5ppp/p3p3/1q2P3/8/2P1bQPP/8/5R1K w - - 0 27",
 "linha": [
-"d4d1",
-"b1d1",
-"d8d1"
+"f3f7",
+"g8h8",
+"f7f8",
+"d8f8",
+"f1f8"
 ],
-"id": 95
+"id": 186
 },
 {
 "tema": "sacrificio",
 "level": 1,
-"rating": 959,
-"fen": "2r3k1/3Q1ppp/pp6/8/5P2/1Pq5/2PR2PP/7K w - - 2 25",
+"rating": 950,
+"fen": "r3qr1k/pp5p/3p1p2/5P2/2BQP1b1/1P6/PBP5/R5K1 w - - 0 22",
 "linha": [
-"d7d8",
-"c8d8",
-"d2d8"
+"d4f6",
+"f8f6",
+"b2f6"
 ],
-"id": 96
+"id": 187
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 963,
+"fen": "2r1rbk1/1n3pp1/2b4p/1p2p2P/1P2Nn1q/2PQ2N1/1BB2PP1/R3R1K1 w - - 4 25",
+"linha": [
+"e4f6",
+"g7f6",
+"d3h7"
+],
+"id": 188
 },
 {
 "tema": "sacrificio",
 "level": 1,
 "rating": 970,
-"fen": "5r1k/6pp/1p6/p7/3p4/bP1Q4/4RqPP/4R2K b - - 1 31",
+"fen": "r4r1k/p6p/5q2/8/4Q1P1/2P1n3/PP2R1PP/R5K1 b - - 2 27",
 "linha": [
-"f2f1",
-"e1f1",
+"f6f1",
+"a1f1",
 "f8f1"
 ],
-"id": 97
+"id": 189
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 980,
+"fen": "3r2k1/2p2ppp/p7/n3p1q1/2P1P3/7P/2rN1QP1/5R1K w - - 0 29",
+"linha": [
+"f2f7",
+"g8h8",
+"f7f8",
+"d8f8",
+"f1f8"
+],
+"id": 190
 },
 {
 "tema": "sacrificio",
@@ -1265,7 +2455,7 @@
 "b6a5",
 "h1b7"
 ],
-"id": 98
+"id": 191
 },
 {
 "tema": "sacrificio",
@@ -1277,33 +2467,137 @@
 "d7f7",
 "f1f7"
 ],
-"id": 99
+"id": 192
 },
 {
 "tema": "sacrificio",
 "level": 1,
-"rating": 1002,
-"fen": "1k4r1/pp3p2/1p1p3p/4P3/1P2P3/P4q2/3Q1PrP/2RR1K2 w - - 3 26",
+"rating": 998,
+"fen": "8/6pk/5p1p/Q7/PpP5/1P1qr2P/6P1/6RK b - - 0 35",
 "linha": [
-"d2d6",
-"b8a8",
-"d6d8",
-"g8d8",
-"d1d8"
+"e3h3",
+"g2h3",
+"d3h3"
 ],
-"id": 100
+"id": 193
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 1008,
+"fen": "4rr1k/pp4pp/2p5/4qp2/2QpnN2/1P2PR2/P5PP/5RK1 w - - 2 24",
+"linha": [
+"f4g6",
+"h7g6",
+"f3h3"
+],
+"id": 194
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 1017,
+"fen": "6k1/5rp1/3p3p/8/1Q6/8/P4qPP/4R2K b - - 0 31",
+"linha": [
+"f2f1",
+"e1f1",
+"f7f1"
+],
+"id": 195
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 1036,
+"fen": "3r2k1/pR4R1/4p1qp/3nN3/P2P4/5PP1/2rQ2KP/8 b - - 0 29",
+"linha": [
+"g6g7",
+"b7g7",
+"g8g7",
+"d2c2",
+"d5e3",
+"g2f2",
+"e3c2"
+],
+"id": 196
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 1045,
+"fen": "1k1r4/ppp3Qp/5n2/5r2/4p3/P3P2P/P2q1PR1/2R2K2 w - - 0 21",
+"linha": [
+"g7c7",
+"b8a8",
+"c7c8",
+"d8c8",
+"c1c8"
+],
+"id": 197
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 1062,
+"fen": "2r4k/5Qp1/p7/1q1pBNP1/8/5p1P/5P2/5RK1 b - - 0 38",
+"linha": [
+"b5f1",
+"g1f1",
+"c8c1"
+],
+"id": 198
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 1074,
+"fen": "4r2k/1Q3pp1/p3qn1p/8/8/1P5N/5PPP/2R2K1R b - - 0 27",
+"linha": [
+"e6e2",
+"f1g1",
+"e2e1",
+"c1e1",
+"e8e1"
+],
+"id": 199
+},
+{
+"tema": "sacrificio",
+"level": 1,
+"rating": 1082,
+"fen": "8/7r/2Q5/k2Pp3/4P3/4q2P/P5P1/6RK b - - 0 43",
+"linha": [
+"h7h3",
+"g2h3",
+"e3h3"
+],
+"id": 200
 },
 {
 "tema": "sacrificio",
 "level": 2,
-"rating": 1303,
-"fen": "3r2r1/2p1nk1p/1p3p1B/p4P2/3N4/2P5/b1P3PP/3RR1K1 w - - 2 23",
+"rating": 1301,
+"fen": "3r1r1k/1b4pp/8/p4P2/PbBB4/1P4P1/6P1/3R1RK1 b - - 2 34",
 "linha": [
-"e1e7",
-"f7e7",
-"d4c6"
+"d8d4",
+"d1d4",
+"b4c5",
+"g1h2",
+"c5d4"
 ],
-"id": 101
+"id": 201
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1309,
+"fen": "4r1k1/ppp2ppp/1bp5/1q6/PN2r3/2P2Q2/1P1P1PPP/R1B2RK1 b - - 0 16",
+"linha": [
+"b5f1",
+"g1f1",
+"e4e1"
+],
+"id": 202
 },
 {
 "tema": "sacrificio",
@@ -1317,129 +2611,209 @@
 "g1f1",
 "d4b6"
 ],
-"id": 102
+"id": 203
 },
 {
 "tema": "sacrificio",
 "level": 2,
-"rating": 1327,
-"fen": "r1b2rk1/1p2bppp/pqnp4/3Np3/2B1PP2/PN6/1PP2nPP/R1BQ1RK1 b - - 6 13",
+"rating": 1320,
+"fen": "3r4/1k3p2/1p3N2/8/4p3/8/PB2nbPP/R6K b - - 1 29",
 "linha": [
-"f2h3",
-"g1h1",
-"b6g1",
-"f1g1",
-"h3f2"
+"e2g3",
+"h2g3",
+"d8h8",
+"f6h5",
+"h8h5"
 ],
-"id": 103
+"id": 204
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1326,
+"fen": "4R3/1P6/7P/3kb3/8/4p1K1/1r6/8 w - - 1 59",
+"linha": [
+"e8e5",
+"d5e5",
+"h6h7",
+"b2b7",
+"h7h8q"
+],
+"id": 205
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1333,
+"fen": "r4rk1/1p3Npp/pq3b2/3Q4/8/P2P4/1PP3PP/R1B4K w - - 0 19",
+"linha": [
+"f7h6",
+"g8h8",
+"d5g8",
+"f8g8",
+"h6f7"
+],
+"id": 206
 },
 {
 "tema": "sacrificio",
 "level": 2,
 "rating": 1340,
-"fen": "3r2k1/6pp/8/5Q2/2pP4/2q3P1/5RKP/8 w - - 0 36",
+"fen": "4r1rk/pp3p1p/2pqnPpQ/3p2P1/3P1R2/2N4P/PPP5/3R2K1 w - - 4 28",
 "linha": [
-"f5f7",
-"g8h8",
-"f7f8",
-"d8f8",
-"f2f8"
+"h6h7",
+"h8h7",
+"f4h4"
 ],
-"id": 104
+"id": 207
 },
 {
 "tema": "sacrificio",
 "level": 2,
-"rating": 1351,
-"fen": "5rk1/5r1p/6bQ/p2pBp2/2pP3R/2q1P2P/P5PK/8 w - - 2 43",
+"rating": 1346,
+"fen": "2r3k1/5pp1/1R2p3/4P3/Q2P1B2/6Pp/P3qR1P/2r2NK1 b - - 5 30",
 "linha": [
-"h6g6",
-"h7g6",
-"h4h8"
-],
-"id": 105
-},
-{
-"tema": "sacrificio",
-"level": 2,
-"rating": 1361,
-"fen": "5rk1/R5p1/5q1p/8/3p2Q1/1P6/P3rPPP/5RK1 b - - 3 38",
-"linha": [
-"f6f2",
-"f1f2",
-"e2e1",
+"c1f1",
 "f2f1",
-"e1f1"
+"e2g2"
 ],
-"id": 106
+"id": 208
 },
 {
 "tema": "sacrificio",
 "level": 2,
-"rating": 1373,
-"fen": "2r4k/pb4pp/1p6/3pP3/3Pn3/2Pq2NQ/PP5P/5R1K w - - 0 24",
+"rating": 1352,
+"fen": "r1r2k2/6pp/BR1pbn2/2p5/8/P3PN1P/2P1KPP1/1R6 b - - 4 24",
 "linha": [
-"h3c8",
-"b7c8",
-"f1f8"
+"a8a6",
+"b6a6",
+"e6c4",
+"e2e1",
+"c4a6"
 ],
-"id": 107
+"id": 209
 },
 {
 "tema": "sacrificio",
 "level": 2,
-"rating": 1383,
-"fen": "2b1r1k1/ppq1rppp/3p4/2pP4/2P5/1P1P2PP/P3RQBK/5R2 w - - 3 24",
+"rating": 1364,
+"fen": "r1b1qr1k/p1p3bp/1p1p2p1/4p1B1/2BPP3/6Q1/PPP1NnP1/2K4R w - - 0 20",
 "linha": [
-"f2f7",
-"e7f7",
-"e2e8",
+"h1h7",
+"h8h7",
+"g3h4",
+"g7h6",
+"h4h6"
+],
+"id": 210
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1372,
+"fen": "r5k1/p4ppp/3r4/8/4qR1b/1P2B3/P1P3PP/1RQ3K1 b - - 12 23",
+"linha": [
+"d6d1",
+"c1d1",
+"e4e3",
+"g1f1",
+"e3f4"
+],
+"id": 211
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1380,
+"fen": "r2q1rk1/1pp2ppp/8/p2pn3/P3N3/3Bb2Q/1P3PPP/R4RK1 w - - 0 18",
+"linha": [
+"e4f6",
+"g7f6",
+"h3h7"
+],
+"id": 212
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1394,
+"fen": "3r3k/pp4bp/3Bn1p1/7n/8/8/PP3P1K/3R1RN1 b - - 2 27",
+"linha": [
+"d8d6",
+"d1d6",
+"g7e5",
+"h2h1",
+"e5d6"
+],
+"id": 213
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1405,
+"fen": "r6k/pp4p1/3b4/3Q4/3P3q/2N3p1/PP2P1Br/R1B2RK1 b - - 3 18",
+"linha": [
+"h2h1",
+"g2h1",
+"h4h2"
+],
+"id": 214
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1413,
+"fen": "5rk1/5ppp/1R2p3/pP6/P7/5Q2/1q1r2PP/5RK1 w - - 6 28",
+"linha": [
+"f3f7",
+"f8f7",
+"b6b8",
+"d2d8",
+"b8d8",
 "f7f8",
 "f1f8"
 ],
-"id": 108
+"id": 215
 },
 {
 "tema": "sacrificio",
 "level": 2,
-"rating": 1406,
-"fen": "r5k1/p2qppbp/1p1p1np1/2p5/2Pn4/P1NPP1PP/1P3P2/1RBQ1RK1 b - - 0 14",
+"rating": 1421,
+"fen": "5rk1/bp3rpp/8/p1pQ4/3q4/P3R1NP/6P1/5R1K w - - 0 35",
 "linha": [
-"d7h3",
-"e3d4",
-"f6g4",
-"d1g4",
-"h3g4"
+"d5f7",
+"f8f7",
+"e3e8",
+"f7f8",
+"f1f8"
 ],
-"id": 109
+"id": 216
 },
 {
 "tema": "sacrificio",
 "level": 2,
-"rating": 1426,
-"fen": "2r5/4ppkp/6p1/1p6/1P6/P3B3/1br2PPP/1R1R2K1 w - - 3 23",
+"rating": 1430,
+"fen": "r4r1k/pppbq1pp/1b3p2/3Bp2R/3P4/2P3P1/PP3P1P/R1BQ2K1 w - - 1 17",
 "linha": [
-"b1b2",
-"c2b2",
-"e3d4",
-"f7f6",
-"d4b2"
+"h5h7",
+"h8h7",
+"d1h5"
 ],
-"id": 110
+"id": 217
 },
 {
 "tema": "sacrificio",
 "level": 2,
 "rating": 1438,
-"fen": "1r6/pp4kp/3q1Rp1/2pNp3/2Pn2P1/3P3P/PP1Q4/6K1 b - - 2 23",
+"fen": "r1b2bk1/p5pp/5n1q/3p4/3p4/3B2B1/PP1NQ1PP/2R3K1 w - - 2 22",
 "linha": [
-"d6f6",
-"d5f6",
-"d4f3",
-"g1f2",
-"f3d2"
+"c1c8",
+"a8c8",
+"e2e6",
+"g8h8",
+"e6c8"
 ],
-"id": 111
+"id": 218
 },
 {
 "tema": "sacrificio",
@@ -1453,107 +2827,235 @@
 "d5b5",
 "a6b5"
 ],
-"id": 112
+"id": 219
 },
 {
 "tema": "sacrificio",
 "level": 2,
-"rating": 1470,
-"fen": "4r1k1/3R1pp1/1p3p1p/p1b5/2P5/P4NP1/1PnRrPBP/5K2 b - - 3 21",
+"rating": 1458,
+"fen": "5rk1/5p1p/p4Qp1/1p3n2/1P4q1/P7/B5PP/4R1K1 w - - 1 30",
 "linha": [
-"e2e1",
-"f3e1",
-"e8e1"
-],
-"id": 113
-},
-{
-"tema": "sacrificio",
-"level": 2,
-"rating": 1476,
-"fen": "1n4k1/5ppp/1p1qp3/rQ6/Pp1P1P2/4PP2/2rNK2P/R5R1 w - - 7 22",
-"linha": [
-"b5e8",
-"d6f8",
-"g1g7",
-"g8g7",
-"a1g1",
-"g7f6",
+"a2f7",
+"f8f7",
+"e1e8",
+"f7f8",
 "e8f8"
 ],
-"id": 114
+"id": 220
 },
 {
 "tema": "sacrificio",
-"level": 3,
-"rating": 1708,
-"fen": "r3n2k/2q1b2p/3p2p1/2n2N2/2B1P3/8/1Pp2B2/1NKR3R w - - 2 30",
+"level": 2,
+"rating": 1466,
+"fen": "4q3/1nk2Np1/Q4pP1/2p1pP2/1pPpP3/1PnK1B2/2P5/8 w - - 27 54",
 "linha": [
-"h1h7",
+"a6b7",
+"c7b7",
+"f7d6",
+"b7b6",
+"d6e8"
+],
+"id": 221
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1473,
+"fen": "6k1/2p1r3/1p1p2p1/p2P2N1/P1P3PQ/3bq2P/5R1K/8 w - - 1 41",
+"linha": [
+"f2f8",
+"g8f8",
+"h4h8"
+],
+"id": 222
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1477,
+"fen": "6k1/5p1p/6p1/1P1Br3/2P5/6Pb/4qP1P/RQ4K1 b - - 0 25",
+"linha": [
+"e5d5",
+"c4d5",
+"e2f3",
+"b1f1",
+"h3f1"
+],
+"id": 223
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1483,
+"fen": "1r4k1/p4pbp/2QP2p1/q7/4p2P/1B2PP2/4KP2/1R6 b - - 0 26",
+"linha": [
+"b8b3",
+"b1b3",
+"a5a2",
+"e2f1",
+"a2b3"
+],
+"id": 224
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1495,
+"fen": "6rk/5p1n/3p1b2/5N2/2q1p1P1/1p5R/1P1Q1P1P/6K1 w - - 0 32",
+"linha": [
+"h3h7",
 "h8h7",
-"d1h1",
-"e7h4",
-"h1h4"
+"d2h6"
 ],
-"id": 115
+"id": 225
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1500,
+"fen": "2kr3r/ppp2pp1/8/2b1p1Pp/6nP/1NP1p2R/PPq1Q1P1/R1B1K1N1 b Q - 6 17",
+"linha": [
+"d8d1",
+"e2d1",
+"c2f2"
+],
+"id": 226
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1508,
+"fen": "r4rk1/p4ppp/2pqp1b1/3p4/3P1N2/6Q1/PPP2PPP/2R2RK1 w - - 4 17",
+"linha": [
+"f4g6",
+"d6g3",
+"g6e7"
+],
+"id": 227
+},
+{
+"tema": "sacrificio",
+"level": 2,
+"rating": 1515,
+"fen": "5rk1/p5p1/2pRqn1p/4p3/4N3/P6P/1PP1Q1P1/7K b - - 2 25",
+"linha": [
+"f6e4",
+"d6e6",
+"e4g3",
+"h1h2",
+"g3e2"
+],
+"id": 228
 },
 {
 "tema": "sacrificio",
 "level": 3,
-"rating": 1729,
-"fen": "2R5/3Nb1pk/1r5p/2pP4/1p2P3/3P4/4K1PP/8 b - - 2 39",
+"rating": 1700,
+"fen": "2r2rk1/p5pp/b3p3/2P1B3/3PQ3/6R1/P2q2PP/4R1K1 b - - 4 25",
 "linha": [
-"b4b3",
-"d5d6",
-"e7d6",
-"d7b6",
-"b3b2",
-"b6c4",
-"b2b1q"
+"d2f2",
+"g1h1",
+"f2f1",
+"e1f1",
+"f8f1"
 ],
-"id": 116
+"id": 229
 },
 {
 "tema": "sacrificio",
 "level": 3,
-"rating": 1748,
-"fen": "r4rk1/1q1p2pp/p3p3/2p1Q3/8/1B6/PPP2PbP/3RR1K1 w - - 0 22",
+"rating": 1713,
+"fen": "r2k1bnr/p1pp1Bpp/1p6/4N1q1/3p4/2P5/PP2QPbP/RN2K2R w KQ - 0 11",
 "linha": [
-"d1d7",
-"b7d7",
-"b3e6",
+"e5c6",
+"g2c6",
+"e2e8"
+],
+"id": 230
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1728,
+"fen": "3r1rk1/ppp2pp1/1b6/7p/4P1R1/2Pq3P/P5P1/R1Q1B2K w - - 0 24",
+"linha": [
+"g4g7",
+"g8g7",
+"c1g5"
+],
+"id": 231
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1745,
+"fen": "2k1rr2/1ppb4/1pnp1q2/3Q2p1/PP1N4/2P3Pp/4RP1P/4R1KB b - - 1 23",
+"linha": [
+"f6f2",
+"e2f2",
+"e8e1",
+"f2f1",
+"e1f1"
+],
+"id": 232
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1751,
+"fen": "5r2/p2n1Q2/bppN2pk/4Ppqr/2PP4/3B1K2/P4P2/R4R2 w - - 5 28",
+"linha": [
+"f7f8",
+"d7f8",
+"d6f7",
+"h6g7",
+"f7g5"
+],
+"id": 233
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1772,
+"fen": "5r1k/p5pp/8/6N1/2Q5/8/Pq3P1P/1b3RK1 w - - 4 31",
+"linha": [
+"g5f7",
+"h8g8",
+"f7h6",
 "g8h8",
-"e6d7"
+"c4g8",
+"f8g8",
+"h6f7"
 ],
-"id": 117
+"id": 234
 },
 {
 "tema": "sacrificio",
 "level": 3,
-"rating": 1774,
-"fen": "7r/1p1q2k1/p4p1p/4n1p1/3N2P1/8/PP5Q/K1R5 w - - 1 36",
+"rating": 1777,
+"fen": "r1r4k/p4p1p/4p3/2BpNq2/1P6/5P2/4K3/6Q1 w - - 2 32",
 "linha": [
-"c1c7",
-"d7c7",
-"d4e6",
-"g7g6",
-"e6c7"
+"e5f7",
+"f5f7",
+"c5d4",
+"e6e5",
+"d4e5",
+"f7f6",
+"e5f6"
 ],
-"id": 118
+"id": 235
 },
 {
 "tema": "sacrificio",
 "level": 3,
-"rating": 1786,
-"fen": "2kr2nr/pp1b1ppp/2nB4/1B1N4/Q2P4/7P/Pq1NKP2/8 w - - 2 16",
+"rating": 1787,
+"fen": "4r1k1/pp1b3p/2p1r2B/3p3p/4pQq1/8/P5PP/R4R1K w - - 10 30",
 "linha": [
-"d5b6",
-"a7b6",
-"a4a8",
-"c6b8",
-"a8b8"
+"f4f8",
+"e8f8",
+"f1f8"
 ],
-"id": 119
+"id": 236
 },
 {
 "tema": "sacrificio",
@@ -1567,7 +3069,33 @@
 "g1h1",
 "b7c8"
 ],
-"id": 120
+"id": 237
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1812,
+"fen": "1r4k1/pr2Bpp1/2p3b1/3n4/N1B5/P4P2/KP5P/R5R1 b - - 0 24",
+"linha": [
+"b7b2",
+"a4b2",
+"d5c3"
+],
+"id": 238
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1826,
+"fen": "r1bq1rk1/ppp3p1/5n1p/4b3/8/2PBB3/PP3PPP/RN1Q1RK1 b - - 1 12",
+"linha": [
+"e5h2",
+"g1h2",
+"f6g4",
+"h2g1",
+"d8h4"
+],
+"id": 239
 },
 {
 "tema": "sacrificio",
@@ -1583,43 +3111,103 @@
 "d8f6",
 "f1f6"
 ],
-"id": 121
+"id": 240
 },
 {
 "tema": "sacrificio",
 "level": 3,
-"rating": 1885,
-"fen": "r1b1rnk1/ppp1q1pp/8/3p3Q/8/2PBP1b1/PP1N2PP/R4RK1 w - - 0 17",
+"rating": 1856,
+"fen": "5rk1/pp4pp/3r4/3n1p2/4pP2/P3K2P/1P6/2RR1B2 w - - 0 24",
 "linha": [
-"f1f8",
-"g8f8",
-"a1f1"
+"d1d5",
+"d6d5",
+"f1c4",
+"f8d8",
+"c1d1"
 ],
-"id": 122
+"id": 241
 },
 {
 "tema": "sacrificio",
 "level": 3,
-"rating": 1908,
-"fen": "2r5/p4k1p/1p4p1/2P1pp2/8/1P2K3/P4PPP/2R5 w - - 1 28",
+"rating": 1868,
+"fen": "8/3K2B1/1bP3kP/p7/5p2/8/8/8 w - - 2 52",
 "linha": [
-"c5b6",
-"c8c1",
-"b6b7"
+"g7d4",
+"b6d4",
+"c6c7"
 ],
-"id": 123
+"id": 242
 },
 {
 "tema": "sacrificio",
 "level": 3,
-"rating": 1938,
-"fen": "3b4/pp3p1p/2p3pk/4Q3/5P1K/1P2P1P1/PB5P/5q2 w - - 15 35",
+"rating": 1889,
+"fen": "6K1/1R2n3/3pk1P1/4p1nP/8/8/8/8 w - - 9 59",
 "linha": [
-"e5g5",
-"d8g5",
-"f4g5"
+"b7e7",
+"e6e7",
+"h5h6",
+"e7f6",
+"h6h7",
+"f6g6",
+"h7h8q"
 ],
-"id": 124
+"id": 243
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1905,
+"fen": "2r3k1/pp3ppp/5n2/3p4/3P4/1P3QP1/PB3RBK/4q3 b - - 4 23",
+"linha": [
+"e1f2",
+"f3f2",
+"f6g4",
+"h2g1",
+"g4f2"
+],
+"id": 244
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1916,
+"fen": "r3r2k/ppq2p1p/2p1p3/4N3/1n6/P7/P1P1Q2P/4KBR1 w - - 0 24",
+"linha": [
+"e5f7",
+"c7f7",
+"e2e5",
+"f7f6",
+"e5f6"
+],
+"id": 245
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1933,
+"fen": "r1b1Q3/ppp3kp/3p2p1/4b3/2B1P3/2N3P1/PPPq1RKP/8 b - - 12 25",
+"linha": [
+"c8h3",
+"g2h3",
+"d2h6",
+"h3g2",
+"a8e8"
+],
+"id": 246
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1948,
+"fen": "6k1/6p1/p3N2p/2qp4/1p2n3/1B6/PPP2rPP/R2Q2K1 b - - 0 22",
+"linha": [
+"f2f1",
+"g1f1",
+"c5f2"
+],
+"id": 247
 },
 {
 "tema": "sacrificio",
@@ -1633,7 +3221,23 @@
 "d2c4",
 "c8c4"
 ],
-"id": 125
+"id": 248
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 1974,
+"fen": "3r1rk1/p1q3pb/1p1b4/8/3B2PQ/2P2pNP/PP3P2/R3R1K1 b - - 2 28",
+"linha": [
+"d6g3",
+"h4g3",
+"c7g3",
+"f2g3",
+"d8d4",
+"c3d4",
+"f3f2"
+],
+"id": 249
 },
 {
 "tema": "sacrificio",
@@ -1655,7 +3259,37 @@
 "e8c8",
 "c7c8"
 ],
-"id": 126
+"id": 250
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 2007,
+"fen": "r1b2rk1/4Qppp/p2p4/1p1P4/5R2/3q4/P5PP/5R1K w - - 0 23",
+"linha": [
+"e7f8",
+"g8f8",
+"f4f7",
+"f8e8",
+"f7f8",
+"e8d7",
+"f1f7"
+],
+"id": 251
+},
+{
+"tema": "sacrificio",
+"level": 3,
+"rating": 2024,
+"fen": "r4rk1/1p3pp1/2p2q1p/p7/6Q1/1PbRB2P/P4PP1/5RK1 w - - 0 24",
+"linha": [
+"d3c3",
+"f6c3",
+"e3d4",
+"c3d4",
+"g4d4"
+],
+"id": 252
 }
 ]
 }
