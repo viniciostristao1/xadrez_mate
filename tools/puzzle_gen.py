@@ -23,6 +23,7 @@ from pathlib import Path
 random.seed(20260816)
 
 OUT = Path(__file__).resolve().parent.parent / "app" / "assets" / "puzzles.json"
+LICHESS = Path(__file__).resolve().parent.parent / "app" / "assets" / "puzzles_lichess.json"
 
 CORNERS = [chess.A8, chess.H8, chess.A1, chess.H1]
 EDGE = [chess.square(f, r) for r in (0, 7) for f in range(8)] + \
@@ -275,6 +276,30 @@ CLASSICS = [
 ]
 
 
+def heuristic_level(p: dict) -> int:
+    """Nível heurístico para problemas gerados (1=fácil, 2=médio, 3=difícil).
+
+    - Várias chaves de mate → fácil;
+    - pouco material → fácil;
+    - muito material (muitas defesas) → difícil;
+    - chave silenciosa em mate>1 (não dá xeque) → mais difícil.
+    """
+    b = chess.Board(p["fen"])
+    pieces = sum(1 for sq in range(64) if b.piece_at(sq))
+    nkeys = len(p["tree"]["keys"])
+    key = p["tree"]["keys"][0]
+    m = b.parse_uci(key)
+    quiet = not b.gives_check(m)
+    score = 1
+    if nkeys >= 2:
+        score -= 1
+    if pieces >= 9:
+        score += 1
+    if quiet and p["mate"] > 1:
+        score += 1
+    return max(1, min(3, score))
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -346,18 +371,35 @@ def main() -> None:
             if p["fen"] in seen:
                 continue
             seen.add(p["fen"])
+            p["level"] = heuristic_level(p)
             puzzles.append(p)
-    puzzles.sort(key=lambda p: (p["mate"], p["fen"]))
+
+    # Problemas reais do Lichess (verificados, com rating e nível por terços)
+    if LICHESS.exists():
+        lich = json.loads(LICHESS.read_text()).get("puzzles", [])
+        for p in lich:
+            if p["fen"] in seen:
+                continue
+            seen.add(p["fen"])
+            puzzles.append(p)
+
+    puzzles.sort(key=lambda p: (p["mate"], p["level"], p["fen"]))
     for i, p in enumerate(puzzles, 1):
         p["id"] = i
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps({"version": 1, "puzzles": puzzles}, indent=1))
+    OUT.write_text(json.dumps({"version": 2, "puzzles": puzzles}, indent=1))
 
+    from collections import Counter
+    per_cat = Counter((p["mate"], p["level"]) for p in puzzles)
     print(f"Total: {len(puzzles)} problemas "
           f"(mate1={sum(1 for p in puzzles if p['mate']==1)}, "
           f"mate2={sum(1 for p in puzzles if p['mate']==2)}, "
-          f"mate3={sum(1 for p in puzzles if p['mate']==3)}) → {OUT}")
+          f"mate3={sum(1 for p in puzzles if p['mate']==3)})")
+    for mate in (1, 2, 3):
+        for lvl in (1, 2, 3):
+            print(f"  mate{mate} nível{lvl}: {per_cat.get((mate, lvl), 0)}")
+    print(f"→ {OUT}")
 
 
 if __name__ == "__main__":

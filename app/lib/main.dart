@@ -52,8 +52,8 @@ class _XequeMateAppState extends State<XequeMateApp> {
 
   Future<void> _loadDb() => PuzzleDb.instance.load();
 
-  void _startPuzzle(int mate) {
-    final puzzles = PuzzleDb.instance.puzzlesFor(mate);
+  void _startPuzzle(int mate, int level) {
+    final puzzles = PuzzleDb.instance.puzzlesForLevel(mate, level);
     if (puzzles.isEmpty) return;
     setState(() {
       _queue = List.of(puzzles)..shuffle();

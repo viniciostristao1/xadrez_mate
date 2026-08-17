@@ -55,12 +55,14 @@ class PuzzleNode {
 class Puzzle {
   final int id;
   final int mate; // 1, 2 ou 3
+  final int level; // 1 = fácil, 2 = médio, 3 = difícil
   final String fen;
   final PuzzleNode tree;
 
   const Puzzle({
     required this.id,
     required this.mate,
+    required this.level,
     required this.fen,
     required this.tree,
   });
@@ -68,6 +70,7 @@ class Puzzle {
   factory Puzzle.fromJson(Map<String, dynamic> json) => Puzzle(
         id: json['id'] as int,
         mate: json['mate'] as int,
+        level: json['level'] as int? ?? 1,
         fen: json['fen'] as String,
         tree: PuzzleNode.fromJson(json['tree'] as Map<String, dynamic>),
       );
@@ -75,4 +78,10 @@ class Puzzle {
   /// Lado a jogar (quem resolve o problema).
   ChessColor get sideToMove =>
       fen.trim().split(' ')[1] == 'b' ? ChessColor.black : ChessColor.white;
+
+  String get levelLabel => switch (level) {
+        1 => 'Fácil',
+        2 => 'Médio',
+        _ => 'Difícil',
+      };
 }

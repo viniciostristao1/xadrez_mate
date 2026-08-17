@@ -1,5 +1,25 @@
 # APRENDIZADOS — notas técnicas e gotchas do Xeque-Mate
 
+## 2026-08-17 — v0.2.0
+
+### Importação do banco do Lichess (tools/import_lichess.py)
+- **FORMATO do CSV (pegadinha central)**: "FEN is the position before the
+  opponent makes their move. The position to present to the player is after
+  applying the first move to that FEN. The second move is the beginning of
+  the solution." Ou seja: o JOGADOR controla o lado OPOSTO ao do FEN; a
+  posição do puzzle = `FEN + moves[0]`; os lances do jogador são
+  `moves[1], moves[3], ...` (índices ímpares). Importar o FEN direto gera
+  0 aceitos.
+- **Bug do nó terminal**: ao percorrer a linha do Lichess na árvore, o
+  verify() devolvia o NÓ TERMINAL (só as chaves do último lance) em vez da
+  RAIZ — o validador pegou: chaves do nó profundo ilegais na posição raiz.
+  Devolver `sol["tree"]` (a raiz completa).
+- **Níveis por terços de rating** dentro de cada categoria (não thresholds
+  globais): mate1 nível3 começa ~900, mate3 nível3 ~1600 — o rating é relativo
+  à categoria.
+- O lichess "mateIn1" permite VÁRIOS lances de mate (todas são chaves) —
+  compatível com nossa árvore (todas as chaves de mate aceitas).
+
 ## 2026-08-16 — v0.1.0
 
 ### Motor de xadrez (Dart)

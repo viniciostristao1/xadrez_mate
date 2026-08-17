@@ -27,17 +27,18 @@ usuário (`ATUALIZACOES`) · futuro (`IDEIAS`).
 
 ## ⭐ ESTADO ATUAL (2026-08-16) — ler primeiro pós-/clear
 
-**v0.1.0 — PRIMEIRA VERSÃO** (`flutter analyze` limpo, **770 testes** passando,
-sendo 737 contra referência do python-chess). App completo:
+**v0.2.0 — NÍVEIS + BANCO REAL** (`flutter analyze` limpo, **969 testes**
+passando, sendo 935 contra referência do python-chess). App completo:
 
-- **Home** — escolhe **Mate em 1 / 2 / 3** (com contagem de problemas) +
-  **layout das peças**: **Merida**, **Cburnett** ou **Emoji** (preferência
-  salva).
+- **Home** — escolhe **Mate em 1 / 2 / 3** e o **nível de dificuldade**
+  (**Fácil / Médio / Difícil**, com contagem) + **layout das peças**:
+  **Merida**, **Cburnett** ou **Emoji** (preferência salva).
 - **Tabuleiro interativo** — orientado para o lado que joga (problemas com
   brancas OU pretas); toca na peça → **casas legais marcadas**; toca no
   destino → joga.
-- **Problemas** — **120 verificados por construção** (52 mate-1, 40 mate-2,
-  28 mate-3), metade com pretas a jogar. Cada um tem a **árvore completa de
+- **Problemas** — **318 verificados** (130 mate-1, 106 mate-2, 82 mate-3):
+  **198 reais de partidas** (banco oficial do Lichess, CC0, com rating real de
+  dificuldade) + 120 gerados/espelhados. Cada um tem a **árvore completa de
   solução**: TODAS as respostas legais do oponente têm continuação exata.
 - **Feedback imediato** — lance errado: aviso na hora + volta ao último lance
   correto (não aplica o lance). Lance certo: segue; resposta do oponente
@@ -47,15 +48,18 @@ sendo 737 contra referência do python-chess). App completo:
 - **Promoção** — diálogo de escolha da peça quando um peão chega à última
   fileira.
 
-**Geração do banco** (`tools/puzzle_gen.py`): posições construtivas (rei no
-canto + escudos + atacantes) resolvidas por **busca exaustiva** com
-python-chess; só entram posições com **categoria exata** (mate em N, não
-menos) e a árvore cobre **todas** as respostas legais. Validação independente
-em `tools/validate_db.py` (varre toda a árvore de cada problema).
+**Geração do banco**: `tools/puzzle_gen.py` (construtivos: rei no canto +
+escudos + atacantes, resolvidos por busca exaustiva com python-chess) +
+`tools/import_lichess.py` (problemas reais do Lichess, re-verificados pelo
+solver). Níveis: terços do rating do Lichess (reais) ou heurística
+(chaves múltiplas/pouco material = fácil; muito material/chave silenciosa =
+difícil) nos gerados. Validação independente em `tools/validate_db.py`
+(varre toda a árvore de cada problema).
 
 ## O que o app faz (MVP)
 
-1. Tela inicial: **3 cartões de dificuldade** (Mate em 1/2/3) + contagem.
+1. Tela inicial: **3 cartões** (Mate em 1/2/3), cada um com **3 níveis**
+   (Fácil/Médio/Difícil) + contagem.
 2. Tela do problema: tabuleiro + instrução ("Brancas jogam · lance 1 de 2").
 3. Jogador seleciona peça → casas legais com marcador; só pode jogar legal.
 4. Errou: **"Lance incorreto (X). Volte a pensar!"** + shake, sem avançar.
@@ -78,9 +82,10 @@ em `tools/validate_db.py` (varre toda a árvore de cada problema).
 - **Sem estado externo** — `shared_preferences` só para a preferência de
   peças. Motor de xadrez puro em `lib/engine/chess.dart` (sem dependência de
   UI, testável).
-- Banco: `assets/puzzles.json` (gerado por `tools/puzzle_gen.py`, validado por
-  `tools/validate_db.py`; referência de lances legais em `test/data/legal_moves.json`
-  via `tools/gen_reference.py`).
+- Banco: `assets/puzzles.json` (gerado por `tools/puzzle_gen.py` +
+  `tools/import_lichess.py`, validado por `tools/validate_db.py`; referência
+  de lances legais em `test/data/legal_moves.json` via
+  `tools/gen_reference.py`).
 - Arquitetura feature-based: `lib/screens/`, `lib/widgets/`, `lib/models/`,
   `lib/data/`, `lib/engine/`, `lib/theme/`.
 - Pacote Android: **com.vinyapps.xadrez_mate** (applicationId — NÃO mudar).
@@ -107,7 +112,7 @@ cd /root/xadrez_mate/app
 /root/flutter/bin/flutter test           # 770 testes
 ```
 
-- `test/engine_test.dart` — motor: **737 posições de referência** (lances
+- `test/engine_test.dart` — motor: **935 posições de referência** (lances
   legais do python-chess) + regras específicas (cavalo L, peões, roque,
   cravadas, en passant, promoção, SAN, FEN ida-e-volta).
 - `test/puzzle_flow_test.dart` — fluxo real com o banco (acertar mate 1/2/3,

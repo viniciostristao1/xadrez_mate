@@ -15,18 +15,20 @@ void main() {
         onDbLoaded: () async {},
         pieceStyle: style,
         onPieceStyleChanged: (_) {},
-        onStartPuzzle: (_) {},
+        onStartPuzzle: (_, __) {},
       ),
     ));
     await tester.pumpAndSettle();
   }
 
-  testWidgets('home mostra as 3 categorias e contagens', (tester) async {
+  testWidgets('home mostra as 3 categorias com os 3 níveis', (tester) async {
     await pumpHome(tester, PieceStyle.merida);
     expect(find.text('Mate em 1'), findsOneWidget);
     expect(find.text('Mate em 2'), findsOneWidget);
     expect(find.text('Mate em 3'), findsOneWidget);
-    expect(find.text('problemas'), findsNWidgets(3));
+    expect(find.text('Fácil'), findsNWidgets(3));
+    expect(find.text('Médio'), findsNWidgets(3));
+    expect(find.text('Difícil'), findsNWidgets(3));
   });
 
   testWidgets('os 3 estilos de peça renderizam', (tester) async {

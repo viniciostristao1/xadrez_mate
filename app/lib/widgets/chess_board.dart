@@ -157,8 +157,9 @@ class _SquareCell extends StatelessWidget {
               Positioned.fill(
                 child: Center(
                   child: Padding(
-                    padding: EdgeInsets.all(size * 0.05),
-                    child: PieceIcon(piece: piece!, style: pieceStyle, size: size * 0.9),
+                    padding: EdgeInsets.only(top: size * 0.02),
+                    child: PieceIcon(
+                        piece: piece!, style: pieceStyle, size: size * 0.98),
                   ),
                 ),
               ),

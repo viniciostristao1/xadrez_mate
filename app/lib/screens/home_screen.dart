@@ -5,13 +5,13 @@ import '../engine/chess.dart';
 import '../theme/app_colors.dart';
 import '../widgets/piece_icon.dart';
 
-/// Tela inicial: escolher quantos lances o mate terá (1, 2 ou 3)
-/// e o layout das peças.
+/// Tela inicial: escolher quantos lances o mate terá (1, 2 ou 3),
+/// o nível de dificuldade (Fácil / Médio / Difícil) e o layout das peças.
 class HomeScreen extends StatefulWidget {
   final Future<void> Function() onDbLoaded;
   final PieceStyle pieceStyle;
   final ValueChanged<PieceStyle> onPieceStyleChanged;
-  final void Function(int mate) onStartPuzzle;
+  final void Function(int mate, int level) onStartPuzzle;
 
   const HomeScreen({
     super.key,
@@ -70,17 +70,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      '$_puzzles problemas verificados de mate em 1, 2 ou 3 lances.\n'
+                      '$_puzzles problemas de mate em 1, 2 ou 3 lances.\n'
                       'Escolha a dificuldade e encontre o xeque-mate!',
                       textAlign: TextAlign.center,
                       style: const TextStyle(color: AppColors.dim, height: 1.4),
                     ),
-                    const SizedBox(height: 28),
+                    const SizedBox(height: 24),
                     for (final mate in const [1, 2, 3]) ...[
                       _PuzzleCard(
                         mate: mate,
-                        count: PuzzleDb.instance.countFor(mate),
-                        onTap: () => widget.onStartPuzzle(mate),
+                        levelCounts: [
+                          PuzzleDb.instance.countForLevel(mate, 1),
+                          PuzzleDb.instance.countForLevel(mate, 2),
+                          PuzzleDb.instance.countForLevel(mate, 3),
+                        ],
+                        onLevelTap: (level) =>
+                            widget.onStartPuzzle(mate, level),
                       ),
                       const SizedBox(height: 12),
                     ],
@@ -129,15 +134,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
 class _PuzzleCard extends StatelessWidget {
   final int mate;
-  final int count;
-  final VoidCallback onTap;
+  final List<int> levelCounts;
+  final ValueChanged<int> onLevelTap;
   const _PuzzleCard({
     required this.mate,
-    required this.count,
-    required this.onTap,
+    required this.levelCounts,
+    required this.onLevelTap,
   });
 
   static const _icons = ['♛', '♛', '♛'];
+  static const _levels = ['Fácil', 'Médio', 'Difícil'];
 
   @override
   Widget build(BuildContext context) {
@@ -147,67 +153,124 @@ class _PuzzleCard extends StatelessWidget {
       _ => 'Três lances até o xeque-mate final',
     };
     return Card(
-      child: InkWell(
-        borderRadius: BorderRadius.circular(16),
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.all(18),
-          child: Row(
-            children: [
-              Container(
-                width: 52,
-                height: 52,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: AppColors.surfaceAlt,
-                  borderRadius: BorderRadius.circular(14),
-                ),
-                child: Text(
-                  _icons[mate - 1],
-                  style: TextStyle(
-                    fontSize: 26,
-                    color: mate == 3 ? AppColors.danger : AppColors.accent,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 46,
+                  height: 46,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: AppColors.surfaceAlt,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Text(
+                    _icons[mate - 1],
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: mate == 3 ? AppColors.danger : AppColors.accent,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(width: 14),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Mate em $mate',
-                      style: const TextStyle(
-                        color: AppColors.text,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w800,
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Mate em $mate',
+                        style: const TextStyle(
+                          color: AppColors.text,
+                          fontSize: 17,
+                          fontWeight: FontWeight.w800,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 2),
-                    Text(subtitle, style: const TextStyle(color: AppColors.dim)),
-                  ],
+                      const SizedBox(height: 1),
+                      Text(
+                        subtitle,
+                        style:
+                            const TextStyle(color: AppColors.dim, fontSize: 12.5),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Column(
-                children: [
-                  Text(
-                    '$count',
-                    style: const TextStyle(
-                      color: AppColors.accent,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w900,
+              ],
+            ),
+            const SizedBox(height: 12),
+            Row(
+              children: [
+                for (var lvl = 0; lvl < 3; lvl++) ...[
+                  Expanded(
+                    child: _LevelButton(
+                      label: _levels[lvl],
+                      count: levelCounts[lvl],
+                      accent: switch (lvl) {
+                        0 => AppColors.ok,
+                        1 => AppColors.accent,
+                        _ => AppColors.danger,
+                      },
+                      onTap: () => onLevelTap(lvl + 1),
                     ),
                   ),
-                  const Text(
-                    'problemas',
-                    style: TextStyle(color: AppColors.faint, fontSize: 11),
-                  ),
+                  if (lvl < 2) const SizedBox(width: 8),
                 ],
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _LevelButton extends StatelessWidget {
+  final String label;
+  final int count;
+  final Color accent;
+  final VoidCallback onTap;
+  const _LevelButton({
+    required this.label,
+    required this.count,
+    required this.accent,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(12),
+      onTap: onTap,
+      child: Ink(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          color: AppColors.surfaceAlt,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: AppColors.border),
+        ),
+        child: Column(
+          children: [
+            Text(
+              label,
+              style: TextStyle(
+                color: accent,
+                fontWeight: FontWeight.w800,
+                fontSize: 13.5,
               ),
-              const SizedBox(width: 4),
-              const Icon(Icons.chevron_right, color: AppColors.faint),
-            ],
-          ),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              '$count',
+              style: const TextStyle(
+                color: AppColors.dim,
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
         ),
       ),
     );

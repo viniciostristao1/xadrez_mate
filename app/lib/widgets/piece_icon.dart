@@ -53,15 +53,32 @@ class PieceIcon extends StatelessWidget {
       case PieceStyle.cburnett:
         final file =
             '${style.assetDir!}/${piece.color == ChessColor.white ? 'w' : 'b'}'
-            '\${_assetLetter(piece.type)}.svg';
-        return SvgPicture.asset(
-          file,
+            '${_assetLetter(piece.type)}.svg';
+        // Merida tem folga no canvas (viewBox 50): amplia p/ preencher a casa
+        final scale = style == PieceStyle.merida ? 1.18 : 1.06;
+        return SizedBox(
           width: size,
           height: size,
-          // Peças Merida brancas são quase brancas: sombra p/ contraste
-          colorFilter: piece.color == ChessColor.white
-              ? const ColorFilter.mode(Colors.white, BlendMode.srcATop)
-              : null,
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              // sombra suave por baixo p/ dar volume e destacar do tabuleiro
+              Transform.scale(
+                scale: scale * 1.02,
+                child: Opacity(
+                  opacity: 0.28,
+                  child: _PieceSvg(file: file, color: Colors.black),
+                ),
+              ),
+              Transform.scale(
+                scale: scale,
+                child: _PieceSvg(
+                  file: file,
+                  color: piece.color == ChessColor.white ? null : null,
+                ),
+              ),
+            ],
+          ),
         );
       case PieceStyle.emoji:
         final glyph = piece.color == ChessColor.white
@@ -70,7 +87,7 @@ class PieceIcon extends StatelessWidget {
         return Text(
           glyph,
           style: TextStyle(
-            fontSize: size * 0.82,
+            fontSize: size * 0.92,
             height: 1.0,
             color: piece.color == ChessColor.white ? Colors.white : Colors.black,
             shadows: [
@@ -87,6 +104,27 @@ class PieceIcon extends StatelessWidget {
     }
   }
 
+  static String _assetLetter(PieceType t) => switch (t) {
+        PieceType.king => 'K',
+        PieceType.queen => 'Q',
+        PieceType.rook => 'R',
+        PieceType.bishop => 'B',
+        PieceType.knight => 'N',
+        PieceType.pawn => 'P',
+      };
+
   /// Cor de fundo "por trás" da peça para miniaturas (ex.: seletor de estilo).
   static Color get previewBackground => AppColors.darkSquare;
+}
+
+class _PieceSvg extends StatelessWidget {
+  final String file;
+  final Color? color;
+  const _PieceSvg({required this.file, this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    if (color == null) return SvgPicture.asset(file);
+    return SvgPicture.asset(file, colorFilter: ColorFilter.mode(color!, BlendMode.srcIn));
+  }
 }

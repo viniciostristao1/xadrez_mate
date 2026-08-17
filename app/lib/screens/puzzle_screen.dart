@@ -252,7 +252,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
           icon: const Icon(Icons.arrow_back),
           onPressed: widget.onExit,
         ),
-        title: Text('Mate em ${widget.puzzle.mate}'),
+        title: Text('Mate em ${widget.puzzle.mate} · ${widget.puzzle.levelLabel}'),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
