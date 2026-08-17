@@ -1,5 +1,28 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-08-17 — v0.7.0
+
+### UI sem rolagem na tela de jogo
+- O `SingleChildScrollView` fazia o usuário rolar para ver o card de
+  sucesso. Troca por `Column` + `Expanded(LayoutBuilder)`: o tabuleiro é
+  `SizedBox(min(maxWidth, maxHeight))` — nunca estoura; tudo fica visível.
+- Histórico SAN virou `SingleChildScrollView` horizontal (`reverse: true`
+  mostra o lance mais recente à esquerda).
+- Feedback com altura fixa (`SizedBox(height: 46)`) para não "pular".
+- Botão "Próximo" virou `_RoundIconButton(Icons.arrow_forward)` que aparece
+  na row de ações quando `_solved` — os testes que procuravam o texto
+  "Próximo problema" foram atualizados para `find.byIcon`.
+
+### Pausa do cronômetro
+- `_togglePause`: cancela/recria o `Timer.periodic`; `_paused` bloqueia o
+  tick dentro do timer (dupla proteção). O chip do AppBar mostra
+  "MM:SS pausado" com ícone de pausa.
+
+### Sessão mista (mate 2/3)
+- No seletor, `_mate == 0` = misto: fila montada com mate 2 + mate 3.
+- Meta de tempo agora é a SOMA dos tempos-alvo de cada problema da fila
+  (antes usava o alvo do primeiro — errado para sessões mistas).
+
 ## 2026-08-17 — v0.6.0
 
 ### Sessão de treino

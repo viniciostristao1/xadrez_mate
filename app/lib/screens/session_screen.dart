@@ -37,7 +37,14 @@ class _SessionScreenState extends State<SessionScreen> {
   int _tempoTotal = 0;
   bool _finished = false;
 
-  int get _metaTotal => widget.size * RatingService.tempoAlvo[_queue.first.mate]!;
+  int get _metaTotal {
+    // soma dos tempos-alvo de CADA problema (suporta sessões mistas 2/3)
+    var total = 0;
+    for (final p in _queue) {
+      total += RatingService.tempoAlvo[p.mate]!;
+    }
+    return total;
+  }
 
   @override
   void initState() {

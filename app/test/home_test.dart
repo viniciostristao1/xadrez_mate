@@ -32,6 +32,24 @@ void main() {
     expect(find.text('Difícil'), findsNWidgets(3));
   });
 
+  testWidgets('home rola até a sessão de treino e evolução', (tester) async {
+    await pumpHome(tester, PieceStyle.merida);
+    // rola para baixo até encontrar os cards do fim
+    await tester.dragUntilVisible(
+      find.text('Evolução do rating'),
+      find.byType(SingleChildScrollView),
+      const Offset(0, -200),
+    );
+    expect(find.text('Evolução do rating'), findsOneWidget);
+    expect(find.text('Sessão de treino'), findsOneWidget);
+  });
+
+  testWidgets('título Mateflow com logo no canto superior esquerdo',
+      (tester) async {
+    await pumpHome(tester, PieceStyle.merida);
+    expect(find.text('Mateflow'), findsOneWidget);
+  });
+
   testWidgets('os 3 estilos de peça renderizam', (tester) async {
     for (final style in PieceStyle.values) {
       await pumpHome(tester, style);

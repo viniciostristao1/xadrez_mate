@@ -67,14 +67,14 @@ void main() {
     // Problema 1
     expect(find.text('Sessão 1 de 2'), findsOneWidget);
     await resolveAtual(tester, mate1[0]);
-    expect(find.text('Próximo problema'), findsOneWidget);
-    await tester.tap(find.text('Próximo problema'));
+    expect(find.byIcon(Icons.arrow_forward), findsOneWidget);
+    await tester.tap(find.byIcon(Icons.arrow_forward));
     await tester.pumpAndSettle();
 
     // Problema 2
     expect(find.text('Sessão 2 de 2'), findsOneWidget);
     await resolveAtual(tester, mate1[1]);
-    await tester.tap(find.text('Próximo problema'));
+    await tester.tap(find.byIcon(Icons.arrow_forward));
     await tester.pumpAndSettle();
 
     // Resumo
@@ -98,7 +98,7 @@ void main() {
     await tester.pumpAndSettle();
 
     await resolveAtual(tester, p);
-    await tester.tap(find.text('Próximo problema'));
+    await tester.tap(find.byIcon(Icons.arrow_forward));
     await tester.pumpAndSettle();
 
     expect(find.text('Fim da sessão'), findsOneWidget);

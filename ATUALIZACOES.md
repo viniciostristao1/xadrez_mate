@@ -1,5 +1,19 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.7.0 (2026-08-17)
+**Ajustes de usabilidade!**
+- 📜 **Página principal rola** até a Sessão de treino e a Evolução do rating.
+- ⏸ **Pausar o cronômetro** com um botão entre a dica e o refazer (pausa/
+  retoma quando quiser; o tempo pausado não conta).
+- 🎯 **Sessão de treino mista**: nova opção "Misto 2/3" — problemas de mate
+  em 2 ou 3 sorteados na mesma sessão (meta de tempo calculada por problema).
+- ➡️ Botão de **próximo problema** (seta para a direita) ao lado dos demais
+  quando você resolve.
+- 🏁 Tela de jogo **sem rolagem**: o tabuleiro se ajusta e a mensagem de
+  "Xeque-mate!" com o lance final aparece inteira na tela.
+- 🗑️ Removida a caixa "Seu lance (1 de 1)" embaixo do tabuleiro (redundante).
+- 🔤 **Mateflow** com o logo no canto superior esquerdo, menor.
+
 ## v0.6.0 (2026-08-17)
 **Sessão de treino + evolução do rating!**
 - ⚡ **Sessão de treino**: escolha lances até o mate (1/2/3), nível e

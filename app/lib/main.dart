@@ -97,7 +97,16 @@ class _MateflowAppState extends State<MateflowApp> {
   }
 
   void _startSession(int mate, int level, int size) {
-    final puzzles = PuzzleDb.instance.puzzlesForLevel(mate, level);
+    // mate == 0 = sessão mista: mate em 2 OU 3, sorteado
+    final List<Puzzle> puzzles;
+    if (mate == 0) {
+      puzzles = [
+        ...PuzzleDb.instance.puzzlesForLevel(2, level),
+        ...PuzzleDb.instance.puzzlesForLevel(3, level),
+      ];
+    } else {
+      puzzles = PuzzleDb.instance.puzzlesForLevel(mate, level);
+    }
     if (puzzles.isEmpty) return;
     Navigator.of(context).pop(); // fecha o seletor
     setState(() {
@@ -192,9 +201,17 @@ class _SessionPickerState extends State<_SessionPicker> {
               style: const TextStyle(color: AppColors.dim, fontSize: 13),
             ),
             const SizedBox(height: 18),
-            _Segmented(label: 'Lances até o mate', value: _mate,
-                options: const [(1, 'Mate em 1'), (2, 'Mate em 2'), (3, 'Mate em 3')],
-                onChanged: (v) => setState(() => _mate = v)),
+            _Segmented(
+              label: 'Lances até o mate',
+              value: _mate,
+              options: const [
+                (0, 'Misto 2/3'),
+                (1, 'Mate em 1'),
+                (2, 'Mate em 2'),
+                (3, 'Mate em 3'),
+              ],
+              onChanged: (v) => setState(() => _mate = v),
+            ),
             const SizedBox(height: 14),
             _Segmented(label: 'Nível', value: _level,
                 options: const [(1, 'Fácil'), (2, 'Médio'), (3, 'Difícil')],

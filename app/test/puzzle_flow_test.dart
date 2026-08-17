@@ -74,7 +74,7 @@ void main() {
 
       expect(screen.testSolved, isTrue);
       expect(find.textContaining('Xeque-mate'), findsWidgets);
-      expect(find.text('Próximo problema'), findsOneWidget);
+      expect(find.byIcon(Icons.arrow_forward), findsOneWidget);
     });
 
     testWidgets('mate em 2: dois lances + respostas do rival', (tester) async {
@@ -85,7 +85,7 @@ void main() {
       await solve(tester, p);
 
       expect(screen.testSolved, isTrue);
-      expect(find.text('Próximo problema'), findsOneWidget);
+      expect(find.byIcon(Icons.arrow_forward), findsOneWidget);
     });
 
     testWidgets('mate em 3: três lances do jogador', (tester) async {
@@ -96,7 +96,7 @@ void main() {
       await solve(tester, p);
 
       expect(screen.testSolved, isTrue);
-      expect(find.text('Próximo problema'), findsOneWidget);
+      expect(find.byIcon(Icons.arrow_forward), findsOneWidget);
     });
 
     testWidgets('lance errado: avisa na hora e não avança', (tester) async {
@@ -150,7 +150,7 @@ void main() {
       await solve(tester, p);
 
       expect(screen.testSolved, isTrue);
-      expect(find.text('Próximo problema'), findsOneWidget);
+      expect(find.byIcon(Icons.arrow_forward), findsOneWidget);
     });
 
     testWidgets('lâmpada (dica) revela o lance correto', (tester) async {
@@ -218,7 +218,29 @@ void main() {
       final frozen = screen.testElapsed;
       await tester.pump(const Duration(seconds: 2));
       expect(screen.testElapsed, frozen, reason: 'cronômetro parou no mate');
-      expect(find.text('Próximo problema'), findsOneWidget);
+      expect(find.byIcon(Icons.arrow_forward), findsOneWidget);
+    });
+
+    testWidgets('pausar cronômetro congela o tempo; retomar segue',
+        (tester) async {
+      final p = puzzles.firstWhere((x) => x.mate == 1);
+      await pumpPuzzle(tester, p);
+      final screen = tester.state<PuzzleScreenState>(find.byType(PuzzleScreen));
+
+      await tester.pump(const Duration(seconds: 3));
+      expect(screen.testElapsed, 3);
+
+      await tester.tap(find.byIcon(Icons.pause));
+      await tester.pumpAndSettle();
+      final parado = screen.testElapsed;
+      await tester.pump(const Duration(seconds: 2));
+      expect(screen.testElapsed, parado, reason: 'pausado não incrementa');
+      expect(find.byIcon(Icons.play_arrow), findsOneWidget);
+
+      await tester.tap(find.byIcon(Icons.play_arrow));
+      await tester.pumpAndSettle();
+      await tester.pump(const Duration(seconds: 2));
+      expect(screen.testElapsed, parado + 2, reason: 'retomou o cronômetro');
     });
 
     testWidgets('clique em peça inimiga não seleciona', (tester) async {

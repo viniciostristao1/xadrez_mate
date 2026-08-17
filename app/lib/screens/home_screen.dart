@@ -56,52 +56,43 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: _loading
             ? const Center(child: CircularProgressIndicator())
-            : Padding(
-                padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+            : SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 28),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    const SizedBox(height: 12),
-                    // Logo Vinyapps ao lado do nome
+                    // Cabeçalho: logo pequeno + Mateflow (canto superior esquerdo)
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          width: 52,
-                          height: 52,
+                          width: 30,
+                          height: 30,
                           decoration: BoxDecoration(
                             color: Colors.black,
-                            borderRadius: BorderRadius.circular(13),
-                            border: Border.all(color: AppColors.accent, width: 1.6),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black54,
-                                blurRadius: 10,
-                                offset: Offset(0, 3),
-                              ),
-                            ],
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: AppColors.accent, width: 1.2),
                           ),
                           child: ClipRRect(
-                            borderRadius: BorderRadius.circular(11),
+                            borderRadius: BorderRadius.circular(7),
                             child: Image.asset(
                               'assets/icon/app_icon.png',
                               fit: BoxFit.cover,
                             ),
                           ),
                         ),
-                        const SizedBox(width: 12),
+                        const SizedBox(width: 9),
                         const Text(
                           'Mateflow',
                           style: TextStyle(
                             color: AppColors.text,
-                            fontSize: 32,
+                            fontSize: 20,
                             fontWeight: FontWeight.w900,
-                            letterSpacing: 0.5,
+                            letterSpacing: 0.4,
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 6),
+                    const SizedBox(height: 14),
                     Text(
                       '$_puzzles problemas de mate em 1, 2 ou 3 lances.\n'
                       'Escolha a dificuldade e encontre o xeque-mate!',

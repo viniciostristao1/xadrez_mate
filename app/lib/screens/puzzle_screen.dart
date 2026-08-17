@@ -63,6 +63,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
   // Cronômetro (roda desde o problema aparecer até a conclusão)
   Timer? _timer;
   int _elapsed = 0;
+  bool _paused = false;
 
   // Dica (lâmpada)
   int? _hintFrom;
@@ -118,16 +119,32 @@ class PuzzleScreenState extends State<PuzzleScreen> {
     super.initState();
     _resetState();
     // Cronômetro começa quando o problema aparece
-    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      if (!mounted || _solved) return;
-      setState(() => _elapsed++);
-    });
+    _startTimer();
   }
 
   @override
   void dispose() {
     _timer?.cancel();
     super.dispose();
+  }
+
+  void _startTimer() {
+    _timer?.cancel();
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (!mounted || _solved || _paused) return;
+      setState(() => _elapsed++);
+    });
+  }
+
+  /// Pausa/retoma o cronômetro.
+  void _togglePause() {
+    if (_solved) return;
+    setState(() => _paused = !_paused);
+    if (_paused) {
+      _timer?.cancel();
+    } else {
+      _startTimer();
+    }
   }
 
   void _resetState() {
@@ -143,6 +160,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
     _feedbackError = false;
     _sanMoves.clear();
     _elapsed = 0;
+    _paused = false;
     _hintFrom = null;
     _hintTo = null;
     _hintsUsed = 0;
@@ -357,7 +375,9 @@ class PuzzleScreenState extends State<PuzzleScreen> {
             margin: const EdgeInsets.only(right: 4),
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             decoration: BoxDecoration(
-              color: _solved ? AppColors.ok.withValues(alpha: 0.15) : AppColors.surfaceAlt,
+              color: _solved
+                  ? AppColors.ok.withValues(alpha: 0.15)
+                  : AppColors.surfaceAlt,
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
                 color: _solved ? AppColors.ok : AppColors.border,
@@ -366,15 +386,18 @@ class PuzzleScreenState extends State<PuzzleScreen> {
             child: Row(
               children: [
                 Icon(
-                  Icons.timer_outlined,
+                  _paused ? Icons.pause : Icons.timer_outlined,
                   size: 16,
-                  color: _solved ? AppColors.ok : AppColors.accent,
+                  color: _paused
+                      ? AppColors.dim
+                      : (_solved ? AppColors.ok : AppColors.accent),
                 ),
                 const SizedBox(width: 5),
                 Text(
-                  _elapsedLabel,
+                  _paused ? '$_elapsedLabel pausado' : _elapsedLabel,
                   style: TextStyle(
-                    color: _solved ? AppColors.ok : AppColors.text,
+                    color:
+                        _paused ? AppColors.dim : (_solved ? AppColors.ok : AppColors.text),
                     fontWeight: FontWeight.w700,
                     fontFeatures: const [FontFeature.tabularFigures()],
                   ),
@@ -384,19 +407,29 @@ class PuzzleScreenState extends State<PuzzleScreen> {
           ),
         ],
       ),
+      // Layout sem rolagem: o tabuleiro se ajusta ao espaço disponível.
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               _HeaderBar(
                 puzzle: widget.puzzle,
                 solved: _solved,
                 userMovesPlayed: _userMovesPlayed,
               ),
-              const SizedBox(height: 12),
-              // Tabuleiro
-              ValueListenableBuilder<int>(
+              const SizedBox(height: 8),
+              // Tabuleiro (flexível — nunca estoura a tela)
+              Expanded(
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    final size = min(constraints.maxWidth, constraints.maxHeight);
+                    return Center(
+                      child: SizedBox(
+                        width: size,
+                        height: size,
+                        child: ValueListenableBuilder<int>(
                 valueListenable: _shake,
                 builder: (context, shake, child) {
                   return TweenAnimationBuilder<double>(
@@ -422,38 +455,49 @@ class PuzzleScreenState extends State<PuzzleScreen> {
                   );
                 },
               ),
-              const SizedBox(height: 16),
-              // Feedback
-              AnimatedSwitcher(
-                duration: const Duration(milliseconds: 250),
-                child: _feedback != null
-                    ? _FeedbackBanner(
-                        key: ValueKey(_feedback),
-                        text: _feedback!,
-                        error: _feedbackError,
-                      )
-                    : _StatusBanner(
-                        key: const ValueKey('status'),
-                        puzzle: widget.puzzle,
-                        solved: _solved,
-                        inCheck: _board.inCheck && !_solved,
-                        userMovesPlayed: _userMovesPlayed,
-                      ),
-              ),
-              const SizedBox(height: 12),
-              // Histórico (SAN)
-              if (_sanMoves.isNotEmpty)
-                Wrap(
-                  spacing: 6,
-                  runSpacing: 6,
-                  alignment: WrapAlignment.center,
-                  children: [
-                    for (var i = 0; i < _sanMoves.length; i++)
-                      _SanChip(index: i, san: _sanMoves[i]),
-                  ],
+            ),
+          );
+        },
+      ),
+    ),
+              const SizedBox(height: 8),
+              // Feedback (altura fixa — não empurra o resto)
+              SizedBox(
+                height: 46,
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 250),
+                  child: _feedback != null
+                      ? _FeedbackBanner(
+                          key: ValueKey(_feedback),
+                          text: _feedback!,
+                          error: _feedbackError,
+                        )
+                      : const SizedBox(key: ValueKey('status'), width: double.infinity),
                 ),
-              const SizedBox(height: 16),
-              // Ações: dica (lâmpada) + refazer (flecha circular)
+              ),
+              // Histórico (SAN) — rolável horizontalmente, sem quebrar layout
+              if (_sanMoves.isNotEmpty) ...[
+                const SizedBox(height: 4),
+                SizedBox(
+                  height: 32,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    reverse: true,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        for (var i = 0; i < _sanMoves.length; i++) ...[
+                          _SanChip(index: i, san: _sanMoves[i]),
+                          const SizedBox(width: 6),
+                        ],
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+              const SizedBox(height: 8),
+              // Ações: dica (lâmpada) + pausar + refazer (flecha circular)
+              // + próximo (seta, quando resolveu)
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -464,23 +508,38 @@ class PuzzleScreenState extends State<PuzzleScreen> {
                     badge: _hintsUsed,
                     onTap: _onHint,
                   ),
-                  const SizedBox(width: 18),
+                  const SizedBox(width: 16),
+                  _RoundIconButton(
+                    icon: _paused ? Icons.play_arrow : Icons.pause,
+                    tooltip: _paused ? 'Retomar cronômetro' : 'Pausar cronômetro',
+                    color: _paused ? AppColors.dim : AppColors.text,
+                    onTap: _togglePause,
+                  ),
+                  const SizedBox(width: 16),
                   _RoundIconButton(
                     icon: Icons.refresh,
                     tooltip: 'Refazer o problema',
                     color: AppColors.text,
                     onTap: _reset,
                   ),
+                  if (_solved) ...[
+                    const SizedBox(width: 16),
+                    _RoundIconButton(
+                      icon: Icons.arrow_forward,
+                      tooltip: 'Próximo problema',
+                      color: AppColors.ok,
+                      onTap: widget.onNext,
+                    ),
+                  ],
                 ],
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 8),
               if (_solved)
                 _SuccessCard(
                   puzzle: widget.puzzle,
                   elapsed: _elapsed,
                   ratingResult: _ratingResult,
-                  onNext: widget.onNext,
-                  onRestart: _reset,
+                  ultimoLance: _sanMoves.isEmpty ? null : _sanMoves.last,
                 ),
             ],
           ),
@@ -545,50 +604,6 @@ class _HeaderBar extends StatelessWidget {
           ],
         ),
       ],
-    );
-  }
-}
-
-class _StatusBanner extends StatelessWidget {
-  final Puzzle puzzle;
-  final bool solved;
-  final bool inCheck;
-  final int userMovesPlayed;
-  const _StatusBanner({
-    super.key,
-    required this.puzzle,
-    required this.solved,
-    required this.inCheck,
-    required this.userMovesPlayed,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final side = puzzle.sideToMove == ChessColor.white ? 'Brancas' : 'Pretas';
-    String text;
-    if (solved) {
-      text = 'Xeque-mate! Você conseguiu!';
-    } else if (inCheck) {
-      text = 'Xeque! $side precisam se defender.';
-    } else {
-      text = 'Seu lance (${userMovesPlayed + 1} de ${puzzle.mate}) — $side jogam';
-    }
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      decoration: BoxDecoration(
-        color: AppColors.surface,
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.border),
-      ),
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: inCheck ? AppColors.danger : AppColors.text,
-          fontWeight: FontWeight.w600,
-        ),
-      ),
     );
   }
 }
@@ -664,14 +679,12 @@ class _SuccessCard extends StatelessWidget {
   final Puzzle puzzle;
   final int elapsed;
   final ({double delta, double novo, double resultado})? ratingResult;
-  final VoidCallback onNext;
-  final VoidCallback onRestart;
+  final String? ultimoLance;
   const _SuccessCard({
     required this.puzzle,
     required this.elapsed,
     required this.ratingResult,
-    required this.onNext,
-    required this.onRestart,
+    this.ultimoLance,
   });
 
   String get _elapsedLabel {
@@ -686,53 +699,50 @@ class _SuccessCard extends StatelessWidget {
     final delta = r?.delta.round() ?? 0;
     final novo = r?.novo.round() ?? RatingService.instance.rating.round();
     final up = delta >= 0;
-    return Card(      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        child: Row(
           children: [
-            const Text('♛', style: TextStyle(fontSize: 44)),
-            const SizedBox(height: 6),
-            const Text(
-              'Xeque-mate! Você conseguiu!',
-              style: TextStyle(
-                color: AppColors.text,
-                fontWeight: FontWeight.w800,
-                fontSize: 18,
+            const Text('♛', style: TextStyle(fontSize: 26)),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
+                    'Xeque-mate! Você conseguiu!',
+                    style: TextStyle(
+                      color: AppColors.text,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 14.5,
+                    ),
+                  ),
+                  if (ultimoLance != null)
+                    Text(
+                      'Lance final: $ultimoLance',
+                      style: const TextStyle(
+                        color: AppColors.ok,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 13,
+                      ),
+                    ),
+                ],
               ),
-              textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _StatChip(icon: Icons.timer_outlined, label: _elapsedLabel),
-                const SizedBox(width: 10),
-                _StatChip(
-                  icon: up ? Icons.trending_up : Icons.trending_down,
-                  label: '${up ? '+' : ''}$delta',
-                  color: up ? AppColors.ok : AppColors.danger,
-                ),
-                const SizedBox(width: 10),
-                _StatChip(
-                  icon: Icons.emoji_events_outlined,
-                  label: '$novo',
-                  color: AppColors.accent,
-                ),
-              ],
+            _StatChip(icon: Icons.timer_outlined, label: _elapsedLabel),
+            const SizedBox(width: 6),
+            _StatChip(
+              icon: up ? Icons.trending_up : Icons.trending_down,
+              label: '${up ? '+' : ''}$delta',
+              color: up ? AppColors.ok : AppColors.danger,
             ),
-            const SizedBox(height: 6),
-            Text(
-              'Rating: ${RatingService.faixa(novo.toDouble())}',
-              style: const TextStyle(color: AppColors.dim, fontSize: 12.5),
-            ),
-            const SizedBox(height: 16),
-            SizedBox(
-              width: double.infinity,
-              child: FilledButton.icon(
-                icon: const Icon(Icons.arrow_forward),
-                label: const Text('Próximo problema'),
-                onPressed: onNext,
-              ),
+            const SizedBox(width: 6),
+            _StatChip(
+              icon: Icons.emoji_events_outlined,
+              label: '$novo',
+              color: AppColors.accent,
             ),
           ],
         ),
