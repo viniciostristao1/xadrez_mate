@@ -1,5 +1,11 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.9.1 (2026-08-17)
+- 🐛 **Correção**: o app não carregava (tela preta + símbolo de carregando
+  infinito) porque um dos arquivos de problemas não foi incluído no pacote.
+  Agora o banco de Tática entra no APK e, se qualquer carga falhar, o app
+  abre mesmo assim (sem travar).
+
 ## v0.9.0 (2026-08-17)
 **Tática + idiomas + mais mates difíceis!**
 - 🏠 **Nova página inicial**: escolha **Mates** ou **Tática** em botões

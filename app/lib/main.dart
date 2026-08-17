@@ -40,20 +40,33 @@ class _MateflowAppState extends State<MateflowApp> {
   }
 
   Future<void> _bootstrap() async {
-    final prefs = await SharedPreferences.getInstance();
-    final saved = prefs.getString('piece_style');
-    if (saved != null) {
-      _pieceStyle = PieceStyle.values.firstWhere(
-        (s) => s.name == saved,
-        orElse: () => PieceStyle.merida,
-      );
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final saved = prefs.getString('piece_style');
+      if (saved != null) {
+        _pieceStyle = PieceStyle.values.firstWhere(
+          (s) => s.name == saved,
+          orElse: () => PieceStyle.merida,
+        );
+      }
+      // Cada load é independente: se um falhar, o app abre mesmo assim
+      // (bancos vazios) em vez de ficar preso na tela de carregamento.
+      final loads = [
+        () => RatingService.instance.load(),
+        () => I18n.instance.load(),
+        () => PuzzleDb.instance.load(),
+        () => TaticaDb.instance.load(),
+      ];
+      await Future.wait(loads.map((f) async {
+        try {
+          await f();
+        } catch (e, st) {
+          debugPrint('ERRO ao carregar: $e\n$st');
+        }
+      }));
+    } catch (e, st) {
+      debugPrint('ERRO no bootstrap: $e\n$st');
     }
-    await Future.wait([
-      RatingService.instance.load(),
-      I18n.instance.load(),
-      PuzzleDb.instance.load(),
-      TaticaDb.instance.load(),
-    ]);
     if (!mounted) return;
     setState(() => _ready = true);
   }
