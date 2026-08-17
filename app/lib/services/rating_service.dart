@@ -29,6 +29,9 @@ class RatingService {
   static const double fatorErro = 0.8; // cada erro = -20%
   static const double fatorDica = 0.6; // cada dica = -40%
 
+  /// Bônus do modo "Mate aleatório" (surpresa): +30% no delta.
+  static const double bonusSurpresa = 1.3;
+
   double _rating = kInicial;
   int _resolvidos = 0;
   int _erros = 0;
@@ -119,11 +122,14 @@ class RatingService {
   }
 
   /// Registra uma resolução e devolve o resumo (delta e novo rating).
+  ///
+  /// `surpresa` = modo "Mate aleatório": o delta ganha o bônus (+30%).
   Future<({double delta, double novo, double resultado})> registrarResolucao({
     required Puzzle puzzle,
     required double segundos,
     required int erros,
     required int dicas,
+    bool surpresa = false,
   }) async {
     final r = resultado(
       mate: puzzle.mate,
@@ -131,7 +137,8 @@ class RatingService {
       erros: erros,
       dicas: dicas,
     );
-    final delta = kConstante * (r - esperado(puzzle.rating));
+    var delta = kConstante * (r - esperado(puzzle.rating));
+    if (surpresa) delta *= bonusSurpresa;
     _rating += delta;
     _resolvidos++;
     _erros += erros;

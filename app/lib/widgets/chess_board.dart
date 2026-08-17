@@ -59,9 +59,10 @@ class ChessBoard extends StatelessWidget {
     if (square == selected) return AppColors.select;
     if (square == _checkedSquare) return AppColors.check;
     if (square == hintFrom || square == hintTo) {
+      // Amarelo intenso — destaca bem a dica
       return (row + col).isOdd
-          ? const Color(0xFF2E7D4F)
-          : const Color(0xFF5BB881);
+          ? const Color(0xFFE0A800)
+          : const Color(0xFFFFD54F);
     }
     if (square == lastTo || square == lastFrom) {
       return (row + col).isOdd

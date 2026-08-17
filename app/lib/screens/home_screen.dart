@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
   final PieceStyle pieceStyle;
   final ValueChanged<PieceStyle> onPieceStyleChanged;
   final void Function(int mate, int level) onStartPuzzle;
-  final void Function() onStartSession;
+  final void Function() onStartSurpresa;
 
   const HomeScreen({
     super.key,
@@ -22,7 +22,7 @@ class HomeScreen extends StatefulWidget {
     required this.pieceStyle,
     required this.onPieceStyleChanged,
     required this.onStartPuzzle,
-    required this.onStartSession,
+    required this.onStartSurpresa,
   });
 
   @override
@@ -162,9 +162,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       const SizedBox(height: 12),
                     ],
-                    // Sessão de treino
-                    _SessionCard(
-                      onTap: widget.onStartSession,
+                    // Mate aleatório (surpresa: mate em 2 ou 3)
+                    _SurpresaCard(
+                      onTap: widget.onStartSurpresa,
                     ),
                     const SizedBox(height: 12),
                     // Evolução do rating
@@ -212,9 +212,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class _SessionCard extends StatelessWidget {
+class _SurpresaCard extends StatelessWidget {
   final VoidCallback onTap;
-  const _SessionCard({required this.onTap});
+  const _SurpresaCard({required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -235,7 +235,7 @@ class _SessionCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: const Icon(
-                  Icons.bolt,
+                  Icons.shuffle,
                   color: AppColors.accent,
                   size: 24,
                 ),
@@ -246,7 +246,7 @@ class _SessionCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'Sessão de treino',
+                      'Mate aleatório',
                       style: TextStyle(
                         color: AppColors.text,
                         fontSize: 15.5,
@@ -255,7 +255,7 @@ class _SessionCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 2),
                     const Text(
-                      'Sequência de problemas com meta de tempo',
+                      'Surpresa: mate em 2 ou 3 · pontuação bônus',
                       style: TextStyle(color: AppColors.dim, fontSize: 12.5),
                     ),
                   ],

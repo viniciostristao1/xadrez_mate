@@ -28,6 +28,10 @@ class PuzzleScreen extends StatefulWidget {
   final VoidCallback onNext;
   final VoidCallback onExit;
 
+  /// Modo "Mate aleatório": esconde o nº de lances (surpresa) e o rating
+  /// ganha bônus.
+  final bool surpresa;
+
   /// Chamado ao concluir (para sessões de treino acumularem estatísticas).
   final void Function(Puzzle puzzle, int elapsed, int errors, int hints)?
       onSolved;
@@ -39,6 +43,7 @@ class PuzzleScreen extends StatefulWidget {
     required this.onPieceStyleChanged,
     required this.onNext,
     required this.onExit,
+    this.surpresa = false,
     this.onSolved,
   });
 
@@ -298,6 +303,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
           segundos: _elapsed.toDouble(),
           erros: _errors,
           dicas: _hintsUsed,
+          surpresa: widget.surpresa,
         )
             .then((r) {
           if (mounted) setState(() => _ratingResult = r);
@@ -368,7 +374,11 @@ class PuzzleScreenState extends State<PuzzleScreen> {
           icon: const Icon(Icons.arrow_back),
           onPressed: widget.onExit,
         ),
-        title: Text('Mate em ${widget.puzzle.mate} · ${widget.puzzle.levelLabel}'),
+        title: Text(
+          widget.surpresa
+              ? 'Mate aleatório'
+              : 'Mate em ${widget.puzzle.mate} · ${widget.puzzle.levelLabel}',
+        ),
         actions: [
           // Cronômetro do problema (roda até concluir; zera no próximo)
           Container(
@@ -417,6 +427,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
               _HeaderBar(
                 puzzle: widget.puzzle,
                 solved: _solved,
+                surpresa: widget.surpresa,
                 userMovesPlayed: _userMovesPlayed,
               ),
               const SizedBox(height: 8),
@@ -555,18 +566,19 @@ class PuzzleScreenState extends State<PuzzleScreen> {
 class _HeaderBar extends StatelessWidget {
   final Puzzle puzzle;
   final bool solved;
+  final bool surpresa;
   final int userMovesPlayed;
   const _HeaderBar({
     required this.puzzle,
     required this.solved,
+    required this.surpresa,
     required this.userMovesPlayed,
   });
 
   @override
   Widget build(BuildContext context) {
     final side = puzzle.sideToMove == ChessColor.white ? 'Brancas' : 'Pretas';
-    final solvedAll = solved;
-    final done = solvedAll ? puzzle.mate : min(userMovesPlayed, puzzle.mate);
+    final done = solved ? puzzle.mate : min(userMovesPlayed, puzzle.mate);
     return Column(
       children: [
         Text(
@@ -578,30 +590,38 @@ class _HeaderBar extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 4),
-        Text(
-          solved
-              ? 'Resolvido! 🎉'
-              : '$side jogam · lance $done de ${puzzle.mate}',
-          style: const TextStyle(color: AppColors.dim),
-        ),
+        if (surpresa)
+          const Text(
+            'Surpresa! Descubra o xeque-mate',
+            style: TextStyle(color: AppColors.dim),
+          )
+        else
+          Text(
+            solved
+                ? 'Resolvido! 🎉'
+                : '$side jogam · lance $done de ${puzzle.mate}',
+            style: const TextStyle(color: AppColors.dim),
+          ),
         const SizedBox(height: 10),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            for (var i = 0; i < puzzle.mate; i++)
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 4),
-                width: 34,
-                height: 6,
-                decoration: BoxDecoration(
-                  color: i < done
-                      ? (solved ? AppColors.ok : AppColors.accent)
-                      : AppColors.border,
-                  borderRadius: BorderRadius.circular(3),
+        // No modo surpresa o nº de lances é segredo — sem as barras
+        if (!surpresa)
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              for (var i = 0; i < puzzle.mate; i++)
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 4),
+                  width: 34,
+                  height: 6,
+                  decoration: BoxDecoration(
+                    color: i < done
+                        ? (solved ? AppColors.ok : AppColors.accent)
+                        : AppColors.border,
+                    borderRadius: BorderRadius.circular(3),
+                  ),
                 ),
-              ),
-          ],
-        ),
+            ],
+          ),
       ],
     );
   }

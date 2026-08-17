@@ -8,7 +8,7 @@ import '../theme/app_colors.dart';
 enum PieceStyle {
   merida('Merida', 'assets/pieces/merida'),
   cburnett('Cburnett', 'assets/pieces/cburnett'),
-  emoji('Emoji', null);
+  leipzig('Leipzig', 'assets/pieces/leipzig');
 
   final String label;
   final String? assetDir;
@@ -28,80 +28,35 @@ class PieceIcon extends StatelessWidget {
     this.size = 48,
   });
 
-  static const _emoji = {
-    PieceType.king: '♚',
-    PieceType.queen: '♛',
-    PieceType.rook: '♜',
-    PieceType.bishop: '♝',
-    PieceType.knight: '♞',
-    PieceType.pawn: '♟',
-  };
-
-  static const _emojiWhite = {
-    PieceType.king: '♔',
-    PieceType.queen: '♕',
-    PieceType.rook: '♖',
-    PieceType.bishop: '♗',
-    PieceType.knight: '♘',
-    PieceType.pawn: '♙',
-  };
-
   @override
   Widget build(BuildContext context) {
-    switch (style) {
-      case PieceStyle.merida:
-      case PieceStyle.cburnett:
-        final file =
-            '${style.assetDir!}/${piece.color == ChessColor.white ? 'w' : 'b'}'
-            '${_assetLetter(piece.type)}.svg';
-        // Merida tem folga no canvas (viewBox 50): amplia p/ preencher a casa
-        final scale = style == PieceStyle.merida ? 1.18 : 1.06;
-        return SizedBox(
-          width: size,
-          height: size,
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              // sombra suave por baixo p/ dar volume e destacar do tabuleiro
-              Transform.scale(
-                scale: scale * 1.02,
-                child: Opacity(
-                  opacity: 0.28,
-                  child: _PieceSvg(file: file, color: Colors.black),
-                ),
-              ),
-              Transform.scale(
-                scale: scale,
-                child: _PieceSvg(
-                  file: file,
-                  color: piece.color == ChessColor.white ? null : null,
-                ),
-              ),
-            ],
+    final file =
+        '${style.assetDir!}/${piece.color == ChessColor.white ? 'w' : 'b'}'
+        '${_assetLetter(piece.type)}.svg';
+    // Merida e Leipzig têm folga no canvas (viewBox ~50): amplia p/ preencher
+    final scale =
+        style == PieceStyle.merida || style == PieceStyle.leipzig ? 1.18 : 1.06;
+    return SizedBox(
+      width: size,
+      height: size,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          // sombra suave por baixo p/ dar volume e destacar do tabuleiro
+          Transform.scale(
+            scale: scale * 1.02,
+            child: Opacity(
+              opacity: 0.28,
+              child: _PieceSvg(file: file, color: Colors.black),
+            ),
           ),
-        );
-      case PieceStyle.emoji:
-        final glyph = piece.color == ChessColor.white
-            ? _emojiWhite[piece.type]!
-            : _emoji[piece.type]!;
-        return Text(
-          glyph,
-          style: TextStyle(
-            fontSize: size * 0.92,
-            height: 1.0,
-            color: piece.color == ChessColor.white ? Colors.white : Colors.black,
-            shadows: [
-              Shadow(
-                color: piece.color == ChessColor.white
-                    ? Colors.black.withValues(alpha: 0.45)
-                    : Colors.white.withValues(alpha: 0.35),
-                blurRadius: 2.5,
-              ),
-              const Shadow(color: Colors.black54, blurRadius: 6),
-            ],
+          Transform.scale(
+            scale: scale,
+            child: _PieceSvg(file: file),
           ),
-        );
-    }
+        ],
+      ),
+    );
   }
 
   static String _assetLetter(PieceType t) => switch (t) {

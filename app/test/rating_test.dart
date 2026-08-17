@@ -140,6 +140,28 @@ void main() {
     expect(fraco.delta, greaterThan(0), reason: 'ainda resolveu (resultado 0.15 > esperado)');
   });
 
+  test('modo surpresa (Mate aleatório) ganha bônus de 30%', () async {
+    await RatingService.instance.load();
+    final svc = RatingService.instance;
+    final normal = await svc.registrarResolucao(
+      puzzle: makePuzzle(rating: 1900),
+      segundos: 5,
+      erros: 0,
+      dicas: 0,
+    );
+    // zera o armazenamento p/ recomeçar do rating inicial (1000)
+    SharedPreferences.setMockInitialValues({});
+    await RatingService.instance.load();
+    final surpresa = await RatingService.instance.registrarResolucao(
+      puzzle: makePuzzle(rating: 1900),
+      segundos: 5,
+      erros: 0,
+      dicas: 0,
+      surpresa: true,
+    );
+    expect(surpresa.delta, closeTo(normal.delta * RatingService.bonusSurpresa, 1e-9));
+  });
+
   test('histórico de evolução persiste', () async {
     await RatingService.instance.load();
     final svc = RatingService.instance;

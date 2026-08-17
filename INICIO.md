@@ -27,8 +27,12 @@ usuário (`ATUALIZACOES`) · futuro (`IDEIAS`).
 
 ## ⭐ ESTADO ATUAL (2026-08-17) — ler primeiro pós-/clear
 
+**v0.8.0 — MATE ALEATÓRIO + LEIPZIG** (categoria surpresa mate 2/3 com +30%
+de pontos no lugar da sessão; peças Leipzig no lugar do Emoji; dica em
+amarelo intenso). Base anterior:
+
 **v0.6.0 — SESSÃO + EVOLUÇÃO** (sessão de treino com meta de tempo e resumo;
-gráfico da evolução do rating na home). Base anterior:
+gráfico da evolução do rating na home).
 
 **v0.5.0 — CRONÔMETRO + DICA + RATING** (tempo por problema, lâmpada de
 dica jogada a jogada, rating estilo Elo inicial 1000, botão refazer como
@@ -121,12 +125,12 @@ difícil) nos gerados. Validação independente em `tools/validate_db.py`
 - `data/puzzle_db.dart` — carrega/indexa `assets/puzzles.json`.
 - `screens/home_screen.dart` — dificuldade + layout das peças + sessão +
   gráfico de evolução.
-- `screens/session_screen.dart` — sessão de treino (sequência, meta de
-  tempo, resumo).
+- Modo surpresa no `puzzle_screen.dart` — esconde o nº de lances e aplica
+  o bônus do `RatingService.bonusSurpresa` (1.3×).
 - `screens/puzzle_screen.dart` — fluxo de resolução (correto/errado/mate).
 - `widgets/chess_board.dart` — tabuleiro interativo (destaques, marcadores).
-- `widgets/piece_icon.dart` — peças nos 3 estilos (Merida/Cburnett SVG,
-  Emoji Unicode).
+- `widgets/piece_icon.dart` — peças nos 3 estilos (Merida/Cburnett/Leipzig,
+  SVGs do lichess).
 - `widgets/rating_chart.dart` — gráfico da evolução do rating (CustomPaint).
 - `services/rating_service.dart` — rating Elo + histórico persistido.
 - `theme/` — `app_colors.dart` (tokens) e `app_theme.dart` (tema escuro).

@@ -1,5 +1,15 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.8.0 (2026-08-17)
+**Mate aleatório (surpresa) + peças Leipzig + dica em amarelo!**
+- 🎲 **Mate aleatório**: no lugar da Sessão de treino. Problemas de mate em
+  2 ou 3 misturados — **sem revelar quantos lances** são necessários, é
+  surpresa! Resolver nesse modo dá **+30% de pontos** no rating.
+- ♞ **Peças Leipzig** (estilo clássico de diagramas de livros) substituem o
+  layout Emoji (que renderizava peças inconsistentes em alguns aparelhos).
+- 💡 **Dica com destaque amarelo intenso** nas casas do lance sugerido.
+- A Sessão de treino foi substituída pelo Mate aleatório.
+
 ## v0.7.1 (2026-08-17)
 - ➡️ Botão de **próximo problema** (seta para a direita) sempre visível à
   direita do botão de refazer — antes de resolver, ele pula para o próximo.

@@ -5,9 +5,7 @@ import 'data/puzzle_db.dart';
 import 'models/puzzle.dart';
 import 'screens/home_screen.dart';
 import 'screens/puzzle_screen.dart';
-import 'screens/session_screen.dart';
 import 'services/rating_service.dart';
-import 'theme/app_colors.dart';
 import 'theme/app_theme.dart';
 import 'widgets/piece_icon.dart';
 
@@ -26,10 +24,10 @@ class MateflowApp extends StatefulWidget {
 class _MateflowAppState extends State<MateflowApp> {
   PieceStyle _pieceStyle = PieceStyle.merida;
 
-  // Modo atual: lista de problemas (treino livre) ou sessão de treino
+  // Modo atual: fila de problemas (treino livre) ou modo surpresa
   List<Puzzle> _queue = [];
   int _queueIndex = 0;
-  bool _session = false;
+  bool _surpresa = false;
 
   @override
   void initState() {
@@ -42,6 +40,7 @@ class _MateflowAppState extends State<MateflowApp> {
     final saved = prefs.getString('piece_style');
     if (saved != null) {
       setState(() {
+        // estilo salvo antigo (ex.: 'emoji', removido) cai no padrão
         _pieceStyle = PieceStyle.values.firstWhere(
           (s) => s.name == saved,
           orElse: () => PieceStyle.merida,
@@ -65,7 +64,26 @@ class _MateflowAppState extends State<MateflowApp> {
     setState(() {
       _queue = List.of(puzzles)..shuffle();
       _queueIndex = 0;
-      _session = false;
+      _surpresa = false;
+    });
+  }
+
+  /// Modo "Mate aleatório": mate em 2 ou 3, sem revelar o número de lances
+  /// (surpresa); o rating ganha bônus.
+  void _startSurpresa() {
+    final puzzles = [
+      ...PuzzleDb.instance.puzzlesForLevel(2, 1),
+      ...PuzzleDb.instance.puzzlesForLevel(2, 2),
+      ...PuzzleDb.instance.puzzlesForLevel(2, 3),
+      ...PuzzleDb.instance.puzzlesForLevel(3, 1),
+      ...PuzzleDb.instance.puzzlesForLevel(3, 2),
+      ...PuzzleDb.instance.puzzlesForLevel(3, 3),
+    ];
+    if (puzzles.isEmpty) return;
+    setState(() {
+      _queue = List.of(puzzles)..shuffle();
+      _queueIndex = 0;
+      _surpresa = true;
     });
   }
 
@@ -78,45 +96,9 @@ class _MateflowAppState extends State<MateflowApp> {
   void _exitToHome() {
     setState(() {
       _queue = [];
-      _session = false;
+      _surpresa = false;
     });
   }
-
-  /// Abre o seletor de sessão de treino.
-  void _openSessionPicker() {
-    showModalBottomSheet<void>(
-      context: context,
-      backgroundColor: const Color(0xFF1B1E23),
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (ctx) {
-        return const _SessionPicker();
-      },
-    );
-  }
-
-  void _startSession(int mate, int level, int size) {
-    // mate == 0 = sessão mista: mate em 2 OU 3, sorteado
-    final List<Puzzle> puzzles;
-    if (mate == 0) {
-      puzzles = [
-        ...PuzzleDb.instance.puzzlesForLevel(2, level),
-        ...PuzzleDb.instance.puzzlesForLevel(3, level),
-      ];
-    } else {
-      puzzles = PuzzleDb.instance.puzzlesForLevel(mate, level);
-    }
-    if (puzzles.isEmpty) return;
-    Navigator.of(context).pop(); // fecha o seletor
-    setState(() {
-      _queue = List.of(puzzles)..shuffle();
-      _session = true;
-    });
-    _sessionSize = size;
-  }
-
-  int _sessionSize = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -130,173 +112,17 @@ class _MateflowAppState extends State<MateflowApp> {
               pieceStyle: _pieceStyle,
               onPieceStyleChanged: _changeStyle,
               onStartPuzzle: _startPuzzle,
-              onStartSession: _openSessionPicker,
+              onStartSurpresa: _startSurpresa,
             )
-          : _session
-              ? SessionScreen(
-                  key: const ValueKey('session'),
-                  puzzles: _queue,
-                  size: _sessionSize,
-                  pieceStyle: _pieceStyle,
-                  onPieceStyleChanged: _changeStyle,
-                  onExit: _exitToHome,
-                )
-              : PuzzleScreen(
-                  key: ValueKey('puzzle-$_queueIndex'),
-                  puzzle: _queue[_queueIndex],
-                  pieceStyle: _pieceStyle,
-                  onPieceStyleChanged: _changeStyle,
-                  onNext: _nextPuzzle,
-                  onExit: _exitToHome,
-                ),
-    );
-  }
-}
-
-/// Seletor da sessão de treino (categoria + nível + quantidade).
-class _SessionPicker extends StatefulWidget {
-  const _SessionPicker();
-
-  @override
-  State<_SessionPicker> createState() => _SessionPickerState();
-}
-
-class _SessionPickerState extends State<_SessionPicker> {
-  int _mate = 1;
-  int _level = 1;
-  int _size = 10;
-  bool _ready = false;
-
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted) setState(() => _ready = true);
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final app = context.findAncestorStateOfType<_MateflowAppState>();
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const Text(
-              'Sessão de treino',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: AppColors.text,
-                fontSize: 18,
-                fontWeight: FontWeight.w800,
-              ),
+          : PuzzleScreen(
+              key: ValueKey('puzzle-$_queueIndex'),
+              puzzle: _queue[_queueIndex],
+              pieceStyle: _pieceStyle,
+              onPieceStyleChanged: _changeStyle,
+              onNext: _nextPuzzle,
+              onExit: _exitToHome,
+              surpresa: _surpresa,
             ),
-            const SizedBox(height: 4),
-            Text(
-              'Resolva a sequência e compare com a meta de tempo',
-              textAlign: TextAlign.center,
-              style: const TextStyle(color: AppColors.dim, fontSize: 13),
-            ),
-            const SizedBox(height: 18),
-            _Segmented(
-              label: 'Lances até o mate',
-              value: _mate,
-              options: const [
-                (0, 'Misto 2/3'),
-                (1, 'Mate em 1'),
-                (2, 'Mate em 2'),
-                (3, 'Mate em 3'),
-              ],
-              onChanged: (v) => setState(() => _mate = v),
-            ),
-            const SizedBox(height: 14),
-            _Segmented(label: 'Nível', value: _level,
-                options: const [(1, 'Fácil'), (2, 'Médio'), (3, 'Difícil')],
-                onChanged: (v) => setState(() => _level = v)),
-            const SizedBox(height: 14),
-            _Segmented(label: 'Problemas', value: _size,
-                options: const [(5, '5'), (10, '10'), (15, '15')],
-                onChanged: (v) => setState(() => _size = v)),
-            const SizedBox(height: 18),
-            FilledButton.icon(
-              icon: const Icon(Icons.play_arrow),
-              label: Text(
-                _ready
-                    ? 'Começar (${PuzzleDb.instance.countForLevel(_mate, _level)})'
-                    : 'Começar',
-              ),
-              onPressed: _ready && app != null
-                  ? () => app._startSession(_mate, _level, _size)
-                  : null,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _Segmented extends StatelessWidget {
-  final String label;
-  final int value;
-  final List<(int, String)> options;
-  final ValueChanged<int> onChanged;
-  const _Segmented({
-    required this.label,
-    required this.value,
-    required this.options,
-    required this.onChanged,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(
-            color: AppColors.dim,
-            fontSize: 12.5,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-        const SizedBox(height: 6),
-        Row(
-          children: [
-            for (final (v, t) in options) ...[
-              Expanded(
-                child: GestureDetector(
-                  onTap: () => onChanged(v),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    decoration: BoxDecoration(
-                      color: v == value ? AppColors.accent : AppColors.surfaceAlt,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: v == value ? AppColors.accent : AppColors.border,
-                      ),
-                    ),
-                    child: Text(
-                      t,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: v == value ? Colors.black : AppColors.text,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 13,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              if (v != options.last.$1) const SizedBox(width: 8),
-            ],
-          ],
-        ),
-      ],
     );
   }
 }

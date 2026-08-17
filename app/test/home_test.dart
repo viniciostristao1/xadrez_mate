@@ -16,7 +16,7 @@ void main() {
         pieceStyle: style,
         onPieceStyleChanged: (_) {},
         onStartPuzzle: (_, __) {},
-        onStartSession: () {},
+        onStartSurpresa: () {},
       ),
     ));
     await tester.pumpAndSettle();
@@ -41,7 +41,7 @@ void main() {
       const Offset(0, -200),
     );
     expect(find.text('Evolução do rating'), findsOneWidget);
-    expect(find.text('Sessão de treino'), findsOneWidget);
+    expect(find.text('Mate aleatório'), findsOneWidget);
   });
 
   testWidgets('título Mateflow com logo no canto superior esquerdo',

@@ -41,7 +41,7 @@ void main() {
       theme: AppTheme.dark,
       home: PuzzleScreen(
         puzzle: p,
-        pieceStyle: PieceStyle.emoji,
+        pieceStyle: PieceStyle.leipzig,
         onPieceStyleChanged: (_) {},
         onNext: () {},
         onExit: () {},
@@ -64,6 +64,8 @@ void main() {
   }
 
   group('Fluxo de resolução (banco real)', () {
+    PuzzleScreenState screenSolved(WidgetTester tester) =>
+        tester.state<PuzzleScreenState>(find.byType(PuzzleScreen));
     testWidgets('mate em 1: resolver mostra sucesso', (tester) async {
       final p = puzzles.firstWhere((x) => x.mate == 1);
       await pumpPuzzle(tester, p);
@@ -219,6 +221,34 @@ void main() {
       await tester.pump(const Duration(seconds: 2));
       expect(screen.testElapsed, frozen, reason: 'cronômetro parou no mate');
       expect(find.byIcon(Icons.arrow_forward), findsOneWidget);
+    });
+
+    testWidgets('modo surpresa não revela o nº de lances', (tester) async {
+      // puzzle de mate 2 rodando em modo surpresa
+      final p = puzzles.firstWhere((x) => x.mate == 2);
+      tester.view.physicalSize = const Size(800, 1400);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(tester.view.reset);
+      await tester.pumpWidget(MaterialApp(
+        theme: AppTheme.dark,
+        home: PuzzleScreen(
+          puzzle: p,
+          pieceStyle: PieceStyle.leipzig,
+          onPieceStyleChanged: (_) {},
+          onNext: () {},
+          onExit: () {},
+          surpresa: true,
+        ),
+      ));
+      await tester.pumpAndSettle();
+      expect(find.text('Mate aleatório'), findsOneWidget);
+      expect(find.textContaining('lance 1 de 2'), findsNothing);
+      expect(find.textContaining('de 2'), findsNothing);
+      expect(find.textContaining('de 3'), findsNothing);
+
+      await solve(tester, p);
+      expect(screenSolved(tester).testSolved, isTrue);
+      expect(find.textContaining('Xeque-mate! Você conseguiu!'), findsOneWidget);
     });
 
     testWidgets('seta de próximo sempre visível à direita do refazer',

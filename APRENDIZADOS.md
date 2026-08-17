@@ -1,5 +1,27 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-08-17 — v0.8.0
+
+### Mate aleatório (surpresa)
+- Modo `surpresa` no PuzzleScreen: AppBar "Mate aleatório", header sem o
+  contador de lances e sem as barrinhas de progresso (revelariam o N).
+- Rating: `registrarResolucao(surpresa: true)` multiplica o delta por
+  `bonusSurpresa` (1.3). Teste verifica a razão exata (zera o
+  SharedPreferences entre os registros para o `esperado` não variar).
+- Fila: mate 2 + mate 3 de todos os níveis, embaralhada (`main.dart`).
+
+### Layout Leipzig
+- Removido o `PieceStyle.emoji` (glifos renderizam inconsistentes:
+  contorno/preenchido/3D conforme a fonte do aparelho). A leitura da
+  preferência salva usa `orElse: () => PieceStyle.merida` — quem tinha
+  'emoji' salvo cai no padrão sem quebrar.
+- Peças baixadas de `lichess1.org/assets/piece/leipzig/` (o
+  raw.githubusercontent do lila deu rate-limit 429; o CDN funciona).
+  viewBox ~50 → scale 1.18 como o Merida.
+
+### Dica amarela
+- Cores de dica no ChessBoard: `#FFD54F` (clara) / `#E0A800` (escura).
+
 ## 2026-08-17 — v0.7.0
 
 ### UI sem rolagem na tela de jogo
