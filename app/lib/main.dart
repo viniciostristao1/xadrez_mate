@@ -221,12 +221,10 @@ class _MateflowAppState extends State<MateflowApp> {
     _startFila(puzzles, surpresa: false);
   }
 
-  void _startSurpresa() {
+  void _startSurpresa(int level) {
     final puzzles = [
-      for (final level in const [1, 2, 3]) ...[
-        ...PuzzleDb.instance.puzzlesForLevel(2, level),
-        ...PuzzleDb.instance.puzzlesForLevel(3, level),
-      ],
+      ...PuzzleDb.instance.puzzlesForLevel(2, level),
+      ...PuzzleDb.instance.puzzlesForLevel(3, level),
     ];
     if (puzzles.isEmpty) return;
     _startFila(puzzles, surpresa: true);
@@ -278,8 +276,9 @@ class _MateflowAppState extends State<MateflowApp> {
   }
 }
 
-/// Fila de mates: cada "Próximo" substitui a tela atual (pushReplacement),
-/// então o voltar sempre retorna à página de MATES.
+/// Fila de mates: UMA rota que troca o problema por índice (ValueKey
+/// recria o PuzzleScreen). O State da fila permanece montado — os botões
+/// próximo (onNext) e voltar (onExit) funcionam sempre.
 class _FilaMates extends StatefulWidget {
   final List<Puzzle> puzzles;
   final bool surpresa;
@@ -296,29 +295,22 @@ class _FilaMates extends StatefulWidget {
 }
 
 class _FilaMatesState extends State<_FilaMates> {
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => _abrir(0));
-  }
-
-  void _abrir(int i) {
-    Navigator.of(context).pushReplacement(MaterialPageRoute(
-      builder: (_) => PuzzleScreen(
-        key: ValueKey('mate-${widget.puzzles[i].id}-$i'),
-        puzzle: widget.puzzles[i],
-        pieceStyle: widget.pieceStyle,
-        onPieceStyleChanged: (_) {},
-        onNext: () => _abrir((i + 1) % widget.puzzles.length),
-        onExit: () => Navigator.of(context).pop(),
-        surpresa: widget.surpresa,
-      ),
-    ));
-  }
+  int _index = 0;
 
   @override
-  Widget build(BuildContext context) =>
-      const Scaffold(body: SizedBox.shrink());
+  Widget build(BuildContext context) {
+    final puzzle = widget.puzzles[_index];
+    return PuzzleScreen(
+      key: ValueKey('mate-${puzzle.id}-$_index'),
+      puzzle: puzzle,
+      pieceStyle: widget.pieceStyle,
+      onPieceStyleChanged: (_) {},
+      onNext: () =>
+          setState(() => _index = (_index + 1) % widget.puzzles.length),
+      onExit: () => Navigator.of(context).pop(),
+      surpresa: widget.surpresa,
+    );
+  }
 }
 
 /// Fila de tática (mesma mecânica).
@@ -336,27 +328,20 @@ class _FilaTatica extends StatefulWidget {
 }
 
 class _FilaTaticaState extends State<_FilaTatica> {
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => _abrir(0));
-  }
-
-  void _abrir(int i) {
-    Navigator.of(context).pushReplacement(MaterialPageRoute(
-      builder: (_) => TaticaScreen(
-        key: ValueKey('tatica-${widget.puzzles[i].id}-$i'),
-        puzzle: widget.puzzles[i],
-        pieceStyle: widget.pieceStyle,
-        onNext: () => _abrir((i + 1) % widget.puzzles.length),
-        onExit: () => Navigator.of(context).pop(),
-      ),
-    ));
-  }
+  int _index = 0;
 
   @override
-  Widget build(BuildContext context) =>
-      const Scaffold(body: SizedBox.shrink());
+  Widget build(BuildContext context) {
+    final puzzle = widget.puzzles[_index];
+    return TaticaScreen(
+      key: ValueKey('tatica-${puzzle.id}-$_index'),
+      puzzle: puzzle,
+      pieceStyle: widget.pieceStyle,
+      onNext: () =>
+          setState(() => _index = (_index + 1) % widget.puzzles.length),
+      onExit: () => Navigator.of(context).pop(),
+    );
+  }
 }
 
 class _StyleOption extends StatelessWidget {

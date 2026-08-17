@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 
+import '../data/tatica_db.dart';
 import '../engine/chess.dart';
 
 /// Problema TÁTICO (linha de solução linear, sem árvore).
@@ -26,7 +27,7 @@ class TaticaPuzzle {
 
   factory TaticaPuzzle.fromJson(Map<String, dynamic> json) => TaticaPuzzle(
         id: json['id'] as int,
-        tema: json['tema'] as String,
+        tema: TaticaDb.normalizarTema(json['tema'] as String),
         level: json['level'] as int? ?? 1,
         rating: json['rating'] as int? ?? 1000,
         fen: json['fen'] as String,

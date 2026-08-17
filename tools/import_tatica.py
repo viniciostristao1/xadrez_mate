@@ -40,6 +40,8 @@ TEMAS = {
     "discoveredAttack": "descoberta",
     "sacrifice": "sacrificio",
 }
+# Chave canônica gravada no JSON (a UI usa estes nomes):
+TEMA_PT = {"skewer": "espeto", "discoveredAttack": "descoberta", "sacrifice": "sacrificio"}
 SAMPLE_PER_TEMA_NIVEL = 220
 GOAL_PER_NIVEL = {"1": 16, "2": 14, "3": 12}  # por tema (total ~42/tema)
 MIN_LINHA = 3  # mínimo de lances totais na linha (prefere linhas mais ricas)
@@ -100,8 +102,9 @@ def main() -> None:
                 if not ok:
                     continue
                 picked[tema][nivel].append(
-                    {"tema": tema, "level": nivel, "rating": cand["rating"],
-                     "fen": puzzle_fen, "linha": linha}
+                    {"tema": TEMA_PT[tema], "level": nivel,
+                     "rating": cand["rating"], "fen": puzzle_fen,
+                     "linha": linha}
                 )
             print(f"  {tema} nível{nivel}: {len(picked[tema][nivel])} aceitos")
 

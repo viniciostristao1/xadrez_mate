@@ -58,4 +58,74 @@ void main() {
     expect(find.text('Descoberta'), findsOneWidget);
     expect(find.text('Sacrifício'), findsOneWidget);
   });
+
+  testWidgets('Tática tem exercícios em todos os níveis', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(const MateflowApp());
+    await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 300)));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Tática'));
+    await tester.pumpAndSettle();
+
+    // contagens > 0 nos 9 botões (3 temas x 3 níveis)
+    final counts = tester
+        .widgetList<Text>(find.descendant(
+          of: find.byType(Card),
+          matching: find.byType(Text),
+        ))
+        .map((t) => t.data)
+        .whereType<String>()
+        .where((s) => int.tryParse(s) != null)
+        .map(int.parse)
+        .toList();
+    expect(counts.length, greaterThanOrEqualTo(9));
+    for (final c in counts) {
+      expect(c, greaterThan(0), reason: 'tema/nível sem exercícios');
+    }
+
+    // clicar num nível entra no primeiro exercício
+    await tester.tap(find.text('Fácil').first);
+    await tester.pumpAndSettle();
+    expect(find.byIcon(Icons.lightbulb_outline), findsOneWidget,
+        reason: 'deveria abrir um exercício tático');
+  });
+
+  testWidgets('fila de mates: próximo avança e voltar retorna',
+      (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    tester.view.physicalSize = const Size(800, 1500);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(const MateflowApp());
+    await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 300)));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Mates'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Fácil').first); // Mate em 1 · Fácil
+    await tester.pumpAndSettle();
+
+    // entrou num problema
+    expect(find.byIcon(Icons.lightbulb_outline), findsOneWidget);
+
+    // seta para a direita (pular) avança para outro problema (id muda)
+    int problemaAtual() => int.parse(tester
+        .widgetList<Text>(find.byType(Text))
+        .map((t) => t.data ?? '')
+        .firstWhere((s) => s.startsWith('Problema '))
+        .split(' ')[1]);
+    final primeiro = problemaAtual();
+    await tester.tap(find.byIcon(Icons.arrow_forward));
+    await tester.pumpAndSettle();
+    final segundo = problemaAtual();
+    expect(segundo, isNot(primeiro), reason: 'avançou para outro problema');
+
+    // flecha para a esquerda (voltar) retorna à página de Mates
+    await tester.tap(find.byIcon(Icons.arrow_back));
+    await tester.pumpAndSettle();
+    expect(find.text('Mate em 1'), findsOneWidget);
+  });
 }

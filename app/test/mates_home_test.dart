@@ -13,7 +13,7 @@ void main() {
       home: MatesHomeScreen(
         onDbLoaded: () async {},
         onStartPuzzle: (_, __) {},
-        onStartSurpresa: () {},
+        onStartSurpresa: (_) {},
       ),
     ));
     await tester.pumpAndSettle();
@@ -24,9 +24,10 @@ void main() {
     expect(find.text('Mate em 1'), findsOneWidget);
     expect(find.text('Mate em 2'), findsOneWidget);
     expect(find.text('Mate em 3'), findsOneWidget);
-    expect(find.text('Fácil'), findsNWidgets(3));
-    expect(find.text('Médio'), findsNWidgets(3));
-    expect(find.text('Difícil'), findsNWidgets(3));
+    // 3 categorias + Mate aleatório = 4 níveis de cada
+    expect(find.text('Fácil'), findsNWidgets(4));
+    expect(find.text('Médio'), findsNWidgets(4));
+    expect(find.text('Difícil'), findsNWidgets(4));
   });
 
   testWidgets('rola até Mate aleatório e Evolução do rating', (tester) async {

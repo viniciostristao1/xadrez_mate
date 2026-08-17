@@ -1,5 +1,13 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.9.3 (2026-08-17)
+- 🐛 **Correções**: botões de **próximo** (seta direita) e **voltar**
+  (seta esquerda) agora funcionam em Mate e Tática; a seção **Tática**
+  voltou a ter exercícios (os temas estavam gravados em inglês no banco —
+  agora tudo em português e com verificação).
+- 🎲 **Mate aleatório com opção de nível**: escolha Fácil, Médio ou Difícil
+  (mate em 2 ou 3 sorteados do nível escolhido, com bônus de surpresa).
+
 ## v0.9.2 (2026-08-17)
 - 🐛 **Correção**: os botões da página inicial (Mates, Tática, engrenagem)
   não abriam as telas — a navegação usava o contexto errado. Agora a

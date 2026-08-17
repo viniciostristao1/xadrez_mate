@@ -10,7 +10,7 @@ import '../widgets/rating_chart.dart';
 class MatesHomeScreen extends StatefulWidget {
   final Future<void> Function() onDbLoaded;
   final void Function(int mate, int level) onStartPuzzle;
-  final void Function() onStartSurpresa;
+  final void Function(int level) onStartSurpresa;
 
   const MatesHomeScreen({
     super.key,
@@ -131,8 +131,18 @@ class _MatesHomeScreenState extends State<MatesHomeScreen> {
                       ),
                       const SizedBox(height: 12),
                     ],
-                    // Mate aleatório (surpresa: mate em 2 ou 3)
-                    _SurpresaCard(onTap: widget.onStartSurpresa),
+                    // Mate aleatório (surpresa: mate em 2 ou 3, com nível)
+                    _SurpresaCard(
+                      levelCounts: [
+                        PuzzleDb.instance.countForLevel(2, 1) +
+                            PuzzleDb.instance.countForLevel(3, 1),
+                        PuzzleDb.instance.countForLevel(2, 2) +
+                            PuzzleDb.instance.countForLevel(3, 2),
+                        PuzzleDb.instance.countForLevel(2, 3) +
+                            PuzzleDb.instance.countForLevel(3, 3),
+                      ],
+                      onLevelTap: widget.onStartSurpresa,
+                    ),
                     const SizedBox(height: 12),
                     // Evolução do rating
                     _EvolutionCard(),
@@ -145,58 +155,86 @@ class _MatesHomeScreenState extends State<MatesHomeScreen> {
 }
 
 class _SurpresaCard extends StatelessWidget {
-  final VoidCallback onTap;
-  const _SurpresaCard({required this.onTap});
+  final List<int> levelCounts;
+  final ValueChanged<int> onLevelTap;
+  const _SurpresaCard({
+    required this.levelCounts,
+    required this.onLevelTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: InkWell(
-        borderRadius: BorderRadius.circular(16),
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Row(
-            children: [
-              Container(
-                width: 44,
-                height: 44,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: AppColors.surfaceAlt,
-                  borderRadius: BorderRadius.circular(12),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 44,
+                  height: 44,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: AppColors.surfaceAlt,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(
+                    Icons.shuffle,
+                    color: AppColors.accent,
+                    size: 24,
+                  ),
                 ),
-                child: const Icon(
-                  Icons.shuffle,
-                  color: AppColors.accent,
-                  size: 24,
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      S.mateAleatorio,
-                      style: const TextStyle(
-                        color: AppColors.text,
-                        fontSize: 15.5,
-                        fontWeight: FontWeight.w800,
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        S.mateAleatorio,
+                        style: const TextStyle(
+                          color: AppColors.text,
+                          fontSize: 15.5,
+                          fontWeight: FontWeight.w800,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 2),
-                    Text(
-                      S.surpresaSub,
-                      style:
-                          const TextStyle(color: AppColors.dim, fontSize: 12.5),
-                    ),
-                  ],
+                      const SizedBox(height: 2),
+                      Text(
+                        S.surpresaSub,
+                        style: const TextStyle(
+                            color: AppColors.dim, fontSize: 12.5),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              const Icon(Icons.chevron_right, color: AppColors.faint),
-            ],
-          ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            Row(
+              children: [
+                for (var lvl = 0; lvl < 3; lvl++) ...[
+                  Expanded(
+                    child: _LevelButton(
+                      label: switch (lvl) {
+                        0 => S.facil,
+                        1 => S.medio,
+                        _ => S.dificil,
+                      },
+                      count: levelCounts[lvl],
+                      accent: switch (lvl) {
+                        0 => AppColors.ok,
+                        1 => AppColors.accent,
+                        _ => AppColors.danger,
+                      },
+                      onTap: () => onLevelTap(lvl + 1),
+                    ),
+                  ),
+                  if (lvl < 2) const SizedBox(width: 8),
+                ],
+              ],
+            ),
+          ],
         ),
       ),
     );

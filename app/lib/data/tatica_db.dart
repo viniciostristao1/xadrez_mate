@@ -28,6 +28,14 @@ class TaticaDb {
     }
   }
 
+  /// Normaliza a chave de tema (defensivo: JSONs antigos tinham 'skewer' etc.).
+  static String normalizarTema(String tema) => switch (tema) {
+        'skewer' => 'espeto',
+        'discoveredAttack' => 'descoberta',
+        'sacrifice' => 'sacrificio',
+        _ => tema,
+      };
+
   List<TaticaPuzzle> forTemaLevel(String tema, int level) =>
       _byTemaLevel?[tema]?[level] ?? const [];
 
