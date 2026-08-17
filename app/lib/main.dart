@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'data/puzzle_db.dart';
 import 'models/puzzle.dart';
+import 'services/rating_service.dart';
 import 'screens/home_screen.dart';
 import 'screens/puzzle_screen.dart';
 import 'theme/app_theme.dart';
@@ -42,6 +43,7 @@ class _XequeMateAppState extends State<XequeMateApp> {
         );
       });
     }
+    await RatingService.instance.load();
   }
 
   Future<void> _changeStyle(PieceStyle style) async {

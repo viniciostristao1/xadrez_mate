@@ -56,6 +56,7 @@ class Puzzle {
   final int id;
   final int mate; // 1, 2 ou 3
   final int level; // 1 = fácil, 2 = médio, 3 = difícil
+  final int rating; // dificuldade (lichess real ou estimada)
   final String fen;
   final PuzzleNode tree;
 
@@ -63,6 +64,7 @@ class Puzzle {
     required this.id,
     required this.mate,
     required this.level,
+    required this.rating,
     required this.fen,
     required this.tree,
   });
@@ -71,6 +73,7 @@ class Puzzle {
         id: json['id'] as int,
         mate: json['mate'] as int,
         level: json['level'] as int? ?? 1,
+        rating: json['rating'] as int? ?? 1000,
         fen: json['fen'] as String,
         tree: PuzzleNode.fromJson(json['tree'] as Map<String, dynamic>),
       );

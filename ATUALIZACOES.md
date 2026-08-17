@@ -1,5 +1,18 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.5.0 (2026-08-17)
+**Cronômetro, dica e sistema de rating!**
+- ⏱ **Cronômetro** por problema: começa quando o problema aparece e para na
+  conclusão (zera a cada problema novo); tempo mostrado no topo e no resultado.
+- 💡 **Dica (lâmpada)**: revela o lance correto jogada por jogada — destaca a
+  peça e a casa no tabuleiro. Cada dica reduz a pontuação.
+- 🏆 **Rating**: você começa com 1000 (leigo) e sobe até ~2000 (topo). Cada
+  problema vale pontos com base no tempo (mate em 1: 10s, mate em 2: 25s,
+  mate em 3: 60s para pontuação cheia), em erros (-20% cada) e dicas (-40%
+  cada). O rating aparece na página principal e no resultado de cada problema.
+- 🔄 Botão **refazer** agora é um ícone de flecha circular, ao lado da lâmpada
+  (corrigido o reset do tabuleiro).
+
 ## v0.4.0 (2026-08-17)
 **Agora é Mateflow!** Nome novo, logo ao lado do título na página principal e
 **instalação/atualização sem conflito**: o app agora é assinado com uma chave

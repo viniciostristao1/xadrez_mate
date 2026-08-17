@@ -1,5 +1,25 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-08-17 — v0.5.0
+
+### Cronômetro / dica / rating
+- **Timer** precisa de `dispose()` cancelando (`_timer?.cancel()`) — senão
+  vaza em testes/widgets; `_resetState()` sem setState p/ uso no initState,
+  `_reset()` = `setState(_resetState)` p/ botões.
+- **Testes com Timer.periodic**: `pumpAndSettle` avança o relógio fake — pode
+  disparar 1 tick do cronômetro entre o tap e a assert (elapsed 0 → 1). Não
+  asserte `elapsed == 0` após refresh; asserte `lessThan(antes)`.
+- **Rating** (`lib/services/rating_service.dart`): Elo com resultado contínuo
+  [0.15, 1.0]; K=24; esperado = 1/(1+10^((rp-rj)/400)); tempo-alvo 10/25/60s;
+  erros 0.8^n; dicas 0.6^n. Singleton com `ValueNotifier` p/ a home atualizar.
+  Testes em `test/rating_test.dart` (mock de SharedPreferences).
+- **Rating por problema**: todos os problemas do banco têm `rating` (real dos
+  Lichess ou estimado por (mate, nível) no `puzzle_gen.py`).
+- **Dica**: `Board.moveFromUci()` (parser UCI→Move legal) + `sanFor()` para o
+  texto; destaque verde no tabuleiro (`hintFrom`/`hintTo` no ChessBoard).
+- **Botão refazer quebrado**: o `_reset` antigo mutava o estado SEM setState —
+  a UI não rebuildava. Fix: `setState(_resetState)`.
+
 ## 2026-08-17 — v0.4.0
 
 ### Assinatura de release (o bug do "pacote em conflito")

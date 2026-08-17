@@ -3,8 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:xadrez_mate/engine/chess.dart';
 import 'package:xadrez_mate/models/puzzle.dart';
+import 'package:xadrez_mate/services/rating_service.dart';
 import 'package:xadrez_mate/screens/puzzle_screen.dart';
 import 'package:xadrez_mate/theme/app_theme.dart';
 import 'package:xadrez_mate/widgets/chess_board.dart';
@@ -13,6 +15,9 @@ import 'package:xadrez_mate/widgets/piece_icon.dart';
 /// Testa o fluxo completo de resolução de problemas com o banco REAL
 /// (assets/puzzles.json): lances certos avançam, errados avisam na hora.
 void main() {
+  setUp(() {
+    SharedPreferences.setMockInitialValues({});
+  });
   final raw = File('assets/puzzles.json').readAsStringSync();
   final puzzles = ((jsonDecode(raw) as Map<String, dynamic>)['puzzles'] as List)
       .map((p) => Puzzle.fromJson(p as Map<String, dynamic>))
@@ -145,6 +150,74 @@ void main() {
       await solve(tester, p);
 
       expect(screen.testSolved, isTrue);
+      expect(find.text('Próximo problema'), findsOneWidget);
+    });
+
+    testWidgets('lâmpada (dica) revela o lance correto', (tester) async {
+      final p = puzzles.firstWhere((x) => x.mate == 1);
+      await pumpPuzzle(tester, p);
+      final screen = tester.state<PuzzleScreenState>(find.byType(PuzzleScreen));
+
+      final key = p.tree.keys.first;
+      await tester.tap(find.byIcon(Icons.lightbulb_outline));
+      await tester.pumpAndSettle();
+
+      expect(screen.testFeedback, contains('Dica'));
+      expect(screen.testHintFrom, _parseSq(key.substring(0, 2)));
+      expect(screen.testHintTo, _parseSq(key.substring(2, 4)));
+      // jogar o lance da dica resolve o mate em 1
+      await tester.tapAt(sqCenter(tester, key.substring(0, 2), p.sideToMove));
+      await tester.pumpAndSettle();
+      await tester.tapAt(sqCenter(tester, key.substring(2, 4), p.sideToMove));
+      await tester.pumpAndSettle();
+      expect(screen.testSolved, isTrue);
+    });
+
+    testWidgets('flecha circular refaz o problema (zera cronômetro)',
+        (tester) async {
+      final p = puzzles.firstWhere((x) => x.mate == 1);
+      await pumpPuzzle(tester, p);
+      final screen = tester.state<PuzzleScreenState>(find.byType(PuzzleScreen));
+
+      // comete um erro (não resolve)
+      final wrong = screen.testBoard
+          .legalMoves()
+          .firstWhere((m) => m.uci != p.tree.keys.first);
+      await tester.tapAt(sqCenter(tester, _sq(wrong.from), p.sideToMove));
+      await tester.pumpAndSettle();
+      await tester.tapAt(sqCenter(tester, _sq(wrong.to), p.sideToMove));
+      await tester.pumpAndSettle();
+      expect(screen.testErrors, greaterThan(0));
+      await tester.pump(const Duration(seconds: 2));
+      expect(screen.testElapsed, greaterThanOrEqualTo(2), reason: 'cronômetro rodou');
+
+      final elapsedAntes = screen.testElapsed;
+      final refreshFinder = find.byIcon(Icons.refresh);
+      expect(refreshFinder.evaluate().length, 1);
+      await tester.tap(refreshFinder, warnIfMissed: true);
+      await tester.pumpAndSettle();
+
+      expect(screen.testErrors, 0, reason: 'erros zerados');
+      // cronômetro zerou (elapsed < antes do refresh)
+      expect(screen.testElapsed, lessThan(elapsedAntes), reason: 'cronômetro zerado');
+      expect(screen.testBoard.fen, p.fen);
+      expect(screen.testSolved, isFalse);
+    });
+
+    testWidgets('cronômetro corre enquanto não resolve e para no mate',
+        (tester) async {
+      final p = puzzles.firstWhere((x) => x.mate == 1);
+      await pumpPuzzle(tester, p);
+      final screen = tester.state<PuzzleScreenState>(find.byType(PuzzleScreen));
+
+      await tester.pump(const Duration(seconds: 3));
+      expect(screen.testElapsed, 3);
+
+      await solve(tester, p);
+      expect(screen.testSolved, isTrue);
+      final frozen = screen.testElapsed;
+      await tester.pump(const Duration(seconds: 2));
+      expect(screen.testElapsed, frozen, reason: 'cronômetro parou no mate');
       expect(find.text('Próximo problema'), findsOneWidget);
     });
 

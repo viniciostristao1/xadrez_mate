@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/puzzle_db.dart';
+import '../services/rating_service.dart';
 import '../engine/chess.dart';
 import '../theme/app_colors.dart';
 import '../widgets/piece_icon.dart';
@@ -104,7 +105,56 @@ class _HomeScreenState extends State<HomeScreen> {
                       textAlign: TextAlign.center,
                       style: const TextStyle(color: AppColors.dim, height: 1.4),
                     ),
-                    const SizedBox(height: 24),
+                    const SizedBox(height: 14),
+                    // Rating do jogador
+                    ValueListenableBuilder<int>(
+                      valueListenable: RatingService.instance.notifier,
+                      builder: (context, _, _) {
+                        final r = RatingService.instance.rating;
+                        return Center(
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 8),
+                            decoration: BoxDecoration(
+                              color: AppColors.surfaceAlt,
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(color: AppColors.border),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Icon(
+                                  Icons.emoji_events_outlined,
+                                  size: 17,
+                                  color: AppColors.accent,
+                                ),
+                                const SizedBox(width: 7),
+                                Text(
+                                  '${r.round()}',
+                                  style: const TextStyle(
+                                    color: AppColors.text,
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: 16,
+                                    fontFeatures: [
+                                      FontFeature.tabularFigures(),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(width: 7),
+                                Text(
+                                  '· ${RatingService.faixa(r)}',
+                                  style: const TextStyle(
+                                    color: AppColors.dim,
+                                    fontSize: 13,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 20),
                     for (final mate in const [1, 2, 3]) ...[
                       _PuzzleCard(
                         mate: mate,

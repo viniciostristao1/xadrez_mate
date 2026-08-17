@@ -374,6 +374,13 @@ def main() -> None:
             p["level"] = heuristic_level(p)
             puzzles.append(p)
 
+    # Rating estimado p/ problemas gerados (os do Lichess trazem o rating real)
+    ESTIMATED_RATING = {
+        (1, 1): 700, (1, 2): 1000, (1, 3): 1400,
+        (2, 1): 900, (2, 2): 1200, (2, 3): 1600,
+        (3, 1): 1100, (3, 2): 1500, (3, 3): 1900,
+    }
+
     # Problemas reais do Lichess (verificados, com rating e nível por terços)
     if LICHESS.exists():
         lich = json.loads(LICHESS.read_text()).get("puzzles", [])
@@ -386,6 +393,7 @@ def main() -> None:
     puzzles.sort(key=lambda p: (p["mate"], p["level"], p["fen"]))
     for i, p in enumerate(puzzles, 1):
         p["id"] = i
+        p.setdefault("rating", ESTIMATED_RATING.get((p["mate"], p["level"]), 1000))
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps({"version": 2, "puzzles": puzzles}, indent=1))

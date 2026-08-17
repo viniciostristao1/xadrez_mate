@@ -18,6 +18,10 @@ class ChessBoard extends StatelessWidget {
   final PieceStyle pieceStyle;
   final void Function(int square) onSquareTap;
 
+  /// Dica ativa: casa de origem e destino do lance correto (destaque).
+  final int? hintFrom;
+  final int? hintTo;
+
   const ChessBoard({
     super.key,
     required this.board,
@@ -28,6 +32,8 @@ class ChessBoard extends StatelessWidget {
     required this.lastTo,
     required this.pieceStyle,
     required this.onSquareTap,
+    this.hintFrom,
+    this.hintTo,
   });
 
   int get _checkedSquare {
@@ -52,6 +58,11 @@ class ChessBoard extends StatelessWidget {
     final square = sqAt(row, col);
     if (square == selected) return AppColors.select;
     if (square == _checkedSquare) return AppColors.check;
+    if (square == hintFrom || square == hintTo) {
+      return (row + col).isOdd
+          ? const Color(0xFF2E7D4F)
+          : const Color(0xFF5BB881);
+    }
     if (square == lastTo || square == lastFrom) {
       return (row + col).isOdd
           ? const Color(0xFFB08D4E)

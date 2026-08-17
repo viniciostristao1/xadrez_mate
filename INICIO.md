@@ -27,11 +27,13 @@ usuário (`ATUALIZACOES`) · futuro (`IDEIAS`).
 
 ## ⭐ ESTADO ATUAL (2026-08-17) — ler primeiro pós-/clear
 
+**v0.5.0 — CRONÔMETRO + DICA + RATING** (tempo por problema, lâmpada de
+dica jogada a jogada, rating estilo Elo inicial 1000, botão refazer como
+ícone de flecha circular). Base anterior:
+
 **v0.4.0 — MATEFLOW + ASSINATURA PRÓPRIA** (nome novo, logo ao lado do
 título na home, keystore de upload permanente — instala/atualiza sem
 conflito; ver APRENDIZADOS §assinatura).
-
-Base anterior:
 
 **v0.3.0 — LOGO VINYAPPS** (ícone do launcher + home, preto/âmbar).
 
@@ -48,9 +50,18 @@ passando, sendo 935 contra referência do python-chess). App completo:
   **198 reais de partidas** (banco oficial do Lichess, CC0, com rating real de
   dificuldade) + 120 gerados/espelhados. Cada um tem a **árvore completa de
   solução**: TODAS as respostas legais do oponente têm continuação exata.
+- **Cronômetro** — roda desde o problema aparecer até concluir; zera a cada
+  problema novo; tempo exibido no topo e no resultado.
+- **Dica (lâmpada)** — revela o lance correto do momento (peça e casa
+  destacadas); usada jogada por jogada. Cada dica custa pontos.
+- **Rating (Elo)** — inicial 1000 (leigo); tempo-alvo p/ pontuação cheia:
+  mate1 = 10s, mate2 = 25s, mate3 = 60s; erros -20% cada; dicas -40% cada.
+  `lib/services/rating_service.dart` (verificado por testes).
 - **Feedback imediato** — lance errado: aviso na hora + volta ao último lance
   correto (não aplica o lance). Lance certo: segue; resposta do oponente
   automática. Fim: **"Xeque-mate! Você conseguiu"** + próximo problema.
+- **Refazer** — ícone de flecha circular ao lado da lâmpada (reinicia o
+  problema e o cronômetro).
 - **Histórico de lances em SAN** (ex.: `1...Qh4#`), contador de lances,
   realce do último lance, xeque em vermelho, reiniciar problema.
 - **Promoção** — diálogo de escolha da peça quando um peão chega à última

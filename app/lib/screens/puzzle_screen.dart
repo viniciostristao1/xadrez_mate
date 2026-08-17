@@ -1,9 +1,11 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 
 import '../engine/chess.dart';
 import '../models/puzzle.dart';
+import '../services/rating_service.dart';
 import '../theme/app_colors.dart';
 import '../widgets/chess_board.dart';
 import '../widgets/piece_icon.dart';
@@ -53,7 +55,28 @@ class PuzzleScreenState extends State<PuzzleScreen> {
   final List<String> _sanMoves = [];
   final _shake = ValueNotifier<int>(0);
 
+  // Cronômetro (roda desde o problema aparecer até a conclusão)
+  Timer? _timer;
+  int _elapsed = 0;
+
+  // Dica (lâmpada)
+  int? _hintFrom;
+  int? _hintTo;
+  int _hintsUsed = 0;
+
+  // Erros cometidos neste problema
+  int _errors = 0;
+
+  // Resultado de rating ao resolver
+  ({double delta, double novo, double resultado})? _ratingResult;
+
   bool get _isUserTurn => !_solved;
+
+  String get _elapsedLabel {
+    final m = _elapsed ~/ 60;
+    final s = _elapsed % 60;
+    return '${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}';
+  }
 
   @visibleForTesting
   Board get testBoard => _board;
@@ -73,13 +96,36 @@ class PuzzleScreenState extends State<PuzzleScreen> {
   @visibleForTesting
   Set<int> get testTargets => _targets;
 
+  @visibleForTesting
+  int get testElapsed => _elapsed;
+
+  @visibleForTesting
+  int get testErrors => _errors;
+
+  @visibleForTesting
+  int? get testHintFrom => _hintFrom;
+
+  @visibleForTesting
+  int? get testHintTo => _hintTo;
+
   @override
   void initState() {
     super.initState();
-    _reset();
+    _resetState();
+    // Cronômetro começa quando o problema aparece
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (!mounted || _solved) return;
+      setState(() => _elapsed++);
+    });
   }
 
-  void _reset() {
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  void _resetState() {
     _board = Board.fen(widget.puzzle.fen);
     _node = widget.puzzle.tree;
     _userMovesPlayed = 0;
@@ -91,6 +137,16 @@ class PuzzleScreenState extends State<PuzzleScreen> {
     _feedback = null;
     _feedbackError = false;
     _sanMoves.clear();
+    _elapsed = 0;
+    _hintFrom = null;
+    _hintTo = null;
+    _hintsUsed = 0;
+    _errors = 0;
+    _ratingResult = null;
+  }
+
+  void _reset() {
+    setState(_resetState);
   }
 
   // ------------------------------------------------------------------
@@ -209,6 +265,20 @@ class PuzzleScreenState extends State<PuzzleScreen> {
         // Nó terminal: o lance do jogador foi o xeque-mate
         _solved = true;
         _feedback = null;
+        _hintFrom = null;
+        _hintTo = null;
+        _timer?.cancel();
+        // Registra no rating (fora do setState, é async)
+        RatingService.instance
+            .registrarResolucao(
+          puzzle: widget.puzzle,
+          segundos: _elapsed.toDouble(),
+          erros: _errors,
+          dicas: _hintsUsed,
+        )
+            .then((r) {
+          if (mounted) setState(() => _ratingResult = r);
+        });
         return;
       }
       // O oponente responde (todas as respostas legais têm continuação exata)
@@ -219,17 +289,39 @@ class PuzzleScreenState extends State<PuzzleScreen> {
       _applyMove(oppMove);
       _node = chosen.value;
       _feedback = null;
+      _hintFrom = null;
+      _hintTo = null;
     });
   }
 
   void _onWrongMove(Move move) {
     final san = _board.sanFor(move);
+    RatingService.instance.registrarErro();
     setState(() {
+      _errors++;
       _selected = null;
       _targets = {};
+      _hintFrom = null;
+      _hintTo = null;
       _feedback = 'Lance incorreto ($san). Volte a pensar!';
       _feedbackError = true;
       _shake.value++; // anima o tabuleiro
+    });
+  }
+
+  /// Dica (lâmpada): revela o lance correto do momento (jogada por jogada).
+  void _onHint() {
+    if (!_isUserTurn) return;
+    final key = _node.keys.first;
+    final move = _board.moveFromUci(key);
+    if (move == null) return;
+    RatingService.instance.registrarDica();
+    setState(() {
+      _hintsUsed++;
+      _hintFrom = move.from;
+      _hintTo = move.to;
+      _feedback = 'Dica: jogue ${_board.sanFor(move)}';
+      _feedbackError = false;
     });
   }
 
@@ -254,10 +346,35 @@ class PuzzleScreenState extends State<PuzzleScreen> {
         ),
         title: Text('Mate em ${widget.puzzle.mate} · ${widget.puzzle.levelLabel}'),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.refresh),
-            tooltip: 'Reiniciar problema',
-            onPressed: _reset,
+          // Cronômetro do problema (roda até concluir; zera no próximo)
+          Container(
+            margin: const EdgeInsets.only(right: 4),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            decoration: BoxDecoration(
+              color: _solved ? AppColors.ok.withValues(alpha: 0.15) : AppColors.surfaceAlt,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                color: _solved ? AppColors.ok : AppColors.border,
+              ),
+            ),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.timer_outlined,
+                  size: 16,
+                  color: _solved ? AppColors.ok : AppColors.accent,
+                ),
+                const SizedBox(width: 5),
+                Text(
+                  _elapsedLabel,
+                  style: TextStyle(
+                    color: _solved ? AppColors.ok : AppColors.text,
+                    fontWeight: FontWeight.w700,
+                    fontFeatures: const [FontFeature.tabularFigures()],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -293,6 +410,8 @@ class PuzzleScreenState extends State<PuzzleScreen> {
                       lastTo: _lastTo,
                       pieceStyle: widget.pieceStyle,
                       onSquareTap: _onSquareTap,
+                      hintFrom: _hintFrom,
+                      hintTo: _hintTo,
                     ),
                   );
                 },
@@ -328,24 +447,34 @@ class PuzzleScreenState extends State<PuzzleScreen> {
                   ],
                 ),
               const SizedBox(height: 16),
-              // Ações
+              // Ações: dica (lâmpada) + refazer (flecha circular)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _RoundIconButton(
+                    icon: Icons.lightbulb_outline,
+                    tooltip: 'Dica: mostra o lance correto',
+                    color: AppColors.accent,
+                    badge: _hintsUsed,
+                    onTap: _onHint,
+                  ),
+                  const SizedBox(width: 18),
+                  _RoundIconButton(
+                    icon: Icons.refresh,
+                    tooltip: 'Refazer o problema',
+                    color: AppColors.text,
+                    onTap: _reset,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
               if (_solved)
                 _SuccessCard(
                   puzzle: widget.puzzle,
+                  elapsed: _elapsed,
+                  ratingResult: _ratingResult,
                   onNext: widget.onNext,
                   onRestart: _reset,
-                )
-              else
-                Row(
-                  children: [
-                    Expanded(
-                      child: OutlinedButton.icon(
-                        icon: const Icon(Icons.refresh, size: 20),
-                        label: const Text('Reiniciar'),
-                        onPressed: _reset,
-                      ),
-                    ),
-                  ],
                 ),
             ],
           ),
@@ -527,18 +656,31 @@ class _SanChip extends StatelessWidget {
 
 class _SuccessCard extends StatelessWidget {
   final Puzzle puzzle;
+  final int elapsed;
+  final ({double delta, double novo, double resultado})? ratingResult;
   final VoidCallback onNext;
   final VoidCallback onRestart;
   const _SuccessCard({
     required this.puzzle,
+    required this.elapsed,
+    required this.ratingResult,
     required this.onNext,
     required this.onRestart,
   });
 
+  String get _elapsedLabel {
+    final m = elapsed ~/ 60;
+    final s = elapsed % 60;
+    return '${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}';
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Padding(
+    final r = ratingResult;
+    final delta = r?.delta.round() ?? 0;
+    final novo = r?.novo.round() ?? RatingService.instance.rating.round();
+    final up = delta >= 0;
+    return Card(      child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
@@ -553,11 +695,29 @@ class _SuccessCard extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 4),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _StatChip(icon: Icons.timer_outlined, label: _elapsedLabel),
+                const SizedBox(width: 10),
+                _StatChip(
+                  icon: up ? Icons.trending_up : Icons.trending_down,
+                  label: '${up ? '+' : ''}$delta',
+                  color: up ? AppColors.ok : AppColors.danger,
+                ),
+                const SizedBox(width: 10),
+                _StatChip(
+                  icon: Icons.emoji_events_outlined,
+                  label: '$novo',
+                  color: AppColors.accent,
+                ),
+              ],
+            ),
+            const SizedBox(height: 6),
             Text(
-              'Problema ${puzzle.id} resolvido em ${puzzle.mate} '
-              '${puzzle.mate == 1 ? 'lance' : 'lances'}.',
-              style: const TextStyle(color: AppColors.dim),
+              'Rating: ${RatingService.faixa(novo.toDouble())}',
+              style: const TextStyle(color: AppColors.dim, fontSize: 12.5),
             ),
             const SizedBox(height: 16),
             SizedBox(
@@ -568,12 +728,108 @@ class _SuccessCard extends StatelessWidget {
                 onPressed: onNext,
               ),
             ),
-            const SizedBox(height: 8),
-            OutlinedButton(
-              onPressed: onRestart,
-              child: const Text('Refazer este'),
-            ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _StatChip extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final Color color;
+  const _StatChip({
+    required this.icon,
+    required this.label,
+    this.color = AppColors.text,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: AppColors.surfaceAlt,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: AppColors.border),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icon, size: 15, color: color),
+          const SizedBox(width: 5),
+          Text(
+            label,
+            style: TextStyle(
+              color: color,
+              fontWeight: FontWeight.w800,
+              fontFeatures: const [FontFeature.tabularFigures()],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _RoundIconButton extends StatelessWidget {
+  final IconData icon;
+  final String tooltip;
+  final Color color;
+  final int badge;
+  final VoidCallback onTap;
+  const _RoundIconButton({
+    required this.icon,
+    required this.tooltip,
+    required this.color,
+    this.badge = 0,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: tooltip,
+      child: Material(
+        color: AppColors.surface,
+        shape: const CircleBorder(
+          side: BorderSide(color: AppColors.border),
+        ),
+        child: InkWell(
+          customBorder: const CircleBorder(),
+          onTap: onTap,
+          child: SizedBox(
+            width: 54,
+            height: 54,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Icon(icon, color: color, size: 26),
+                if (badge > 0)
+                  Positioned(
+                    right: 7,
+                    top: 7,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 5, vertical: 1),
+                      decoration: const BoxDecoration(
+                        color: AppColors.accent,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Text(
+                        '$badge',
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
         ),
       ),
     );

@@ -447,6 +447,32 @@ class Board {
 
   bool isLegal(Move m) => legalMoves().any((x) => x == m);
 
+  /// Converte UCI ("e2e4", "e7e8q") em Move, se for lance legal.
+  Move? moveFromUci(String uci) {
+    if (uci.length < 4 || uci.length > 5) return null;
+    final int from, to;
+    try {
+      from = _parseSq(uci.substring(0, 2));
+      to = _parseSq(uci.substring(2, 4));
+    } catch (_) {
+      return null;
+    }
+    PieceType? promo;
+    if (uci.length == 5) {
+      promo = switch (uci[4].toLowerCase()) {
+        'q' => PieceType.queen,
+        'r' => PieceType.rook,
+        'b' => PieceType.bishop,
+        'n' => PieceType.knight,
+        _ => null,
+      };
+      if (promo == null) return null;
+    }
+    final candidates = legalMoves()
+        .where((m) => m.from == from && m.to == to && m.promotion == promo);
+    return candidates.isEmpty ? null : candidates.first;
+  }
+
   void makeMove(Move m) {
     if (!isLegal(m)) {
       throw StateError('Lance ilegal: ${m.uci}');
