@@ -1,5 +1,9 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.10.1 (2026-08-17)
+- ⬆️ Botões de **dica, pausar, refazer e próximo** agora ficam **colados
+  abaixo do tabuleiro** (antes ficavam no pé da tela).
+
 ## v0.10.0 (2026-08-17)
 **Nova categoria DEFESA + bancos ampliados!**
 - 🛡 **Defesa** na página inicial (agora são 3: Mates, Tática e Defesa), com

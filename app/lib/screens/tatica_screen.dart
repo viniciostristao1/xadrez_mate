@@ -346,7 +346,7 @@ class TaticaScreenState extends State<TaticaScreen> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 4, 16, 36),
+          padding: const EdgeInsets.fromLTRB(16, 4, 16, 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -398,9 +398,44 @@ class TaticaScreenState extends State<TaticaScreen> {
                   },
                 ),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 6),
+              // Ações: dica + pausar + refazer + próximo — COLADOS no tabuleiro
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _RoundIconButton(
+                    icon: Icons.lightbulb_outline,
+                    tooltip: S.dicaTooltip,
+                    color: AppColors.accent,
+                    badge: _hintsUsed,
+                    onTap: _onHint,
+                  ),
+                  const SizedBox(width: 12),
+                  _RoundIconButton(
+                    icon: _paused ? Icons.play_arrow : Icons.pause,
+                    tooltip: _paused ? S.retomar : S.pausar,
+                    color: _paused ? AppColors.dim : AppColors.text,
+                    onTap: _togglePause,
+                  ),
+                  const SizedBox(width: 12),
+                  _RoundIconButton(
+                    icon: Icons.refresh,
+                    tooltip: S.refazer,
+                    color: AppColors.text,
+                    onTap: _reset,
+                  ),
+                  const SizedBox(width: 12),
+                  _RoundIconButton(
+                    icon: Icons.arrow_forward,
+                    tooltip: _solved ? S.proximo : S.pular,
+                    color: _solved ? AppColors.ok : AppColors.dim,
+                    onTap: widget.onNext,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 6),
               SizedBox(
-                height: 46,
+                height: 44,
                 child: AnimatedSwitcher(
                   duration: const Duration(milliseconds: 250),
                   child: _feedback != null
@@ -416,7 +451,7 @@ class TaticaScreenState extends State<TaticaScreen> {
               if (_sanMoves.isNotEmpty) ...[
                 const SizedBox(height: 4),
                 SizedBox(
-                  height: 32,
+                  height: 30,
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     reverse: true,
@@ -432,41 +467,7 @@ class TaticaScreenState extends State<TaticaScreen> {
                   ),
                 ),
               ],
-              const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  _RoundIconButton(
-                    icon: Icons.lightbulb_outline,
-                    tooltip: S.dicaTooltip,
-                    color: AppColors.accent,
-                    badge: _hintsUsed,
-                    onTap: _onHint,
-                  ),
-                  const SizedBox(width: 16),
-                  _RoundIconButton(
-                    icon: _paused ? Icons.play_arrow : Icons.pause,
-                    tooltip: _paused ? S.retomar : S.pausar,
-                    color: _paused ? AppColors.dim : AppColors.text,
-                    onTap: _togglePause,
-                  ),
-                  const SizedBox(width: 16),
-                  _RoundIconButton(
-                    icon: Icons.refresh,
-                    tooltip: S.refazer,
-                    color: AppColors.text,
-                    onTap: _reset,
-                  ),
-                  const SizedBox(width: 16),
-                  _RoundIconButton(
-                    icon: Icons.arrow_forward,
-                    tooltip: _solved ? S.proximo : S.pular,
-                    color: _solved ? AppColors.ok : AppColors.dim,
-                    onTap: widget.onNext,
-                  ),
-                ],
-              ),
-              const SizedBox(height: 14),
+              const SizedBox(height: 8),
               if (_solved)
                 _SuccessCard(
                   puzzle: widget.puzzle,
