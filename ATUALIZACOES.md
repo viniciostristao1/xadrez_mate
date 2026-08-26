@@ -1,5 +1,8 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.14.1 (2026-08-26)
+- 🗑️ Tema **Madeira Escura** removido (restam **Azul Royal**, **Minimal Outline** e **Terracota**).
+
 ## v0.14.0 (2026-08-26)
 - 🎨 Novos temas: **Terracota** (bege #F2E8D6 + acento #B5652E) e **Madeira Escura** (bege queimado #EADFC8 + #6B4A2E) — em **Configurações → Tema** ▾.
 
