@@ -1,5 +1,9 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.10.2 (2026-08-17)
+- 📐 Tabuleiro maior — ocupa toda a largura da tela e botões **colados** no tabuleiro (gap de 2px).
+- 🔍 **"Brancas/Pretas jogam • lance X de Y"** agora em banner âmbar destacado com borda, ícone da cor a jogar e fonte 16 w800 (antes cinza pequeno).
+
 ## v0.10.1 (2026-08-17)
 - ⬆️ Botões de **dica, pausar, refazer e próximo** agora ficam **colados
   abaixo do tabuleiro** (antes ficavam no pé da tela).
