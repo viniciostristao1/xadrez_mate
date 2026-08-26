@@ -52,11 +52,11 @@ void main() {
         tester.state<TaticaScreenState>(find.byType(TaticaScreen));
     expect(screen.testSolved, isFalse);
 
-    // joga todos os lances do jogador (índices pares da linha)
     for (final uci in p.linha.whereIndexed((i, _) => i.isEven)) {
       await tester.tapAt(sqCenter(tester, uci.substring(0, 2), p.sideToMove));
       await tester.pumpAndSettle();
       await tester.tapAt(sqCenter(tester, uci.substring(2, 4), p.sideToMove));
+      await tester.pump(const Duration(milliseconds: 500));
       await tester.pumpAndSettle();
     }
 

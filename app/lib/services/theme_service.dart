@@ -13,7 +13,7 @@ class ThemeService {
   static const _prefsKey = 'app_theme';
 
   final ValueNotifier<int> notifier = ValueNotifier(0);
-  AppPalette _palette = AppPalette.amber;
+  AppPalette _palette = AppPalette.azulRoyal;
 
   AppPalette get palette => _palette;
 

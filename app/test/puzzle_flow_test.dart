@@ -50,7 +50,6 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  /// Toca a sequência de lances corretos resolvendo o problema.
   Future<void> solve(WidgetTester tester, Puzzle p) async {
     final screen = tester.state<PuzzleScreenState>(find.byType(PuzzleScreen));
     for (var guard = 0; guard < 12 && !screen.testSolved; guard++) {
@@ -59,6 +58,7 @@ void main() {
       await tester.tapAt(sqCenter(tester, key.substring(0, 2), p.sideToMove));
       await tester.pumpAndSettle();
       await tester.tapAt(sqCenter(tester, key.substring(2, 4), p.sideToMove));
+      await tester.pump(const Duration(milliseconds: 500));
       await tester.pumpAndSettle();
     }
   }

@@ -1,9 +1,14 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.13.0 (2026-08-26)
+- ⚙️ Ícone da **engrenagem** aumentado para **28px** (antes 20px).
+- ⏱️ Movimento do **adversário com delay de 450ms** — dá tempo de ver o lance.
+- 🗑️ Tema **Âmbar Clássico** removido (restam **Azul Royal** e **Minimal Outline**).
+
 ## v0.12.0 (2026-08-26)
 - ⚪ Bolinha **Brancas/Pretas jogam** aumentada para **20px** (antes 14px) — sem mudar fonte ou janela.
 - 🗑️ Tema **Carmesim & Ouro** removido.
-- 🎨 Novos temas: **Azul Royal** (fundo navy #0A0F1C + acento azul #3B82F6) e **Minimal Outline** (preto-quente #0C0C0D + borda 1px) — escolha em **Configurações → Tema** ▾.
+- 🎨 Novos temas: **Azul Royal** e **Minimal Outline** — em **Configurações → Tema** ▾.
 
 ## v0.11.0 (2026-08-26)
 - 🎨 **Temas!** Novo tema **Carmesim & Ouro** (dourado sobre marrom escuro) além do **Âmbar Clássico**. Escolha em **Configurações → Tema** (toque na flechinha ▾ para selecionar). A preferência fica salva.

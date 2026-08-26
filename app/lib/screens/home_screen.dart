@@ -30,12 +30,12 @@ class HomeScreen extends StatelessWidget {
         actions: [
           // engrenagem pequena no canto superior direito
           IconButton(
-            icon: const Icon(Icons.settings_outlined, size: 20),
+            icon: const Icon(Icons.settings_outlined, size: 28),
             tooltip: S.configuracoes,
             onPressed: onConfig,
             visualDensity: VisualDensity.compact,
             padding: EdgeInsets.zero,
-            constraints: const BoxConstraints(minWidth: 36, minHeight: 36),
+            constraints: const BoxConstraints(minWidth: 44, minHeight: 44),
           ),
         ],
       ),

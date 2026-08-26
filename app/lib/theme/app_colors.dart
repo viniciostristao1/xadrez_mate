@@ -52,28 +52,6 @@ class AppPalette {
     required this.check,
   });
 
-  /// Tema padrão: escuro âmbar ("painel de xadrez").
-  static const amber = AppPalette(
-    id: 'amber',
-    nome: 'Âmbar Clássico',
-    background: Color(0xFF121417),
-    surface: Color(0xFF1B1E23),
-    surfaceAlt: Color(0xFF23272E),
-    border: Color(0xFF2E333B),
-    text: Color(0xFFEDEFF2),
-    dim: Color(0xFF9AA3AE),
-    faint: Color(0xFF6B737C),
-    accent: Color(0xFFE8A33D),
-    ok: Color(0xFF4CAF7D),
-    danger: Color(0xFFE05A4E),
-    lightSquare: Color(0xFFEAE3C8),
-    darkSquare: Color(0xFF9C7A54),
-    select: Color(0xFFFFE08A),
-    hint: Color(0x99FFFFFF),
-    lastMove: Color(0x33E8A33D),
-    check: Color(0xFFE05A4E),
-  );
-
   static const azulRoyal = AppPalette(
     id: 'azulRoyal',
     nome: 'Azul Royal',
@@ -117,17 +95,17 @@ class AppPalette {
   );
 
   /// Todos os temas disponíveis (a ordem é a ordem do seletor).
-  static const all = <AppPalette>[amber, azulRoyal, minimalOutline];
+  static const all = <AppPalette>[azulRoyal, minimalOutline];
 
   static AppPalette byId(String? id) =>
-      all.firstWhere((p) => p.id == id, orElse: () => amber);
+      all.firstWhere((p) => p.id == id, orElse: () => azulRoyal);
 }
 
 /// Fachada de cores do app. Os widgets usam sempre `AppColors.x`; a paleta
 /// ativa é trocada em runtime por `AppColors.apply` (chamado pelo
 /// `ThemeService`) seguido de um rebuild da raiz.
 abstract final class AppColors {
-  static AppPalette _active = AppPalette.amber;
+  static AppPalette _active = AppPalette.azulRoyal;
 
   static AppPalette get active => _active;
   static void apply(AppPalette palette) => _active = palette;

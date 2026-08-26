@@ -220,12 +220,14 @@ class TaticaScreenState extends State<TaticaScreen> {
     );
   }
 
-  void _tryPlay(Move move) {
+  void _tryPlay(Move move) async {
     final esperado = _lanceEsperadoUci;
     if (_moveIndex.isOdd || move.uci != esperado) {
       _onWrongMove(move);
       return;
     }
+    final nextIndex = _moveIndex + 1;
+    final isMate = nextIndex >= widget.puzzle.linha.length;
     setState(() {
       _applyMove(move);
       _userMovesPlayed++;
@@ -234,8 +236,7 @@ class TaticaScreenState extends State<TaticaScreen> {
       _hintFrom = null;
       _hintTo = null;
       _moveIndex++;
-      if (_moveIndex >= widget.puzzle.linha.length) {
-        // fim da linha: tática concluída
+      if (isMate) {
         _solved = true;
         _feedback = null;
         _timer?.cancel();
@@ -249,9 +250,12 @@ class TaticaScreenState extends State<TaticaScreen> {
             .then((r) {
           if (mounted) setState(() => _ratingResult = r);
         });
-        return;
       }
-      // resposta do oponente (lance da linha)
+    });
+    if (isMate) return;
+    await Future.delayed(const Duration(milliseconds: 450));
+    if (!mounted || _solved) return;
+    setState(() {
       final opp = widget.puzzle.linha[_moveIndex];
       final oppMove = _board.legalMoves().firstWhere((m) => m.uci == opp);
       _applyMove(oppMove);

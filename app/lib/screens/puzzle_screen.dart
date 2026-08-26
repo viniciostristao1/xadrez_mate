@@ -280,24 +280,23 @@ class PuzzleScreenState extends State<PuzzleScreen> {
   }
 
   /// Tenta jogar o lance do jogador. Correto -> aplica; errado -> avisa.
-  void _tryPlay(Move move) {
+  void _tryPlay(Move move) async {
     if (!_node.keys.contains(move.uci)) {
       _onWrongMove(move);
       return;
     }
-    setState(() {
-      _applyMove(move);
-      _userMovesPlayed++;
-      _selected = null;
-      _targets = {};
-      if (_node.replies == null) {
-        // Nó terminal: o lance do jogador foi o xeque-mate
-        _solved = true;
-        _feedback = null;
+    final oppReplies = _node.replies?[move.uci];
+    if (oppReplies == null) {
+      setState(() {
+        _applyMove(move);
+        _userMovesPlayed++;
+        _selected = null;
+        _targets = {};
         _hintFrom = null;
         _hintTo = null;
+        _solved = true;
+        _feedback = null;
         _timer?.cancel();
-        // Registra no rating (fora do setState, é async)
         RatingService.instance
             .registrarResolucao(
           puzzle: widget.puzzle,
@@ -310,10 +309,20 @@ class PuzzleScreenState extends State<PuzzleScreen> {
           if (mounted) setState(() => _ratingResult = r);
         });
         widget.onSolved?.call(widget.puzzle, _elapsed, _errors, _hintsUsed);
-        return;
-      }
-      // O oponente responde (todas as respostas legais têm continuação exata)
-      final oppReplies = _node.replies![move.uci]!;
+      });
+      return;
+    }
+    setState(() {
+      _applyMove(move);
+      _userMovesPlayed++;
+      _selected = null;
+      _targets = {};
+      _hintFrom = null;
+      _hintTo = null;
+    });
+    await Future.delayed(const Duration(milliseconds: 450));
+    if (!mounted || _solved) return;
+    setState(() {
       final chosen =
           oppReplies.entries.toList()[Random().nextInt(oppReplies.length)];
       final oppMove = _board.legalMoves().firstWhere((m) => m.uci == chosen.key);

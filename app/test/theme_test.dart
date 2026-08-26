@@ -8,10 +8,10 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
 
-  test('tema padrão é Âmbar Clássico', () async {
+  test('tema padrão é Azul Royal', () async {
     await ThemeService.instance.load();
-    expect(ThemeService.instance.palette.id, 'amber');
-    expect(AppColors.accent, AppPalette.amber.accent);
+    expect(ThemeService.instance.palette.id, 'azulRoyal');
+    expect(AppColors.accent, AppPalette.azulRoyal.accent);
   });
 
   test('troca para Azul Royal aplica em AppColors e persiste', () async {
@@ -26,7 +26,7 @@ void main() {
     expect(ThemeService.instance.palette.id, 'azulRoyal');
     expect(AppColors.accent, AppPalette.azulRoyal.accent);
 
-    await ThemeService.instance.setPalette(AppPalette.amber);
+    await ThemeService.instance.setPalette(AppPalette.azulRoyal);
   });
 
   test('troca para Minimal Outline aplica', () async {
@@ -34,12 +34,12 @@ void main() {
     await ThemeService.instance.setPalette(AppPalette.minimalOutline);
     expect(ThemeService.instance.palette.id, 'minimalOutline');
     expect(AppColors.accent, AppPalette.minimalOutline.accent);
-    await ThemeService.instance.setPalette(AppPalette.amber);
+    await ThemeService.instance.setPalette(AppPalette.azulRoyal);
   });
 
-  test('byId cai no padrão (âmbar) para id desconhecido ou nulo', () {
-    expect(AppPalette.byId('inexistente').id, 'amber');
-    expect(AppPalette.byId(null).id, 'amber');
+  test('byId cai no padrão (Azul Royal) para id desconhecido ou nulo', () {
+    expect(AppPalette.byId('inexistente').id, 'azulRoyal');
+    expect(AppPalette.byId(null).id, 'azulRoyal');
   });
 
   test('todos os temas têm id único e nome não vazio', () {
