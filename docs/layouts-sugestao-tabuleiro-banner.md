@@ -6,6 +6,21 @@ O **v0.10.2** já publicado é a **Opção 1** abaixo (implementação atual). A
 
 **APK atual (Opção 1):** https://github.com/viniciostristao1/xadrez_mate/releases/latest/download/xadrez-mate.apk
 
+**Prévia visual com imagens (recomendado):** https://github.com/viniciostristao1/xadrez_mate/blob/main/docs/mateflow-layouts-10.html — abra no navegador para ver as 10 telas renderizadas (cada opção com o app aberto e cores sugeridas).
+
+> Se o GitHub mostrar o HTML como código, use o link raw: https://raw.githack.com/viniciostristao1/xadrez_mate/main/docs/mateflow-layouts-10.html
+
+![Layout 1](img/layout-01.png)
+![Layout 2](img/layout-02.png)
+![Layout 3](img/layout-03.png)
+![Layout 4](img/layout-04.png)
+![Layout 5](img/layout-05.png)
+![Layout 6](img/layout-06.png)
+![Layout 7](img/layout-07.png)
+![Layout 8](img/layout-08.png)
+![Layout 9](img/layout-09.png)
+![Layout 10](img/layout-10.png)
+
 ---
 
 ### 1) Atual v0.10.2 — Banner âmbar com borda (APLICADO)

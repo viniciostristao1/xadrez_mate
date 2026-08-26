@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mateflow — 10 sugestões de layout</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,Manrope,sans-serif;background:#0b0d0f;color:#e8ebee;padding:20px 14px 60px}
+header{max-width:1100px;margin:0 auto 24px;text-align:center}
+header h1{font-size:26px;font-weight:800}
+header p{color:#9aa3ae;margin-top:8px;font-size:13px;line-height:1.5}
+header p b{color:#e8ebee}
+.apk{max-width:1100px;margin:14px auto;display:flex;justify-content:center}
+.apk a{background:#E8A33D;color:#111;padding:10px 18px;border-radius:10px;font-weight:800;text-decoration:none;font-size:13px}
+.grid{max-width:1100px;margin:18px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.card{background:#14171a;border:1px solid #23282d;border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.card h2{font-size:14px;font-weight:800;display:flex;gap:8px;align-items:center}
+.card h2 small{font-size:11px;color:#9aa3ae;font-weight:600}
+.card p{font-size:11px;color:#9aa3ae;line-height:1.5}
+.card p b{color:#e8ebee}
+.card img{width:100%;border-radius:14px;border:1px solid #23282d;background:#121417}
+.badge{display:inline-block;font-size:10px;font-weight:800;padding:3px 8px;border-radius:20px}
+.sel{border-color:#E8A33D;box-shadow:0 0 0 1px #E8A33D}
+footer{max-width:700px;margin:30px auto 0;text-align:center;color:#9aa3ae;font-size:13px;line-height:1.6}
+footer b{color:#E8A33D}
+</style></head><body>
+<header>
+<h1>Mateflow — 10 sugestões de layout</h1>
+<p>Pedido: <b>tabuleiro maior</b> ocupando largura total + botões colados &nbsp;•&nbsp; <b>“Brancas/Pretas jogam • lance X de Y”</b> mais destacado.<br>A <b>Opção 1</b> é o que já está no APK v0.10.2. Escolha 1 número ou “misturar”.</p>
+</header>
+<div class="apk"><a href="https://github.com/viniciostristao1/xadrez_mate/releases/latest/download/xadrez-mate.apk">⬇ Baixar APK v0.10.2 (Opção 1)</a></div>
+<div class="grid">
+
+<div class="card sel"><h2><span class="badge" style="background:#E8A33D;color:#111">1</span> Atual v0.10.2 <small>• aplicado</small></h2><img src="img/layout-01.png" alt="layout 1"><p>Banner <b>âmbar 18% + borda âmbar 1.6px</b>, borderRadius 12, ícone ●, <b>16px w800</b>. Padding 8px, gap 2px ao tabuleiro. Equilíbrio entre destaque e identidade.</p></div>
+
+<div class="card"><h2><span class="badge" style="background:#fff;color:#111">2</span> Faixa full-width</h2><img src="img/layout-02.png" alt="layout 2"><p>Fundo <b>branco/preto sólido</b> ocupando 100% da largura, texto cor oposta. Máxima clareza de quem joga. Tabuleiro edge-to-edge.</p></div>
+
+<div class="card"><h2><span class="badge" style="background:#23272E;color:#EDEFF2;border:1px solid #9AA3AE">3</span> Pill com selo</h2><img src="img/layout-03.png" alt="layout 3"><p>Pill central 70% largura, <b>selo ● 18px</b> com sombra, borda cinza. Mais leve visualmente.</p></div>
+
+<div class="card"><h2><span class="badge" style="background:#E8A33D;color:#111">4</span> Duas linhas</h2><img src="img/layout-04.png" alt="layout 4"><p>Linha 1: <b>BRANCAS JOGAM 18px w900</b> caixa alta, linha 2: <b>lance 1 de 2 13px</b>. Hierarquia forte, escaneamento rápido.</p></div>
+
+<div class="card"><h2><span class="badge" style="background:#3B82F6;color:#fff">5</span> Lichess azul</h2><img src="img/layout-05.png" alt="layout 5"><p>Faixa <b>azul #1E3A5F + borda #3B82F6</b>, ícone 👑. Familiar para quem usa Lichess.</p></div>
+
+<div class="card"><h2><span class="badge" style="background:#121417;color:#E8A33D;border:1px solid #E8A33D">6</span> Minimal gigante</h2><img src="img/layout-06.png" alt="layout 6"><p>Sem card: texto <b>20px w900 âmbar</b> + linha fina 2px. Mais limpo, fonte maior sem ocupar espaço.</p></div>
+
+<div class="card"><h2><span class="badge" style="background:#E8A33D;color:#111">7</span> Badge sobreposto</h2><img src="img/layout-07.png" alt="layout 7"><p>Badge <b>flutuante no canto do tabuleiro</b> (sobreposto). Economiza altura, tabuleiro ainda maior.</p></div>
+
+<div class="card"><h2><span class="badge" style="background:#2A2418;color:#E8A33D;border:1px solid #E8A33D">8</span> Progresso integrado</h2><img src="img/layout-08.png" alt="layout 8"><p>Barras <b>dentro do banner</b> (embaixo do texto). Tudo em um elemento, mais compacto.</p></div>
+
+<div class="card"><h2><span class="badge" style="background:#1B1E23;color:#EDEFF2;border:1px solid #E8A33D">9</span> Card elevado + coroa</h2><img src="img/layout-09.png" alt="layout 9"><p>Card <b>elevado com sombra</b>, ícone ♔ 20px, botões em barra pill única colada no tabuleiro.</p></div>
+
+<div class="card"><h2><span class="badge" style="background:#1A2E22;color:#4CAF7D;border:1px solid #4CAF7D">10</span> Verde resolvido</h2><img src="img/layout-10.png" alt="layout 10"><p>Jogando âmbar, <b>resolvido verde 18% + borda verde</b> com ✓. Feedback de conclusão muito visível + borda do tabuleiro verde.</p></div>
+
+</div>
+<footer>Como escolher: responda <b>“quero a 4”</b> ou <b>“misturar 1 com botões da 9”</b> etc. Eu aplico em &lt;5 min e gero novo APK no mesmo link fixo.<br><br><b>AGENTS.md</b> atualizado: sempre commit+push + sempre mandar link direto do APK.</footer>
+</body></html>
