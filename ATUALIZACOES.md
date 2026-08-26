@@ -1,5 +1,10 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.12.0 (2026-08-26)
+- ⚪ Bolinha **Brancas/Pretas jogam** aumentada para **20px** (antes 14px) — sem mudar fonte ou janela.
+- 🗑️ Tema **Carmesim & Ouro** removido.
+- 🎨 Novos temas: **Azul Royal** (fundo navy #0A0F1C + acento azul #3B82F6) e **Minimal Outline** (preto-quente #0C0C0D + borda 1px) — escolha em **Configurações → Tema** ▾.
+
 ## v0.11.0 (2026-08-26)
 - 🎨 **Temas!** Novo tema **Carmesim & Ouro** (dourado sobre marrom escuro) além do **Âmbar Clássico**. Escolha em **Configurações → Tema** (toque na flechinha ▾ para selecionar). A preferência fica salva.
 

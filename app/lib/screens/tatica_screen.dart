@@ -514,6 +514,7 @@ class _HeaderBar extends StatelessWidget {
     final side =
         puzzle.sideToMove == ChessColor.white ? S.brancasJogam : S.pretasJogam;
     final done = solved ? total : min(userMovesPlayed, total);
+    final isWhite = puzzle.sideToMove == ChessColor.white;
     return Column(
       children: [
         Text(
@@ -524,12 +525,73 @@ class _HeaderBar extends StatelessWidget {
             fontSize: 18,
           ),
         ),
-        const SizedBox(height: 4),
-        Text(
-          solved ? S.resolvido : '$side · ${S.lanceDe(done + 1, total)}',
-          style: TextStyle(color: AppColors.dim),
-        ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 6),
+        if (solved)
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+            decoration: BoxDecoration(
+              color: AppColors.ok.withValues(alpha: 0.18),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: AppColors.ok, width: 1.6),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.check_circle, size: 18, color: AppColors.ok),
+                const SizedBox(width: 7),
+                Text(
+                  S.resolvido,
+                  style: TextStyle(
+                    color: AppColors.ok,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+          )
+        else
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+            decoration: BoxDecoration(
+              color: AppColors.accent.withValues(alpha: 0.18),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: AppColors.accent, width: 1.6),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 20,
+                  height: 20,
+                  decoration: BoxDecoration(
+                    color: isWhite ? Colors.white : Colors.black,
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: isWhite ? Color(0xFF9AA3AE) : Colors.white,
+                      width: 1.2,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Flexible(
+                  child: Text(
+                    '$side  •  ${S.lanceDe(done + 1, total)}',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: AppColors.text,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 16,
+                      letterSpacing: 0.2,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        const SizedBox(height: 8),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

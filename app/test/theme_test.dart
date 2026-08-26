@@ -14,21 +14,26 @@ void main() {
     expect(AppColors.accent, AppPalette.amber.accent);
   });
 
-  test('troca para Carmesim & Ouro aplica em AppColors e persiste', () async {
+  test('troca para Azul Royal aplica em AppColors e persiste', () async {
     await ThemeService.instance.load();
-    await ThemeService.instance.setPalette(AppPalette.crimson);
+    await ThemeService.instance.setPalette(AppPalette.azulRoyal);
 
-    expect(ThemeService.instance.palette.id, 'crimson');
-    // AppColors espelha a paleta ativa.
-    expect(AppColors.accent, AppPalette.crimson.accent);
-    expect(AppColors.background, AppPalette.crimson.background);
+    expect(ThemeService.instance.palette.id, 'azulRoyal');
+    expect(AppColors.accent, AppPalette.azulRoyal.accent);
+    expect(AppColors.background, AppPalette.azulRoyal.background);
 
-    // Recarrega "do disco": a escolha persistiu.
     await ThemeService.instance.load();
-    expect(ThemeService.instance.palette.id, 'crimson');
-    expect(AppColors.accent, AppPalette.crimson.accent);
+    expect(ThemeService.instance.palette.id, 'azulRoyal');
+    expect(AppColors.accent, AppPalette.azulRoyal.accent);
 
-    // Volta ao padrão para não vazar estado entre testes.
+    await ThemeService.instance.setPalette(AppPalette.amber);
+  });
+
+  test('troca para Minimal Outline aplica', () async {
+    await ThemeService.instance.load();
+    await ThemeService.instance.setPalette(AppPalette.minimalOutline);
+    expect(ThemeService.instance.palette.id, 'minimalOutline');
+    expect(AppColors.accent, AppPalette.minimalOutline.accent);
     await ThemeService.instance.setPalette(AppPalette.amber);
   });
 

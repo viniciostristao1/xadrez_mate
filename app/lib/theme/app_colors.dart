@@ -74,30 +74,50 @@ class AppPalette {
     check: Color(0xFFE05A4E),
   );
 
-  /// Tema alternativo: dourado dramático sobre marrom escuro.
-  static const crimson = AppPalette(
-    id: 'crimson',
-    nome: 'Carmesim & Ouro',
-    background: Color(0xFF14100F),
-    surface: Color(0xFF1F1817),
-    surfaceAlt: Color(0xFF2B201E),
-    border: Color(0xFF402C28),
-    text: Color(0xFFF4EAE4),
-    dim: Color(0xFFBBA097),
-    faint: Color(0xFF8A5C4E),
-    accent: Color(0xFFE0B24B),
+  static const azulRoyal = AppPalette(
+    id: 'azulRoyal',
+    nome: 'Azul Royal',
+    background: Color(0xFF0A0F1C),
+    surface: Color(0xFF121A2E),
+    surfaceAlt: Color(0xFF1B2540),
+    border: Color(0xFF24365E),
+    text: Color(0xFFEAF0FB),
+    dim: Color(0xFF8A95AB),
+    faint: Color(0xFF5A6480),
+    accent: Color(0xFF3B82F6),
+    ok: Color(0xFF4CAF7D),
+    danger: Color(0xFFE05A4E),
+    lightSquare: Color(0xFFDDE8F0),
+    darkSquare: Color(0xFF4A6FA5),
+    select: Color(0xFF6EA8FE),
+    hint: Color(0x99FFFFFF),
+    lastMove: Color(0x333B82F6),
+    check: Color(0xFFE05A4E),
+  );
+
+  static const minimalOutline = AppPalette(
+    id: 'minimalOutline',
+    nome: 'Minimal Outline',
+    background: Color(0xFF0C0C0D),
+    surface: Color(0xFF161617),
+    surfaceAlt: Color(0xFF1E1E20),
+    border: Color(0xFF3A3A3A),
+    text: Color(0xFFF0EEE9),
+    dim: Color(0xFF9A9A9A),
+    faint: Color(0xFF6B6B6B),
+    accent: Color(0xFFE8A33D),
     ok: Color(0xFF4CAF7D),
     danger: Color(0xFFE05A4E),
     lightSquare: Color(0xFFEAE3C8),
     darkSquare: Color(0xFF9C7A54),
-    select: Color(0xFFF0CE7A),
+    select: Color(0xFFFFE08A),
     hint: Color(0x99FFFFFF),
-    lastMove: Color(0x33E0B24B),
+    lastMove: Color(0x33E8A33D),
     check: Color(0xFFE05A4E),
   );
 
   /// Todos os temas disponíveis (a ordem é a ordem do seletor).
-  static const all = <AppPalette>[amber, crimson];
+  static const all = <AppPalette>[amber, azulRoyal, minimalOutline];
 
   static AppPalette byId(String? id) =>
       all.firstWhere((p) => p.id == id, orElse: () => amber);
