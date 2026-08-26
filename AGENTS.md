@@ -60,12 +60,18 @@ cd app && /root/flutter/bin/flutter test test/engine_test.dart
 1. Subir versão em `app/pubspec.yaml` (`X.Y.Z+N` — versionCode cresce; mudança
    visível = MINOR).
 2. `git commit` + `git push origin main` → CI compila APK e publica em
-   `ci-latest`. Acompanhe: `gh run watch <id> --exit-status`.
+   `ci-latest`. Acompanhe: `gh run watch <id> --exit-status`. **SEMPRE fazer
+   commit+push imediatamente após `analyze`+`test` verdes — nunca deixar
+   mudanças só locais.**
 3. CI verde: `scripts/release.sh vX.Y.Z "<nota 1 linha>"` → publica o APK de
    nome fixo `xadrez-mate.apk` (link perene
    `/releases/latest/download/xadrez-mate.apk`).
 4. 1 linha em `ATUALIZACOES.md` (se visível ao usuário) + nota técnica em
    `APRENDIZADOS.md`; planos → `IDEIAS.md`.
+5. **Sempre enviar ao usuário o link direto do APK:**
+   `https://github.com/viniciostristao1/xadrez_mate/releases/latest/download/xadrez-mate.apk`
+   (após `scripts/release.sh`; enquanto CI roda, avisar que o link será
+   atualizado em ~5 min).
 
 ## 5. Definition of Done
 
