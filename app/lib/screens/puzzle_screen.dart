@@ -421,7 +421,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
       // Layout sem rolagem: o tabuleiro se ajusta ao espaço disponível.
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(8, 2, 8, 12),
+          padding: const EdgeInsets.fromLTRB(16, 4, 16, 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -431,7 +431,7 @@ class PuzzleScreenState extends State<PuzzleScreen> {
                 surpresa: widget.surpresa,
                 userMovesPlayed: _userMovesPlayed,
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 8),
               // Tabuleiro (flexível — nunca estoura a tela)
               Expanded(
                 child: LayoutBuilder(
@@ -472,7 +472,8 @@ class PuzzleScreenState extends State<PuzzleScreen> {
         },
       ),
     ),
-              const SizedBox(height: 2),
+              const SizedBox(height: 6),
+              // Ações: dica + pausar + refazer + próximo — COLADOS no tabuleiro
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -506,7 +507,8 @@ class PuzzleScreenState extends State<PuzzleScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 6),
+              // Feedback (altura fixa — não empurra o resto)
               SizedBox(
                 height: 44,
                 child: AnimatedSwitcher(
@@ -577,7 +579,6 @@ class _HeaderBar extends StatelessWidget {
         ? S.brancasJogam
         : S.pretasJogam;
     final done = solved ? puzzle.mate : min(userMovesPlayed, puzzle.mate);
-    final isWhite = puzzle.sideToMove == ChessColor.white;
     return Column(
       children: [
         Text(
@@ -588,92 +589,21 @@ class _HeaderBar extends StatelessWidget {
             fontSize: 18,
           ),
         ),
-        const SizedBox(height: 6),
+        const SizedBox(height: 4),
         if (surpresa)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
-            decoration: BoxDecoration(
-              color: AppColors.accent.withValues(alpha: 0.16),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppColors.accent, width: 1.6),
-            ),
-            child: Text(
-              S.surpresaTitulo,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: AppColors.text,
-                fontWeight: FontWeight.w800,
-                fontSize: 15,
-              ),
-            ),
-          )
-        else if (solved)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
-            decoration: BoxDecoration(
-              color: AppColors.ok.withValues(alpha: 0.18),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppColors.ok, width: 1.6),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(Icons.check_circle, size: 18, color: AppColors.ok),
-                const SizedBox(width: 7),
-                Text(
-                  S.resolvido,
-                  style: const TextStyle(
-                    color: AppColors.ok,
-                    fontWeight: FontWeight.w800,
-                    fontSize: 16,
-                  ),
-                ),
-              ],
-            ),
+          Text(
+            S.surpresaTitulo,
+            style: const TextStyle(color: AppColors.dim),
           )
         else
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
-            decoration: BoxDecoration(
-              color: AppColors.accent.withValues(alpha: 0.18),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppColors.accent, width: 1.6),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 14,
-                  height: 14,
-                  decoration: BoxDecoration(
-                    color: isWhite ? Colors.white : Colors.black,
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      color: isWhite ? const Color(0xFF9AA3AE) : Colors.white,
-                      width: 1.2,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Flexible(
-                  child: Text(
-                    '$side  •  ${S.lanceDe(done, puzzle.mate)}',
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: AppColors.text,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 16,
-                      letterSpacing: 0.2,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+          Text(
+            solved
+                ? S.resolvido
+                : '$side · ${S.lanceDe(done, puzzle.mate)}',
+            style: const TextStyle(color: AppColors.dim),
           ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 10),
+        // No modo surpresa o nº de lances é segredo — sem as barras
         if (!surpresa)
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
