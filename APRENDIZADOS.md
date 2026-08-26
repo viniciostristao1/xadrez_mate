@@ -1,5 +1,31 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-08-26 — v0.11.0 (temas trocáveis em runtime)
+
+### Arquitetura de temas
+- `AppPalette` (imutável, `lib/theme/app_colors.dart`) guarda **todas** as
+  cores de um tema. Dois temas: `AppPalette.amber` (padrão) e
+  `AppPalette.crimson` (Carmesim & Ouro). Adicionar tema = mais uma const em
+  `AppPalette.all` (o seletor lê essa lista).
+- `AppColors` deixou de ser `static const` e virou **fachada de getters** que
+  leem a paleta ativa (`AppColors.apply(palette)`). Os widgets seguem usando
+  `AppColors.x` (regra do AGENTS intacta) — mudou só a implementação.
+- `ThemeService` (singleton, espelha o `I18n`): `ValueNotifier` que a raiz
+  escuta; `load()` aplica antes do 1º build; `setPalette()` aplica + notifica +
+  persiste em `shared_preferences` (chave `app_theme`).
+- `main.dart`: raiz agora é `ListenableBuilder` com
+  `Listenable.merge([I18n.notifier, ThemeService.notifier])` → trocar tema
+  reconstrói o `MaterialApp` (o `AppTheme.dark` é getter, recomputa as cores).
+
+### GOTCHA — `const` + cor não-const
+- Tornar `AppColors.x` getter quebra **todo** `const` que embutia uma cor
+  (`invalid_constant`) e os defaults de parâmetro (`this.color = AppColors.x`
+  → `non_constant_default_value`). Foram ~42 sites. Achados por
+  `flutter analyze` (o `const` costuma ser multi-linha: `const TextStyle(` numa
+  linha, `AppColors.x` na de baixo — grep de mesma-linha NÃO pega).
+- Fix: remover o `const` do construtor que embute a cor; para defaults, tornar
+  o parâmetro `Color?` e resolver `color ?? AppColors.x` no `build`.
+
 ## 2026-08-17 — v0.8.0
 
 ### Mate aleatório (surpresa)

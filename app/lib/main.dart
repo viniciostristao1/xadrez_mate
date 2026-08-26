@@ -15,6 +15,7 @@ import 'screens/tatica_home_screen.dart';
 import 'screens/tatica_screen.dart';
 import 'services/i18n.dart';
 import 'services/rating_service.dart';
+import 'services/theme_service.dart';
 import 'theme/app_colors.dart';
 import 'theme/app_theme.dart';
 import 'widgets/piece_icon.dart';
@@ -59,6 +60,7 @@ class _MateflowAppState extends State<MateflowApp> {
       final loads = [
         () => RatingService.instance.load(),
         () => I18n.instance.load(),
+        () => ThemeService.instance.load(),
         () => PuzzleDb.instance.load(),
         () => TaticaDb.instance.load(),
         () => DefesaDb.instance.load(),
@@ -132,7 +134,7 @@ class _MateflowAppState extends State<MateflowApp> {
               Text(
                 S.configuracoes,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
+                style: TextStyle(
                   color: AppColors.text,
                   fontSize: 18,
                   fontWeight: FontWeight.w800,
@@ -140,8 +142,68 @@ class _MateflowAppState extends State<MateflowApp> {
               ),
               const SizedBox(height: 18),
               Text(
+                S.tema,
+                style: TextStyle(
+                  color: AppColors.dim,
+                  fontSize: 12.5,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(height: 6),
+              ValueListenableBuilder<int>(
+                valueListenable: ThemeService.instance.notifier,
+                builder: (context, _, _) {
+                  return Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 14),
+                    decoration: BoxDecoration(
+                      color: AppColors.surfaceAlt,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: AppColors.border),
+                    ),
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton<AppPalette>(
+                        value: ThemeService.instance.palette,
+                        isExpanded: true,
+                        borderRadius: BorderRadius.circular(12),
+                        dropdownColor: AppColors.surfaceAlt,
+                        icon: Icon(
+                          Icons.keyboard_arrow_down,
+                          color: AppColors.dim,
+                        ),
+                        items: [
+                          for (final p in AppPalette.all)
+                            DropdownMenuItem(
+                              value: p,
+                              child: Row(
+                                children: [
+                                  _TemaSwatch(palette: p),
+                                  const SizedBox(width: 12),
+                                  Text(
+                                    p.nome,
+                                    style: TextStyle(
+                                      color: AppColors.text,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                        ],
+                        onChanged: (p) {
+                          if (p != null) {
+                            ThemeService.instance.setPalette(p);
+                          }
+                        },
+                      ),
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(height: 18),
+              Text(
                 S.idioma,
-                style: const TextStyle(
+                style: TextStyle(
                   color: AppColors.dim,
                   fontSize: 12.5,
                   fontWeight: FontWeight.w700,
@@ -198,7 +260,7 @@ class _MateflowAppState extends State<MateflowApp> {
               const SizedBox(height: 18),
               Text(
                 S.layoutPecas,
-                style: const TextStyle(
+                style: TextStyle(
                   color: AppColors.dim,
                   fontSize: 12.5,
                   fontWeight: FontWeight.w700,
@@ -277,9 +339,11 @@ class _MateflowAppState extends State<MateflowApp> {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<int>(
-      valueListenable: I18n.instance.notifier,
-      builder: (context, _, _) {
+    return ListenableBuilder(
+      listenable: Listenable.merge(
+        [I18n.instance.notifier, ThemeService.instance.notifier],
+      ),
+      builder: (context, _) {
         return MaterialApp(
           title: 'Mateflow',
           debugShowCheckedModeBanner: false,
@@ -416,6 +480,34 @@ class _StyleOption extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Amostra do tema no seletor: fundo da paleta + um ponto na cor de destaque.
+class _TemaSwatch extends StatelessWidget {
+  final AppPalette palette;
+  const _TemaSwatch({required this.palette});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 30,
+      height: 22,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: palette.background,
+        borderRadius: BorderRadius.circular(6),
+        border: Border.all(color: palette.border),
+      ),
+      child: Container(
+        width: 12,
+        height: 12,
+        decoration: BoxDecoration(
+          color: palette.accent,
+          shape: BoxShape.circle,
+        ),
       ),
     );
   }

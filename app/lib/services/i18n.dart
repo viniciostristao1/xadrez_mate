@@ -64,6 +64,7 @@ abstract final class S {
         Idioma.en: 'Piece set',
         Idioma.es: 'Estilo de piezas',
       });
+  static String get tema => I18n.t({Idioma.pt: 'Tema', Idioma.en: 'Theme', Idioma.es: 'Tema'});
 
   // Categorias/níveis
   static String get facil => I18n.t({Idioma.pt: 'Fácil', Idioma.en: 'Easy', Idioma.es: 'Fácil'});

@@ -141,7 +141,7 @@ class _BigButton extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: AppColors.text,
                         fontSize: 21,
                         fontWeight: FontWeight.w900,
@@ -150,13 +150,13 @@ class _BigButton extends StatelessWidget {
                     const SizedBox(height: 3),
                     Text(
                       subtitle,
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: AppColors.dim, fontSize: 13.5, height: 1.35),
                     ),
                   ],
                 ),
               ),
-              const Icon(Icons.chevron_right, color: AppColors.faint, size: 30),
+              Icon(Icons.chevron_right, color: AppColors.faint, size: 30),
             ],
           ),
         ),

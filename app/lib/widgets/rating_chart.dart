@@ -22,7 +22,7 @@ class RatingChart extends StatelessWidget {
     if (pontos.length < 2) {
       return SizedBox(
         height: altura,
-        child: const Center(
+        child: Center(
           child: Text(
             'Resolva 2 problemas para ver sua evolução',
             style: TextStyle(color: AppColors.dim, fontSize: 13),

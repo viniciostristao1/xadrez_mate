@@ -1,5 +1,8 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.11.0 (2026-08-26)
+- 🎨 **Temas!** Novo tema **Carmesim & Ouro** (dourado sobre marrom escuro) além do **Âmbar Clássico**. Escolha em **Configurações → Tema** (toque na flechinha ▾ para selecionar). A preferência fica salva.
+
 ## v0.10.3 (2026-08-26)
 - ↩️ Tabuleiro revertido ao original (sem alteração interna) — prévias de navegação pedidas não foram aplicadas, só documentadas.
 

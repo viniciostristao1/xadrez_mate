@@ -55,7 +55,7 @@ class _TaticaHomeScreenState extends State<TaticaHomeScreen> {
                     Text(
                       S.taticaSub,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(color: AppColors.dim, height: 1.4),
+                      style: TextStyle(color: AppColors.dim, height: 1.4),
                     ),
                     const SizedBox(height: 14),
                     for (final tema in const [
@@ -136,7 +136,7 @@ class _TemaCard extends StatelessWidget {
                     children: [
                       Text(
                         label,
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: AppColors.text,
                           fontSize: 17,
                           fontWeight: FontWeight.w800,
@@ -145,7 +145,7 @@ class _TemaCard extends StatelessWidget {
                       const SizedBox(height: 1),
                       Text(
                         subtitle,
-                        style: const TextStyle(
+                        style: TextStyle(
                             color: AppColors.dim, fontSize: 12.5),
                       ),
                     ],
@@ -221,7 +221,7 @@ class _LevelButton extends StatelessWidget {
             const SizedBox(height: 2),
             Text(
               '$count',
-              style: const TextStyle(
+              style: TextStyle(
                 color: AppColors.dim,
                 fontSize: 12,
                 fontWeight: FontWeight.w600,

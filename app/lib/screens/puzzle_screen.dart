@@ -583,7 +583,7 @@ class _HeaderBar extends StatelessWidget {
       children: [
         Text(
           S.problemaNum(puzzle.id),
-          style: const TextStyle(
+          style: TextStyle(
             color: AppColors.text,
             fontWeight: FontWeight.w700,
             fontSize: 18,
@@ -593,14 +593,14 @@ class _HeaderBar extends StatelessWidget {
         if (surpresa)
           Text(
             S.surpresaTitulo,
-            style: const TextStyle(color: AppColors.dim),
+            style: TextStyle(color: AppColors.dim),
           )
         else
           Text(
             solved
                 ? S.resolvido
                 : '$side · ${S.lanceDe(done, puzzle.mate)}',
-            style: const TextStyle(color: AppColors.dim),
+            style: TextStyle(color: AppColors.dim),
           ),
         const SizedBox(height: 10),
         // No modo surpresa o nº de lances é segredo — sem as barras
@@ -684,7 +684,7 @@ class _SanChip extends StatelessWidget {
       ),
       child: Text(
         '${index ~/ 2 + 1}.${index.isOdd ? '' : '..'} $san',
-        style: const TextStyle(
+        style: TextStyle(
           color: AppColors.text,
           fontFamily: 'monospace',
           fontWeight: FontWeight.w600,
@@ -733,7 +733,7 @@ class _SuccessCard extends StatelessWidget {
                   child: Text(
                     S.xequeMate,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: AppColors.text,
                       fontWeight: FontWeight.w800,
                       fontSize: 15,
@@ -772,15 +772,16 @@ class _SuccessCard extends StatelessWidget {
 class _StatChip extends StatelessWidget {
   final IconData icon;
   final String label;
-  final Color color;
+  final Color? color;
   const _StatChip({
     required this.icon,
     required this.label,
-    this.color = AppColors.text,
+    this.color,
   });
 
   @override
   Widget build(BuildContext context) {
+    final c = color ?? AppColors.text;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
@@ -791,12 +792,12 @@ class _StatChip extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, size: 15, color: color),
+          Icon(icon, size: 15, color: c),
           const SizedBox(width: 5),
           Text(
             label,
             style: TextStyle(
-              color: color,
+              color: c,
               fontWeight: FontWeight.w800,
               fontFeatures: const [FontFeature.tabularFigures()],
             ),
@@ -827,7 +828,7 @@ class _RoundIconButton extends StatelessWidget {
       message: tooltip,
       child: Material(
         color: AppColors.surface,
-        shape: const CircleBorder(
+        shape: CircleBorder(
           side: BorderSide(color: AppColors.border),
         ),
         child: InkWell(
@@ -847,7 +848,7 @@ class _RoundIconButton extends StatelessWidget {
                     child: Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 5, vertical: 1),
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: AppColors.accent,
                         shape: BoxShape.circle,
                       ),

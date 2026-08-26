@@ -78,7 +78,7 @@ class _MatesHomeScreenState extends State<MatesHomeScreen> {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                const Icon(
+                                Icon(
                                   Icons.emoji_events_outlined,
                                   size: 17,
                                   color: AppColors.accent,
@@ -86,7 +86,7 @@ class _MatesHomeScreenState extends State<MatesHomeScreen> {
                                 const SizedBox(width: 7),
                                 Text(
                                   '${r.round()}',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     color: AppColors.text,
                                     fontWeight: FontWeight.w900,
                                     fontSize: 16,
@@ -98,7 +98,7 @@ class _MatesHomeScreenState extends State<MatesHomeScreen> {
                                 const SizedBox(width: 7),
                                 Text(
                                   '· ${RatingService.faixa(r)}',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     color: AppColors.dim,
                                     fontSize: 13,
                                   ),
@@ -115,7 +115,7 @@ class _MatesHomeScreenState extends State<MatesHomeScreen> {
                       '${S.escolhaDificuldade}',
                       textAlign: TextAlign.center,
                       style:
-                          const TextStyle(color: AppColors.dim, height: 1.4),
+                          TextStyle(color: AppColors.dim, height: 1.4),
                     ),
                     const SizedBox(height: 14),
                     for (final mate in const [1, 2, 3]) ...[
@@ -180,7 +180,7 @@ class _SurpresaCard extends StatelessWidget {
                     color: AppColors.surfaceAlt,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.shuffle,
                     color: AppColors.accent,
                     size: 24,
@@ -193,7 +193,7 @@ class _SurpresaCard extends StatelessWidget {
                     children: [
                       Text(
                         S.mateAleatorio,
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: AppColors.text,
                           fontSize: 15.5,
                           fontWeight: FontWeight.w800,
@@ -202,7 +202,7 @@ class _SurpresaCard extends StatelessWidget {
                       const SizedBox(height: 2),
                       Text(
                         S.surpresaSub,
-                        style: const TextStyle(
+                        style: TextStyle(
                             color: AppColors.dim, fontSize: 12.5),
                       ),
                     ],
@@ -256,7 +256,7 @@ class _EvolutionCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.show_chart,
                       size: 18,
                       color: AppColors.accent,
@@ -264,7 +264,7 @@ class _EvolutionCard extends StatelessWidget {
                     const SizedBox(width: 8),
                     Text(
                       S.evolucaoRating,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: AppColors.text,
                         fontWeight: FontWeight.w800,
                         fontSize: 15.5,
@@ -274,7 +274,7 @@ class _EvolutionCard extends StatelessWidget {
                     if (historico.isNotEmpty)
                       Text(
                         '${RatingService.instance.resolvidos} ${S.resolvidos}',
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: AppColors.faint,
                           fontSize: 12,
                         ),
@@ -354,7 +354,7 @@ class _PuzzleCard extends StatelessWidget {
                     children: [
                       Text(
                         S.mateEm(mate),
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: AppColors.text,
                           fontSize: 17,
                           fontWeight: FontWeight.w800,
@@ -363,7 +363,7 @@ class _PuzzleCard extends StatelessWidget {
                       const SizedBox(height: 1),
                       Text(
                         subtitle,
-                        style: const TextStyle(
+                        style: TextStyle(
                             color: AppColors.dim, fontSize: 12.5),
                       ),
                     ],
@@ -439,7 +439,7 @@ class _LevelButton extends StatelessWidget {
             const SizedBox(height: 2),
             Text(
               '$count',
-              style: const TextStyle(
+              style: TextStyle(
                 color: AppColors.dim,
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
