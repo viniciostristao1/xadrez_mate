@@ -1,5 +1,8 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.14.0 (2026-08-26)
+- 🎨 Novos temas: **Terracota** (bege #F2E8D6 + acento #B5652E) e **Madeira Escura** (bege queimado #EADFC8 + #6B4A2E) — em **Configurações → Tema** ▾.
+
 ## v0.13.0 (2026-08-26)
 - ⚙️ Ícone da **engrenagem** aumentado para **28px** (antes 20px).
 - ⏱️ Movimento do **adversário com delay de 450ms** — dá tempo de ver o lance.

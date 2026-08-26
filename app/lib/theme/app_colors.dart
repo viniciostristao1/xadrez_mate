@@ -94,8 +94,50 @@ class AppPalette {
     check: Color(0xFFE05A4E),
   );
 
+  static const terracota = AppPalette(
+    id: 'terracota',
+    nome: 'Terracota',
+    background: Color(0xFFF2E8D6),
+    surface: Color(0xFFE0D1B9),
+    surfaceAlt: Color(0xFFCBB897),
+    border: Color(0xFFB8A08A),
+    text: Color(0xFF382E20),
+    dim: Color(0xFF8A7355),
+    faint: Color(0xFF6B5A4A),
+    accent: Color(0xFFB5652E),
+    ok: Color(0xFF4CAF7D),
+    danger: Color(0xFFC0392B),
+    lightSquare: Color(0xFFEAE3C8),
+    darkSquare: Color(0xFF9C7A54),
+    select: Color(0xFFF0CE7A),
+    hint: Color(0x66000000),
+    lastMove: Color(0x33B5652E),
+    check: Color(0xFFC0392B),
+  );
+
+  static const madeiraEscura = AppPalette(
+    id: 'madeiraEscura',
+    nome: 'Madeira Escura',
+    background: Color(0xFFEADFC8),
+    surface: Color(0xFFD8C7AC),
+    surfaceAlt: Color(0xFFCBB897),
+    border: Color(0xFF8A7355),
+    text: Color(0xFF2B1E14),
+    dim: Color(0xFF8A7355),
+    faint: Color(0xFF6B5A4A),
+    accent: Color(0xFF6B4A2E),
+    ok: Color(0xFF4CAF7D),
+    danger: Color(0xFFC0392B),
+    lightSquare: Color(0xFFE8D6B8),
+    darkSquare: Color(0xFF8B5A2B),
+    select: Color(0xFFD4A574),
+    hint: Color(0x66000000),
+    lastMove: Color(0x336B4A2E),
+    check: Color(0xFFC0392B),
+  );
+
   /// Todos os temas disponíveis (a ordem é a ordem do seletor).
-  static const all = <AppPalette>[azulRoyal, minimalOutline];
+  static const all = <AppPalette>[azulRoyal, minimalOutline, terracota, madeiraEscura];
 
   static AppPalette byId(String? id) =>
       all.firstWhere((p) => p.id == id, orElse: () => azulRoyal);
