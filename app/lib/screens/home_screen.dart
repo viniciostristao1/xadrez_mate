@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   final VoidCallback onMates;
   final VoidCallback onTatica;
   final VoidCallback onDefesa;
+  final VoidCallback onAberturas;
   final VoidCallback onConfig;
 
   const HomeScreen({
@@ -16,8 +17,11 @@ class HomeScreen extends StatelessWidget {
     required this.onMates,
     required this.onTatica,
     required this.onDefesa,
+    VoidCallback? onAberturas,
     required this.onConfig,
-  });
+  }) : onAberturas = onAberturas ?? _noop;
+
+  static void _noop() {}
 
   @override
   Widget build(BuildContext context) {
@@ -91,6 +95,13 @@ class HomeScreen extends StatelessWidget {
                 title: S.defesa,
                 subtitle: S.defesaSub,
                 onTap: onDefesa,
+              ),
+              const SizedBox(height: 18),
+              _BigButton(
+                icon: Icons.menu_book_outlined,
+                title: 'Aberturas',
+                subtitle: 'Do zero à transição — Italiana como PoC',
+                onTap: onAberturas,
               ),
             ],
           ),

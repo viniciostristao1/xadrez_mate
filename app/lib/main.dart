@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'data/aberturas_db.dart';
 import 'data/defesa_db.dart';
 import 'data/puzzle_db.dart';
 import 'data/tatica_db.dart';
 import 'engine/chess.dart';
 import 'models/puzzle.dart';
 import 'models/tatica_puzzle.dart';
+import 'screens/aberturas_home_screen.dart';
 import 'screens/defesa_home_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/mates_home_screen.dart';
@@ -64,6 +66,7 @@ class _MateflowAppState extends State<MateflowApp> {
         () => PuzzleDb.instance.load(),
         () => TaticaDb.instance.load(),
         () => DefesaDb.instance.load(),
+        () => AberturasDb.instance.load(),
       ];
       await Future.wait(loads.map((f) async {
         try {
@@ -115,6 +118,10 @@ class _MateflowAppState extends State<MateflowApp> {
         onStartDefesa: _startDefesa,
       ),
     ));
+  }
+
+  void _abrirAberturas() {
+    _navKey.currentState!.push(MaterialPageRoute(builder: (_) => const AberturasHomeScreen()));
   }
 
   void _abrirConfig() {
@@ -354,6 +361,7 @@ class _MateflowAppState extends State<MateflowApp> {
                   onMates: _abrirMates,
                   onTatica: _abrirTatica,
                   onDefesa: _abrirDefesa,
+                  onAberturas: _abrirAberturas,
                   onConfig: _abrirConfig,
                 )
               : const Scaffold(

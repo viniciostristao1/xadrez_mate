@@ -1,0 +1,35 @@
+{
+  "versao": "2.0-congelada",
+  "data": "2026-08-27",
+  "regra_global": "Priorizar compreensão e tomada de decisão sobre memorização de sequências",
+  "arquitetura": "Fundamentos → Famílias → Abertura → Do Zero → Tabiya → Escolha → Por quê → Reação → Armadilhas → Erros → Plano → Jogue → Revisão",
+  "transicao": {
+    "definicao": "A abertura está terminando quando os objetivos iniciais foram cumpridos e a posição começa a exigir um plano de meio-jogo",
+    "indicadores": ["desenvolvimento relevante", "rei seguro", "centro controlado", "dama quando necessário", "torres próximas de conectar", "decisão estratégica própria"],
+    "nota_lances": "Aproximadamente 8-12 lances em iniciantes, sem número fixo",
+    "sistema": "Posições de transição definidas por conteúdo, não detecção automática de fim de teoria"
+  },
+  "mvp_12": [
+    {"id": 1, "nome": "Italiana", "cor": "brancas", "eco": "C50", "prioridade": "primeira-a-implementar", "fen_tabiya": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4"},
+    {"id": 2, "nome": "Ruy Lopez", "cor": "brancas", "eco": "C60-C99"},
+    {"id": 3, "nome": "London System", "cor": "brancas", "eco": "D00"},
+    {"id": 4, "nome": "Gambito da Dama", "cor": "brancas", "eco": "D06"},
+    {"id": 5, "nome": "Siciliana", "cor": "pretas_vs_e4", "eco": "B20-B99"},
+    {"id": 6, "nome": "Francesa", "cor": "pretas_vs_e4", "eco": "C00-C19"},
+    {"id": 7, "nome": "Caro-Kann", "cor": "pretas_vs_e4", "eco": "B10-B19"},
+    {"id": 8, "nome": "Defesa Índia do Rei", "cor": "pretas_vs_d4", "eco": "E60-E99"},
+    {"id": 9, "nome": "Gambito da Dama Recusado", "cor": "pretas_vs_d4", "eco": "D30-D69"},
+    {"id": 10, "nome": "Nimzo-Índia", "cor": "pretas_vs_d4", "eco": "E20-E59"},
+    {"id": 11, "nome": "Inglesa", "cor": "flanco", "eco": "A10-A39"},
+    {"id": 12, "nome": "Réti", "cor": "flanco", "eco": "A04-A09"}
+  ],
+  "template_13_passos": ["o_que_e", "por_que_jogar", "principios", "do_zero", "tabiya", "escolha_lance", "por_que", "reacao", "armadilhas", "erros_comuns", "encontre_o_plano", "jogue_bots", "revisao"],
+  "mecanica_plano": {
+    "passo_a": "Escolha entre 3-4 planos",
+    "passo_b": "Por que esse plano?",
+    "passo_c": "Jogue 3-5 lances executando o plano"
+  },
+  "bots": ["teorico_linha_principal", "adaptativo_sai_da_teoria"],
+  "xp": ["xp_lance", "xp_entendimento_cerebro"],
+  "implementacao": "Fase 1: Italiana completa 13 passos → validar → Fase 2: replicar para 11 restantes"
+}

@@ -1,0 +1,64 @@
+{
+  "aberturas": [
+    {
+      "id": 1,
+      "nome": "Italiana",
+      "eco": "C50",
+      "cor": "brancas",
+      "descricaoCurta": "Desenvolve rapidamente e pressiona o ponto f7.",
+      "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "fenTabiya": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+      "steps": [
+        {"tipo": "oQueE", "titulo": "O que é?", "texto": "A Italiana (1.e4 e5 2.Nf3 Nc6 3.Bc4) desenvolve bispo para c4 mirando f7, a casa mais frágil das pretas no início."},
+        {"tipo": "porQueJogar", "titulo": "Por que jogar?", "texto": "Escolha sólida para iniciantes que ensina desenvolvimento e centro.", "bullets": ["Desenvolvimento rápido com ataque a f7", "Prepara roque curto naturalmente", "Estruturas claras para aprender planos"]},
+        {"tipo": "principios", "titulo": "Princípios", "texto": "Quais princípios da abertura estão sendo aplicados aqui.", "bullets": ["Centro: 1.e4 ocupa e libera bispo/dama", "Desenvolvimento: Nf3 + Bc4 desenvolvem e atacam", "Rei seguro: prepara O-O em 2 lances", "Não mova sem propósito: cada lance desenvolve ou controla centro"]},
+        {"tipo": "doZero", "titulo": "Do Zero", "texto": "Aprenda os primeiros lances com o porquê de cada um.", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "sequencia": [
+          {"uci": "e2e4", "san": "1.e4", "porQue": "Ocupa o centro, libera bispo f1 e dama"},
+          {"uci": "e7e5", "san": "1...e5", "porQue": "Pretas disputam o centro e liberam peças"},
+          {"uci": "g1f3", "san": "2.Nf3", "porQue": "Desenvolve, ataca e5 e prepara O-O"},
+          {"uci": "b8c6", "san": "2...Nc6", "porQue": "Defende e5 e desenvolve"},
+          {"uci": "f1c4", "san": "3.Bc4", "porQue": "Mira f7 e desenvolve com tempo"}
+        ]},
+        {"tipo": "tabiya", "titulo": "Tabiya ⭐", "texto": "Você chegou na posição-chave. É sua vez de brancas. O que jogaria?", "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4", "quizzes": [
+          {"pergunta": "Qual o lance mais natural aqui?", "opcoes": ["3...Bc5 (Giuoco Piano)", "3...Nf6 (Defesa dos Dois Cavalos)", "3...d6", "Todos são jogáveis, mas Nf6 e Bc5 são principais"], "correta": 3, "explicacao": "Bc5 e Nf6 são as linhas principais; d6 é sólida mas passiva. Reconhecer a estrutura importa mais que decorar."}
+        ]},
+        {"tipo": "escolhaLance", "titulo": "Encontre o lance", "texto": "Na Tabiya, encontre o melhor lance para as brancas.", "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4", "sequencia": [
+          {"uci": "c2c3", "san": "4.c3", "porQue": "Prepara d4 com ganho de centro — ideia central da Italiana moderna"},
+          {"uci": "d2d3", "san": "4.d3", "porQue": "Sólido, mantém flexibilidade (Giuoco Pianissimo)"}
+        ]},
+        {"tipo": "porQue", "titulo": "Entenda o porquê 🧠", "texto": "Por que c3 é tão jogado aqui?", "quizzes": [
+          {"pergunta": "Por que 4.c3?", "opcoes": ["Atacar o rei imediatamente", "Desenvolver e preparar d4 para tomar o centro", "Ganhar uma peça", "Evitar uma troca"], "correta": 1, "explicacao": "c3 sustenta d4. Se pretas jogam ...Bc5, d4 ataca o bispo e ganha centro."}
+        ]},
+        {"tipo": "reacao", "titulo": "Reação — e se o adversário sair da teoria?", "texto": "Seu adversário não jogou 3...Bc5 nem 3...Nf6. Jogou 3...d6. O que mudou?", "fen": "r1bqk1nr/ppp2ppp/3p4/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4", "quizzes": [
+          {"pergunta": "Contra 3...d6, qual adaptação?", "opcoes": ["Jogar igual: c3 e d4 ainda é o plano", "Trocar em f7 imediatamente", "Recuar o bispo", "Jogar h3"], "correta": 0, "explicacao": "A estrutura mudou pouco; o plano c3-d4 continua, mas pretas estão mais sólidas. Não precisa pânico."}
+        ]},
+        {"tipo": "armadilhas", "titulo": "Armadilhas", "texto": "Poucas e importantes para não cair nem tentar forçar.", "bullets": ["Mate do Pastor: 1.e4 e5 2.Bc4 Nc6 3.Qh5 Nf6?? 4.Qxf7# — só funciona se pretas errarem", "Gambito Evans: 4.b4!? sacrifica peão por tempo — não obrigatório"]},
+        {"tipo": "errosComuns", "titulo": "Erros comuns", "texto": "O que evitar na Italiana.", "bullets": ["4.Qh5? expõe a dama cedo e perde tempo", "Mover o mesmo bispo duas vezes sem necessidade", "Fazer muitos peões sem desenvolver (ex: h3/a3 cedo demais)", "Esquecer o roque e deixar rei no centro"]},
+        {"tipo": "plano", "titulo": "Encontre o Plano ⭐", "texto": "A abertura está terminando. Qual é seu plano?"},
+        {"tipo": "jogue", "titulo": "Jogue", "texto": "Pratique contra dois bots.", "bullets": ["🟢 Bot Teórico: segue linha principal", "🔵 Bot Adaptativo: sai da teoria"]},
+        {"tipo": "revisao", "titulo": "Revisão", "texto": "Repetição espaçada focada nos erros de entendimento e plano."}
+      ],
+      "plano": {
+        "fenTransicao": "r1bqk1nr/ppp2ppp/2n5/2b1p3/2B1P3/2P2N2/PP1P1PPP/RNBQK2R b KQkq - 0 4",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": ["Jogar d4 para tomar o centro", "Atacar na ala do rei com Ng5", "Trocar tudo no centro", "Jogar a4 na ala da dama"],
+        "planoCorreto": 0,
+        "porQuePlano": "Com c3 sustentando, d4 desafia e5 e abre linhas para bispos. É o plano estratégico da Italiana.",
+        "sequenciaPlano": ["e5e4", "d3d4", "c6e7", "e4e5"]
+      },
+      "botTeorico": ["e2e4", "g1f3", "f1c4", "c2c3"],
+      "botAdaptativo": ["e7e5", "b8c6", "g8f6", "d7d6"]
+    },
+    {"id": 2, "nome": "Ruy Lopez", "eco": "C60", "cor": "brancas", "descricaoCurta": "Pressão longa sobre Nc6 e e5.", "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "fenTabiya": "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3", "steps": [], "botTeorico": [], "botAdaptativo": []},
+    {"id": 3, "nome": "London System", "eco": "D00", "cor": "brancas", "descricaoCurta": "Sistema sólido com Bf4.", "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "fenTabiya": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 3", "steps": [], "botTeorico": [], "botAdaptativo": []},
+    {"id": 4, "nome": "Gambito da Dama", "eco": "D06", "cor": "brancas", "descricaoCurta": "2.c4 pressiona d5.", "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "fenTabiya": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2", "steps": [], "botTeorico": [], "botAdaptativo": []},
+    {"id": 5, "nome": "Siciliana", "eco": "B20", "cor": "pretasVsE4", "descricaoCurta": "1...c5 contra 1.e4.", "fenInicial": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1", "fenTabiya": "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 2", "steps": [], "botTeorico": [], "botAdaptativo": []},
+    {"id": 6, "nome": "Francesa", "eco": "C00", "cor": "pretasVsE4", "descricaoCurta": "1...e6 estrutura sólida.", "fenInicial": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1", "fenTabiya": "rnbqkbnr/ppp2ppp/4p3/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 2", "steps": [], "botTeorico": [], "botAdaptativo": []},
+    {"id": 7, "nome": "Caro-Kann", "eco": "B10", "cor": "pretasVsE4", "descricaoCurta": "1...c6 sólida.", "fenInicial": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1", "fenTabiya": "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2", "steps": [], "botTeorico": [], "botAdaptativo": []},
+    {"id": 8, "nome": "Defesa Índia do Rei", "eco": "E60", "cor": "pretasVsD4", "descricaoCurta": "1...Nf6 2...g6 fianchetto.", "fenInicial": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1", "fenTabiya": "rnbqkb1r/pppppp1p/5np1/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 2", "steps": [], "botTeorico": [], "botAdaptativo": []},
+    {"id": 9, "nome": "Gambito da Dama Recusado", "eco": "D30", "cor": "pretasVsD4", "descricaoCurta": "1...d5 2...e6.", "fenInicial": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1", "fenTabiya": "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 2", "steps": [], "botTeorico": [], "botAdaptativo": []},
+    {"id": 10, "nome": "Nimzo-Índia", "eco": "E20", "cor": "pretasVsD4", "descricaoCurta": "1...Nf6 2...e6 3...Bb4.", "fenInicial": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1", "fenTabiya": "rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 3", "steps": [], "botTeorico": [], "botAdaptativo": []},
+    {"id": 11, "nome": "Inglesa", "eco": "A10", "cor": "flanco", "descricaoCurta": "1.c4.", "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "fenTabiya": "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1", "steps": [], "botTeorico": [], "botAdaptativo": []},
+    {"id": 12, "nome": "Réti", "eco": "A04", "cor": "flanco", "descricaoCurta": "1.Nf3.", "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "fenTabiya": "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1", "steps": [], "botTeorico": [], "botAdaptativo": []}
+  ]
+}

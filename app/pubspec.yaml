@@ -25,6 +25,7 @@ flutter:
     - assets/puzzles.json
     - assets/tatica.json
     - assets/defesa.json
+    - assets/aberturas.json
     - assets/icon/app_icon.png
     - assets/pieces/merida/
     - assets/pieces/cburnett/
