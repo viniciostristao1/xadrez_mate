@@ -206,47 +206,112 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
   }
 
   Widget _quiz(AberturaQuiz q, int qIdx) {
+    const letters = ['a', 'b', 'c', 'd'];
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Text(q.pergunta, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w700)),
-      const SizedBox(height: 8),
-      for (int i = 0; i < q.opcoes.length; i++)
-        Padding(
-          padding: const EdgeInsets.only(bottom: 6),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: AppColors.surfaceAlt),
-            onPressed: () {
-              final ok = i == q.correta;
-              engine.addEntendimento(ok);
-              if (!ok && !wrongQuizzes.contains(qIdx)) wrongQuizzes.add(qIdx);
-              setState(() => feedback = '${ok ? "✅" : "❌"} ${q.explicacao} ${ok ? "🧠 +10 XP entendimento" : ""}');
-            },
-            child: Text(q.opcoes[i], style: TextStyle(color: AppColors.text)),
-          ),
+      const SizedBox(height: 10),
+      Container(
+        decoration: BoxDecoration(
+          color: AppColors.surfaceAlt,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: AppColors.border),
         ),
+        child: Column(
+          children: [
+            for (int i = 0; i < q.opcoes.length; i++) ...[
+              InkWell(
+                borderRadius: BorderRadius.vertical(
+                  top: i == 0 ? const Radius.circular(12) : Radius.zero,
+                  bottom: i == q.opcoes.length - 1 ? const Radius.circular(12) : Radius.zero,
+                ),
+                onTap: () {
+                  final ok = i == q.correta;
+                  engine.addEntendimento(ok);
+                  if (!ok && !wrongQuizzes.contains(qIdx)) wrongQuizzes.add(qIdx);
+                  setState(() => feedback = '${ok ? "✅" : "❌"} ${q.explicacao} ${ok ? "🧠 +10 XP entendimento" : ""}');
+                },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 13),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: 26,
+                        height: 26,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: AppColors.surface,
+                          shape: BoxShape.circle,
+                          border: Border.all(color: AppColors.border),
+                        ),
+                        child: Text(letters[i], style: TextStyle(color: AppColors.dim, fontWeight: FontWeight.w800, fontSize: 13)),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(child: Text(q.opcoes[i], style: TextStyle(color: AppColors.text, height: 1.35))),
+                    ],
+                  ),
+                ),
+              ),
+              if (i != q.opcoes.length - 1) Divider(height: 1, thickness: 1, color: AppColors.border.withValues(alpha: 0.5)),
+            ],
+          ],
+        ),
+      ),
     ]);
   }
 
   Widget _plano() {
     final p = widget.abertura.plano!;
     if (planoEtapa == 0) {
+      const letters = ['a', 'b', 'c', 'd'];
       return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(p.pergunta, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w800)),
-        const SizedBox(height: 8),
-        for (int i = 0; i < p.planos.length; i++)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 6),
-            child: ElevatedButton(
-              onPressed: () => setState(() {
-                planoEscolha = i;
-                final ok = engine.validatePlano(i);
-                feedback = '${ok ? "✅ Plano correto!" : "❌ Não é o melhor."} ${p.porQuePlano}';
-                if (ok) planoEtapa = 1;
-                if (!ok && !wrongQuizzes.contains(999)) wrongQuizzes.add(999);
-                engine.addEntendimento(ok);
-              }),
-              child: Text(p.planos[i]),
-            ),
+        const SizedBox(height: 10),
+        Container(
+          decoration: BoxDecoration(
+            color: AppColors.surfaceAlt,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: AppColors.border),
           ),
+          child: Column(
+            children: [
+              for (int i = 0; i < p.planos.length; i++) ...[
+                InkWell(
+                  borderRadius: BorderRadius.vertical(
+                    top: i == 0 ? const Radius.circular(12) : Radius.zero,
+                    bottom: i == p.planos.length - 1 ? const Radius.circular(12) : Radius.zero,
+                  ),
+                  onTap: () => setState(() {
+                    planoEscolha = i;
+                    final ok = engine.validatePlano(i);
+                    feedback = '${ok ? "✅ Plano correto!" : "❌ Não é o melhor."} ${p.porQuePlano}';
+                    if (ok) planoEtapa = 1;
+                    if (!ok && !wrongQuizzes.contains(999)) wrongQuizzes.add(999);
+                    engine.addEntendimento(ok);
+                  }),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 13),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 26,
+                          height: 26,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(color: AppColors.surface, shape: BoxShape.circle, border: Border.all(color: AppColors.border)),
+                          child: Text(letters[i], style: TextStyle(color: AppColors.dim, fontWeight: FontWeight.w800, fontSize: 13)),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(child: Text(p.planos[i], style: TextStyle(color: AppColors.text, height: 1.35))),
+                      ],
+                    ),
+                  ),
+                ),
+                if (i != p.planos.length - 1) Divider(height: 1, thickness: 1, color: AppColors.border.withValues(alpha: 0.5)),
+              ],
+            ],
+          ),
+        ),
       ]);
     }
     if (planoEtapa == 1) {
