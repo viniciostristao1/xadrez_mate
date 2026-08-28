@@ -62,19 +62,34 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
   }
 
   void _next() => setState(() {
-        if (!engine.isLast) {
+        if (engine.isLast) return;
+        final t = step.tipo;
+        if (t == AberturaStepTipo.oQueE) {
+          engine.stepIndex += 3;
+          if (engine.stepIndex >= engine.abertura.steps.length) engine.stepIndex = engine.abertura.steps.length - 1;
+        } else if (t == AberturaStepTipo.armadilhas) {
+          engine.stepIndex += 2;
+          if (engine.stepIndex >= engine.abertura.steps.length) engine.stepIndex = engine.abertura.steps.length - 1;
+        } else {
           engine.next();
-          _syncBoardToStep();
-          feedback = null;
-          quizIndex = 0;
         }
+        _syncBoardToStep();
+        feedback = null;
+        quizIndex = 0;
       });
   void _prev() => setState(() {
-        if (engine.stepIndex > 0) {
+        if (engine.stepIndex <= 0) return;
+        final t = step.tipo;
+        if (t == AberturaStepTipo.doZero) {
+          engine.stepIndex = 0;
+        } else if (t == AberturaStepTipo.plano) {
+          engine.stepIndex -= 2;
+          if (engine.stepIndex < 0) engine.stepIndex = 0;
+        } else {
           engine.prev();
-          _syncBoardToStep();
-          feedback = null;
         }
+        _syncBoardToStep();
+        feedback = null;
       });
 
   void _onTap(int sq, Board board) {
@@ -293,6 +308,36 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
             const SizedBox(height: 6),
             Text(s.texto, style: TextStyle(color: AppColors.dim)),
             if (s.bullets.isNotEmpty) ...[const SizedBox(height: 8), for (final b in s.bullets) Padding(padding: const EdgeInsets.only(bottom: 4), child: Text('• $b', style: TextStyle(color: AppColors.dim)))],
+            if (s.tipo == AberturaStepTipo.oQueE) ...[
+              const SizedBox(height: 14),
+              Builder(builder: (_) {
+                final s1 = widget.abertura.steps[1];
+                final s2 = widget.abertura.steps[2];
+                return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text(s1.titulo, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w800)),
+                  const SizedBox(height: 4),
+                  Text(s1.texto, style: TextStyle(color: AppColors.dim)),
+                  for (final b in s1.bullets) Padding(padding: const EdgeInsets.only(bottom: 4, top: 4), child: Text('• $b', style: TextStyle(color: AppColors.dim))),
+                  const SizedBox(height: 12),
+                  Text(s2.titulo, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w800)),
+                  const SizedBox(height: 4),
+                  Text(s2.texto, style: TextStyle(color: AppColors.dim)),
+                  for (final b in s2.bullets) Padding(padding: const EdgeInsets.only(bottom: 4, top: 4), child: Text('• $b', style: TextStyle(color: AppColors.dim))),
+                ]);
+              }),
+            ],
+            if (s.tipo == AberturaStepTipo.armadilhas) ...[
+              const SizedBox(height: 14),
+              Builder(builder: (_) {
+                final se = widget.abertura.steps[9];
+                return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text(se.titulo, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w800)),
+                  const SizedBox(height: 4),
+                  Text(se.texto, style: TextStyle(color: AppColors.dim)),
+                  for (final b in se.bullets) Padding(padding: const EdgeInsets.only(bottom: 4, top: 4), child: Text('• $b', style: TextStyle(color: AppColors.dim))),
+                ]);
+              }),
+            ],
             if (s.sequencia.isNotEmpty && s.tipo == AberturaStepTipo.doZero) ...[
               const SizedBox(height: 8),
               if (_opponentThinking)
