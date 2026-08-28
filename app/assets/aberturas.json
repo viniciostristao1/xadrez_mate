@@ -1131,12 +1131,222 @@
       "nome": "Francesa",
       "eco": "C00",
       "cor": "pretasVsE4",
-      "descricaoCurta": "1...e6 estrutura sólida.",
+      "descricaoCurta": "1...e6 sólida: cadeia de peões e contra-ataque c5/f6.",
       "fenInicial": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
-      "fenTabiya": "rnbqkbnr/ppp2ppp/4p3/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 2",
-      "steps": [],
-      "botTeorico": [],
-      "botAdaptativo": []
+      "fenTabiya": "rnbqkbnr/ppp2ppp/4p3/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 3",
+      "steps": [
+        {
+          "tipo": "oQueE",
+          "titulo": "O que é?",
+          "texto": "A Francesa (1.e4 e6 2.d4 d5) fecha o centro com e6/d5 e joga por ...c5/f6 contra a base da cadeia branca."
+        },
+        {
+          "tipo": "porQueJogar",
+          "titulo": "Por que jogar?",
+          "texto": "Para quem prefere estrutura sólida e contra-ataque, não jogo aberto.",
+          "bullets": [
+            "Cadeia de peões e6/d5 sólida, difícil de quebrar",
+            "Ideia clara: atacar base com ...c5 e ...f6",
+            "Bispo c8 ruim vira desafio pedagógico (como ativá-lo)"
+          ]
+        },
+        {
+          "tipo": "principios",
+          "titulo": "Princípios",
+          "texto": "Francesa e os fundamentos.",
+          "bullets": [
+            "Centro: e6/d5 fecham centro, controle por peões",
+            "Desenvolvimento: ...Nf6/Cc6/Bd7 liberam",
+            "Rei seguro: ...Be7 e O-O após quebrar",
+            "Não mova sem propósito: ...e6 já prepara ...d5 com luta central"
+          ]
+        },
+        {
+          "tipo": "doZero",
+          "titulo": "Do Zero",
+          "texto": "Primeiros lances (pretas) com porquê.",
+          "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+          "sequencia": [
+            {
+              "uci": "e7e6",
+              "san": "1...e6",
+              "porQue": "Prepara ...d5 fechando centro"
+            },
+            {
+              "uci": "d2d4",
+              "san": "2.d4",
+              "porQue": "Brancas ocupam centro"
+            },
+            {
+              "uci": "d7d5",
+              "san": "2...d5",
+              "porQue": "Disputa e4 e cria cadeia"
+            },
+            {
+              "uci": "b1c3",
+              "san": "3.Nc3",
+              "porQue": "Pressiona d5 e desenvolve"
+            },
+            {
+              "uci": "g8f6",
+              "san": "3...Nf6",
+              "porQue": "Desenvolve atacando e4"
+            }
+          ]
+        },
+        {
+          "tipo": "tabiya",
+          "titulo": "Tabiya ⭐",
+          "texto": "Posição-chave após 3.Nc3. É sua vez de pretas. O que jogaria?",
+          "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 3",
+          "quizzes": [
+            {
+              "pergunta": "Pretas na Tabiya após 3.Nc3. Qual ideia principal?",
+              "opcoes": [
+                "3...Nf6 pressionando e4",
+                "3...Bb4 cravando o cavalo (Winawer)",
+                "3...dxe4 trocando no centro",
+                "Todas jogáveis; Nf6 é mais instrutiva para estrutura clássica"
+              ],
+              "correta": 3,
+              "explicacao": "Nf6 mantém cadeia e pressão; Bb4 e dxe4 são jogáveis. Reconhecer base da cadeia > decorar."
+            }
+          ]
+        },
+        {
+          "tipo": "escolhaLance",
+          "titulo": "Encontre o lance",
+          "texto": "Na Tabiya, encontre um lance natural para pretas.",
+          "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 3",
+          "sequencia": [
+            {
+              "uci": "g8f6",
+              "san": "3...Nf6",
+              "porQue": "Ataca e4 mantendo cadeia e6/d5"
+            },
+            {
+              "uci": "f8b4",
+              "san": "3...Bb4",
+              "porQue": "Crava Nc3, ideia Winawer, ataca base"
+            }
+          ]
+        },
+        {
+          "tipo": "porQue",
+          "titulo": "Entenda o porquê 🧠",
+          "texto": "Por que 3...Nf6?",
+          "quizzes": [
+            {
+              "pergunta": "Por que 3...Nf6 na Francesa?",
+              "opcoes": [
+                "Ganhar material",
+                "Manter cadeia e pressionar e4 sem desfazer estrutura",
+                "Dar xeque",
+                "Evitar roque"
+              ],
+              "correta": 1,
+              "explicacao": "Nf6 ataca e4, mantém peões e6/d5, prepara ...Be7."
+            }
+          ]
+        },
+        {
+          "tipo": "reacao",
+          "titulo": "Reação — e se o adversário sair da teoria?",
+          "texto": "Brancas não jogaram 3.Nc3. Jogaram 3.exd5 (Troca). O que mudou?",
+          "fen": "rnbqkbnr/ppp2ppp/4p3/3P4/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+          "quizzes": [
+            {
+              "pergunta": "Contra 3.exd5 (Troca Francesa), qual adaptação?",
+              "opcoes": [
+                "Recapturar ...exd5 mantendo estrutura simétrica",
+                "Jogar ...Nf6 igual",
+                "Trocar damas",
+                "Jogar ...c5"
+              ],
+              "correta": 0,
+              "explicacao": "exd5 abre centro; ...exd5 mantém simetria e libera bispo c8 — estrutura muda de fechada para aberta."
+            }
+          ]
+        },
+        {
+          "tipo": "armadilhas",
+          "titulo": "Armadilhas",
+          "texto": "Poucas e importantes.",
+          "bullets": [
+            "Não caia em 4.Bg5 dxe4 5.Nxe4?? Qb4+",
+            "Evite ...Bxb4? sem ver Nxe5"
+          ]
+        },
+        {
+          "tipo": "errosComuns",
+          "titulo": "Erros comuns",
+          "texto": "O que evitar.",
+          "bullets": [
+            "Jogar ...e5 cedo demais e quebrar cadeia sem preparo",
+            "Trocar ...dxe4 sem motivo e liberar e4",
+            "Mover bispo c8 antes de ...e6/d5",
+            "Esquecer ...c5 e deixar brancas com centro livre"
+          ]
+        },
+        {
+          "tipo": "plano",
+          "titulo": "Encontre o Plano ⭐",
+          "texto": "A abertura está terminando. Qual é seu plano?"
+        },
+        {
+          "tipo": "jogue",
+          "titulo": "Jogue",
+          "texto": "Pratique contra dois bots.",
+          "bullets": [
+            "🟢 Bot Teórico: segue linha principal",
+            "🔵 Bot Adaptativo: sai da teoria"
+          ]
+        },
+        {
+          "tipo": "revisao",
+          "titulo": "Revisão",
+          "texto": "Repetição focada nos erros."
+        }
+      ],
+      "plano": {
+        "fenTransicao": "rnbqk2r/ppp1bppp/4pn2/3p2B1/3PP3/2N5/PPP2PPP/R2QKBNR w KQkq - 4 5",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": [
+          "...c5 atacando base d4 (ruptura principal)",
+          "Jogar ...e5 imediato sem preparar",
+          "Trocar ...dxe4 sem pressão",
+          "Jogar ...a6 sem ideia"
+        ],
+        "planoCorreto": 0,
+        "porQuePlano": "Na cadeia e4/d4 vs e6/d5, base branca é d4; ...c5 ataca base e abre linhas para bispo c8 — ruptura Francesa clássica.",
+        "sequenciaPlano": [
+          "e4e5",
+          "f6d7",
+          "f2f4",
+          "c7c5"
+        ]
+      },
+      "botTeorico": [
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "f8e7",
+        "e4e5",
+        "f6d7"
+      ],
+      "botAdaptativo": [
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "e4d5",
+        "e6d5",
+        "c1f4",
+        "c7c5",
+        "b1c3"
+      ]
     },
     {
       "id": 7,
