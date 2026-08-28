@@ -2019,12 +2019,222 @@
       "nome": "Nimzo-Índia",
       "eco": "E20",
       "cor": "pretasVsD4",
-      "descricaoCurta": "1...Nf6 2...e6 3...Bb4.",
+      "descricaoCurta": "3...Bb4 pressiona Nc3 e questiona estrutura.",
       "fenInicial": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
-      "fenTabiya": "rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 3",
-      "steps": [],
-      "botTeorico": [],
-      "botAdaptativo": []
+      "fenTabiya": "rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4",
+      "steps": [
+        {
+          "tipo": "oQueE",
+          "titulo": "O que é?",
+          "texto": "A Nimzo-Índia (1.d4 Nf6 2.c4 e6 3.Nc3 Bb4) crava o cavalo que defende e4/d5: pressão e decisão estrutural, não ganho de peça."
+        },
+        {
+          "tipo": "porQueJogar",
+          "titulo": "Por que jogar?",
+          "texto": "Para quem prefere pressão e jogo estratégico com bispo.",
+          "bullets": [
+            "Bispo b4 pressiona Nc3 e centro sem ocupar",
+            "Cria dilema: trocar Bxc3 e dobrar peões ou manter tensão",
+            "Luta pelo centro com desenvolvimento rápido"
+          ]
+        },
+        {
+          "tipo": "principios",
+          "titulo": "Princípios",
+          "texto": "Nimzo e os fundamentos.",
+          "bullets": [
+            "Centro: Bb4 ataca defensor de e4/d5",
+            "Desenvolvimento: Nf6/e6/Bb4 rápidos",
+            "Rei seguro: ...O-O após Bb4",
+            "Não mova sem propósito: Bb4 já questiona estrutura"
+          ]
+        },
+        {
+          "tipo": "doZero",
+          "titulo": "Do Zero",
+          "texto": "Primeiros lances (pretas) com porquê.",
+          "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+          "sequencia": [
+            {
+              "uci": "g8f6",
+              "san": "1...Nf6",
+              "porQue": "Ataca e4, controla centro"
+            },
+            {
+              "uci": "c2c4",
+              "san": "2.c4",
+              "porQue": "Brancas ampliam centro"
+            },
+            {
+              "uci": "e7e6",
+              "san": "2...e6",
+              "porQue": "Prepara Bb4 e libera bispo"
+            },
+            {
+              "uci": "b1c3",
+              "san": "3.Nc3",
+              "porQue": "Defende e4/d5"
+            },
+            {
+              "uci": "f8b4",
+              "san": "3...Bb4",
+              "porQue": "Crava Nc3, pressiona centro"
+            }
+          ]
+        },
+        {
+          "tipo": "tabiya",
+          "titulo": "Tabiya ⭐",
+          "texto": "Posição-chave após 3...Bb4. É sua vez de brancas. O que jogaria?",
+          "fen": "rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4",
+          "quizzes": [
+            {
+              "pergunta": "Brancas na Tabiya após 3...Bb4. Qual ideia principal?",
+              "opcoes": [
+                "4.Qc2 defendendo e preparando a3",
+                "4.a3 questionando bispo",
+                "4.e3 sólido",
+                "Todas jogáveis; Qc2 é mais instrutiva para manter centro"
+              ],
+              "correta": 3,
+              "explicacao": "Qc2 defende e evita peões dobrados; a3/e3 também jogáveis. Decisão estrutural > peça."
+            }
+          ]
+        },
+        {
+          "tipo": "escolhaLance",
+          "titulo": "Encontre o lance",
+          "texto": "Na Tabiya, encontre um lance natural para brancas.",
+          "fen": "rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4",
+          "sequencia": [
+            {
+              "uci": "d1c2",
+              "san": "4.Qc2",
+              "porQue": "Defende Nc3 e mantém peões"
+            },
+            {
+              "uci": "a2a3",
+              "san": "4.a3",
+              "porQue": "Expulsa bispo questionando troca"
+            }
+          ]
+        },
+        {
+          "tipo": "porQue",
+          "titulo": "Entenda o porquê 🧠",
+          "texto": "Por que 4.Qc2?",
+          "quizzes": [
+            {
+              "pergunta": "Por que 4.Qc2 na Nimzo?",
+              "opcoes": [
+                "Ganhar peça",
+                "Evitar peões dobrados após ...Bxc3, mantendo estrutura",
+                "Dar xeque",
+                "Preparar roque longo"
+              ],
+              "correta": 1,
+              "explicacao": "Qc2 recaptura em c3 sem dobrar peões; troca Bxc3 dobraria peões c."
+            }
+          ]
+        },
+        {
+          "tipo": "reacao",
+          "titulo": "Reação — e se o adversário sair da teoria?",
+          "texto": "Brancas não jogaram 3.Nc3. Jogaram 3.Nf3 (evita Nimzo). O que mudou?",
+          "fen": "rnbqkb1r/pppp1ppp/4pn2/8/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3",
+          "quizzes": [
+            {
+              "pergunta": "Contra 3.Nf3, qual adaptação?",
+              "opcoes": [
+                "Jogar ...Bb4 não é mais cravada, melhor ...d5",
+                "Jogar ...Bb4 igual",
+                "Trocar em c4",
+                "Jogar ...g6"
+              ],
+              "correta": 0,
+              "explicacao": "Sem Nc3, Bb4 perde pressão; ...d5 disputa centro de modo clássico."
+            }
+          ]
+        },
+        {
+          "tipo": "armadilhas",
+          "titulo": "Armadilhas",
+          "texto": "Poucas e importantes.",
+          "bullets": [
+            "Não jogue ...Bxc3+ sem ver Qxc3 e peões dobrados",
+            "Evite ...Nxe4?? após Qc2 com Da4+"
+          ]
+        },
+        {
+          "tipo": "errosComuns",
+          "titulo": "Erros comuns",
+          "texto": "O que evitar.",
+          "bullets": [
+            "Trocar Bxc3 automaticamente achando que ganha peça",
+            "Jogar ...d5 sem preparar e perder centro",
+            "Mover damas cedo sem desenvolvimento",
+            "Esquecer ...O-O após Bb4"
+          ]
+        },
+        {
+          "tipo": "plano",
+          "titulo": "Encontre o Plano ⭐",
+          "texto": "A abertura está terminando. Qual é seu plano?"
+        },
+        {
+          "tipo": "jogue",
+          "titulo": "Jogue",
+          "texto": "Pratique contra dois bots.",
+          "bullets": [
+            "🟢 Bot Teórico: segue linha principal",
+            "🔵 Bot Adaptativo: sai da teoria"
+          ]
+        },
+        {
+          "tipo": "revisao",
+          "titulo": "Revisão",
+          "texto": "Repetição focada nos erros."
+        }
+      ],
+      "plano": {
+        "fenTransicao": "rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N5/PPQ1PPPP/R1B1KBNR b KQkq - 3 4",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": [
+          "...Bxc3+ dobrando peões c (troca estratégica)",
+          "Manter tensão com ...O-O sem trocar",
+          "Jogar ...d5 imediato sem preparar",
+          "Jogar ...a6 sem ideia"
+        ],
+        "planoCorreto": 0,
+        "porQuePlano": "Bxc3+ não ganha peça: dobra peões c e abre coluna b para pretas; decisão troca estrutura por par de bispos — dilema Nimzo.",
+        "sequenciaPlano": [
+          "b4c3",
+          "c2c3",
+          "d7d5",
+          "c4d5"
+        ]
+      },
+      "botTeorico": [
+        "g8f6",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "f8b4",
+        "d1c2",
+        "d7d5",
+        "a2a3",
+        "b4c3"
+      ],
+      "botAdaptativo": [
+        "g8f6",
+        "c2c4",
+        "e7e6",
+        "g1f3",
+        "f8b4",
+        "b1c3",
+        "e8g8",
+        "d2d4"
+      ]
     },
     {
       "id": 11,
