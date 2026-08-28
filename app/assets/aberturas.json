@@ -1797,12 +1797,222 @@
       "nome": "Gambito da Dama Recusado",
       "eco": "D30",
       "cor": "pretasVsD4",
-      "descricaoCurta": "1...d5 2...e6.",
+      "descricaoCurta": "2...e6 sólido: mantém tensão sem ganhar peão c4.",
       "fenInicial": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
-      "fenTabiya": "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 2",
-      "steps": [],
-      "botTeorico": [],
-      "botAdaptativo": []
+      "fenTabiya": "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3",
+      "steps": [
+        {
+          "tipo": "oQueE",
+          "titulo": "O que é?",
+          "texto": "O GDR (1.d4 d5 2.c4 e6) recusa o gambito: pretas sustentam d5 com e6, mantêm tensão em vez de capturar c4."
+        },
+        {
+          "tipo": "porQueJogar",
+          "titulo": "Por que jogar?",
+          "texto": "Sólido e clássico, ensina tensão central.",
+          "bullets": [
+            "e6 sustenta d5 sem capturar — aceita tensão",
+            "Desenvolvimento clássico: Nf6, Be7, O-O",
+            "Ruptura ...c5 bem preparada, não imediata"
+          ]
+        },
+        {
+          "tipo": "principios",
+          "titulo": "Princípios",
+          "texto": "GDR e os fundamentos.",
+          "bullets": [
+            "Centro: e6/d5 mantêm disputa c4/d5",
+            "Desenvolvimento: Nf6/Be7/O-O rápidos",
+            "Rei seguro: O-O após Be7",
+            "Não mova sem propósito: e6 já tem ideia de sustentar"
+          ]
+        },
+        {
+          "tipo": "doZero",
+          "titulo": "Do Zero",
+          "texto": "Primeiros lances (pretas) com porquê.",
+          "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+          "sequencia": [
+            {
+              "uci": "d7d5",
+              "san": "1...d5",
+              "porQue": "Ocupa centro simetricamente"
+            },
+            {
+              "uci": "c2c4",
+              "san": "2.c4",
+              "porQue": "Gambito: ataca d5"
+            },
+            {
+              "uci": "e7e6",
+              "san": "2...e6",
+              "porQue": "Recusa sólida, sustenta d5"
+            },
+            {
+              "uci": "b1c3",
+              "san": "3.Nc3",
+              "porQue": "Pressiona d5"
+            },
+            {
+              "uci": "g8f6",
+              "san": "3...Nf6",
+              "porQue": "Desenvolve atacando e4 e d5"
+            }
+          ]
+        },
+        {
+          "tipo": "tabiya",
+          "titulo": "Tabiya ⭐",
+          "texto": "Posição-chave após 3.Nc3. É sua vez de pretas. O que jogaria?",
+          "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3",
+          "quizzes": [
+            {
+              "pergunta": "Pretas na Tabiya após 3.Nc3. Qual ideia principal?",
+              "opcoes": [
+                "3...Nf6 desenvolvimento clássico",
+                "3...Be7 sólido",
+                "3...Bb4 pressão (vira Nimzo)",
+                "Todas jogáveis; Nf6 é mais instrutiva para manter tensão"
+              ],
+              "correta": 3,
+              "explicacao": "Nf6 mantém e6/d5; Be7/Bb4 também jogáveis. Aceitar tensão > capturar cedo."
+            }
+          ]
+        },
+        {
+          "tipo": "escolhaLance",
+          "titulo": "Encontre o lance",
+          "texto": "Na Tabiya, encontre um lance natural para pretas.",
+          "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3",
+          "sequencia": [
+            {
+              "uci": "g8f6",
+              "san": "3...Nf6",
+              "porQue": "Clássico, mantém e6/d5"
+            },
+            {
+              "uci": "f8e7",
+              "san": "3...Be7",
+              "porQue": "Sólido, prepara O-O"
+            }
+          ]
+        },
+        {
+          "tipo": "porQue",
+          "titulo": "Entenda o porquê 🧠",
+          "texto": "Por que 3...Nf6?",
+          "quizzes": [
+            {
+              "pergunta": "Por que 3...Nf6 no GDR?",
+              "opcoes": [
+                "Ganhar peão c4",
+                "Desenvolver mantendo tensão e6/d5",
+                "Dar xeque",
+                "Evitar Bg5"
+              ],
+              "correta": 1,
+              "explicacao": "Nf6 desenvolve sem desfazer estrutura e6/d5."
+            }
+          ]
+        },
+        {
+          "tipo": "reacao",
+          "titulo": "Reação — e se o adversário sair da teoria?",
+          "texto": "Brancas não jogaram 3.Nc3. Jogaram 3.cxd5 (Troca). O que mudou?",
+          "fen": "rnbqkbnr/ppp2ppp/8/3p4/3P4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3",
+          "quizzes": [
+            {
+              "pergunta": "Contra 3.cxd5, qual adaptação?",
+              "opcoes": [
+                "Recapturar ...exd5 simétrica",
+                "Jogar ...Nf6 igual",
+                "Jogar ...c5",
+                "Jogar ...Bb4"
+              ],
+              "correta": 0,
+              "explicacao": "cxd5 troca tensão; ...exd5 abre linhas e libera c8 — estrutura de peão isolado vs simétrica."
+            }
+          ]
+        },
+        {
+          "tipo": "armadilhas",
+          "titulo": "Armadilhas",
+          "texto": "Poucas e importantes.",
+          "bullets": [
+            "Não caia em Nxd5?? exd5/Dxd5 perde tempo",
+            "Evite ...dxc4 sem ...e6 preparado"
+          ]
+        },
+        {
+          "tipo": "errosComuns",
+          "titulo": "Erros comuns",
+          "texto": "O que evitar.",
+          "bullets": [
+            "Capturar ...dxc4 cedo sem ver e3",
+            "Jogar ...c5 sem preparar e deixar d5 fraco",
+            "Mover damas cedo sem desenvolvimento",
+            "Esquecer ...Be7/O-O e deixar rei no centro"
+          ]
+        },
+        {
+          "tipo": "plano",
+          "titulo": "Encontre o Plano ⭐",
+          "texto": "A abertura está terminando. Qual é seu plano?"
+        },
+        {
+          "tipo": "jogue",
+          "titulo": "Jogue",
+          "texto": "Pratique contra dois bots.",
+          "bullets": [
+            "🟢 Bot Teórico: segue linha principal",
+            "🔵 Bot Adaptativo: sai da teoria"
+          ]
+        },
+        {
+          "tipo": "revisao",
+          "titulo": "Revisão",
+          "texto": "Repetição focada nos erros."
+        }
+      ],
+      "plano": {
+        "fenTransicao": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N1P3/PP3PPP/R2QKBNR b KQkq - 0 5",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": [
+          "...O-O e ...c5 ruptura (plano principal)",
+          "Jogar ...dxc4 sem preparar",
+          "Trocar ...Nxd4",
+          "Jogar ...a6 sem ideia"
+        ],
+        "planoCorreto": 0,
+        "porQuePlano": "Com Bg5/Be7/e3, ...O-O garante rei e ...c5 ataca base c4/d4 — ruptura GDR clássica.",
+        "sequenciaPlano": [
+          "e8g8",
+          "f1d3",
+          "c7c5",
+          "c4d5"
+        ]
+      },
+      "botTeorico": [
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "f8e7",
+        "e2e3",
+        "e8g8"
+      ],
+      "botAdaptativo": [
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "c4d5",
+        "e6d5",
+        "g1f3",
+        "c7c5",
+        "b1c3"
+      ]
     },
     {
       "id": 10,
