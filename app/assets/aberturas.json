@@ -459,12 +459,225 @@
       "nome": "London System",
       "eco": "D00",
       "cor": "brancas",
-      "descricaoCurta": "Sistema sólido com Bf4.",
+      "descricaoCurta": "Sistema sólido com Bf4 e estrutura estável.",
       "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-      "fenTabiya": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 3",
-      "steps": [],
-      "botTeorico": [],
-      "botAdaptativo": []
+      "fenTabiya": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4",
+      "steps": [
+        {
+          "tipo": "oQueE",
+          "titulo": "O que é?",
+          "texto": "A London (1.d4 + Bf4) coloca o bispo fora da cadeia de peões cedo e joga com estrutura sólida e pouco risco."
+        },
+        {
+          "tipo": "porQueJogar",
+          "titulo": "Por que jogar?",
+          "texto": "Ideal para iniciantes que querem posição sólida sem decorar muito.",
+          "bullets": [
+            "Bispo desenvolvido antes de e3, sem ficar preso",
+            "Estrutura estável com d4, e3, Nf3",
+            "Planos claros: Bd3, c3, O-O, depois e4 ou ataque na ala"
+          ]
+        },
+        {
+          "tipo": "principios",
+          "titulo": "Princípios",
+          "texto": "Como a London aplica os fundamentos.",
+          "bullets": [
+            "Centro: d4 ocupa centro",
+            "Desenvolvimento: Bf4 + Nf3 desenvolvem cedo",
+            "Rei seguro: e3 libera bispo e prepara O-O",
+            "Não mova sem propósito: Bf4 tem ideia; depois não mexa sem plano"
+          ]
+        },
+        {
+          "tipo": "doZero",
+          "titulo": "Do Zero",
+          "texto": "Aprenda os primeiros lances com o porquê.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "sequencia": [
+            {
+              "uci": "d2d4",
+              "san": "1.d4",
+              "porQue": "Ocupa centro e libera bispo c1"
+            },
+            {
+              "uci": "d7d5",
+              "san": "1...d5",
+              "porQue": "Pretas disputam centro simetricamente"
+            },
+            {
+              "uci": "g1f3",
+              "san": "2.Nf3",
+              "porQue": "Desenvolve, controla e4 e prepara e3"
+            },
+            {
+              "uci": "g8f6",
+              "san": "2...Nf6",
+              "porQue": "Desenvolve e pressiona d4"
+            },
+            {
+              "uci": "c1f4",
+              "san": "3.Bf4",
+              "porQue": "Bispo fora da cadeia antes de e3 — ideia da London"
+            }
+          ]
+        },
+        {
+          "tipo": "tabiya",
+          "titulo": "Tabiya ⭐",
+          "texto": "Você chegou na posição-chave após 3...e6. É sua vez de brancas. O que jogaria?",
+          "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4",
+          "quizzes": [
+            {
+              "pergunta": "Brancas na Tabiya London após 3...e6. Qual ideia principal?",
+              "opcoes": [
+                "4.e3 preparando Bd3 e estrutura sólida",
+                "4.c4 buscando centro aberto",
+                "4.Nc3 desenvolvimento natural",
+                "Todas são jogáveis; e3 é a mais instrutiva para manter a estrutura London"
+              ],
+              "correta": 3,
+              "explicacao": "e3 sustenta d4, libera Bd3 e mantém Bf4 ativo; c4 muda para Gambito. Reconhecer estrutura > decorar."
+            }
+          ]
+        },
+        {
+          "tipo": "escolhaLance",
+          "titulo": "Encontre o lance",
+          "texto": "Na Tabiya (e6), encontre um lance natural para as brancas.",
+          "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4",
+          "sequencia": [
+            {
+              "uci": "e2e3",
+              "san": "4.e3",
+              "porQue": "Sustenta centro, libera Bd3 e prepara c3/O-O"
+            },
+            {
+              "uci": "b1d2",
+              "san": "4.Nbd2",
+              "porQue": "Desenvolve mantendo flexibilidade, prepara c3"
+            }
+          ]
+        },
+        {
+          "tipo": "porQue",
+          "titulo": "Entenda o porquê 🧠",
+          "texto": "Por que 4.e3 é tão jogado?",
+          "quizzes": [
+            {
+              "pergunta": "Por que 4.e3 na London?",
+              "opcoes": [
+                "Atacar o rei imediatamente",
+                "Manter Bf4 ativo e liberar Bd3 com estrutura sólida",
+                "Ganhar peça",
+                "Evitar roque"
+              ],
+              "correta": 1,
+              "explicacao": "e3 não prende Bf4 (já fora) e abre caminho para Bd3, c3 e O-O — plano London."
+            }
+          ]
+        },
+        {
+          "tipo": "reacao",
+          "titulo": "Reação — e se o adversário sair da teoria?",
+          "texto": "Seu adversário não jogou 3...e6. Jogou 3...c5 agressivo. O que mudou?",
+          "fen": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4",
+          "quizzes": [
+            {
+              "pergunta": "Contra 3...c5, qual adaptação?",
+              "opcoes": [
+                "Jogar e3 igual: mantém estrutura, mas atenção à pressão em d4",
+                "Trocar em c5 imediatamente sempre",
+                "Recuar Bf4",
+                "Jogar h3"
+              ],
+              "correta": 0,
+              "explicacao": "c5 ataca d4; e3 ainda é sólido, mas avalie c3 para sustentar. Não entre em pânico, mantenha desenvolvimento."
+            }
+          ]
+        },
+        {
+          "tipo": "armadilhas",
+          "titulo": "Armadilhas",
+          "texto": "Poucas e importantes.",
+          "bullets": [
+            "Evite Bxb8? após ...c5 bxc5 — perde tempo",
+            "Não caia em ...Qb6 atacando b2 antes de c3/Na3"
+          ]
+        },
+        {
+          "tipo": "errosComuns",
+          "titulo": "Erros comuns",
+          "texto": "O que evitar na London.",
+          "bullets": [
+            "Jogar Bf4 muito cedo sem Nf3 permite ...Nh5",
+            "Fazer h3/a3 sem desenvolver",
+            "Esquecer c3 e deixar d4 fraco após ...c5",
+            "Trocar Bf4 sem motivo"
+          ]
+        },
+        {
+          "tipo": "plano",
+          "titulo": "Encontre o Plano ⭐",
+          "texto": "A abertura está terminando. Qual é seu plano?"
+        },
+        {
+          "tipo": "jogue",
+          "titulo": "Jogue",
+          "texto": "Pratique contra dois bots.",
+          "bullets": [
+            "🟢 Bot Teórico: segue linha principal",
+            "🔵 Bot Adaptativo: sai da teoria"
+          ]
+        },
+        {
+          "tipo": "revisao",
+          "titulo": "Revisão",
+          "texto": "Repetição espaçada focada nos erros de entendimento e plano."
+        }
+      ],
+      "plano": {
+        "fenTransicao": "rnbqk2r/ppp1bppp/4pn2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 1 5",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": [
+          "Bd3 + c3 + O-O com estrutura sólida",
+          "Jogar e4 imediatamente sem preparar",
+          "Atacar na ala do rei com g4 cedo",
+          "Trocar tudo no centro"
+        ],
+        "planoCorreto": 0,
+        "porQuePlano": "Com Bf4/e6/Be7, Bd3 desenvolve, c3 sustenta d4 e O-O garante rei seguro — plano London clássico antes de abrir centro.",
+        "sequenciaPlano": [
+          "f1d3",
+          "c7c5",
+          "c2c3",
+          "b8c6"
+        ]
+      },
+      "botTeorico": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "e7e6",
+        "e2e3",
+        "f8e7",
+        "f1d3",
+        "e8g8"
+      ],
+      "botAdaptativo": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c7c5",
+        "e2e3",
+        "d8b6",
+        "b1c3",
+        "c8f5"
+      ]
     },
     {
       "id": 4,
