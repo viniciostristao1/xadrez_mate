@@ -3,6 +3,7 @@ import '../data/aberturas_db.dart';
 import '../models/abertura.dart';
 import '../theme/app_colors.dart';
 import 'abertura_lesson_screen.dart';
+import 'aberturas_fundamentos_screen.dart';
 
 class AberturasHomeScreen extends StatelessWidget {
   const AberturasHomeScreen({super.key});
@@ -14,10 +15,7 @@ class AberturasHomeScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
         children: [
-          _Secao(titulo: 'Fundamentos', itens: const [
-            'Centro • Desenvolvimento • Rei seguro • Não mova sem propósito',
-            '5 Erros ❌ — ver Italiana como modelo',
-          ]),
+          _SecaoFundamentos(),
           const SizedBox(height: 12),
           _Grupo(titulo: 'Brancas', cor: AberturaCor.brancas, db: db),
           _Grupo(titulo: 'Pretas vs 1.e4', cor: AberturaCor.pretasVsE4, db: db),
@@ -29,13 +27,11 @@ class AberturasHomeScreen extends StatelessWidget {
   }
 }
 
-class _Secao extends StatelessWidget {
-  final String titulo;
-  final List<String> itens;
-  const _Secao({required this.titulo, required this.itens});
+class _SecaoFundamentos extends StatelessWidget {
+  const _SecaoFundamentos();
   @override
   Widget build(BuildContext context) {
-    return Card(child: Padding(padding: const EdgeInsets.all(14), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text(titulo, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w800)), const SizedBox(height: 6), for (final t in itens) Text('• $t', style: TextStyle(color: AppColors.dim)) ])));
+    return Card(child: InkWell(borderRadius: BorderRadius.circular(12), onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AberturasFundamentosScreen())), child: Padding(padding: const EdgeInsets.all(14), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Row(children: [Text('Fundamentos', style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w800)), const Spacer(), Icon(Icons.chevron_right, color: AppColors.faint)]), const SizedBox(height: 6), Text('Centro • Desenvolvimento • Rei seguro • Não mova sem propósito', style: TextStyle(color: AppColors.dim)), Text('5 Erros ❌ + Quando acaba (Transição) — toque para abrir', style: TextStyle(color: AppColors.dim))]))));
   }
 }
 

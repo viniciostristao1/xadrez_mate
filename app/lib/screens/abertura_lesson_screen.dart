@@ -15,6 +15,7 @@ class AberturaLessonScreen extends StatefulWidget {
 
 class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
   late AberturaEngine engine;
+  late Board planoBoard;
   int? selected;
   Set<int> targets = {};
   String? feedback;
@@ -23,81 +24,214 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
   int? planoEscolha;
   int planoEtapa = 0;
   int planoMoves = 0;
+  int doZeroIdx = 0;
+  final List<int> wrongQuizzes = [];
 
   @override
-  void initState() { super.initState(); engine = AberturaEngine(widget.abertura); }
+  void initState() {
+    super.initState();
+    engine = AberturaEngine(widget.abertura);
+    planoBoard = Board.fen(widget.abertura.plano?.fenTransicao ?? widget.abertura.fenTabiya);
+    _syncBoardToStep();
+  }
 
   AberturaStep get step => engine.step;
 
-  void _next() => setState(() { if (!engine.isLast) { engine.next(); selected=null; targets={}; feedback=null; quizIndex=0; planoEscolha=null; planoEtapa=0; planoMoves=0; }});
-  void _prev() => setState(() { if (engine.stepIndex>0) { engine.prev(); selected=null; targets={}; feedback=null; }});
+  void _syncBoardToStep() {
+    final s = step;
+    if (s.fen != null) {
+      engine.resetToFen(s.fen!);
+      doZeroIdx = 0;
+    } else if (s.tipo == AberturaStepTipo.plano) {
+      planoBoard = Board.fen(widget.abertura.plano!.fenTransicao);
+      planoEtapa = 0;
+      planoMoves = 0;
+      planoEscolha = null;
+    } else if (s.tipo == AberturaStepTipo.doZero) {
+      engine.resetToFen(s.fen ?? widget.abertura.fenInicial);
+      doZeroIdx = 0;
+    }
+    selected = null;
+    targets = {};
+  }
 
-  void _onTap(int sq) {
-    final legal = engine.legalMoves();
-    final piece = engine.board.pieceAt(sq);
-    final side = engine.board.turn;
+  void _next() => setState(() {
+        if (!engine.isLast) {
+          engine.next();
+          _syncBoardToStep();
+          feedback = null;
+          quizIndex = 0;
+        }
+      });
+  void _prev() => setState(() {
+        if (engine.stepIndex > 0) {
+          engine.prev();
+          _syncBoardToStep();
+          feedback = null;
+        }
+      });
+
+  void _onTap(int sq, Board board) {
+    final legal = board.legalMoves();
+    final piece = board.pieceAt(sq);
+    final side = board.turn;
     if (piece != null && piece.color == side) {
-      setState(() { selected=sq; targets=legal.where((m)=>m.from==sq).map((m)=>m.to).toSet(); });
+      setState(() {
+        selected = sq;
+        targets = legal.where((m) => m.from == sq).map((m) => m.to).toSet();
+      });
       return;
     }
     if (selected != null && targets.contains(sq)) {
-      final move = legal.firstWhere((m)=>m.from==selected && m.to==sq);
-      _tryMove(move);
+      final move = legal.firstWhere((m) => m.from == selected && m.to == sq);
+      if (step.tipo == AberturaStepTipo.plano && planoEtapa == 2) {
+        _playPlano(move);
+      } else {
+        _tryMove(move, board);
+      }
     }
   }
 
-  void _tryMove(Move m) {
-    final expected = step.sequencia.map((e)=>e.uci).toList();
+  void _tryMove(Move m, Board board) {
+    final expected = step.sequencia.map((e) => e.uci).toList();
     if (expected.isEmpty) {
-      setState(() { engine.board.makeMove(m); feedback='Lance jogado: ${engine.board.sanFor(m)}'; feedbackOk=true; });
+      setState(() {
+        board.makeMove(m);
+        feedback = 'Lance jogado: ${m.uci}';
+        feedbackOk = true;
+      });
+      return;
+    }
+    if (step.tipo == AberturaStepTipo.doZero) {
+      final exp = expected[doZeroIdx];
+      if (m.uci != exp) {
+        setState(() {
+          feedback = 'Tente ${exp} — ${step.sequencia[doZeroIdx].porQue}';
+          feedbackOk = false;
+          selected = null;
+          targets = {};
+        });
+        return;
+      }
+      board.makeMove(m);
+      final porQue = step.sequencia[doZeroIdx].porQue;
+      doZeroIdx++;
+      setState(() {
+        feedback = '✅ ${m.uci} — $porQue';
+        feedbackOk = true;
+        selected = null;
+        targets = {};
+      });
+      if (doZeroIdx < expected.length) {
+        final oppUci = expected[doZeroIdx];
+        final oppMove = board.moveFromUci(oppUci);
+        if (oppMove != null) {
+          Future.delayed(const Duration(milliseconds: 350), () {
+            if (!mounted) return;
+            setState(() {
+              board.makeMove(oppMove);
+              feedback = '${feedback!}  •  ...${oppUci} ${step.sequencia[doZeroIdx].porQue}';
+              doZeroIdx++;
+            });
+          });
+        }
+      } else {
+        setState(() => feedback = '${feedback!} — Sequência completa ✅');
+      }
+      engine.xpLance += 10;
       return;
     }
     final ok = engine.tryPlay(m.uci, expected);
-    setState(() { feedback = ok ? 'Correto! ${m.uci} — ${step.sequencia.firstWhere((e)=>e.uci==m.uci).porQue}' : 'Tente outro lance. Dica: ${step.sequencia.first.porQue}'; feedbackOk = ok; selected=null; targets={}; });
-    if (ok && step.tipo==AberturaStepTipo.doZero && engine.board.moveCount < expected.length) {}
+    setState(() {
+      if (ok) {
+        final exp = step.sequencia.firstWhere((e) => e.uci == m.uci);
+        feedback = 'Correto! ${m.uci} — ${exp.porQue}';
+      } else {
+        feedback = 'Tente outro lance. Dica: ${step.sequencia.first.porQue}';
+      }
+      feedbackOk = ok;
+      selected = null;
+      targets = {};
+    });
   }
 
-  Widget _quiz(AberturaQuiz q) {
+  void _playPlano(Move m) {
+    planoBoard.makeMove(m);
+    setState(() {
+      planoMoves++;
+      selected = null;
+      targets = {};
+      if (planoMoves >= 3) feedback = 'Plano executado! ✅ Sequência: ${widget.abertura.plano!.sequenciaPlano.join(" ")}';
+    });
+  }
+
+  Widget _quiz(AberturaQuiz q, int qIdx) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Text(q.pergunta, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w700)),
       const SizedBox(height: 8),
-      for (int i=0;i<q.opcoes.length;i++) Padding(padding: const EdgeInsets.only(bottom: 6), child: ElevatedButton(
-        style: ElevatedButton.styleFrom(backgroundColor: AppColors.surfaceAlt),
-        onPressed: () { final ok=i==q.correta; engine.addEntendimento(ok); setState(()=>feedback='${ok?"✅":"❌"} ${q.explicacao} ${ok?"🧠 +10 XP entendimento":""}'); },
-        child: Text(q.opcoes[i], style: TextStyle(color: AppColors.text)),
-      )),
+      for (int i = 0; i < q.opcoes.length; i++)
+        Padding(
+          padding: const EdgeInsets.only(bottom: 6),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: AppColors.surfaceAlt),
+            onPressed: () {
+              final ok = i == q.correta;
+              engine.addEntendimento(ok);
+              if (!ok && !wrongQuizzes.contains(qIdx)) wrongQuizzes.add(qIdx);
+              setState(() => feedback = '${ok ? "✅" : "❌"} ${q.explicacao} ${ok ? "🧠 +10 XP entendimento" : ""}');
+            },
+            child: Text(q.opcoes[i], style: TextStyle(color: AppColors.text)),
+          ),
+        ),
     ]);
   }
 
   Widget _plano() {
     final p = widget.abertura.plano!;
-    if (planoEtapa==0) {
+    if (planoEtapa == 0) {
       return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(p.pergunta, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w800)),
         const SizedBox(height: 8),
-        for (int i=0;i<p.planos.length;i++) Padding(padding: const EdgeInsets.only(bottom: 6), child: ElevatedButton(
-          onPressed: () => setState(() { planoEscolha=i; final ok=engine.validatePlano(i); feedback='${ok?"✅ Plano correto!":"❌ Não é o melhor."} ${p.porQuePlano}'; if(ok) planoEtapa=1; }),
-          child: Text(p.planos[i]),
-        )),
+        for (int i = 0; i < p.planos.length; i++)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 6),
+            child: ElevatedButton(
+              onPressed: () => setState(() {
+                planoEscolha = i;
+                final ok = engine.validatePlano(i);
+                feedback = '${ok ? "✅ Plano correto!" : "❌ Não é o melhor."} ${p.porQuePlano}';
+                if (ok) planoEtapa = 1;
+                if (!ok && !wrongQuizzes.contains(999)) wrongQuizzes.add(999);
+                engine.addEntendimento(ok);
+              }),
+              child: Text(p.planos[i]),
+            ),
+          ),
       ]);
     }
-    if (planoEtapa==1) {
-      return Column(children: [Text(p.porQuePlano, style: TextStyle(color: AppColors.dim)), const SizedBox(height: 8), ElevatedButton(onPressed: ()=>setState(()=>planoEtapa=2), child: const Text('Jogar 3-5 lances do plano'))]);
+    if (planoEtapa == 1) {
+      return Column(children: [
+        Text(p.porQuePlano, style: TextStyle(color: AppColors.dim)),
+        const SizedBox(height: 8),
+        ElevatedButton(onPressed: () => setState(() => planoEtapa = 2), child: const Text('Jogar 3-5 lances do plano'))
+      ]);
     }
     return Column(children: [
-      Text('Execute o plano no tabuleiro (${planoMoves+1}/3)', style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w700)),
+      Text('Execute o plano no tabuleiro (${planoMoves + 1}/3)', style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w700)),
       const SizedBox(height: 8),
-      ChessBoard(board: engine.board, bottomColor: ChessColor.white, selected: selected, legalTargets: targets, lastFrom: null, lastTo: null, pieceStyle: PieceStyle.merida, onSquareTap: (sq) {
-        final legal = engine.legalMoves();
-        final piece = engine.board.pieceAt(sq);
-        if (piece!=null && piece.color==engine.board.turn) { setState((){selected=sq; targets=legal.where((m)=>m.from==sq).map((m)=>m.to).toSet();}); return; }
-        if (selected!=null && targets.contains(sq)) {
-          final m = legal.firstWhere((m)=>m.from==selected && m.to==sq);
-          engine.board.makeMove(m);
-          setState((){planoMoves++; selected=null; targets={}; });
-          if (planoMoves>=3) setState(()=>feedback='Plano executado! ✅');
-        }
-      }),
+      AspectRatio(
+        aspectRatio: 1,
+        child: ChessBoard(
+          board: planoBoard,
+          bottomColor: ChessColor.white,
+          selected: selected,
+          legalTargets: targets,
+          lastFrom: null,
+          lastTo: null,
+          pieceStyle: PieceStyle.merida,
+          onSquareTap: (sq) => _onTap(sq, planoBoard),
+        ),
+      ),
       const SizedBox(height: 8),
       Text('Sequência sugerida: ${p.sequenciaPlano.join(" ")}', style: TextStyle(color: AppColors.faint, fontSize: 12)),
     ]);
@@ -106,31 +240,105 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
   @override
   Widget build(BuildContext context) {
     final s = step;
-    final showBoard = s.fen!=null || s.tipo==AberturaStepTipo.doZero || s.tipo==AberturaStepTipo.tabiya || s.tipo==AberturaStepTipo.escolhaLance || s.tipo==AberturaStepTipo.reacao || s.tipo==AberturaStepTipo.plano;
+    final isPlanoPlay = s.tipo == AberturaStepTipo.plano && planoEtapa == 2;
     Board? displayBoard;
-    if (s.fen!=null) displayBoard = Board.fen(s.fen!);
-    else if (s.tipo==AberturaStepTipo.plano) displayBoard = Board.fen(widget.abertura.plano!.fenTransicao);
-    else if (s.tipo==AberturaStepTipo.doZero) displayBoard = engine.board;
+    Board activeBoard = engine.board;
+    if (s.fen != null) {
+      displayBoard = Board.fen(s.fen!);
+      activeBoard = displayBoard;
+    } else if (s.tipo == AberturaStepTipo.plano) {
+      if (!isPlanoPlay) displayBoard = Board.fen(widget.abertura.plano!.fenTransicao);
+    } else if (s.tipo == AberturaStepTipo.doZero) {
+      displayBoard = engine.board;
+      activeBoard = engine.board;
+    }
+    final showBoard = s.fen != null || s.tipo == AberturaStepTipo.doZero || s.tipo == AberturaStepTipo.tabiya || s.tipo == AberturaStepTipo.escolhaLance || s.tipo == AberturaStepTipo.reacao || s.tipo == AberturaStepTipo.plano || s.tipo == AberturaStepTipo.jogue;
 
     return Scaffold(
-      appBar: AppBar(title: Text('${widget.abertura.nome} — ${s.titulo}'), actions: [Center(child: Padding(padding: const EdgeInsets.only(right: 12), child: Text('${engine.stepIndex+1}/${widget.abertura.steps.length}', style: TextStyle(color: AppColors.dim))))]),
-      body: SafeArea(child: SingleChildScrollView(padding: const EdgeInsets.fromLTRB(16, 12, 16, 24), child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-        Text(s.titulo, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w900, fontSize: 18)),
-        const SizedBox(height: 6),
-        Text(s.texto, style: TextStyle(color: AppColors.dim)),
-        if (s.bullets.isNotEmpty) ...[const SizedBox(height: 8), for (final b in s.bullets) Padding(padding: const EdgeInsets.only(bottom: 4), child: Text('• $b', style: TextStyle(color: AppColors.dim)))],
-        if (s.sequencia.isNotEmpty && s.tipo==AberturaStepTipo.doZero) ...[const SizedBox(height: 8), for (final mv in s.sequencia) Text('${mv.san}: ${mv.porQue}', style: TextStyle(color: AppColors.text, fontSize: 13))],
-        if (s.quizzes.isNotEmpty) ...[const SizedBox(height: 12), _quiz(s.quizzes[quizIndex])],
-        if (s.tipo==AberturaStepTipo.plano) ...[const SizedBox(height: 12), _plano()],
-        if (s.tipo==AberturaStepTipo.jogue) ...[const SizedBox(height: 12), Row(children: [Expanded(child: ElevatedButton(onPressed: (){ final uci=engine.botTeoricoNext(); final m=engine.board.moveFromUci(uci); if(m!=null) setState(()=>engine.board.makeMove(m)); }, child: const Text('🟢 Bot Teórico'))), const SizedBox(width: 8), Expanded(child: ElevatedButton(onPressed: (){ final uci=engine.botAdaptativoNext(); final m=engine.board.moveFromUci(uci); if(m!=null) setState(()=>engine.board.makeMove(m)); }, child: const Text('🔵 Bot Adaptativo'))) ])],
-        if (showBoard && displayBoard!=null) ...[const SizedBox(height: 12), AspectRatio(aspectRatio: 1, child: ChessBoard(board: s.fen!=null? displayBoard : engine.board, bottomColor: ChessColor.white, selected: selected, legalTargets: targets, lastFrom: null, lastTo: null, pieceStyle: PieceStyle.merida, onSquareTap: _onTap))],
-        if (feedback!=null) ...[const SizedBox(height: 12), Container(padding: const EdgeInsets.all(12), decoration: BoxDecoration(color: feedbackOk? AppColors.ok.withValues(alpha: 0.15): AppColors.danger.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(12), border: Border.all(color: feedbackOk? AppColors.ok: AppColors.danger)), child: Text(feedback!, style: TextStyle(color: feedbackOk? AppColors.ok: AppColors.danger, fontWeight: FontWeight.w700)))],
-        const SizedBox(height: 16),
-        Row(children: [Expanded(child: OutlinedButton(onPressed: engine.stepIndex>0? _prev:null, child: const Text('Voltar'))), const SizedBox(width: 12), Expanded(child: ElevatedButton(onPressed: !engine.isLast? _next:null, child: Text(engine.isLast? 'Concluído ✓':'Próximo')))]),
-        const SizedBox(height: 8),
-        Text('XP lance: ${engine.xpLance}  •  🧠 entendimento: ${engine.xpEntendimento}', textAlign: TextAlign.center, style: TextStyle(color: AppColors.faint, fontSize: 12)),
-        if (s.tipo==AberturaStepTipo.revisao) ...[const SizedBox(height: 8), Text('Faltantes na spec: ${engine.checkSpecCoverage().join(", ").isEmpty? "nenhum — 13/13 ✅": engine.checkSpecCoverage().join(", ")}', style: TextStyle(color: AppColors.dim, fontSize: 12))],
-      ]))),
+      appBar: AppBar(
+        title: Text('${widget.abertura.nome} — ${s.titulo}'),
+        actions: [Center(child: Padding(padding: const EdgeInsets.only(right: 12), child: Text('${engine.stepIndex + 1}/${widget.abertura.steps.length}', style: TextStyle(color: AppColors.dim))))],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Text(s.titulo, style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w900, fontSize: 18)),
+            const SizedBox(height: 6),
+            Text(s.texto, style: TextStyle(color: AppColors.dim)),
+            if (s.bullets.isNotEmpty) ...[const SizedBox(height: 8), for (final b in s.bullets) Padding(padding: const EdgeInsets.only(bottom: 4), child: Text('• $b', style: TextStyle(color: AppColors.dim)))],
+            if (s.sequencia.isNotEmpty && s.tipo == AberturaStepTipo.doZero) ...[
+              const SizedBox(height: 8),
+              for (int i = 0; i < s.sequencia.length; i++)
+                Text('${s.sequencia[i].san}: ${s.sequencia[i].porQue}', style: TextStyle(color: i < doZeroIdx ? AppColors.ok : AppColors.text, fontSize: 13, fontWeight: i == doZeroIdx ? FontWeight.w700 : FontWeight.w400))
+            ],
+            if (s.quizzes.isNotEmpty) ...[const SizedBox(height: 12), _quiz(s.quizzes[quizIndex], engine.stepIndex)],
+            if (s.tipo == AberturaStepTipo.plano) ...[const SizedBox(height: 12), _plano()],
+            if (s.tipo == AberturaStepTipo.jogue) ...[
+              const SizedBox(height: 12),
+              Text('Board atual: ${activeBoard.fen}', style: TextStyle(color: AppColors.faint, fontSize: 10)),
+              const SizedBox(height: 6),
+              Row(children: [
+                Expanded(child: ElevatedButton(onPressed: () { final uci = engine.botTeoricoNext(); final m = activeBoard.moveFromUci(uci); if (m != null) setState(() => activeBoard.makeMove(m)); }, child: const Text('🟢 Bot Teórico'))),
+                const SizedBox(width: 8),
+                Expanded(child: ElevatedButton(onPressed: () { final uci = engine.botAdaptativoNext(); final m = activeBoard.moveFromUci(uci); if (m != null) setState(() => activeBoard.makeMove(m)); }, child: const Text('🔵 Bot Adaptativo'))),
+              ])
+            ],
+            if (showBoard && !isPlanoPlay) ...[
+              const SizedBox(height: 12),
+              AspectRatio(
+                aspectRatio: 1,
+                child: ChessBoard(
+                  board: displayBoard ?? activeBoard,
+                  bottomColor: ChessColor.white,
+                  selected: selected,
+                  legalTargets: targets,
+                  lastFrom: null,
+                  lastTo: null,
+                  pieceStyle: PieceStyle.merida,
+                  onSquareTap: (sq) => _onTap(sq, displayBoard ?? activeBoard),
+                ),
+              ),
+            ],
+            if (feedback != null) ...[
+              const SizedBox(height: 12),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: feedbackOk ? AppColors.ok.withValues(alpha: 0.15) : AppColors.danger.withValues(alpha: 0.15),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: feedbackOk ? AppColors.ok : AppColors.danger),
+                ),
+                child: Text(feedback!, style: TextStyle(color: feedbackOk ? AppColors.ok : AppColors.danger, fontWeight: FontWeight.w700)),
+              )
+            ],
+            const SizedBox(height: 16),
+            Row(children: [
+              Expanded(child: OutlinedButton(onPressed: engine.stepIndex > 0 ? _prev : null, child: const Text('Voltar'))),
+              const SizedBox(width: 12),
+              Expanded(child: ElevatedButton(onPressed: !engine.isLast ? _next : null, child: Text(engine.isLast ? 'Concluído ✓' : 'Próximo'))),
+            ]),
+            const SizedBox(height: 8),
+            Text('XP lance: ${engine.xpLance}  •  🧠 entendimento: ${engine.xpEntendimento}', textAlign: TextAlign.center, style: TextStyle(color: AppColors.faint, fontSize: 12)),
+            if (s.tipo == AberturaStepTipo.revisao) ...[
+              const SizedBox(height: 12),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(color: AppColors.surfaceAlt, borderRadius: BorderRadius.circular(12), border: Border.all(color: AppColors.border)),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text('Revisão — repetição espaçada', style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w800)),
+                  const SizedBox(height: 6),
+                  Text(wrongQuizzes.isEmpty ? 'Nenhum erro registrado ✅ — pronto para próxima abertura.' : 'Erros para revisar: ${wrongQuizzes.length} ponto(s). Toque em Voltar e refaça Tabiya/Plano.', style: TextStyle(color: AppColors.dim)),
+                  const SizedBox(height: 6),
+                  Text('Cobertura Spec: ${engine.checkSpecCoverage().isEmpty ? "13/13 ✅" : engine.checkSpecCoverage().join(", ")}', style: TextStyle(color: AppColors.dim, fontSize: 12)),
+                  const SizedBox(height: 8),
+                  Text('Regra global: compreensão > memorização. Você foi levado a entender porquês e planos, não só sequências.', style: TextStyle(color: AppColors.faint, fontSize: 11)),
+                ]),
+              )
+            ],
+          ]),
+        ),
+      ),
     );
   }
 }

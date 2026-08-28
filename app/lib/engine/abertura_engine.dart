@@ -10,6 +10,10 @@ class AberturaEngine {
 
   AberturaEngine(this.abertura) : board = Board.fen(abertura.fenInicial);
 
+  void resetToFen(String fen) {
+    board.parseFen(fen);
+  }
+
   AberturaStep get step => abertura.steps[stepIndex];
   bool get isLast => stepIndex >= abertura.steps.length - 1;
   void next() { if (!isLast) stepIndex++; }
