@@ -22,6 +22,8 @@ class ChessBoard extends StatelessWidget {
   final int? hintFrom;
   final int? hintTo;
 
+  final bool showCoordinates;
+
   const ChessBoard({
     super.key,
     required this.board,
@@ -34,6 +36,7 @@ class ChessBoard extends StatelessWidget {
     required this.onSquareTap,
     this.hintFrom,
     this.hintTo,
+    this.showCoordinates = false,
   });
 
   int get _checkedSquare {
@@ -108,6 +111,13 @@ class ChessBoard extends StatelessWidget {
                                 isTarget: legalTargets.contains(sqAt(row, col)),
                                 size: sqSize,
                                 onTap: () => onSquareTap(sqAt(row, col)),
+                                showCoordinates: showCoordinates,
+                                coordFile: showCoordinates && row == 7
+                                    ? String.fromCharCode('a'.codeUnitAt(0) + colOf(sqAt(row, col)))
+                                    : null,
+                                coordRank: showCoordinates && col == 0
+                                    ? (sqAt(row, col) ~/ 8 + 1).toString()
+                                    : null,
                               ),
                             ),
                         ],
@@ -130,6 +140,9 @@ class _SquareCell extends StatelessWidget {
   final bool isTarget;
   final double size;
   final VoidCallback onTap;
+  final bool showCoordinates;
+  final String? coordFile;
+  final String? coordRank;
 
   const _SquareCell({
     required this.color,
@@ -138,10 +151,16 @@ class _SquareCell extends StatelessWidget {
     required this.isTarget,
     required this.size,
     required this.onTap,
+    this.showCoordinates = false,
+    this.coordFile,
+    this.coordRank,
   });
 
   @override
   Widget build(BuildContext context) {
+    final isLight = color == AppColors.lightSquare ||
+        color == const Color(0xFFFFD54F) ||
+        color == const Color(0xFFF2E08F);
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: onTap,
@@ -174,6 +193,26 @@ class _SquareCell extends StatelessWidget {
                         piece: piece!, style: pieceStyle, size: size * 0.98),
                   ),
                 ),
+              ),
+            if (showCoordinates && coordRank != null)
+              Positioned(
+                left: 2,
+                top: 1,
+                child: Text(coordRank!,
+                    style: TextStyle(
+                        fontSize: size * 0.22,
+                        fontWeight: FontWeight.w700,
+                        color: isLight ? Colors.black54 : Colors.white70)),
+              ),
+            if (showCoordinates && coordFile != null)
+              Positioned(
+                right: 2,
+                bottom: 1,
+                child: Text(coordFile!,
+                    style: TextStyle(
+                        fontSize: size * 0.22,
+                        fontWeight: FontWeight.w700,
+                        color: isLight ? Colors.black54 : Colors.white70)),
               ),
           ],
         ),

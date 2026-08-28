@@ -26,6 +26,8 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
   int planoMoves = 0;
   int doZeroIdx = 0;
   bool _opponentThinking = false;
+  int? hintFrom;
+  int? hintTo;
   final List<int> wrongQuizzes = [];
 
   @override
@@ -41,6 +43,8 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
   void _syncBoardToStep() {
     final s = step;
     _opponentThinking = false;
+    hintFrom = null;
+    hintTo = null;
     if (s.fen != null) {
       engine.resetToFen(s.fen!);
       doZeroIdx = 0;
@@ -94,6 +98,19 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
     }
   }
 
+  void _onHint(Board board) {
+    if (step.sequencia.isEmpty) return;
+    final uci = step.sequencia.first.uci;
+    final mv = board.moveFromUci(uci);
+    if (mv == null) return;
+    setState(() {
+      hintFrom = mv.from;
+      hintTo = mv.to;
+      feedback = '💡 Dica: ${step.sequencia.first.san} — ${step.sequencia.first.porQue}';
+      feedbackOk = true;
+    });
+  }
+
   void _tryMove(Move m, Board board) {
     final expected = step.sequencia.map((e) => e.uci).toList();
     if (expected.isEmpty) {
@@ -123,6 +140,8 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
         feedbackOk = true;
         selected = null;
         targets = {};
+        hintFrom = null;
+        hintTo = null;
       });
       if (doZeroIdx < expected.length) {
         final oppUci = expected[doZeroIdx];
@@ -150,6 +169,8 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
       if (ok) {
         final exp = step.sequencia.firstWhere((e) => e.uci == m.uci);
         feedback = 'Correto! ${m.uci} — ${exp.porQue}';
+        hintFrom = null;
+        hintTo = null;
       } else {
         feedback = 'Tente outro lance. Dica: ${step.sequencia.first.porQue}';
       }
@@ -234,6 +255,7 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
           lastTo: null,
           pieceStyle: PieceStyle.merida,
           onSquareTap: (sq) => _onTap(sq, planoBoard),
+          showCoordinates: true,
         ),
       ),
       const SizedBox(height: 8),
@@ -299,6 +321,18 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
                 Expanded(child: ElevatedButton(onPressed: () { final uci = engine.botAdaptativoNext(); final m = activeBoard.moveFromUci(uci); if (m != null) setState(() => activeBoard.makeMove(m)); }, child: const Text('🔵 Bot Adaptativo'))),
               ])
             ],
+            if (s.tipo == AberturaStepTipo.escolhaLance && s.sequencia.isNotEmpty) ...[
+              const SizedBox(height: 10),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: OutlinedButton.icon(
+                  icon: const Icon(Icons.lightbulb_outline, size: 18),
+                  label: const Text('Dica'),
+                  style: OutlinedButton.styleFrom(foregroundColor: AppColors.accent),
+                  onPressed: () => _onHint(displayBoard ?? activeBoard),
+                ),
+              ),
+            ],
             if (showBoard && !isPlanoPlay) ...[
               const SizedBox(height: 12),
               AspectRatio(
@@ -312,6 +346,9 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
                   lastTo: null,
                   pieceStyle: PieceStyle.merida,
                   onSquareTap: (sq) => _onTap(sq, displayBoard ?? activeBoard),
+                  hintFrom: hintFrom,
+                  hintTo: hintTo,
+                  showCoordinates: true,
                 ),
               ),
             ],
