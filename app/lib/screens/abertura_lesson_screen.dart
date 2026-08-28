@@ -270,8 +270,8 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
     Board? displayBoard;
     Board activeBoard = engine.board;
     if (s.fen != null) {
-      displayBoard = Board.fen(s.fen!);
-      activeBoard = displayBoard;
+      displayBoard = engine.board;
+      activeBoard = engine.board;
     } else if (s.tipo == AberturaStepTipo.plano) {
       if (!isPlanoPlay) displayBoard = Board.fen(widget.abertura.plano!.fenTransicao);
     } else if (s.tipo == AberturaStepTipo.doZero) {

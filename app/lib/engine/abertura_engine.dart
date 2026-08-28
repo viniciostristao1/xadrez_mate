@@ -38,16 +38,23 @@ class AberturaEngine {
 
   String botTeoricoNext() {
     if (abertura.botTeorico.isEmpty) return '';
-    return abertura.botTeorico[board.moveCount % abertura.botTeorico.length];
+    final legal = board.legalMoves().map((m) => m.uci).toSet();
+    for (final uci in abertura.botTeorico) {
+      if (legal.contains(uci)) return uci;
+    }
+    return legal.isEmpty ? '' : legal.first;
   }
 
   String botAdaptativoNext() {
     if (abertura.botAdaptativo.isEmpty) return botTeoricoNext();
     final legal = board.legalMoves().map((m) => m.uci).toList();
+    final legalSet = legal.toSet();
     for (final uci in abertura.botAdaptativo) {
-      if (legal.contains(uci)) return uci;
+      if (legalSet.contains(uci)) return uci;
     }
-    return legal.isEmpty ? '' : legal.first;
+    if (legal.isEmpty) return '';
+    legal.shuffle();
+    return legal.first;
   }
 
   bool validatePlano(int escolha) => abertura.plano?.planoCorreto == escolha;
