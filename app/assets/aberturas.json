@@ -1353,12 +1353,222 @@
       "nome": "Caro-Kann",
       "eco": "B10",
       "cor": "pretasVsE4",
-      "descricaoCurta": "1...c6 sólida.",
+      "descricaoCurta": "1...c6 + ...d5: estrutura sólida e bispo livre.",
       "fenInicial": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
-      "fenTabiya": "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
-      "steps": [],
-      "botTeorico": [],
-      "botAdaptativo": []
+      "fenTabiya": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 3",
+      "steps": [
+        {
+          "tipo": "oQueE",
+          "titulo": "O que é?",
+          "texto": "A Caro-Kann (1.e4 c6 2.d4 d5) prepara ...d5 com ...c6: sólida, bispo c8 livre e estrutura sem fraquezas."
+        },
+        {
+          "tipo": "porQueJogar",
+          "titulo": "Por que jogar?",
+          "texto": "Sólida e posicional, ideal para quem prefere segurança e bom bispo.",
+          "bullets": [
+            "Estrutura com ...c6 sustenta ...d5 sem travar bispo c8",
+            "Desenvolvimento natural: ...Bf5/g4, ...Nd7, ...e6",
+            "Menos tática imediata que Siciliana, mais sólida que Francesa"
+          ]
+        },
+        {
+          "tipo": "principios",
+          "titulo": "Princípios",
+          "texto": "Caro-Kann e os fundamentos.",
+          "bullets": [
+            "Centro: c6+d5 disputam e4 e centro",
+            "Desenvolvimento: ...Bf5 antes de ...e6 libera",
+            "Rei seguro: ...e6 e ...Be7 preparam O-O",
+            "Não mova sem propósito: c6 já tem ideia de sustentar d5"
+          ]
+        },
+        {
+          "tipo": "doZero",
+          "titulo": "Do Zero",
+          "texto": "Primeiros lances (pretas) com porquê.",
+          "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+          "sequencia": [
+            {
+              "uci": "c7c6",
+              "san": "1...c6",
+              "porQue": "Prepara ...d5 com suporte"
+            },
+            {
+              "uci": "d2d4",
+              "san": "2.d4",
+              "porQue": "Brancas ocupam centro"
+            },
+            {
+              "uci": "d7d5",
+              "san": "2...d5",
+              "porQue": "Ataca e4 e fecha centro com apoio c6"
+            },
+            {
+              "uci": "b1c3",
+              "san": "3.Nc3",
+              "porQue": "Pressiona d5"
+            },
+            {
+              "uci": "d5e4",
+              "san": "3...dxe4",
+              "porQue": "Troca e abre linha para bispo"
+            }
+          ]
+        },
+        {
+          "tipo": "tabiya",
+          "titulo": "Tabiya ⭐",
+          "texto": "Posição-chave após 3.Nc3. É sua vez de pretas. O que jogaria?",
+          "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 3",
+          "quizzes": [
+            {
+              "pergunta": "Pretas na Tabiya após 3.Nc3. Qual ideia principal?",
+              "opcoes": [
+                "3...dxe4 abrindo para Bf5",
+                "3...Nf6 pressionando e4",
+                "3...g6 preparando Bg7",
+                "Todas jogáveis; dxe4 é mais instrutiva para liberar bispo"
+              ],
+              "correta": 3,
+              "explicacao": "dxe4 abre diagonal c8-f5; Nf6 também jogável. Reconhecer liberação do bispo > decorar."
+            }
+          ]
+        },
+        {
+          "tipo": "escolhaLance",
+          "titulo": "Encontre o lance",
+          "texto": "Na Tabiya, encontre um lance natural para pretas.",
+          "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 3",
+          "sequencia": [
+            {
+              "uci": "d5e4",
+              "san": "3...dxe4",
+              "porQue": "Abre para Bf5 e simplifica centro"
+            },
+            {
+              "uci": "c8f5",
+              "san": "3...Bf5",
+              "porQue": "Desenvolve bispo antes de fechar, ideia Caro-Kann"
+            }
+          ]
+        },
+        {
+          "tipo": "porQue",
+          "titulo": "Entenda o porquê 🧠",
+          "texto": "Por que 3...dxe4?",
+          "quizzes": [
+            {
+              "pergunta": "Por que 3...dxe4 na Caro-Kann?",
+              "opcoes": [
+                "Ganhar peão definitivo",
+                "Abrir diagonal para Bf5 e aliviar centro",
+                "Dar xeque",
+                "Evitar roque"
+              ],
+              "correta": 1,
+              "explicacao": "dxe4 desfaz tensão e libera c8; não ganha material, melhora desenvolvimento."
+            }
+          ]
+        },
+        {
+          "tipo": "reacao",
+          "titulo": "Reação — e se o adversário sair da teoria?",
+          "texto": "Brancas não jogaram 3.Nc3. Jogaram 3.e5 (Avanço). O que mudou?",
+          "fen": "rn1qkbnr/pp2pppp/2p5/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+          "quizzes": [
+            {
+              "pergunta": "Contra 3.e5, qual adaptação?",
+              "opcoes": [
+                "Jogar ...Bf5 mantendo bispo ativo",
+                "Jogar ...c5 igual",
+                "Trocar em e5",
+                "Jogar ...e6"
+              ],
+              "correta": 0,
+              "explicacao": "e5 fecha mas Bf5 continua ativo; ...c5 ataca base d4. Estrutura muda para avançada."
+            }
+          ]
+        },
+        {
+          "tipo": "armadilhas",
+          "titulo": "Armadilhas",
+          "texto": "Poucas e importantes.",
+          "bullets": [
+            "Não jogue ...Qb6? cedo sem ...Bf5",
+            "Evite ...Nd7 antes de ...Bf5 travar bispo"
+          ]
+        },
+        {
+          "tipo": "errosComuns",
+          "titulo": "Erros comuns",
+          "texto": "O que evitar.",
+          "bullets": [
+            "Jogar ...e6 cedo demais e travar Bf5 (vira Francesa ruim)",
+            "Mover dama cedo sem desenvolvimento",
+            "Esquecer ...c5 e deixar brancas com centro livre",
+            "Trocar ...dxe4 sem ver Nxe4"
+          ]
+        },
+        {
+          "tipo": "plano",
+          "titulo": "Encontre o Plano ⭐",
+          "texto": "A abertura está terminando. Qual é seu plano?"
+        },
+        {
+          "tipo": "jogue",
+          "titulo": "Jogue",
+          "texto": "Pratique contra dois bots.",
+          "bullets": [
+            "🟢 Bot Teórico: segue linha principal",
+            "🔵 Bot Adaptativo: sai da teoria"
+          ]
+        },
+        {
+          "tipo": "revisao",
+          "titulo": "Revisão",
+          "texto": "Repetição focada nos erros."
+        }
+      ],
+      "plano": {
+        "fenTransicao": "rn1qkbnr/pp2pppp/2p5/5b2/3PN3/8/PPP2PPP/R1BQKBNR w KQkq - 1 5",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": [
+          "Nf3 + Be2 + O-O com desenvolvimento sólido",
+          "Jogar f3 cedo enfraquecendo",
+          "Trocar tudo com exd5",
+          "Jogar g4 ataque sem preparo"
+        ],
+        "planoCorreto": 0,
+        "porQuePlano": "Com Nxe4/Bf5, Nf3 desenvolve, Be2 sustenta e O-O garante rei; estrutura Caro-Kann pede desenvolvimento antes de ...e6/c5.",
+        "sequenciaPlano": [
+          "g1f3",
+          "e7e6",
+          "f1d3",
+          "b8d7"
+        ]
+      },
+      "botTeorico": [
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "d5e4",
+        "c3e4",
+        "c8f5",
+        "g1f3",
+        "e7e6"
+      ],
+      "botAdaptativo": [
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "e4e5",
+        "c8f5",
+        "b1c3",
+        "e7e6",
+        "g1f3"
+      ]
     },
     {
       "id": 8,
