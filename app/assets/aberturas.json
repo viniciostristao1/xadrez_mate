@@ -2463,12 +2463,221 @@
       "nome": "Réti",
       "eco": "A04",
       "cor": "flanco",
-      "descricaoCurta": "1.Nf3.",
+      "descricaoCurta": "1.Nf3 flexível: controla e5/d4 e decide estrutura depois.",
       "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-      "fenTabiya": "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1",
-      "steps": [],
-      "botTeorico": [],
-      "botAdaptativo": []
+      "fenTabiya": "rnbqkbnr/ppp1pppp/8/3p4/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 0 2",
+      "steps": [
+        {
+          "tipo": "oQueE",
+          "titulo": "O que é?",
+          "texto": "A Réti (1.Nf3) desenvolve o cavalo controlando e5/d4 sem definir peões centrais — máxima flexibilidade e transposição."
+        },
+        {
+          "tipo": "porQueJogar",
+          "titulo": "Por que jogar?",
+          "texto": "Flexível e pouco teórica, ideal para observar o adversário.",
+          "bullets": [
+            "Nf3 controla e5/d4 sem fixar peões",
+            "Mantém opções: c4, d4, g3/Bg2, b3",
+            "Transpõe para Inglesa/1.d4 conforme resposta preta"
+          ]
+        },
+        {
+          "tipo": "principios",
+          "titulo": "Princípios",
+          "texto": "Réti e os fundamentos.",
+          "bullets": [
+            "Centro: Nf3 controla d4/e5 à distância",
+            "Desenvolvimento: Nf3 primeiro, sem bloquear",
+            "Rei seguro: g3/Bg2 preparam O-O flexível",
+            "Não mova sem propósito: Nf3 já disputa centro"
+          ]
+        },
+        {
+          "tipo": "doZero",
+          "titulo": "Do Zero",
+          "texto": "Primeiros lances com porquê.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "sequencia": [
+            {
+              "uci": "g1f3",
+              "san": "1.Nf3",
+              "porQue": "Controla e5/d4 sem definir centro"
+            },
+            {
+              "uci": "d7d5",
+              "san": "1...d5",
+              "porQue": "Pretas ocupam centro"
+            },
+            {
+              "uci": "c2c4",
+              "san": "2.c4",
+              "porQue": "Ataca d5 mantendo flexibilidade"
+            },
+            {
+              "uci": "e7e6",
+              "san": "2...e6",
+              "porQue": "Sustenta d5 e libera bispo"
+            },
+            {
+              "uci": "g2g3",
+              "san": "3.g3",
+              "porQue": "Fianchetto flexível, prepara Bg2"
+            }
+          ]
+        },
+        {
+          "tipo": "tabiya",
+          "titulo": "Tabiya ⭐",
+          "texto": "Posição-chave após 1...d5. É sua vez de brancas. O que jogaria?",
+          "fen": "rnbqkbnr/ppp1pppp/8/3p4/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 0 2",
+          "quizzes": [
+            {
+              "pergunta": "Brancas na Tabiya após 1...d5. Qual ideia principal?",
+              "opcoes": [
+                "2.c4 mantendo pressão e flexibilidade",
+                "2.g3 fianchetto direto",
+                "2.d4 ocupando centro",
+                "Todas jogáveis; c4 é mais instrutiva para manter opções"
+              ],
+              "correta": 3,
+              "explicacao": "c4 ataca d5 sem fixar; g3/d4 também jogáveis. Observar resposta > fixar plano cedo."
+            }
+          ]
+        },
+        {
+          "tipo": "escolhaLance",
+          "titulo": "Encontre o lance",
+          "texto": "Na Tabiya, encontre um lance natural para brancas.",
+          "fen": "rnbqkbnr/ppp1pppp/8/3p4/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 0 2",
+          "sequencia": [
+            {
+              "uci": "c2c4",
+              "san": "2.c4",
+              "porQue": "Mantém Nf3 e ataca d5 com flexibilidade"
+            },
+            {
+              "uci": "g2g3",
+              "san": "2.g3",
+              "porQue": "Fianchetto sem definir c4/d4"
+            }
+          ]
+        },
+        {
+          "tipo": "porQue",
+          "titulo": "Entenda o porquê 🧠",
+          "texto": "Por que 2.c4?",
+          "quizzes": [
+            {
+              "pergunta": "Por que 2.c4 após 1...d5?",
+              "opcoes": [
+                "Ganhar peão",
+                "Manter Nf3 e pressionar d5 sem travar bispo",
+                "Dar xeque",
+                "Evitar ...c5"
+              ],
+              "correta": 1,
+              "explicacao": "c4 sustenta Nf3, ataca d5 e deixa Bf1 livre."
+            }
+          ]
+        },
+        {
+          "tipo": "reacao",
+          "titulo": "Reação — e se o adversário sair da teoria?",
+          "texto": "Pretas não jogaram 1...d5. Jogaram 1...c5. O que mudou?",
+          "fen": "rnbqkbnr/pp1ppppp/8/2p5/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 0 2",
+          "quizzes": [
+            {
+              "pergunta": "Contra 1...c5, qual adaptação?",
+              "opcoes": [
+                "Jogar c4 igual transpondo para Inglesa simétrica",
+                "Trocar em c5 sempre",
+                "Jogar d4 imediato",
+                "Jogar e3"
+              ],
+              "correta": 0,
+              "explicacao": "c5 é Inglesa; c4 transpoõe e mantém controle à distância. Flexibilidade da Réti aparece."
+            }
+          ]
+        },
+        {
+          "tipo": "armadilhas",
+          "titulo": "Armadilhas",
+          "texto": "Poucas e importantes.",
+          "bullets": [
+            "Não jogue c4 c5 Nc3? d5 e perca tempo",
+            "Evite Nf3 Nh5 sem ver Bg5"
+          ]
+        },
+        {
+          "tipo": "errosComuns",
+          "titulo": "Erros comuns",
+          "texto": "O que evitar.",
+          "bullets": [
+            "Definir peões cedo demais (c4/d4/e4 sem ver resposta)",
+            "Mover Nf3 várias vezes sem desenvolver resto",
+            "Esquecer g3/Bg2 e deixar ...d5 livre",
+            "Fixar estrutura antes de observar pretas"
+          ]
+        },
+        {
+          "tipo": "plano",
+          "titulo": "Encontre o Plano ⭐",
+          "texto": "A abertura está terminando. Qual é seu plano?"
+        },
+        {
+          "tipo": "jogue",
+          "titulo": "Jogue",
+          "texto": "Pratique contra dois bots.",
+          "bullets": [
+            "🟢 Bot Teórico: segue linha principal",
+            "🔵 Bot Adaptativo: sai da teoria"
+          ]
+        },
+        {
+          "tipo": "revisao",
+          "titulo": "Revisão",
+          "texto": "Repetição focada nos erros."
+        }
+      ],
+      "plano": {
+        "fenTransicao": "rnbqk2r/ppp1bppp/4pn2/3p4/2P5/5NP1/PP1PPPBP/RNBQK2R w KQkq - 3 5",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": [
+          "O-O + d4 transpondo para 1.d4 com Nf3/g3",
+          "Jogar e4 imediato sem preparar",
+          "Trocar em d5 sem motivo",
+          "Jogar b3 sem ver ...c5"
+        ],
+        "planoCorreto": 0,
+        "porQuePlano": "Com Nf3/c4/e6/g3, estrutura ainda flexível; O-O e d4 definem centro tipo 1.d4 com tempo e bispo já em g2.",
+        "sequenciaPlano": [
+          "e1g1",
+          "e8g8",
+          "d2d4"
+        ]
+      },
+      "botTeorico": [
+        "g1f3",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "g2g3",
+        "g8f6",
+        "f1g2",
+        "f8e7",
+        "e1g1"
+      ],
+      "botAdaptativo": [
+        "g1f3",
+        "c7c5",
+        "c2c4",
+        "g8f6",
+        "g2g3",
+        "d7d5",
+        "f1g2",
+        "c8f5"
+      ]
     }
   ]
 }
