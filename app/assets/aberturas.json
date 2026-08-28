@@ -684,12 +684,225 @@
       "nome": "Gambito da Dama",
       "eco": "D06",
       "cor": "brancas",
-      "descricaoCurta": "2.c4 pressiona d5.",
+      "descricaoCurta": "2.c4 pressiona d5 e disputa o centro.",
       "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-      "fenTabiya": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2",
-      "steps": [],
-      "botTeorico": [],
-      "botAdaptativo": []
+      "fenTabiya": "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4",
+      "steps": [
+        {
+          "tipo": "oQueE",
+          "titulo": "O que é?",
+          "texto": "O Gambito da Dama (1.d4 d5 2.c4) oferece o peão c para abrir o centro; pretas podem aceitar (dxc4) ou recusar (e6, Nf6)."
+        },
+        {
+          "tipo": "porQueJogar",
+          "titulo": "Por que jogar?",
+          "texto": "Ótimo para aprender luta central e desenvolvimento.",
+          "bullets": [
+            "Cria tensão imediata no centro",
+            "Ensina aceitar/recusar gambito",
+            "Planos claros: e3, Nc3, Nf3, Bf4/Bg5"
+          ]
+        },
+        {
+          "tipo": "principios",
+          "titulo": "Princípios",
+          "texto": "Como se aplica aqui.",
+          "bullets": [
+            "Centro: c4 ataca d5 e abre coluna c",
+            "Desenvolvimento: Nc3/Nf3 desenvolvem",
+            "Rei seguro: e3 libera bispo e prepara O-O",
+            "Não mova sem propósito: c4 tem ideia central, não é peão solto"
+          ]
+        },
+        {
+          "tipo": "doZero",
+          "titulo": "Do Zero",
+          "texto": "Primeiros lances com o porquê.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "sequencia": [
+            {
+              "uci": "d2d4",
+              "san": "1.d4",
+              "porQue": "Ocupa centro, libera bispo"
+            },
+            {
+              "uci": "d7d5",
+              "san": "1...d5",
+              "porQue": "Pretas ocupam centro simetricamente"
+            },
+            {
+              "uci": "c2c4",
+              "san": "2.c4",
+              "porQue": "Gambito: ataca d5 e abre centro"
+            },
+            {
+              "uci": "e7e6",
+              "san": "2...e6",
+              "porQue": "Recusa sólida, libera bispo"
+            },
+            {
+              "uci": "b1c3",
+              "san": "3.Nc3",
+              "porQue": "Desenvolve e pressiona d5"
+            }
+          ]
+        },
+        {
+          "tipo": "tabiya",
+          "titulo": "Tabiya ⭐",
+          "texto": "Você chegou na posição-chave após 3...Nf6. É sua vez de brancas. O que jogaria?",
+          "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4",
+          "quizzes": [
+            {
+              "pergunta": "Brancas na Tabiya após 3...Nf6. Qual ideia principal?",
+              "opcoes": [
+                "4.Nf3 desenvolvimento sólido mantendo tensão",
+                "4.Bg5 cravando o cavalo",
+                "4.cxd5 trocando no centro",
+                "Todas são jogáveis; Nf3 é a mais instrutiva para manter opções"
+              ],
+              "correta": 3,
+              "explicacao": "Nf3 mantém tensão e flexibilidade; Bg5 e cxd5 são jogáveis. Reconhecer tensão > decorar."
+            }
+          ]
+        },
+        {
+          "tipo": "escolhaLance",
+          "titulo": "Encontre o lance",
+          "texto": "Na Tabiya, encontre um lance natural para as brancas.",
+          "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4",
+          "sequencia": [
+            {
+              "uci": "g1f3",
+              "san": "4.Nf3",
+              "porQue": "Desenvolve mantendo tensão central"
+            },
+            {
+              "uci": "c1g5",
+              "san": "4.Bg5",
+              "porQue": "Crava Nf6 e pressiona"
+            }
+          ]
+        },
+        {
+          "tipo": "porQue",
+          "titulo": "Entenda o porquê 🧠",
+          "texto": "Por que 4.Nf3 é tão jogado?",
+          "quizzes": [
+            {
+              "pergunta": "Por que 4.Nf3?",
+              "opcoes": [
+                "Ganhar peão imediato",
+                "Desenvolver sem definir centro, mantendo pressão",
+                "Dar xeque",
+                "Evitar roque"
+              ],
+              "correta": 1,
+              "explicacao": "Nf3 desenvolve, mantém c4xd5 e e3 em reserva; flexibilidade central."
+            }
+          ]
+        },
+        {
+          "tipo": "reacao",
+          "titulo": "Reação — e se o adversário sair da teoria?",
+          "texto": "Seu adversário não recusou. Jogou 2...dxc4 (Gambito Aceito). O que mudou?",
+          "fen": "rnbqkbnr/ppp1pppp/8/8/2pP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3",
+          "quizzes": [
+            {
+              "pergunta": "Contra 2...dxc4, qual adaptação?",
+              "opcoes": [
+                "Jogar e3 para recuperar o peão com desenvolvimento",
+                "Defender c4 com b3 imediatamente",
+                "Trocar damas",
+                "Jogar h3"
+              ],
+              "correta": 0,
+              "explicacao": "e3 ataca c4 e libera bispo; recupera peão com tempo. Não entre em pânico."
+            }
+          ]
+        },
+        {
+          "tipo": "armadilhas",
+          "titulo": "Armadilhas",
+          "texto": "Poucas e importantes.",
+          "bullets": [
+            "Não tente 4.e4? dxe4 5.Nxe4?? Nxe4 perde peça",
+            "Cuidado com ...Bb4 cravando Nc3 antes de e3"
+          ]
+        },
+        {
+          "tipo": "errosComuns",
+          "titulo": "Erros comuns",
+          "texto": "O que evitar.",
+          "bullets": [
+            "Jogar c4 sem preparar e3/Nc3 e ficar com peão isolado fraco",
+            "Trocar em d5 sem motivo e liberar jogo preto",
+            "Mover dama cedo para a4 sem necessidade",
+            "Esquecer desenvolvimento antes de abrir centro"
+          ]
+        },
+        {
+          "tipo": "plano",
+          "titulo": "Encontre o Plano ⭐",
+          "texto": "A abertura está terminando. Qual é seu plano?"
+        },
+        {
+          "tipo": "jogue",
+          "titulo": "Jogue",
+          "texto": "Pratique contra dois bots.",
+          "bullets": [
+            "🟢 Bot Teórico: segue linha principal",
+            "🔵 Bot Adaptativo: sai da teoria"
+          ]
+        },
+        {
+          "tipo": "revisao",
+          "titulo": "Revisão",
+          "texto": "Repetição espaçada focada nos erros de entendimento e plano."
+        }
+      ],
+      "plano": {
+        "fenTransicao": "rnbqk2r/ppp1bppp/4pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 4 5",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": [
+          "e3 sólido + Bd3 + O-O mantendo tensão",
+          "Jogar e4 imediato sem preparar",
+          "Trocar tudo com cxd5",
+          "Jogar g4 ataque precoce"
+        ],
+        "planoCorreto": 0,
+        "porQuePlano": "Com Nc3/Nf3/Be7, e3 libera Bd3 e sustenta centro; O-O garante rei seguro antes de abrir com cxd5 ou e4.",
+        "sequenciaPlano": [
+          "e2e3",
+          "e8g8",
+          "f1d3",
+          "c7c6"
+        ]
+      },
+      "botTeorico": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "f8e7",
+        "e2e3",
+        "e8g8"
+      ],
+      "botAdaptativo": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "d5c4",
+        "e2e3",
+        "g8f6",
+        "f1c4",
+        "c7c5",
+        "b1c3",
+        "c8f5"
+      ]
     },
     {
       "id": 5,
