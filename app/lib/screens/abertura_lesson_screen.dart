@@ -25,6 +25,7 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
   int planoEtapa = 0;
   int planoMoves = 0;
   int doZeroIdx = 0;
+  bool _opponentThinking = false;
   final List<int> wrongQuizzes = [];
 
   @override
@@ -39,6 +40,7 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
 
   void _syncBoardToStep() {
     final s = step;
+    _opponentThinking = false;
     if (s.fen != null) {
       engine.resetToFen(s.fen!);
       doZeroIdx = 0;
@@ -126,12 +128,14 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
         final oppUci = expected[doZeroIdx];
         final oppMove = board.moveFromUci(oppUci);
         if (oppMove != null) {
-          Future.delayed(const Duration(milliseconds: 350), () {
+          setState(() => _opponentThinking = true);
+          Future.delayed(const Duration(milliseconds: 550), () {
             if (!mounted) return;
             setState(() {
               board.makeMove(oppMove);
               feedback = '${feedback!}  •  ...${oppUci} ${step.sequencia[doZeroIdx].porQue}';
               doZeroIdx++;
+              _opponentThinking = false;
             });
           });
         }
@@ -269,8 +273,19 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
             if (s.bullets.isNotEmpty) ...[const SizedBox(height: 8), for (final b in s.bullets) Padding(padding: const EdgeInsets.only(bottom: 4), child: Text('• $b', style: TextStyle(color: AppColors.dim)))],
             if (s.sequencia.isNotEmpty && s.tipo == AberturaStepTipo.doZero) ...[
               const SizedBox(height: 8),
+              if (_opponentThinking)
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  decoration: BoxDecoration(color: AppColors.surfaceAlt, borderRadius: BorderRadius.circular(10), border: Border.all(color: AppColors.border)),
+                  child: Row(mainAxisSize: MainAxisSize.min, children: [
+                    SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.accent)),
+                    const SizedBox(width: 8),
+                    Text('Pretas jogando...', style: TextStyle(color: AppColors.accent, fontWeight: FontWeight.w700, fontSize: 13)),
+                  ]),
+                ),
+              const SizedBox(height: 6),
               for (int i = 0; i < s.sequencia.length; i++)
-                Text('${s.sequencia[i].san}: ${s.sequencia[i].porQue}', style: TextStyle(color: i < doZeroIdx ? AppColors.ok : AppColors.text, fontSize: 13, fontWeight: i == doZeroIdx ? FontWeight.w700 : FontWeight.w400))
+                Text('${s.sequencia[i].san}: ${s.sequencia[i].porQue}', style: TextStyle(color: i < doZeroIdx ? AppColors.ok : i == doZeroIdx && !_opponentThinking ? AppColors.text : AppColors.dim, fontSize: 13, fontWeight: i == doZeroIdx && !_opponentThinking ? FontWeight.w700 : FontWeight.w400))
             ],
             if (s.quizzes.isNotEmpty) ...[const SizedBox(height: 12), _quiz(s.quizzes[quizIndex], engine.stepIndex)],
             if (s.tipo == AberturaStepTipo.plano) ...[const SizedBox(height: 12), _plano()],
