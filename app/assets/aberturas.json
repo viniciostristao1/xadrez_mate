@@ -1575,12 +1575,222 @@
       "nome": "Defesa Índia do Rei",
       "eco": "E60",
       "cor": "pretasVsD4",
-      "descricaoCurta": "1...Nf6 2...g6 fianchetto.",
+      "descricaoCurta": "Permite centro branco para atacar depois: fianchetto g6/Bg7.",
       "fenInicial": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
-      "fenTabiya": "rnbqkb1r/pppppp1p/5np1/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 2",
-      "steps": [],
-      "botTeorico": [],
-      "botAdaptativo": []
+      "fenTabiya": "rnbqk2r/ppppppbp/5np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4",
+      "steps": [
+        {
+          "tipo": "oQueE",
+          "titulo": "O que é?",
+          "texto": "A Índia do Rei (1.d4 Nf6 2.c4 g6 3.Nc3 Bg7) permite que brancas façam centro grande (d4/c4/e4) para depois atacá-lo com ...d6, ...e5 ou ...c5."
+        },
+        {
+          "tipo": "porQueJogar",
+          "titulo": "Por que jogar?",
+          "texto": "Para quem prefere contra-jogo e luta por iniciativa como pretas.",
+          "bullets": [
+            "Fianchetto g6/Bg7 flexível contra centro grande",
+            "Ideia clara: deixar centro e atacar com rupturas ...e5/c5",
+            "Jogo posicional rico, não só defesa passiva"
+          ]
+        },
+        {
+          "tipo": "principios",
+          "titulo": "Princípios",
+          "texto": "Índia do Rei e os fundamentos.",
+          "bullets": [
+            "Centro: permite d4/c4/e4 para depois atacar base",
+            "Desenvolvimento: Nf6/g6/Bg7 rápidos",
+            "Rei seguro: ...O-O cedo após fianchetto",
+            "Não mova sem propósito: ...g6/Bg7 já miram centro e rei"
+          ]
+        },
+        {
+          "tipo": "doZero",
+          "titulo": "Do Zero",
+          "texto": "Primeiros lances (pretas) com porquê.",
+          "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+          "sequencia": [
+            {
+              "uci": "g8f6",
+              "san": "1...Nf6",
+              "porQue": "Ataca e4 e controla centro sem ocupar"
+            },
+            {
+              "uci": "c2c4",
+              "san": "2.c4",
+              "porQue": "Brancas ampliam centro d4/c4"
+            },
+            {
+              "uci": "g7g6",
+              "san": "2...g6",
+              "porQue": "Prepara fianchetto Bg7"
+            },
+            {
+              "uci": "b1c3",
+              "san": "3.Nc3",
+              "porQue": "Brancas desenvolvem e sustentam d4"
+            },
+            {
+              "uci": "f8g7",
+              "san": "3...Bg7",
+              "porQue": "Fianchetto mira centro e casa d4"
+            }
+          ]
+        },
+        {
+          "tipo": "tabiya",
+          "titulo": "Tabiya ⭐",
+          "texto": "Posição-chave após 4.e4. É sua vez de pretas. O que jogaria?",
+          "fen": "rnbqk2r/ppppppbp/5np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4",
+          "quizzes": [
+            {
+              "pergunta": "Pretas na Tabiya após 4.e4. Qual ideia principal?",
+              "opcoes": [
+                "4...d6 preparando ...e5 ou ...O-O",
+                "4...O-O roque imediato",
+                "4...c5 atacando d4",
+                "Todas jogáveis; d6 é mais instrutiva para ruptura ...e5"
+              ],
+              "correta": 3,
+              "explicacao": "d6 sustenta e5; O-O e c5 também jogáveis. Permitir centro para atacar > ocupar cedo."
+            }
+          ]
+        },
+        {
+          "tipo": "escolhaLance",
+          "titulo": "Encontre o lance",
+          "texto": "Na Tabiya, encontre um lance natural para pretas.",
+          "fen": "rnbqk2r/ppppppbp/5np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4",
+          "sequencia": [
+            {
+              "uci": "d7d6",
+              "san": "4...d6",
+              "porQue": "Prepara ...e5 ou ...O-O, sustenta centro"
+            },
+            {
+              "uci": "e8g8",
+              "san": "4...O-O",
+              "porQue": "Rei seguro antes de definir ruptura"
+            }
+          ]
+        },
+        {
+          "tipo": "porQue",
+          "titulo": "Entenda o porquê 🧠",
+          "texto": "Por que 4...d6?",
+          "quizzes": [
+            {
+              "pergunta": "Por que 4...d6 na Índia do Rei?",
+              "opcoes": [
+                "Ganhar peão",
+                "Preparar ruptura ...e5 atacando base d4/e4",
+                "Dar xeque",
+                "Evitar Bg5"
+              ],
+              "correta": 1,
+              "explicacao": "d6 sustenta e5; ideia é atacar base do centro grande branco."
+            }
+          ]
+        },
+        {
+          "tipo": "reacao",
+          "titulo": "Reação — e se o adversário sair da teoria?",
+          "texto": "Brancas não jogaram 3.Nc3. Jogaram 3.Nf3 (sem ceder e4 fácil). O que mudou?",
+          "fen": "rnbqk2r/ppppppbp/5np1/8/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4",
+          "quizzes": [
+            {
+              "pergunta": "Contra 3.Nf3, qual adaptação?",
+              "opcoes": [
+                "Jogar ...Bg7 igual mantendo fianchetto",
+                "Jogar ...d5 igual",
+                "Trocar em c4",
+                "Jogar ...c5"
+              ],
+              "correta": 0,
+              "explicacao": "Nf3 evita e4 imediato; Bg7 continua mirando centro, mas plano ...d6/e5 muda para pressão sobre d4."
+            }
+          ]
+        },
+        {
+          "tipo": "armadilhas",
+          "titulo": "Armadilhas",
+          "texto": "Poucas e importantes.",
+          "bullets": [
+            "Não caia em Nxe5?? após ...d6 sem ...O-O com Qh4",
+            "Evite ...c5 sem preparar contra dxc5"
+          ]
+        },
+        {
+          "tipo": "errosComuns",
+          "titulo": "Erros comuns",
+          "texto": "O que evitar.",
+          "bullets": [
+            "Jogar ...e5 cedo demais sem ...d6/O-O",
+            "Mover ...d6 e esquecer ...O-O deixando rei no centro",
+            "Jogar ...c5 sem ver d4-d5",
+            "Trocar Bg7 sem motivo perdendo fianchetto"
+          ]
+        },
+        {
+          "tipo": "plano",
+          "titulo": "Encontre o Plano ⭐",
+          "texto": "A abertura está terminando. Qual é seu plano?"
+        },
+        {
+          "tipo": "jogue",
+          "titulo": "Jogue",
+          "texto": "Pratique contra dois bots.",
+          "bullets": [
+            "🟢 Bot Teórico: segue linha principal",
+            "🔵 Bot Adaptativo: sai da teoria"
+          ]
+        },
+        {
+          "tipo": "revisao",
+          "titulo": "Revisão",
+          "texto": "Repetição focada nos erros."
+        }
+      ],
+      "plano": {
+        "fenTransicao": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 0 5",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": [
+          "...e5 atacando base d4 (ruptura principal)",
+          "Jogar ...b5 sem preparar",
+          "Trocar ...dxe4 sem ideia",
+          "Jogar ...a6 sem plano"
+        ],
+        "planoCorreto": 0,
+        "porQuePlano": "Com peões d4/c4/e4 vs Nf6/g6/Bg7, ...e5 desafia base d4/e4 — ideia Índia do Rei: atacar centro grande.",
+        "sequenciaPlano": [
+          "e8g8",
+          "f1e2",
+          "e7e5",
+          "d4e5"
+        ]
+      },
+      "botTeorico": [
+        "g8f6",
+        "c2c4",
+        "g7g6",
+        "b1c3",
+        "f8g7",
+        "e2e4",
+        "d7d6",
+        "g1f3",
+        "e8g8"
+      ],
+      "botAdaptativo": [
+        "g8f6",
+        "c2c4",
+        "g7g6",
+        "g1f3",
+        "f8g7",
+        "b1c3",
+        "d7d6",
+        "c7c5"
+      ]
     },
     {
       "id": 9,
