@@ -232,12 +232,227 @@
       "nome": "Ruy Lopez",
       "eco": "C60",
       "cor": "brancas",
-      "descricaoCurta": "Pressão longa sobre Nc6 e e5.",
+      "descricaoCurta": "Pressão duradoura sobre Nc6 e e5.",
       "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-      "fenTabiya": "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
-      "steps": [],
-      "botTeorico": [],
-      "botAdaptativo": []
+      "fenTabiya": "r1bqkbnr/1ppp1ppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+      "steps": [
+        {
+          "tipo": "oQueE",
+          "titulo": "O que é?",
+          "texto": "A Ruy Lopez (1.e4 e5 2.Nf3 Nc6 3.Bb5) não ganha material na hora: pressiona o cavalo que defende e5 e mantém tensão por muitos lances."
+        },
+        {
+          "tipo": "porQueJogar",
+          "titulo": "Por que jogar?",
+          "texto": "Excelente para aprender planos de longo prazo sem decoreba curta.",
+          "bullets": [
+            "Pressão duradoura sobre e5 sem trocar cedo",
+            "Ensina desenvolvimento + roque + tensão central",
+            "Estruturas claras para treinar planos como c3, d4, Re1"
+          ]
+        },
+        {
+          "tipo": "principios",
+          "titulo": "Princípios",
+          "texto": "Como a Ruy Lopez aplica os fundamentos.",
+          "bullets": [
+            "Centro: 1.e4 + Nf3 pressiona e5",
+            "Desenvolvimento: Nf3 e Bb5 desenvolvem atacando",
+            "Rei seguro: prepara O-O rapidamente",
+            "Não mova sem propósito: Bb5 tem ideia concreta, não só desenvolver"
+          ]
+        },
+        {
+          "tipo": "doZero",
+          "titulo": "Do Zero",
+          "texto": "Aprenda os primeiros lances com o porquê de cada um.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "sequencia": [
+            {
+              "uci": "e2e4",
+              "san": "1.e4",
+              "porQue": "Ocupa centro, libera bispo e dama"
+            },
+            {
+              "uci": "e7e5",
+              "san": "1...e5",
+              "porQue": "Disputa centro e libera peças pretas"
+            },
+            {
+              "uci": "g1f3",
+              "san": "2.Nf3",
+              "porQue": "Ataca e5, desenvolve e prepara O-O"
+            },
+            {
+              "uci": "b8c6",
+              "san": "2...Nc6",
+              "porQue": "Defende e5 e desenvolve"
+            },
+            {
+              "uci": "f1b5",
+              "san": "3.Bb5",
+              "porQue": "Pressiona o defensor de e5; ideia de longo prazo"
+            }
+          ]
+        },
+        {
+          "tipo": "tabiya",
+          "titulo": "Tabiya ⭐",
+          "texto": "Você chegou na posição-chave após 3...a6. É sua vez de brancas. O que jogaria?",
+          "fen": "r1bqkbnr/1ppp1ppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+          "quizzes": [
+            {
+              "pergunta": "Brancas na Tabiya após 3...a6. Qual ideia principal?",
+              "opcoes": [
+                "4.Ba4 mantendo pressão e guardando o bispo",
+                "4.Bxc6 trocando e dobrando peões",
+                "4.d3 sólido mas menos ambicioso",
+                "Todas são jogáveis; Ba4 é a mais instrutiva para manter tensão"
+              ],
+              "correta": 3,
+              "explicacao": "Ba4 mantém pressão sem se desfazer do par de bispos; Bxc6 e d3 são jogáveis. Reconhecer tensão > decorar."
+            }
+          ]
+        },
+        {
+          "tipo": "escolhaLance",
+          "titulo": "Encontre o lance",
+          "texto": "Na Tabiya (a6), encontre um lance natural para as brancas.",
+          "fen": "r1bqkbnr/1ppp1ppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+          "sequencia": [
+            {
+              "uci": "b5a4",
+              "san": "4.Ba4",
+              "porQue": "Mantém pressão, preserva bispo para depois de Nf6"
+            },
+            {
+              "uci": "b5c6",
+              "san": "4.Bxc6",
+              "porQue": "Simplifica: dobra peões pretos e abre centro"
+            }
+          ]
+        },
+        {
+          "tipo": "porQue",
+          "titulo": "Entenda o porquê 🧠",
+          "texto": "Por que 4.Ba4 é tão jogado aqui?",
+          "quizzes": [
+            {
+              "pergunta": "Por que 4.Ba4 após 3...a6?",
+              "opcoes": [
+                "Ganhar material imediatamente",
+                "Manter pressão sobre Nc6 sem trocar e guardar opções",
+                "Dar xeque",
+                "Evitar roque"
+              ],
+              "correta": 1,
+              "explicacao": "Ba4 recua mantendo a cravada potencial e flexibilidade; não ganha peça, cria tensão duradoura."
+            }
+          ]
+        },
+        {
+          "tipo": "reacao",
+          "titulo": "Reação — e se o adversário sair da teoria?",
+          "texto": "Seu adversário não jogou 3...a6. Jogou 3...d6 sólido. O que mudou?",
+          "fen": "r1bqkbnr/ppp2ppp/2np4/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+          "quizzes": [
+            {
+              "pergunta": "Contra 3...d6, qual adaptação?",
+              "opcoes": [
+                "Jogar igual: Ba4 ainda faz sentido",
+                "Trocar em c6 imediatamente sempre",
+                "Recuar para a4 sem motivo",
+                "Jogar h3"
+              ],
+              "correta": 0,
+              "explicacao": "Estrutura muda pouco; Ba4 continua bom, mas pretas estão mais sólidas. Mantenha desenvolvimento e roque."
+            }
+          ]
+        },
+        {
+          "tipo": "armadilhas",
+          "titulo": "Armadilhas",
+          "texto": "Poucas e importantes.",
+          "bullets": [
+            "Noah's Ark Trap: 4.Ba4 d6 5.d4 b5 6.Bb3 Nxd4?? 7.Nxd4 exd4 8.Qxd4 e Bb3 fica preso — cuidado ao mover Bb3 cedo",
+            "Não tente ganhar peão com Nxe5 cedo sem preparo"
+          ]
+        },
+        {
+          "tipo": "errosComuns",
+          "titulo": "Erros comuns",
+          "texto": "O que evitar na Ruy Lopez.",
+          "bullets": [
+            "4.Ng5? sem sentido após a6",
+            "Mover o bispo várias vezes sem rocar",
+            "Jogar d4 cedo demais sem c3/Re1",
+            "Esquecer o roque e deixar rei no centro"
+          ]
+        },
+        {
+          "tipo": "plano",
+          "titulo": "Encontre o Plano ⭐",
+          "texto": "A abertura está terminando. Qual é seu plano?"
+        },
+        {
+          "tipo": "jogue",
+          "titulo": "Jogue",
+          "texto": "Pratique contra dois bots.",
+          "bullets": [
+            "🟢 Bot Teórico: segue linha principal",
+            "🔵 Bot Adaptativo: sai da teoria"
+          ]
+        },
+        {
+          "tipo": "revisao",
+          "titulo": "Revisão",
+          "texto": "Repetição espaçada focada nos erros de entendimento e plano."
+        }
+      ],
+      "plano": {
+        "fenTransicao": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": [
+          "Fazer roque (O-O) e preparar Re1/c3/d4",
+          "Jogar Ng5 atacando f7 cedo",
+          "Trocar tudo com Bxc6 sem motivo",
+          "Jogar a4 na ala da dama sem plano"
+        ],
+        "planoCorreto": 0,
+        "porQuePlano": "Com Ba4 e Nf6 na posição, roque garante rei seguro e Re1 pressiona e5; depois c3 sustenta d4 — plano clássico da Ruy Lopez.",
+        "sequenciaPlano": [
+          "e1g1",
+          "b7b5",
+          "a4b3",
+          "d7d6"
+        ]
+      },
+      "botTeorico": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "f8e7",
+        "f1e1"
+      ],
+      "botAdaptativo": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "d7d6",
+        "b5a4",
+        "g8f6",
+        "d2d3",
+        "c8g4",
+        "b1c3"
+      ]
     },
     {
       "id": 3,
