@@ -2241,12 +2241,222 @@
       "nome": "Inglesa",
       "eco": "A10",
       "cor": "flanco",
-      "descricaoCurta": "1.c4.",
+      "descricaoCurta": "1.c4 controla o centro à distância, flexível e transponível.",
       "fenInicial": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-      "fenTabiya": "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1",
-      "steps": [],
-      "botTeorico": [],
-      "botAdaptativo": []
+      "fenTabiya": "rnbqkbnr/pp1ppppp/8/2p5/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2",
+      "steps": [
+        {
+          "tipo": "oQueE",
+          "titulo": "O que é?",
+          "texto": "A Inglesa (1.c4) não ocupa d4/e4 de imediato: controla o centro à distância e mantém flexibilidade para transpor."
+        },
+        {
+          "tipo": "porQueJogar",
+          "titulo": "Por que jogar?",
+          "texto": "Flexível e pouco teórica para iniciantes que gostam de posição.",
+          "bullets": [
+            "Controla d5 sem peão central fixo",
+            "Transpõe para estruturas conhecidas (Siciliana reversa, etc.)",
+            "Fianchetto g3/Bg2 sólido e pouca decoreba"
+          ]
+        },
+        {
+          "tipo": "principios",
+          "titulo": "Princípios",
+          "texto": "Inglesa e os fundamentos.",
+          "bullets": [
+            "Centro: c4 controla d5 à distância",
+            "Desenvolvimento: Nc3/g3/Bg2 flexíveis",
+            "Rei seguro: g3/Bg2 preparam O-O",
+            "Não mova sem propósito: c4 já disputa centro, não é lateral"
+          ]
+        },
+        {
+          "tipo": "doZero",
+          "titulo": "Do Zero",
+          "texto": "Primeiros lances com porquê.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "sequencia": [
+            {
+              "uci": "c2c4",
+              "san": "1.c4",
+              "porQue": "Controla d5 à distância, flexível"
+            },
+            {
+              "uci": "c7c5",
+              "san": "1...c5",
+              "porQue": "Simetria: disputa mesmo centro"
+            },
+            {
+              "uci": "b1c3",
+              "san": "2.Nc3",
+              "porQue": "Desenvolve controlando d5/e4"
+            },
+            {
+              "uci": "g8f6",
+              "san": "2...Nf6",
+              "porQue": "Desenvolve pressionando e4"
+            },
+            {
+              "uci": "g2g3",
+              "san": "3.g3",
+              "porQue": "Fianchetto prepara Bg2 e O-O"
+            }
+          ]
+        },
+        {
+          "tipo": "tabiya",
+          "titulo": "Tabiya ⭐",
+          "texto": "Posição-chave após 1...c5. É sua vez de brancas. O que jogaria?",
+          "fen": "rnbqkbnr/pp1ppppp/8/2p5/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2",
+          "quizzes": [
+            {
+              "pergunta": "Brancas na Tabiya após 1...c5. Qual ideia principal?",
+              "opcoes": [
+                "2.Nc3 mantendo flexibilidade e controle d5",
+                "2.g3 fianchetto imediato",
+                "2.e3 sólido",
+                "Todas jogáveis; Nc3 é mais instrutiva para manter centro à distância"
+              ],
+              "correta": 3,
+              "explicacao": "Nc3 mantém c4 e controla d5/e4; g3/e3 também jogáveis. Flexibilidade > sequência fixa."
+            }
+          ]
+        },
+        {
+          "tipo": "escolhaLance",
+          "titulo": "Encontre o lance",
+          "texto": "Na Tabiya, encontre um lance natural para brancas.",
+          "fen": "rnbqkbnr/pp1ppppp/8/2p5/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2",
+          "sequencia": [
+            {
+              "uci": "b1c3",
+              "san": "2.Nc3",
+              "porQue": "Mantém c4 e pressiona d5"
+            },
+            {
+              "uci": "g2g3",
+              "san": "2.g3",
+              "porQue": "Fianchetto direto, flexível"
+            }
+          ]
+        },
+        {
+          "tipo": "porQue",
+          "titulo": "Entenda o porquê 🧠",
+          "texto": "Por que 2.Nc3?",
+          "quizzes": [
+            {
+              "pergunta": "Por que 2.Nc3 na Inglesa simétrica?",
+              "opcoes": [
+                "Ganhar peão",
+                "Controlar d5/e4 mantendo c4 sem definir estrutura",
+                "Dar xeque",
+                "Evitar ...d5"
+              ],
+              "correta": 1,
+              "explicacao": "Nc3 sustenta c4 e ataca d5/e4 sem fixar peões."
+            }
+          ]
+        },
+        {
+          "tipo": "reacao",
+          "titulo": "Reação — e se o adversário sair da teoria?",
+          "texto": "Pretas não jogaram 1...c5. Jogaram 1...e5 (Siciliana reversa). O que mudou?",
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2",
+          "quizzes": [
+            {
+              "pergunta": "Contra 1...e5, qual adaptação?",
+              "opcoes": [
+                "Jogar Nc3 igual controlando d5",
+                "Trocar em e5 sempre",
+                "Jogar d4 imediato",
+                "Jogar e3"
+              ],
+              "correta": 0,
+              "explicacao": "e5 ocupa centro; Nc3 ainda controla d5, mas estrutura vira Siciliana reversa com tempo a mais."
+            }
+          ]
+        },
+        {
+          "tipo": "armadilhas",
+          "titulo": "Armadilhas",
+          "texto": "Poucas e importantes.",
+          "bullets": [
+            "Não jogue c4 c5 Nc3 c6? b3 sem ver ...d5",
+            "Evite g3 sem Nc3 e cair em ...d5"
+          ]
+        },
+        {
+          "tipo": "errosComuns",
+          "titulo": "Erros comuns",
+          "texto": "O que evitar.",
+          "bullets": [
+            "Jogar c4 e depois d4 sem preparar e perder tempo",
+            "Mover g3/Bg2 várias vezes sem desenvolver resto",
+            "Esquecer Nc3 e deixar ...d5 livre",
+            "Fixar peões cedo demais sem ver transposição"
+          ]
+        },
+        {
+          "tipo": "plano",
+          "titulo": "Encontre o Plano ⭐",
+          "texto": "A abertura está terminando. Qual é seu plano?"
+        },
+        {
+          "tipo": "jogue",
+          "titulo": "Jogue",
+          "texto": "Pratique contra dois bots.",
+          "bullets": [
+            "🟢 Bot Teórico: segue linha principal",
+            "🔵 Bot Adaptativo: sai da teoria"
+          ]
+        },
+        {
+          "tipo": "revisao",
+          "titulo": "Revisão",
+          "texto": "Repetição focada nos erros."
+        }
+      ],
+      "plano": {
+        "fenTransicao": "rnbqk2r/pp1pppbp/5np1/2p5/2P5/2N3P1/PP1PPPBP/R1BQK1NR w KQkq - 2 5",
+        "pergunta": "A abertura está terminando. Qual é seu plano?",
+        "planos": [
+          "Bg2 + d3 + O-O mantendo controle d5",
+          "Jogar d4 imediato sem preparar",
+          "Trocar em c5 sem motivo",
+          "Jogar e4 sem ver ...d5"
+        ],
+        "planoCorreto": 0,
+        "porQuePlano": "Com c4/c5/Nc3/Nf6/g3, Bg2 completa fianchetto, d3 sustenta c4 e O-O garante rei — controle à distância vira estrutura sólida.",
+        "sequenciaPlano": [
+          "e2e3",
+          "e7e6",
+          "g1f3",
+          "d7d5"
+        ]
+      },
+      "botTeorico": [
+        "c2c4",
+        "c7c5",
+        "b1c3",
+        "g8f6",
+        "g2g3",
+        "g7g6",
+        "f1g2",
+        "f8g7",
+        "e2e3"
+      ],
+      "botAdaptativo": [
+        "c2c4",
+        "e7e5",
+        "b1c3",
+        "g8f6",
+        "g2g3",
+        "d7d5",
+        "f1g2",
+        "c7c6"
+      ]
     },
     {
       "id": 12,
