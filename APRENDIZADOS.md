@@ -1,5 +1,11 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-09-05 — v0.16.0 (3 temas Cread preenchidos)
+
+### Novos temas
+- 3 paletas preenchidas adicionadas a `AppPalette.all`: `terracotaBloco` (#FFF5E6/#B5652E), `noiteEstrelada` (#0B1026/#FFD54F) e `escuroPremium` (#0A0A0A/#FFC857). `lightSquare/darkSquare` sólidos, `hint` 60% branco nos escuros, 40% preto no claro. Total 6 temas; seletor em `Configurações → Tema` sem migração (chave `app_theme`).
+- Tabuleiros com borda `border` 3px e contraste alto; BigButtons `surface` sólido + ícone `accent`.
+
 ## 2026-09-05 — Fluxo de entrega (REGRA OBRIGATÓRIA)
 
 ### Sempre enviar link direto do APK após push

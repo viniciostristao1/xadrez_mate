@@ -115,8 +115,78 @@ class AppPalette {
     check: Color(0xFFC0392B),
   );
 
+  static const terracotaBloco = AppPalette(
+    id: 'terracotaBloco',
+    nome: 'Terracota Bloco',
+    background: Color(0xFFFFF5E6),
+    surface: Color(0xFFF2E8D6),
+    surfaceAlt: Color(0xFFEADFC8),
+    border: Color(0xFFD2B89A),
+    text: Color(0xFF382E20),
+    dim: Color(0xFF8A7355),
+    faint: Color(0xFF6B5A4A),
+    accent: Color(0xFFB5652E),
+    ok: Color(0xFF4CAF7D),
+    danger: Color(0xFFC0392B),
+    lightSquare: Color(0xFFFFF5E6),
+    darkSquare: Color(0xFFB5652E),
+    select: Color(0xFFF0CE7A),
+    hint: Color(0x66000000),
+    lastMove: Color(0x33B5652E),
+    check: Color(0xFFC0392B),
+  );
+
+  static const noiteEstrelada = AppPalette(
+    id: 'noiteEstrelada',
+    nome: 'Noite Estrelada',
+    background: Color(0xFF0B1026),
+    surface: Color(0xFF121A33),
+    surfaceAlt: Color(0xFF1A2347),
+    border: Color(0xFF2A3A5E),
+    text: Color(0xFFE8EAF6),
+    dim: Color(0xFF8A95C2),
+    faint: Color(0xFF5A648A),
+    accent: Color(0xFFFFD54F),
+    ok: Color(0xFF4CAF7D),
+    danger: Color(0xFFE05A4E),
+    lightSquare: Color(0xFFE8EAF6),
+    darkSquare: Color(0xFF2A3A6B),
+    select: Color(0xFFFFE082),
+    hint: Color(0x99FFFFFF),
+    lastMove: Color(0x33FFD54F),
+    check: Color(0xFFE05A4E),
+  );
+
+  static const escuroPremium = AppPalette(
+    id: 'escuroPremium',
+    nome: 'Escuro Premium',
+    background: Color(0xFF0A0A0A),
+    surface: Color(0xFF121212),
+    surfaceAlt: Color(0xFF1E1E1E),
+    border: Color(0xFF2E2E2E),
+    text: Color(0xFFEAEAEA),
+    dim: Color(0xFF9A9A9A),
+    faint: Color(0xFF6B6B6B),
+    accent: Color(0xFFFFC857),
+    ok: Color(0xFF4CAF7D),
+    danger: Color(0xFFE05A4E),
+    lightSquare: Color(0xFFEAEAEA),
+    darkSquare: Color(0xFF4A4A4A),
+    select: Color(0xFFFFE082),
+    hint: Color(0x99FFFFFF),
+    lastMove: Color(0x33FFC857),
+    check: Color(0xFFE05A4E),
+  );
+
   /// Todos os temas disponíveis (a ordem é a ordem do seletor).
-  static const all = <AppPalette>[azulRoyal, minimalOutline, terracota];
+  static const all = <AppPalette>[
+    azulRoyal,
+    minimalOutline,
+    terracota,
+    terracotaBloco,
+    noiteEstrelada,
+    escuroPremium,
+  ];
 
   static AppPalette byId(String? id) =>
       all.firstWhere((p) => p.id == id, orElse: () => azulRoyal);

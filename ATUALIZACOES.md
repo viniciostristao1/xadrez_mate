@@ -1,5 +1,8 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.16.0 (2026-09-05)
+- 🎨 **3 novos temas preenchidos (Cread):** **Terracota Bloco** (papel #FFF5E6 + #B5652E sólido), **Noite Estrelada** (noite #0B1026 + amarelo #FFD54F) e **Escuro Premium** (preto #0A0A0A + âmbar #FFC857) — em **Configurações → Tema**. Total agora 6 temas.
+
 ## v0.15.0 (2026-09-05)
 - 🎨 **Novo ícone do Mateflow** — substitui o anterior em todo o app (ícone da loja/launcher gerado de `assets/icon/app_icon.png`).
 
