@@ -1,5 +1,8 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.15.0 (2026-09-05)
+- 🎨 **Novo ícone do Mateflow** — substitui o anterior em todo o app (ícone da loja/launcher gerado de `assets/icon/app_icon.png`).
+
 ## v0.14.1 (2026-08-26)
 - 🗑️ Tema **Madeira Escura** removido (restam **Azul Royal**, **Minimal Outline** e **Terracota**).
 

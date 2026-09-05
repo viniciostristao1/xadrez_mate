@@ -1,5 +1,14 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-09-05 — Fluxo de entrega (REGRA OBRIGATÓRIA)
+
+### Sempre enviar link direto do APK após push
+- **REGRA:** Toda nova versão (commit+push em `main`) DEVE terminar com o envio do **link direto perene** ao usuário: `https://github.com/viniciostristao1/xadrez_mate/releases/latest/download/xadrez-mate.apk`
+- **Quando:** imediatamente após `git push origin main` (e, se for release versionada, após `scripts/release.sh vX.Y.Z` com CI verde).
+- **Por quê:** usuário pediu explicitamente para nunca esquecer (2026-09-05). O link é o mesmo sempre (`latest/download/xadrez-mate.apk`), atualizado pelo `release.sh`.
+- **Checklist:** `flutter analyze` + `flutter test` verdes → `git commit` + `git push` → `gh run watch` → `scripts/release.sh` → **enviar link**.
+- Nunca deixar mudanças só locais; nunca terminar sem enviar o link.
+
 ## 2026-08-26 — v0.11.0 (temas trocáveis em runtime)
 
 ### Arquitetura de temas
