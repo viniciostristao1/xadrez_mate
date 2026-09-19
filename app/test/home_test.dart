@@ -20,6 +20,7 @@ void main() {
     await tester.pumpWidget(MaterialApp(
       theme: AppTheme.dark,
       home: HomeScreen(
+        onJogar: () {},
         onMates: () {},
         onTatica: () {},
         onDefesa: () {},
@@ -29,12 +30,17 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  testWidgets('página principal tem Mates e Tática', (tester) async {
+  testWidgets('página principal tem Jogar acima de Mates', (tester) async {
     await pump(tester);
     expect(find.text('Mateflow'), findsOneWidget);
+    expect(find.text('Jogar'), findsOneWidget);
     expect(find.text('Mates'), findsOneWidget);
     expect(find.text('Tática'), findsOneWidget);
     expect(find.text('Defesa'), findsOneWidget);
+    expect(
+      tester.getTopLeft(find.text('Jogar')).dy,
+      lessThan(tester.getTopLeft(find.text('Mates')).dy),
+    );
   });
 
   testWidgets('engrenagem abre configurações com idioma e peças',

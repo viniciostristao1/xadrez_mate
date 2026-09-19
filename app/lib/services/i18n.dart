@@ -177,6 +177,115 @@ abstract final class S {
   static String get faixaAvancado => I18n.t({Idioma.pt: 'Avançado', Idioma.en: 'Advanced', Idioma.es: 'Avanzado'});
   static String get faixaMestre => I18n.t({Idioma.pt: 'Mestre do Mate', Idioma.en: 'Mate Master', Idioma.es: 'Maestro del Mate'});
 
+  // Jogar (partida completa com precisão)
+  static String get jogar => I18n.t({Idioma.pt: 'Jogar', Idioma.en: 'Play', Idioma.es: 'Jugar'});
+  static String get jogarSub => I18n.t({
+        Idioma.pt: 'Partida completa do início, com nota de precisão em cada lance',
+        Idioma.en: 'A full game from the start, with a precision score on every move',
+        Idioma.es: 'Partida completa desde el inicio, con nota de precisión en cada jugada',
+      });
+  static String get partida => I18n.t({Idioma.pt: 'Partida', Idioma.en: 'Game', Idioma.es: 'Partida'});
+  static String get precisaoTreino => I18n.t({
+        Idioma.pt: 'Treino de precisão',
+        Idioma.en: 'Accuracy training',
+        Idioma.es: 'Entrenamiento de precisión',
+      });
+  static String get precisaoTreinoSub => I18n.t({
+        Idioma.pt: 'Cada lance seu recebe uma nota: Bom, Médio ou Ruim. Achou que '
+            'podia ser melhor? Toque em Voltar e repita o lance até acertar.',
+        Idioma.en: 'Every move you make is graded: Good, Medium or Bad. Think it '
+            'could be better? Tap Undo and replay the move until you get it right.',
+        Idioma.es: 'Cada jugada tuya recibe una nota: Buena, Media o Mala. '
+            '¿Crees que podía ser mejor? Toca Deshacer y repite la jugada.',
+      });
+  static String get voceJogaDe => I18n.t({
+        Idioma.pt: 'Você joga de',
+        Idioma.en: 'You play as',
+        Idioma.es: 'Juegas con',
+      });
+  static String get brancas => I18n.t({Idioma.pt: 'Brancas', Idioma.en: 'White', Idioma.es: 'Blancas'});
+  static String get pretas => I18n.t({Idioma.pt: 'Pretas', Idioma.en: 'Black', Idioma.es: 'Negras'});
+  static String get nivelDoRival => I18n.t({
+        Idioma.pt: 'Nível do rival',
+        Idioma.en: 'Opponent level',
+        Idioma.es: 'Nivel del rival',
+      });
+  static String get rivalFacil => I18n.t({
+        Idioma.pt: 'Rival distraído',
+        Idioma.en: 'Distracted opponent',
+        Idioma.es: 'Rival distraído',
+      });
+  static String get rivalMedio => I18n.t({
+        Idioma.pt: 'Rival equilibrado',
+        Idioma.en: 'Balanced opponent',
+        Idioma.es: 'Rival equilibrado',
+      });
+  static String get rivalDificil => I18n.t({
+        Idioma.pt: 'Rival calculista',
+        Idioma.en: 'Calculating opponent',
+        Idioma.es: 'Rival calculador',
+      });
+  static String get suaVez => I18n.t({Idioma.pt: 'Sua vez', Idioma.en: 'Your turn', Idioma.es: 'Tu turno'});
+  static String get rivalPensando => I18n.t({
+        Idioma.pt: 'Rival pensando…',
+        Idioma.en: 'Opponent thinking…',
+        Idioma.es: 'Rival pensando…',
+      });
+  static String get voltaLance => I18n.t({
+        Idioma.pt: 'Voltar lance',
+        Idioma.en: 'Undo move',
+        Idioma.es: 'Deshacer jugada',
+      });
+  static String get novaPartida => I18n.t({
+        Idioma.pt: 'Nova partida',
+        Idioma.en: 'New game',
+        Idioma.es: 'Nueva partida',
+      });
+  static String get bomLance => I18n.t({Idioma.pt: 'Bom lance!', Idioma.en: 'Good move!', Idioma.es: '¡Buena jugada!'});
+  static String get lanceMedio => I18n.t({
+        Idioma.pt: 'Lance médio',
+        Idioma.en: 'Medium move',
+        Idioma.es: 'Jugada media',
+      });
+  static String get lanceRuim => I18n.t({Idioma.pt: 'Lance ruim', Idioma.en: 'Bad move', Idioma.es: 'Jugada mala'});
+  static String get precisaoRotulo => I18n.t({Idioma.pt: 'Precisão', Idioma.en: 'Accuracy', Idioma.es: 'Precisión'});
+  static String get precisaoMedia => I18n.t({
+        Idioma.pt: 'Precisão média',
+        Idioma.en: 'Average accuracy',
+        Idioma.es: 'Precisión media',
+      });
+  static String melhorEra(String san) => I18n.t({
+        Idioma.pt: 'Melhor era $san',
+        Idioma.en: 'Best was $san',
+        Idioma.es: 'Mejor era $san',
+      });
+  static String get voceVenceu => I18n.t({
+        Idioma.pt: 'Xeque-mate! Você venceu!',
+        Idioma.en: 'Checkmate! You won!',
+        Idioma.es: '¡Jaque mate! ¡Ganaste!',
+      });
+  static String get rivalVenceu => I18n.t({
+        Idioma.pt: 'Xeque-mate. O rival venceu.',
+        Idioma.en: 'Checkmate. The opponent won.',
+        Idioma.es: 'Jaque mate. Ganó el rival.',
+      });
+  static String get jogoEmpatado => I18n.t({Idioma.pt: 'Empate!', Idioma.en: 'Draw!', Idioma.es: '¡Tablas!'});
+  static String get empateAfogado => I18n.t({
+        Idioma.pt: 'Rei afogado (sem lances legais)',
+        Idioma.en: 'Stalemate (no legal moves)',
+        Idioma.es: 'Rey ahogado (sin jugadas legales)',
+      });
+  static String get empateCinquenta => I18n.t({
+        Idioma.pt: 'Regra dos 50 lances',
+        Idioma.en: '50-move rule',
+        Idioma.es: 'Regla de los 50 movimientos',
+      });
+  static String get empateMaterial => I18n.t({
+        Idioma.pt: 'Material insuficiente',
+        Idioma.en: 'Insufficient material',
+        Idioma.es: 'Material insuficiente',
+      });
+
   // Tática
   static String get espeto => I18n.t({Idioma.pt: 'Espeto', Idioma.en: 'Skewer', Idioma.es: 'Pincho'});
   static String get descoberta => I18n.t({Idioma.pt: 'Descoberta', Idioma.en: 'Discovered attack', Idioma.es: 'Ataque descubierto'});

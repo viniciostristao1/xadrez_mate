@@ -1,5 +1,8 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.17.0 (2026-09-19)
+- ♟️ **JOGAR (nova categoria, no topo):** partida completa desde o início contra um rival com **3 níveis**, e você escolhe jogar de **brancas ou pretas**. **Cada lance seu recebe uma nota de precisão — Bom, Médio ou Ruim** (metodologia da Lichess), com o **melhor lance** sugerido quando você erra. Não gostou? Toque em **Voltar lance** e repita a jogada (vale para qualquer nota). Mesmo **cronômetro**, **pausar** e **voltar** dos Mates; no fim, precisão média, contagem por nota e **nova partida**.
+
 ## v0.16.0 (2026-09-05)
 - 🎨 **3 novos temas preenchidos (Cread):** **Terracota Bloco** (papel #FFF5E6 + #B5652E sólido), **Noite Estrelada** (noite #0B1026 + amarelo #FFD54F) e **Escuro Premium** (preto #0A0A0A + âmbar #FFC857) — em **Configurações → Tema**. Total agora 6 temas.
 

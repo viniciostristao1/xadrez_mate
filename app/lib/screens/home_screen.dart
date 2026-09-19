@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import '../services/i18n.dart';
 import '../theme/app_colors.dart';
 
-/// Página principal: escolher entre MATES e TÁTICA + configurações
+/// Página principal: escolher entre JOGAR, MATES e TÁTICA + configurações
 /// (engrenagem: idioma e layout das peças).
 class HomeScreen extends StatelessWidget {
+  final VoidCallback onJogar;
   final VoidCallback onMates;
   final VoidCallback onTatica;
   final VoidCallback onDefesa;
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
 
   const HomeScreen({
     super.key,
+    required this.onJogar,
     required this.onMates,
     required this.onTatica,
     required this.onDefesa,
@@ -76,6 +78,13 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
+              _BigButton(
+                icon: Icons.sports_esports_outlined,
+                title: S.jogar,
+                subtitle: S.jogarSub,
+                onTap: onJogar,
+              ),
+              const SizedBox(height: 18),
               _BigButton(
                 icon: Icons.flag_outlined,
                 title: S.mates,

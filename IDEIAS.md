@@ -27,6 +27,22 @@
 9. **Som de lance/mate** — pequenos efeitos sonoros (opcional, off por padrão).
 10. **Play Store** — seguir o mesmo caminho do CarLog (AAB no lançamento).
 
+## Modo Jogar (v0.17.0) — evoluções possíveis
+
+1. **Repetição tripla** — hoje o empate automático cobre afogado, 50 lances e
+   material insuficiente; falta a repetição tripla (precisa de chave de
+   posição no `Board`).
+2. **Dica no modo Jogar** — lâmpada com o melhor lance (a análise já calcula
+   o melhor lance; custaria precisão na nota, como nas dicas dos Mates).
+3. **Revisão pós-partida** — lista dos lances ruins/médios com o melhor lance
+   e navegação para reviver cada posição.
+4. **Rating do modo Jogar** — Elo próprio contra os níveis do rival,
+   separado do rating dos Mates.
+5. **Abertura preferida** — deixar o usuário começar de uma abertura
+   (reusar o banco de `AberturasDb`) em vez da posição inicial.
+6. **Tempo por lance** — opção de relógio (ex.: 10 min + incremento) medindo
+   também a precisão sob pressão.
+
 ## Decisões em aberto
 
 - Revelar o lance certo depois de 2 erros? (hoje: nunca — só avisa).

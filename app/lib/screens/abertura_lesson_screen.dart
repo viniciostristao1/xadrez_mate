@@ -140,7 +140,7 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
       final exp = expected[doZeroIdx];
       if (m.uci != exp) {
         setState(() {
-          feedback = 'Tente ${exp} — ${step.sequencia[doZeroIdx].porQue}';
+          feedback = 'Tente $exp — ${step.sequencia[doZeroIdx].porQue}';
           feedbackOk = false;
           selected = null;
           targets = {};
@@ -167,7 +167,7 @@ class _AberturaLessonScreenState extends State<AberturaLessonScreen> {
             if (!mounted) return;
             setState(() {
               board.makeMove(oppMove);
-              feedback = '${feedback!}  •  ...${oppUci} ${step.sequencia[doZeroIdx].porQue}';
+              feedback = '$feedback!  •  ...$oppUci ${step.sequencia[doZeroIdx].porQue}';
               doZeroIdx++;
               _opponentThinking = false;
             });

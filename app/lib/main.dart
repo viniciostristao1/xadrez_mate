@@ -11,6 +11,8 @@ import 'models/tatica_puzzle.dart';
 import 'screens/aberturas_home_screen.dart';
 import 'screens/defesa_home_screen.dart';
 import 'screens/home_screen.dart';
+import 'screens/jogar_home_screen.dart';
+import 'screens/jogo_screen.dart';
 import 'screens/mates_home_screen.dart';
 import 'screens/puzzle_screen.dart';
 import 'screens/tatica_home_screen.dart';
@@ -91,6 +93,23 @@ class _MateflowAppState extends State<MateflowApp> {
   // ------------------------------------------------------------------
   // Navegação
   // ------------------------------------------------------------------
+
+  void _abrirJogar() {
+    _navKey.currentState!.push(MaterialPageRoute(
+      builder: (_) => JogarHomeScreen(onStart: _startJogo),
+    ));
+  }
+
+  void _startJogo(int level, ChessColor cor) {
+    _navKey.currentState!.push(MaterialPageRoute(
+      builder: (_) => JogoScreen(
+        pieceStyle: _pieceStyle,
+        level: level,
+        userColor: cor,
+        onExit: () => _navKey.currentState!.pop(),
+      ),
+    ));
+  }
 
   void _abrirMates() {
     _navKey.currentState!.push(MaterialPageRoute(
@@ -358,6 +377,7 @@ class _MateflowAppState extends State<MateflowApp> {
           theme: AppTheme.dark,
           home: _ready
               ? HomeScreen(
+                  onJogar: _abrirJogar,
                   onMates: _abrirMates,
                   onTatica: _abrirTatica,
                   onDefesa: _abrirDefesa,

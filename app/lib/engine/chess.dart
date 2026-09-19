@@ -89,6 +89,10 @@ class Board {
 
   Board();
 
+  /// Posição inicial padrão (usada no modo Jogar).
+  static const String fenInicial =
+      'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+
   factory Board.fen(String fen) {
     final b = Board();
     b.parseFen(fen);
@@ -480,6 +484,14 @@ class Board {
     _makeMoveInternal(m);
   }
 
+  /// Aplica um lance JÁ VALIDADO (não re-checa legalidade).
+  ///
+  /// Uso restrito a buscadores (IA) que geram os lances legais e os aplicam
+  /// em sequência — a checagem de [makeMove] regeneraria a lista de legais a
+  /// cada lance e inviabilizaria a busca. Nunca usar com lance de origem
+  /// não confiável.
+  void makeMoveUnchecked(Move m) => _makeMoveInternal(m);
+
   void _makeMoveInternal(Move m) {
     final moving = _squares[m.from]!;
     final captured = _squares[m.to];
@@ -593,6 +605,36 @@ class Board {
   }
 
   bool get isGameOver => isCheckmate || isStalemate;
+
+  /// Regra dos 50 lances (100 meios-lances sem captura ou lance de peão).
+  bool get isFiftyMoveDraw => halfmoveClock >= 100;
+
+  /// Empate por material insuficiente (posição morta, casos automáticos):
+  /// K x K, K+B x K, K+N x K e K+B x K+B com os bispos na mesma cor de casa.
+  bool get isInsufficientMaterial {
+    final minors = <({PieceType type, int square})>[];
+    for (var sq = 0; sq < 64; sq++) {
+      final p = _squares[sq];
+      if (p == null || p.type == PieceType.king) continue;
+      if (p.type == PieceType.pawn ||
+          p.type == PieceType.rook ||
+          p.type == PieceType.queen) {
+        return false;
+      }
+      minors.add((type: p.type, square: sq));
+    }
+    if (minors.length <= 1) return true;
+    if (minors.length == 2 &&
+        minors[0].type == PieceType.bishop &&
+        minors[1].type == PieceType.bishop &&
+        _squareColor(minors[0].square) == _squareColor(minors[1].square)) {
+      return true;
+    }
+    return false;
+  }
+
+  /// Cor da casa (0/1) — usada nas regras de empate.
+  static int _squareColor(int sq) => (sq % 8 + sq ~/ 8) % 2;
 
   // ------------------------------------------------------------------
   // SAN (para exibição)

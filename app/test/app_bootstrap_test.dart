@@ -78,6 +78,9 @@ void main() {
 
   testWidgets('Defesa tem exercícios em todos os níveis', (tester) async {
     SharedPreferences.setMockInitialValues({});
+    tester.view.physicalSize = const Size(800, 1500);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
     await tester.pumpWidget(const MateflowApp());
     await tester.runAsync(
         () => Future<void>.delayed(const Duration(milliseconds: 1500)));
@@ -114,6 +117,9 @@ void main() {
 
   testWidgets('Tática tem exercícios em todos os níveis', (tester) async {
     SharedPreferences.setMockInitialValues({});
+    tester.view.physicalSize = const Size(800, 1500);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
     await tester.pumpWidget(const MateflowApp());
     await tester.runAsync(
         () => Future<void>.delayed(const Duration(milliseconds: 300)));

@@ -1,5 +1,54 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-09-19 — v0.17.0 (modo Jogar: partida completa + precisão por lance)
+
+### Mini-motor de IA (`lib/engine/ai.dart`, Dart puro)
+- Busca **negamax + alfa-beta + quiescência** (só capturas/promoções, cap 4) com
+  avaliação **material + PSQT** (Michniewski) e ordenação **MVV-LVA**.
+- Níveis do rival: **1** = prof. 1 + 30% de lance aleatório + sorteio entre os
+  lances a 150cp do melhor; **2** = prof. 2 + sorteio a 60cp; **3** = prof. 3
+  determinístico.
+- Bench na VPS: análise prof. 3 ≤ ~90ms (4 posições); escolha do rival ≤ ~40ms.
+  Celular é mais lento, mas a análise roda 1× por lance do jogador (aceitável).
+- GOTCHA de performance: `Board.makeMove` re-checa legalidade (regenera TODOS os
+  legais → O(n²) na busca). Adicionado `Board.makeMoveUnchecked` para lances já
+  validados. **Nunca** usar com lance de entrada não confiável.
+- Truque da análise: com poda no root, só o lance que sobe o alfa tem score
+  exato; o lance jogado (se não subiu) é re-buscado de janela cheia. Filho
+  buscado com alpha=-inf e sem beta-cutoff é exato — por isso não precisa
+  buscar TODOS os root moves de janela cheia.
+
+### Precisão (metodologia da Lichess — `lichess.org/page/accuracy`)
+- Win% = `50 + 50*(2/(1+exp(-0.00368208*cp)) - 1)`, cp limitado a ±1000
+  (mate = ±1000). Fonte: `scalachess/eval.scala` (`WinPercent`).
+- Precisão do lance = `103.1668100711649*exp(-0.04354415386753951*perda)
+  - 3.166924740191411 + 1`, clamp [0,100] (o +1 é o bônus de incerteza).
+  Fonte: `lila/AccuracyPercent.scala`.
+- **Limiares** (mesmos Judgements da Lichess): perda **<10pp = bom**;
+  **10–20 = médio** (Inaccuracy); **≥20 = ruim** (Mistake/Blunder).
+- Casos de mate (de `lila/Advice.scala`): perdeu mate forçado → 30pp (ruim);
+  12pp se, mesmo sem mate, seguia ganhando >999cp. Permitiu mate → 30pp (ruim);
+  12pp se já estava perdido (≤-1000cp). Mate apenas adiado → 0 (segue bom).
+- ⚠️ A avaliação é rasa (prof. 3): pega peça pendurada e tática de 1–2 lances;
+  não é Stockfish e não deve ser vendida como verdade absoluta em finais.
+
+### Tela do jogo (`lib/screens/jogo_screen.dart`)
+- Snapshot (FEN + tamanhos das listas) **a cada lance do jogador**; "Voltar
+  lance" restaura e desfaz junto a resposta do rival. `_generation` invalida
+  respostas pendentes (undo, nova partida, dispose) — sem isso, "Nova partida"
+  durante o delay do rival aplicava um lance no tabuleiro novo.
+- O snapshot é sempre da vez do jogador → ao voltar, `_thinking = false`.
+- Fim de jogo: mate (vitória/derrota), afogado, **50 lances**
+  (`Board.isFiftyMoveDraw`) e **material insuficiente**
+  (`Board.isInsufficientMaterial`, movido para o motor — regra "regras só no
+  engine"). Sem repetição tripla nesta versão (ver IDEIAS).
+- Testes: `rivalDelay` e `analysisDepth` injetáveis (10ms/1) — senão o teste
+  fica lento/flaky. Teste de layout em **360x640** pega overflow de verdade
+  (botões do card final → `Wrap`; textos → `Flexible`+ellipsis).
+- GOTCHA: adicionar um 5º card na home empurrou "Defesa" para fora do viewport
+  padrão (800x600) dos testes antigos → `app_bootstrap_test.dart` ganhou
+  `physicalSize` 800x1500. Home é scrollável; o usuário rola no aparelho.
+
 ## 2026-09-05 — v0.16.0 (3 temas Cread preenchidos)
 
 ### Novos temas
