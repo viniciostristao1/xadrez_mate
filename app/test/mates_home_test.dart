@@ -40,4 +40,29 @@ void main() {
     expect(find.text('Evolução do rating'), findsOneWidget);
     expect(find.text('Mate aleatório'), findsOneWidget);
   });
+
+  testWidgets('as categorias cabem sem rolar em tela pequena (360x640)',
+      (tester) async {
+    tester.view.physicalSize = const Size(360, 640);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(MaterialApp(
+      theme: AppTheme.dark,
+      home: MatesHomeScreen(
+        onDbLoaded: () async {},
+        onStartPuzzle: (_, __) {},
+        onStartSurpresa: (_) {},
+      ),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Mate em 3'), findsOneWidget);
+    // O card de Mate aleatório é o último da lista de categorias e tem de
+    // terminar dentro da tela (só a Evolução do rating pode ficar abaixo).
+    final surpresa = find.ancestor(
+      of: find.text('Mate aleatório'),
+      matching: find.byType(Card),
+    );
+    expect(tester.getBottomLeft(surpresa).dy, lessThanOrEqualTo(640));
+  });
 }

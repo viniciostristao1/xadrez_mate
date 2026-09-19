@@ -1,5 +1,21 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-09-19 — v0.19.0 (tela Mates compacta, rating para baixo)
+
+- `mates_home_screen.dart`: cards de categoria com padding 9, ícone 40, título
+  15, subtítulo 11 **`maxLines: 2` + ellipsis**, botões de nível com padding
+  vertical 5; espaços entre cards 8→6; instrução com `maxLines: 2`.
+- A **medalha de rating** saiu do topo e ficou abaixo do "Mate aleatório",
+  junto do gráfico — o usuário autorizou ("no máximo o rating pode ficar para
+  baixo"). As 4 categorias terminam dentro de 640px (teste com fonte de teste
+  Ahem, que é MAIS larga que a real — logo no aparelho sobra espaço).
+- GOTCHA de teste: a `Row` do cabeçalho do `_EvolutionCard` estourava em Ahem
+  (296px disponíveis vs ~305 do texto) mesmo com o card abaixo da dobra — o
+  `SingleChildScrollView` constrói todos os filhos e o overflow derruba o
+  teste. Fix: título em `Expanded` + ellipsis (sem `Spacer`).
+- Teste novo em `mates_home_test.dart`: viewport 360x640 e
+  `getBottomLeft(Card do 'Mate aleatório') <= 640`.
+
 ## 2026-09-19 — v0.18.0 (home compacta, 5 categorias sem rolagem)
 
 - `_BigButton`: padding vertical 26→11, ícone 58→46, título 21→18, subtítulo

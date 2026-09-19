@@ -58,66 +58,20 @@ class _MatesHomeScreenState extends State<MatesHomeScreen> {
         child: _loading
             ? const Center(child: CircularProgressIndicator())
             : SingleChildScrollView(
-                padding: const EdgeInsets.fromLTRB(20, 8, 20, 28),
+                padding: const EdgeInsets.fromLTRB(16, 6, 16, 14),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    ValueListenableBuilder<int>(
-                      valueListenable: RatingService.instance.notifier,
-                      builder: (context, _, _) {
-                        final r = RatingService.instance.rating;
-                        return Center(
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 16, vertical: 8),
-                            decoration: BoxDecoration(
-                              color: AppColors.surfaceAlt,
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: AppColors.border),
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Icon(
-                                  Icons.emoji_events_outlined,
-                                  size: 17,
-                                  color: AppColors.accent,
-                                ),
-                                const SizedBox(width: 7),
-                                Text(
-                                  '${r.round()}',
-                                  style: TextStyle(
-                                    color: AppColors.text,
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 16,
-                                    fontFeatures: [
-                                      FontFeature.tabularFigures(),
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(width: 7),
-                                Text(
-                                  '· ${RatingService.faixa(r)}',
-                                  style: TextStyle(
-                                    color: AppColors.dim,
-                                    fontSize: 13,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                    const SizedBox(height: 14),
                     Text(
                       '$_puzzles ${S.problemas(_puzzles)} · '
                       '${S.escolhaDificuldade}',
                       textAlign: TextAlign.center,
-                      style:
-                          TextStyle(color: AppColors.dim, height: 1.4),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          color: AppColors.dim, fontSize: 12, height: 1.2),
                     ),
-                    const SizedBox(height: 14),
+                    const SizedBox(height: 8),
                     for (final mate in const [1, 2, 3]) ...[
                       _PuzzleCard(
                         mate: mate,
@@ -129,7 +83,7 @@ class _MatesHomeScreenState extends State<MatesHomeScreen> {
                         onLevelTap: (level) =>
                             widget.onStartPuzzle(mate, level),
                       ),
-                      const SizedBox(height: 12),
+                      const SizedBox(height: 8),
                     ],
                     // Mate aleatório (surpresa: mate em 2 ou 3, com nível)
                     _SurpresaCard(
@@ -143,8 +97,57 @@ class _MatesHomeScreenState extends State<MatesHomeScreen> {
                       ],
                       onLevelTap: widget.onStartSurpresa,
                     ),
-                    const SizedBox(height: 12),
-                    // Evolução do rating
+                    const SizedBox(height: 8),
+                    // Rating (pode ficar abaixo da dobra)
+                    ValueListenableBuilder<int>(
+                      valueListenable: RatingService.instance.notifier,
+                      builder: (context, _, _) {
+                        final r = RatingService.instance.rating;
+                        return Center(
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 13, vertical: 5),
+                            decoration: BoxDecoration(
+                              color: AppColors.surfaceAlt,
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(color: AppColors.border),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(
+                                  Icons.emoji_events_outlined,
+                                  size: 15,
+                                  color: AppColors.accent,
+                                ),
+                                const SizedBox(width: 6),
+                                Text(
+                                  '${r.round()}',
+                                  style: TextStyle(
+                                    color: AppColors.text,
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: 15,
+                                    fontFeatures: [
+                                      FontFeature.tabularFigures(),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(width: 6),
+                                Text(
+                                  '· ${RatingService.faixa(r)}',
+                                  style: TextStyle(
+                                    color: AppColors.dim,
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 8),
+                    // Evolução do rating (pode ficar abaixo da dobra)
                     _EvolutionCard(),
                   ],
                 ),
@@ -166,27 +169,27 @@ class _SurpresaCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(9),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
                 Container(
-                  width: 44,
-                  height: 44,
+                  width: 40,
+                  height: 40,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: AppColors.surfaceAlt,
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(11),
                   ),
                   child: Icon(
                     Icons.shuffle,
                     color: AppColors.accent,
-                    size: 24,
+                    size: 22,
                   ),
                 ),
-                const SizedBox(width: 12),
+                const SizedBox(width: 10),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -195,22 +198,24 @@ class _SurpresaCard extends StatelessWidget {
                         S.mateAleatorio,
                         style: TextStyle(
                           color: AppColors.text,
-                          fontSize: 15.5,
+                          fontSize: 14.5,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
-                      const SizedBox(height: 2),
+                      const SizedBox(height: 1),
                       Text(
                         S.surpresaSub,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                            color: AppColors.dim, fontSize: 12.5),
+                            color: AppColors.dim, fontSize: 11, height: 1.2),
                       ),
                     ],
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 6),
             Row(
               children: [
                 for (var lvl = 0; lvl < 3; lvl++) ...[
@@ -249,28 +254,30 @@ class _EvolutionCard extends StatelessWidget {
       builder: (context, _, _) {
         final historico = RatingService.instance.historico;
         return Card(
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Icon(
-                      Icons.show_chart,
-                      size: 18,
-                      color: AppColors.accent,
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                      S.evolucaoRating,
-                      style: TextStyle(
-                        color: AppColors.text,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 15.5,
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(
+                    Icons.show_chart,
+                    size: 18,
+                    color: AppColors.accent,
+                  ),
+                  const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        S.evolucaoRating,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: AppColors.text,
+                          fontWeight: FontWeight.w800,
+                          fontSize: 15.5,
+                        ),
                       ),
                     ),
-                    const Spacer(),
                     if (historico.isNotEmpty)
                       Text(
                         '${RatingService.instance.resolvidos} ${S.resolvidos}',
@@ -325,29 +332,29 @@ class _PuzzleCard extends StatelessWidget {
     };
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(9),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
                 Container(
-                  width: 46,
-                  height: 46,
+                  width: 40,
+                  height: 40,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: AppColors.surfaceAlt,
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(11),
                   ),
                   child: Text(
                     _icons[mate - 1],
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 21,
                       color: mate == 3 ? AppColors.danger : AppColors.accent,
                     ),
                   ),
                 ),
-                const SizedBox(width: 12),
+                const SizedBox(width: 10),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -356,22 +363,24 @@ class _PuzzleCard extends StatelessWidget {
                         S.mateEm(mate),
                         style: TextStyle(
                           color: AppColors.text,
-                          fontSize: 17,
+                          fontSize: 15,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
                       const SizedBox(height: 1),
                       Text(
                         subtitle,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                            color: AppColors.dim, fontSize: 12.5),
+                            color: AppColors.dim, fontSize: 11, height: 1.2),
                       ),
                     ],
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 6),
             Row(
               children: [
                 for (var lvl = 0; lvl < 3; lvl++) ...[
@@ -420,7 +429,7 @@ class _LevelButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(12),
       onTap: onTap,
       child: Ink(
-        padding: const EdgeInsets.symmetric(vertical: 10),
+        padding: const EdgeInsets.symmetric(vertical: 5),
         decoration: BoxDecoration(
           color: AppColors.surfaceAlt,
           borderRadius: BorderRadius.circular(12),
@@ -433,15 +442,15 @@ class _LevelButton extends StatelessWidget {
               style: TextStyle(
                 color: accent,
                 fontWeight: FontWeight.w800,
-                fontSize: 13.5,
+                fontSize: 12.5,
               ),
             ),
-            const SizedBox(height: 2),
+            const SizedBox(height: 1),
             Text(
               '$count',
               style: TextStyle(
                 color: AppColors.dim,
-                fontSize: 12,
+                fontSize: 11,
                 fontWeight: FontWeight.w600,
               ),
             ),

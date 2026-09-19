@@ -1,5 +1,8 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.19.0 (2026-09-19)
+- 📐 **Página "Mates" mais compacta:** cards de **Mate em 1/2/3** e **Mate aleatório** com altura reduzida e menos espaço entre eles — as 4 categorias **cabem sem rolar**; o **rating** (medalha e gráfico de evolução) passou para baixo, onde pode rolar.
+
 ## v0.18.0 (2026-09-19)
 - 📐 **Página inicial mais compacta:** cards de **Jogar, Mates, Tática, Defesa e Aberturas** com altura reduzida e menos espaço entre eles (logo menor também) — as 5 categorias agora **cabem sem rolar** na maioria dos aparelhos.
 
