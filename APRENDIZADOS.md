@@ -1,5 +1,15 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-09-19 — v0.18.0 (home compacta, 5 categorias sem rolagem)
+
+- `_BigButton`: padding vertical 26→11, ícone 58→46, título 21→18, subtítulo
+  13.5→12 com **`maxLines: 2` + ellipsis** (traduções longas não esticam o card),
+  chevron 30→26. Espaço entre cards 18→8; logo 84→60; paddings do corpo menores.
+- Altura total estimada ~500px + AppBar (~556) → cabe em 360x640.
+- Teste de regressão em `home_test.dart`: viewport **360x640** e
+  `getBottomLeft(find.byType(Card).last).dy <= 640` — falha se a home voltar a
+  exigir rolagem em tela pequena.
+
 ## 2026-09-19 — v0.17.0 (modo Jogar: partida completa + precisão por lance)
 
 ### Mini-motor de IA (`lib/engine/ai.dart`, Dart puro)

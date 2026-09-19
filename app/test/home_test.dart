@@ -51,4 +51,30 @@ void main() {
     await tester.pumpAndSettle();
     expect(aberto, isTrue);
   });
+
+  testWidgets('as 5 categorias cabem sem rolar em tela pequena (360x640)',
+      (tester) async {
+    tester.view.physicalSize = const Size(360, 640);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    await RatingService.instance.load();
+    await I18n.instance.load();
+    await tester.pumpWidget(MaterialApp(
+      theme: AppTheme.dark,
+      home: HomeScreen(
+        onJogar: () {},
+        onMates: () {},
+        onTatica: () {},
+        onDefesa: () {},
+        onConfig: () {},
+      ),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Jogar'), findsOneWidget);
+    expect(find.text('Aberturas'), findsOneWidget);
+    // O card de Aberturas (último) tem de terminar dentro da tela.
+    final ultimoCard = find.byType(Card).last;
+    expect(tester.getBottomLeft(ultimoCard).dy, lessThanOrEqualTo(640));
+  });
 }

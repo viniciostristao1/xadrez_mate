@@ -1,5 +1,8 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.18.0 (2026-09-19)
+- 📐 **Página inicial mais compacta:** cards de **Jogar, Mates, Tática, Defesa e Aberturas** com altura reduzida e menos espaço entre eles (logo menor também) — as 5 categorias agora **cabem sem rolar** na maioria dos aparelhos.
+
 ## v0.17.0 (2026-09-19)
 - ♟️ **JOGAR (nova categoria, no topo):** partida completa desde o início contra um rival com **3 níveis**, e você escolhe jogar de **brancas ou pretas**. **Cada lance seu recebe uma nota de precisão — Bom, Médio ou Ruim** (metodologia da Lichess), com o **melhor lance** sugerido quando você erra. Não gostou? Toque em **Voltar lance** e repita a jogada (vale para qualquer nota). Mesmo **cronômetro**, **pausar** e **voltar** dos Mates; no fim, precisão média, contagem por nota e **nova partida**.
 

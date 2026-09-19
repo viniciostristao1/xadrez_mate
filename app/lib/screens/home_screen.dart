@@ -47,29 +47,28 @@ class HomeScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(24, 16, 24, 28),
+          padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 8),
               Center(
                 child: Container(
-                  width: 84,
-                  height: 84,
+                  width: 60,
+                  height: 60,
                   decoration: BoxDecoration(
                     color: Colors.black,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(14),
                     border: Border.all(color: AppColors.accent, width: 2),
                     boxShadow: const [
                       BoxShadow(
                         color: Colors.black54,
-                        blurRadius: 14,
-                        offset: Offset(0, 4),
+                        blurRadius: 12,
+                        offset: Offset(0, 3),
                       ),
                     ],
                   ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(18),
+                    borderRadius: BorderRadius.circular(12),
                     child: Image.asset(
                       'assets/icon/app_icon.png',
                       fit: BoxFit.cover,
@@ -77,35 +76,35 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 12),
               _BigButton(
                 icon: Icons.sports_esports_outlined,
                 title: S.jogar,
                 subtitle: S.jogarSub,
                 onTap: onJogar,
               ),
-              const SizedBox(height: 18),
+              const SizedBox(height: 8),
               _BigButton(
                 icon: Icons.flag_outlined,
                 title: S.mates,
                 subtitle: S.matesSub,
                 onTap: onMates,
               ),
-              const SizedBox(height: 18),
+              const SizedBox(height: 8),
               _BigButton(
                 icon: Icons.bolt_outlined,
                 title: S.tatica,
                 subtitle: S.taticaSub,
                 onTap: onTatica,
               ),
-              const SizedBox(height: 18),
+              const SizedBox(height: 8),
               _BigButton(
                 icon: Icons.shield_outlined,
                 title: S.defesa,
                 subtitle: S.defesaSub,
                 onTap: onDefesa,
               ),
-              const SizedBox(height: 18),
+              const SizedBox(height: 8),
               _BigButton(
                 icon: Icons.menu_book_outlined,
                 title: 'Aberturas',
@@ -140,21 +139,21 @@ class _BigButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 26),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
           child: Row(
             children: [
               Container(
-                width: 58,
-                height: 58,
+                width: 46,
+                height: 46,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: AppColors.surfaceAlt,
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: AppColors.border),
                 ),
-                child: Icon(icon, color: AppColors.accent, size: 30),
+                child: Icon(icon, color: AppColors.accent, size: 24),
               ),
-              const SizedBox(width: 18),
+              const SizedBox(width: 14),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -163,20 +162,22 @@ class _BigButton extends StatelessWidget {
                       title,
                       style: TextStyle(
                         color: AppColors.text,
-                        fontSize: 21,
+                        fontSize: 18,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
-                    const SizedBox(height: 3),
+                    const SizedBox(height: 1),
                     Text(
                       subtitle,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                          color: AppColors.dim, fontSize: 13.5, height: 1.35),
+                          color: AppColors.dim, fontSize: 12, height: 1.25),
                     ),
                   ],
                 ),
               ),
-              Icon(Icons.chevron_right, color: AppColors.faint, size: 30),
+              Icon(Icons.chevron_right, color: AppColors.faint, size: 26),
             ],
           ),
         ),
