@@ -17,11 +17,13 @@ import 'screens/mates_home_screen.dart';
 import 'screens/puzzle_screen.dart';
 import 'screens/tatica_home_screen.dart';
 import 'screens/tatica_screen.dart';
+import 'services/board_service.dart';
 import 'services/i18n.dart';
 import 'services/rating_service.dart';
 import 'services/theme_service.dart';
 import 'theme/app_colors.dart';
 import 'theme/app_theme.dart';
+import 'theme/board_style.dart';
 import 'widgets/piece_icon.dart';
 
 void main() {
@@ -65,6 +67,7 @@ class _MateflowAppState extends State<MateflowApp> {
         () => RatingService.instance.load(),
         () => I18n.instance.load(),
         () => ThemeService.instance.load(),
+        () => BoardService.instance.load(),
         () => PuzzleDb.instance.load(),
         () => TaticaDb.instance.load(),
         () => DefesaDb.instance.load(),
@@ -228,6 +231,66 @@ class _MateflowAppState extends State<MateflowApp> {
               ),
               const SizedBox(height: 18),
               Text(
+                S.tabuleiro,
+                style: TextStyle(
+                  color: AppColors.dim,
+                  fontSize: 12.5,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(height: 6),
+              ValueListenableBuilder<int>(
+                valueListenable: BoardService.instance.notifier,
+                builder: (context, _, _) {
+                  return Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 14),
+                    decoration: BoxDecoration(
+                      color: AppColors.surfaceAlt,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: AppColors.border),
+                    ),
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton<BoardStyle>(
+                        value: BoardService.instance.style,
+                        isExpanded: true,
+                        borderRadius: BorderRadius.circular(12),
+                        dropdownColor: AppColors.surfaceAlt,
+                        icon: Icon(
+                          Icons.keyboard_arrow_down,
+                          color: AppColors.dim,
+                        ),
+                        items: [
+                          for (final b in BoardStyle.all)
+                            DropdownMenuItem(
+                              value: b,
+                              child: Row(
+                                children: [
+                                  _TabuleiroSwatch(style: b),
+                                  const SizedBox(width: 12),
+                                  Text(
+                                    b.nome,
+                                    style: TextStyle(
+                                      color: AppColors.text,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                        ],
+                        onChanged: (b) {
+                          if (b != null) {
+                            BoardService.instance.setStyle(b);
+                          }
+                        },
+                      ),
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(height: 18),
+              Text(
                 S.idioma,
                 style: TextStyle(
                   color: AppColors.dim,
@@ -367,7 +430,11 @@ class _MateflowAppState extends State<MateflowApp> {
   Widget build(BuildContext context) {
     return ListenableBuilder(
       listenable: Listenable.merge(
-        [I18n.instance.notifier, ThemeService.instance.notifier],
+        [
+          I18n.instance.notifier,
+          ThemeService.instance.notifier,
+          BoardService.instance.notifier,
+        ],
       ),
       builder: (context, _) {
         return MaterialApp(
@@ -536,6 +603,45 @@ class _TemaSwatch extends StatelessWidget {
           color: palette.accent,
           shape: BoxShape.circle,
         ),
+      ),
+    );
+  }
+}
+
+/// Amostra do tabuleiro no seletor: mini-tabuleiro 2×2 com as casas do estilo
+/// (estilos sem cor própria caem nas cores da paleta ativa).
+class _TabuleiroSwatch extends StatelessWidget {
+  final BoardStyle style;
+  const _TabuleiroSwatch({required this.style});
+
+  @override
+  Widget build(BuildContext context) {
+    final light = style.lightSquare ?? AppColors.active.lightSquare;
+    final dark = style.darkSquare ?? AppColors.active.darkSquare;
+    return Container(
+      width: 30,
+      height: 22,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(6),
+        border: Border.all(color: AppColors.border),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        children: [
+          for (var row = 0; row < 2; row++)
+            Expanded(
+              child: Row(
+                children: [
+                  for (var col = 0; col < 2; col++)
+                    Expanded(
+                      child: Container(
+                        color: (row + col).isOdd ? dark : light,
+                      ),
+                    ),
+                ],
+              ),
+            ),
+        ],
       ),
     );
   }

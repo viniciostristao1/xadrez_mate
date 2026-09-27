@@ -1,5 +1,25 @@
 # APRENDIZADOS — notas técnicas e gotchas do Mateflow
 
+## 2026-09-27 — v0.20.0 (seletor de tabuleiro separado do tema)
+
+- Cores do tabuleiro agora têm **override independente do tema**:
+  `BoardStyle` (`lib/theme/board_style.dart`) com `lightSquare/darkSquare/
+  select` opcionais (null = usa a paleta ativa) + `BoardService`
+  (`lib/services/board_service.dart`, prefs `board_style`, espelha o
+  `ThemeService`). `AppColors` ganhou `board`/`applyBoard` e os getters de
+  tabuleiro resolvem o override — widgets continuam lendo `AppColors.x`
+  (regra do AGENTS.md).
+- Estilos: `doTema` (padrão, comportamento antigo) e `lichess`
+  (#F0D9B5/#B58863 + seleção âmbar #FFE08A — o azul do Azul Royal brigaria
+  com o marrom). Dicas/lance anterior já eram âmbar fixo no `chess_board`.
+- GOTCHA: o `isLight` das coordenadas comparava `color == AppColors.lightSquare`
+  — com override de tabuleiro a comparação quebra (e já era frágil com
+  dica/lance). Agora vem da **paridade `(row + col)`** passada ao `_SquareCell`.
+- Seletor em `Configurações → Tabuleiro` com mini-tabuleiro 2×2 de amostra;
+  a raiz escuta `BoardService.instance.notifier` no `Listenable.merge`.
+- Testes: `test/board_style_test.dart` (padrão, aplicação, persistência,
+  tema não mexe no tabuleiro fixado, `byId`).
+
 ## 2026-09-19 — v0.19.0 (tela Mates compacta, rating para baixo)
 
 - `mates_home_screen.dart`: cards de categoria com padding 9, ícone 40, título

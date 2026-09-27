@@ -8,7 +8,9 @@
    com o tempo-alvo definido); ranking local de melhores sessões.
 4. **Mais estatísticas** — erros por categoria, taxa de acerto por nível,
    melhor sequência.
-5. **Tema de tabuleiro** — cores do tabuleiro (clássico, verde, madeira…).
+5. **Tema de tabuleiro** ✅ (v0.20.0) — seletor "Tabuleiro" independente do
+   tema, com "Lichess (marrom)"; outras cores (verde, madeira…) podem entrar
+   como novos `BoardStyle`.
 6. **Modo "lado contrário"** — resolver do outro lado do tabuleiro.
 2. **Contador de erros** — registrar quantas tentativas erradas o usuário fez
    por problema; mostrar no fim ("resolvido em X tentativas").

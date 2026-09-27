@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'board_style.dart';
+
 /// Uma paleta completa do app (imutável). É trocável em runtime pelo
 /// `ThemeService`; os widgets continuam lendo as cores por `AppColors.x`.
 @immutable
@@ -197,9 +199,13 @@ class AppPalette {
 /// `ThemeService`) seguido de um rebuild da raiz.
 abstract final class AppColors {
   static AppPalette _active = AppPalette.azulRoyal;
+  static BoardStyle _board = BoardStyle.doTema;
 
   static AppPalette get active => _active;
   static void apply(AppPalette palette) => _active = palette;
+
+  static BoardStyle get board => _board;
+  static void applyBoard(BoardStyle style) => _board = style;
 
   // Fundos
   static Color get background => _active.background;
@@ -217,10 +223,10 @@ abstract final class AppColors {
   static Color get ok => _active.ok;
   static Color get danger => _active.danger;
 
-  // Tabuleiro
-  static Color get lightSquare => _active.lightSquare;
-  static Color get darkSquare => _active.darkSquare;
-  static Color get select => _active.select;
+  // Tabuleiro (o estilo de tabuleiro pode sobrepor a paleta ativa)
+  static Color get lightSquare => _board.lightSquare ?? _active.lightSquare;
+  static Color get darkSquare => _board.darkSquare ?? _active.darkSquare;
+  static Color get select => _board.select ?? _active.select;
   static Color get hint => _active.hint; // pontinhos de casas disponíveis
   static Color get lastMove => _active.lastMove;
   static Color get check => _active.check;

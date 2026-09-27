@@ -106,6 +106,7 @@ class ChessBoard extends StatelessWidget {
                             Expanded(
                               child: _SquareCell(
                                 color: _colorOf(row, col),
+                                isLight: (row + col).isEven,
                                 piece: board.pieceAt(sqAt(row, col)),
                                 pieceStyle: pieceStyle,
                                 isTarget: legalTargets.contains(sqAt(row, col)),
@@ -135,6 +136,7 @@ class ChessBoard extends StatelessWidget {
 
 class _SquareCell extends StatelessWidget {
   final Color color;
+  final bool isLight;
   final Piece? piece;
   final PieceStyle pieceStyle;
   final bool isTarget;
@@ -146,6 +148,7 @@ class _SquareCell extends StatelessWidget {
 
   const _SquareCell({
     required this.color,
+    required this.isLight,
     required this.piece,
     required this.pieceStyle,
     required this.isTarget,
@@ -158,9 +161,6 @@ class _SquareCell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isLight = color == AppColors.lightSquare ||
-        color == const Color(0xFFFFD54F) ||
-        color == const Color(0xFFF2E08F);
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: onTap,

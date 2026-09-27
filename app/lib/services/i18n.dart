@@ -65,6 +65,11 @@ abstract final class S {
         Idioma.es: 'Estilo de piezas',
       });
   static String get tema => I18n.t({Idioma.pt: 'Tema', Idioma.en: 'Theme', Idioma.es: 'Tema'});
+  static String get tabuleiro => I18n.t({
+        Idioma.pt: 'Tabuleiro',
+        Idioma.en: 'Board',
+        Idioma.es: 'Tablero',
+      });
 
   // Categorias/níveis
   static String get facil => I18n.t({Idioma.pt: 'Fácil', Idioma.en: 'Easy', Idioma.es: 'Fácil'});

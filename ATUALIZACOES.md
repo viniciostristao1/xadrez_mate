@@ -1,5 +1,8 @@
 # ATUALIZAÇÕES — changelog do usuário (topo = mais recente)
 
+## v0.20.0 (2026-09-27)
+- ♟️ **Novo seletor de Tabuleiro (independente do tema):** em **Configurações → Tabuleiro** você escolhe **Lichess (marrom)** (casas #F0D9B5/#B58863, como o Lichess) ou **"Do tema"** (padrão, como era). A escolha fica **salva** e o tabuleiro **não muda mais** quando você troca o tema do app.
+
 ## v0.19.0 (2026-09-19)
 - 📐 **Página "Mates" mais compacta:** cards de **Mate em 1/2/3** e **Mate aleatório** com altura reduzida e menos espaço entre eles — as 4 categorias **cabem sem rolar**; o **rating** (medalha e gráfico de evolução) passou para baixo, onde pode rolar.
 
